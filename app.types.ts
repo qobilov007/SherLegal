@@ -7,10 +7,17 @@ export type FAQItem = {
   answer: string;
 };
 
+export interface ContactData {
+  phone: string;
+  email: string;
+  website: string;
+  address: string;
+}
+
 
 export interface TeamsType {
     id?: string;
     teamImg: StaticImageData;
     names: string;
     desc: string;
-  }
+}
