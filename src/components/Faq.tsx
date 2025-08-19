@@ -1,0 +1,14 @@
+import Questions from "./question/Question";
+
+export default function QuestionsPage() {
+  return (
+    <div className="container md:py-10 py-5">
+      <div className="flex items-center justify-between max-sm:flex-col gap-1 md:pb-[28px] pb-[20px]">
+        <h1 className="lg:text-[48px] md:text-4xl text-3xl font-vk leading-[100%] max-sm:text-center font-bold text-[black]">
+          F.A.Q
+        </h1>
+      </div>
+      <Questions/>
+    </div>
+  );
+}

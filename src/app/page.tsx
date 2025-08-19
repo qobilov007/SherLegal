@@ -1,3 +1,9 @@
+
+import Comments from "../components/Comments";
+import Faq from "../components/Faq";
+import News from "../components/News";
+import OurService from "../components/OurService";
+import Partners from "../components/Partners";
 import Button from "../components/btn/Button";
 import { ArrowRight } from "lucide-react";
 import WhyChoose from "./_components/WhyChoose";
@@ -16,6 +22,16 @@ export default function Home() {
     { number: "12+", label: "Happy clients" },
   ];
   return (
+    <div>
+      <div className="home-prev">
+        <h1>Salom</h1>
+      </div>
+      <div>
+        <OurService/>
+        <Partners/>
+        <Comments/>
+        <News/>
+        <Faq/>
     <div className="home-prev">
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/40"></div>
