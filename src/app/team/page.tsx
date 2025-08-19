@@ -3,6 +3,8 @@ import { ArrowRight } from "lucide-react";
 import cardImg from "../../../public/icons/team1.png";
 import Teamm from "./teamm"
 import { TeamsType } from "@/src/app.type";
+import Teams from "./teams";
+import { TeamsType } from "@/app.types";
 
 export default function OurTeam() {
   const teams: TeamsType[] = [
