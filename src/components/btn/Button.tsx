@@ -21,7 +21,7 @@ export default function Button({
   className,
 }: ButtonProps) {
   const baseStyle =
-    "inline-flex group w-max items-center gap-2 px-6 py-3 hover:shadow-lg hover:shadow-red-600 rounded-full bg-[linear-gradient(90deg,#CB1612_0%,#650B09_100%)] text-white font-inter font-medium hover:opacity-90 transition";
+    "group boxshadow rounded-[1000px] bg-[#C61511] p-[16px] inline-flex gap-[8px] items-center justify-between text-white text-[20px] font-inter font-[600]";
 
   const content = (
     <>
