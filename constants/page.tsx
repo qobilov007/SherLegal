@@ -1,4 +1,4 @@
-import { FAQItem } from "@/app.types";
+import { ContactData } from "../app.types";
 
 export const services = [
   {
@@ -17,6 +17,54 @@ export const services = [
     description: "Divorce proceedings, property division, alimony, guardianship, and adoption.",
   },
   {
+    icon: "/images/octicon_law-16.svg",
+    title: "Labor Law",
+    description: "Consultation on labor legislation, protection of the rights of employees and employers, and resolution of labor disputes.",
+  },
+  {
+    icon: "/images/octicon_law-16.svg",
+    title: "Investment Law",
+    description: "Legal support for public-private partnership (PPP) projects, tax optimization within investment activities, and consultation on antitrust regulation issues.",
+  },
+  {
+    icon: "/images/octicon_law-16.svg",
+    title: "Administrative Law",
+    description: "Challenging administrative acts, representation in administrative bodies.",
+  },
+];
+
+export const servicess = [
+  {
+    icon: "/images/octicon_law-16.svg",
+    title: "Corporate law",
+    description: "Business registration and support, corporate governance, mergers and acquisition",
+  },
+  {
+    icon: "/images/octicon_law-16.svg",
+    title: "Civil Law",
+    description: "Dispute resolution, contract drafting and analysis, protection of property and non-property rights.",
+  },
+  {
+    icon: "/images/octicon_law-16.svg",
+    title: "Family Law",
+    description: "Divorce proceedings, property division, alimony, guardianship, and adoption.",
+  },
+  {
+    icon: "/images/octicon_law-16.svg",
+    title: "Labor Law",
+    description: "Consultation on labor legislation, protection of the rights of employees and employers, and resolution of labor disputes.",
+  },
+  {
+    icon: "/images/octicon_law-16.svg",
+    title: "Investment Law",
+    description: "Legal support for public-private partnership (PPP) projects, tax optimization within investment activities, and consultation on antitrust regulation issues.",
+  },
+  {
+    icon: "/images/octicon_law-16.svg",
+    title: "Administrative Law",
+    description: "Challenging administrative acts, representation in administrative bodies.",
+  },
+    {
     icon: "/images/octicon_law-16.svg",
     title: "Labor Law",
     description: "Consultation on labor legislation, protection of the rights of employees and employers, and resolution of labor disputes.",
@@ -185,6 +233,15 @@ export const faqdata = [
   }, {
     question: "Do I need to register in advance to get advice?",
     answer: "Yes, it is recommended to make an appointment in advance for a convenient and quick service."
+  },
+];
+
+export const getContactInfo: ContactData[] = [
+  {
+    phone: "+998 (55) 514 30 03",
+    email: "clamosocial@gmail.com",
+    website: "Clamo.uz",
+    address: "улица Мирзакалон Исмоилий, дом 2A",
   },
 ];
 

@@ -31,7 +31,7 @@ export default function ServicesSection() {
                             key={index}
                             className="group cursor-pointer rounded-xl p-6 shadow hover:shadow-lg hover:bg-[#fff] ease-linear duration-300"
                         >
-                            <div className="bg-[#fff] w-[80px] border ease-linear duration-300 h-[80px] p-[16px] rounded-[24px] group-hover:border-[#137BEA] group-hover:border-[2px]">
+                            <div className="bg-[#fff] w-[80px] border-[2px] ease-linear duration-300 h-[80px] p-[16px] rounded-[24px] group-hover:border-[#137BEA] ">
                                 <Image
                                     src={service.icon}
                                     alt="Service"
