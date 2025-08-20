@@ -13,7 +13,7 @@ module.exports = {
   	extend: {
   		container: {
   			center: true,
-  			padding: "10px",
+  			padding: "1rem",
   			screens: {
   				sm: '640px',
   				md: '768px',
