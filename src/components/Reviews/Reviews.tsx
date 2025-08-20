@@ -59,7 +59,7 @@ export default function TestimonialsMarquee() {
         </div>
 
         {/* Marquee qismi */}
-        <div className="flex gap-10 w-2/3 relative">
+        <div className="flex flex-col gap-10 w-2/3 relative">
           {/* Tepaga harakatlanadigan */}
           <div className="relative flex h-[900px] w-full flex-row items-center justify-center overflow-hidden">
             <Marquee pauseOnHover vertical className="[--duration:20s]">

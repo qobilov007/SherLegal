@@ -336,3 +336,5 @@
     opacity: 1;
   }
 }
+
+.boxshadoww { border-radius: 50%; background: linear-gradient(214deg, #118AC6 24.87%, #BC0606 89.63%); box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.60) inset; }
