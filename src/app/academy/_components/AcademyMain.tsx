@@ -1,8 +1,11 @@
+import Image from "next/image";
+import BtnIcon from "../../../../public/images/Button Icon.svg";
+import SherLegalLogo from "../../../../public/icons/sherlegallogo.svg";
 
 export default function AcademyMain() {
   return (
     <div className="bg-academy bg-no-repeat bg-center bg-cover w-full h-screen">
-      <div className="pt-[177px] container">
+      <div className="pt-[177px] container flex justify-between">
         <div>
           <article className="w-[150px] flex items-center gap-2 px-6 py-4 rounded-full glass2 border">
             <svg
@@ -17,10 +20,41 @@ export default function AcademyMain() {
                 fill="white"
               />
             </svg>
-            <span className="relative z-[4] font-inter">About us</span>
+            <span className="relative z-[4] font-inter text-white font-medium">
+              Course
+            </span>
           </article>
+          <h1 className="text-[56px] font-medium text-white font-inter leading-[120%] pb-4">
+            Legal Course by
+          </h1>
+          <h1 className="text-[56px] font-medium text-white font-inter leading-[120%] flex items-center gap-3 pb-4">
+            <span className="text-[56px] font-bold text-white font-inter leading-[120%] px-3 rounded-[10px] border border-transparent sherGradient">
+              Sher
+            </span>
+            Legal
+          </h1>
+          <p className="text-white font-inter font-normal text-[16px] leading-[130%] pb-6">
+            Author&apos;s course from Sherzod Egamberdiev on improving legal
+            literacy
+          </p>
+          <button className="group boxshadow rounded-[1000px] bg-[#C61511] p-[16px]">
+            <p className="flex gap-[8px] items-center justify-between text-white text-[20px] font-inter font-[600]">
+              Buy a course{" "}
+              <Image
+                src={BtnIcon}
+                alt="BtnIcon"
+                className="group-hover:rotate-[45deg] ease-linear duration-300"
+              />
+            </p>
+          </button>
         </div>
-        <div></div>
+        <div>
+          <Image
+            src={SherLegalLogo}
+            alt="sherLegalLogo"
+            className=" -translate-y-36 translate-x-28"
+          />
+        </div>
       </div>
     </div>
   );

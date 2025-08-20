@@ -151,7 +151,7 @@
     rgba(0, 0, 0, 0.759) 75%,
     rgba(0, 0, 0, 0) 100%
   );
-} 
+}
 
 .glass {
   position: relative;
@@ -176,6 +176,21 @@
   height: 100%;
   z-index: 1;
   filter: blur(25px);
+}
+.sherGradient{
+    position: relative;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    z-index: 2;
+    background: linear-gradient(
+      90deg,
+      rgba(203, 22, 18, 1) 0%,
+      rgba(203, 22, 18, 0.9) 30%,
+      rgba(203, 22, 18, 0.8) 50%,
+      rgba(101, 11, 9, 0.9) 70%,
+      rgba(101, 11, 9, 1) 100%
+    );
 }
 
 .glass2 {

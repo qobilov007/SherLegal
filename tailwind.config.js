@@ -33,7 +33,8 @@ module.exports = {
   			bebas: [
   				'BebasNeue',
   				'sans-serif'
-  			]
+  			],
+            vela: ['"Vela Sans"', 'sans-serif'],
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
@@ -104,7 +105,11 @@ module.exports = {
   			'accordion-down': 'accordion-down 0.2s ease-out',
   			'accordion-up': 'accordion-up 0.2s ease-out'
   		},
-      backgroundImage: { academy: "url('/academypageBg.png')", },
+      backgroundImage: {
+        academy: "url('/academypageBg.png')",
+        academyVideo: "url('/academyVideoBg.png')",
+        getintouch: "url('/gettouchBg.svg')",
+    },
   	}
   },
   plugins: [require("tailwindcss-animate")],
