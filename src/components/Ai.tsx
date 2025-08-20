@@ -116,7 +116,7 @@ export default function Hero() {
                             <div className="absolute top-0 left-0 w-full h-0.5 bg-red-500 scale-x-0 inputstyle-focus:scale-x-100 transition-transform duration-200 origin-left"></div>
                         </div>
 
-                        <div className="cursor-pointer flex gap-[8px] w-[60px] py-[16px] px-[16px] items-center justify-center boxshadoww">
+                        <div onClick={() => setOpen(true)} className="cursor-pointer flex gap-[8px] w-[60px] py-[16px] px-[16px] items-center justify-center boxshadoww">
                             <svg width="20" height="20" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M7.50002 2V16M7.50002 2L1.66669 7.83333M7.50002 2L13.3334 7.83333" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
