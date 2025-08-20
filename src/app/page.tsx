@@ -7,6 +7,7 @@ import Button from "../components/btn/Button";
 import { ArrowRight } from "lucide-react";
 import WhyChoose from "./_components/WhyChoose";
 import OurTeam from "./team/page";
+import Ai from "../components/Ai"
 
 type Stat = {
   number: string;
@@ -98,6 +99,7 @@ export default function Home() {
         <OurTeam />
       </div>
       <OurService />
+      <Ai/>
       <Partners />
       <Comments />
       <News />

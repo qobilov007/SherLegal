@@ -50,6 +50,7 @@
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
   }
+
   .dark {
     --background: 0 0% 3.9%;
     --foreground: 0 0% 98%;
@@ -76,6 +77,7 @@
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }
+
   .theme {
     --animate-marquee: marquee var(--duration) infinite linear;
     --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
@@ -118,6 +120,7 @@
   border: 1px solid rgba(255, 255, 255, 0.308);
   margin-bottom: 16px;
 }
+
 .glass::before {
   content: "";
   position: absolute;
@@ -184,13 +187,11 @@
   width: 100%;
   height: 100%;
   background: #000000;
-  background: linear-gradient(
-    1deg,
-    rgba(0, 0, 0, 0.872) 0%,
-    rgba(0, 0, 0, 1) 30%,
-    rgba(0, 0, 0, 0.741) 60%,
-    rgba(0, 0, 0, 0.501) 100%
-  );
+  background: linear-gradient(1deg,
+      rgba(0, 0, 0, 0.872) 0%,
+      rgba(0, 0, 0, 1) 30%,
+      rgba(0, 0, 0, 0.741) 60%,
+      rgba(0, 0, 0, 0.501) 100%);
 }
 
 @layer utilities {
@@ -198,14 +199,17 @@
     0% {
       transform: translateX(0%);
     }
+
     100% {
       transform: translateX(-50%);
     }
   }
+
   @keyframes marquee-vertical {
     0% {
       transform: translateY(0%);
     }
+
     100% {
       transform: translateY(-50%);
     }
@@ -214,9 +218,11 @@
   .animate-marquee {
     animation: marquee var(--duration, 40s) linear infinite;
   }
+
   .animate-marquee-vertical {
     animation: marquee-vertical var(--duration, 40s) linear infinite;
   }
+
   .animate-reverse {
     animation-direction: reverse;
   }
@@ -227,6 +233,7 @@
   left: 0;
   top: 0;
   overflow: hidden;
+
   &::before {
     content: "";
     position: absolute;
@@ -241,7 +248,8 @@
     opacity: 0;
     transition: all 0.3s linear;
   }
-  &::after{
+
+  &::after {
     content: "";
     position: absolute;
     bottom: -50px;
@@ -256,10 +264,18 @@
     opacity: 0;
     transition: all 0.3s linear;
   }
-  &:hover::before{
+
+  &:hover::before {
     opacity: 1;
   }
-  &:hover::after{
+
+  &:hover::after {
     opacity: 1;
   }
+}
+
+.boxshadoww {
+  border-radius: 50%;
+  background: linear-gradient(214deg, #118AC6 24.87%, #BC0606 89.63%);
+  box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.60) inset;
 }

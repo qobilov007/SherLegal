@@ -3,8 +3,6 @@ import { ArrowRight } from "lucide-react";
 import cardImg from "../../../public/icons/team1.png";
 import Teamm from "./teamm"
 import { TeamsType } from "@/src/app.type";
-import Teams from "./teams";
-import { TeamsType } from "@/app.types";
 
 export default function OurTeam() {
   const teams: TeamsType[] = [
@@ -79,7 +77,7 @@ export default function OurTeam() {
         </article>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
-          {teams.slice(0, 9).map((team, id) => (
+          {teams.slice(0, 6).map((team, id) => (
             <Teamm key={id} infoTeam={team} />
           ))}
         </div>
