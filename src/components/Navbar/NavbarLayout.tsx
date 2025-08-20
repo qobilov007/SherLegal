@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from "next/link";
@@ -24,7 +23,9 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 bg-black`}
+      className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${
+        scrolled ? "bg-black" : "bg-transparent"
+      }`}
     >
       <div className="container flex items-center justify-between py-4">
         {/* Logo */}
@@ -61,10 +62,7 @@ export default function Navbar() {
         </div>
 
         {/* Menu */}
-        <ul className="hidden md:flex items-center gap-6 text-white font-inter">
-          <li>
-            <Link href="/">Home</Link>
-          </li>
+        <ul className="hidden smd:flex items-center gap-6 text-white font-inter">
           <li>
             <Link href="/about">About us</Link>
           </li>
@@ -99,7 +97,9 @@ export default function Navbar() {
               <Globe size={16} />
               <span>En</span>
               <svg
-                className={`w-4 h-4 ml-1 ${langOpen ? "text-red-500" : "text-white"}`}
+                className={`w-4 h-4 ml-1 ${
+                  langOpen ? "text-red-500" : "text-white"
+                }`}
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"

@@ -13,14 +13,18 @@ module.exports = {
   	extend: {
   		container: {
   			center: true,
-  			padding: '1rem',
+  			padding: "10px",
   			screens: {
   				sm: '640px',
   				md: '768px',
+				smd: "850px",
   				lg: '1024px',
   				xl: '1184px'
   			}
   		},
+		screens:{
+			smd: "850px"
+		},
   		fontFamily: {
   			inter: [
   				'Inter',

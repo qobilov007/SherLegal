@@ -6,7 +6,7 @@ import { TeamsType } from "@/src/app.type";
 import Teams from "./teams";
 import { TeamsType } from "@/app.types";
 
-export default function OurTeam() {
+export default function   OurTeam() {
   const teams: TeamsType[] = [
     {
       teamImg: cardImg,
