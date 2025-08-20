@@ -1,6 +1,4 @@
-import { cn } from "@/lib/utils";
-import Image from "next/image";
-import BlurImg from "../../../public/blurred.png";
+
 
 export default function ReviewCard({
     name,
@@ -18,7 +16,7 @@ export default function ReviewCard({
       style={{backgroundColor: "rgba(255, 255, 255, 0.02)"}}
         className="
           relative cursor-pointer rounded-[32px] p-6 
-            transition-all duration-300 shadow-effect border-2 border-[rgba(255,255,255,0.6)] backdrop-blur-[12px]
+            transition-all duration-300 shadow-effect border-2 border-[rgba(255,255,255,0.13)] backdrop-blur-[12px]
         "
       >
         <div className="relative z-[10] flex items-center gap-4">

@@ -73,7 +73,7 @@ export default function Home() {
           </div>
           <div className="relative w-full flex justify-center items-center py-5">
             {/* Shaffof qora container */}
-            <div className="relative w-full flex justify-evenly gap-10 md:gap-16 px-6 py-6 border border-gray-200/20 rounded-2xl backdrop-blur-[6px] text-white">
+            <div className="relative w-full flex justify-evenly gap-10 md:gap-16 text-white">
               {stats.map((item, i) => (
                 <div key={i} className="flex flex-col items-center text-center">
                   <span className="text-7xl leading-[120%] text-center font-bebas font-bold">
@@ -89,17 +89,11 @@ export default function Home() {
         </div>
       </div>
       <div>
-             <OurService />
-         </div>
-         <div className="w-full overflow-hidden bg-black py-16 team-overlay">
-             <OurTeam />
-         </div>
-         <div className="bg-[#F9F9F9] pt-10 pb-10">
-             <div className="container">
-                 <Map />
-                 <Socialmedia />
-             </div>
-         </div>
+        <OurService />
+      </div>
+      <div className="w-full overflow-hidden bg-black py-16 team-overlay">
+        <OurTeam />
+      </div>
     </div>
   );
 }
