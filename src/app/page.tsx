@@ -1,4 +1,4 @@
-import Comments from "../components/Comments";
+import Comments from "../components/Reviews/Reviews";
 import Faq from "../components/Faq";
 import News from "../components/News";
 import OurService from "../components/OurService";

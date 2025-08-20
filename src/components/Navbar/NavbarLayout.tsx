@@ -24,9 +24,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${
-        scrolled ? "bg-black backdrop-blur-md" : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 bg-black`}
     >
       <div className="container flex items-center justify-between py-4">
         {/* Logo */}

@@ -2,12 +2,12 @@
 
 import Image from "next/image";
 import { servicess } from "@/constants/page";
-import Comments from "@/src/components/Comments";
+import Comments from "@/src/components/Reviews/Reviews";
 import Partners from "@/src/components/Partners";
 
 export default function ServicesSection() {
     return (
-        <div className="bg-[#F9F9F9] pt-[68px] max-h-[100vh]">
+        <div className="bg-[#F9F9F9] pt-[68px]">
             <section className="container mx-auto px-6 py-16">
                 <div className="flex justify-between items-center mb-10">
                     <div>
