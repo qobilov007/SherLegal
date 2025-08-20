@@ -13,14 +13,18 @@ module.exports = {
   	extend: {
   		container: {
   			center: true,
-  			padding: '1rem',
+  			padding: "10px",
   			screens: {
   				sm: '640px',
   				md: '768px',
+				smd: "850px",
   				lg: '1024px',
   				xl: '1184px'
   			}
   		},
+		screens:{
+			smd: "850px"
+		},
   		fontFamily: {
   			inter: [
   				'Inter',
@@ -99,7 +103,8 @@ module.exports = {
   		animation: {
   			'accordion-down': 'accordion-down 0.2s ease-out',
   			'accordion-up': 'accordion-up 0.2s ease-out'
-  		}
+  		},
+      backgroundImage: { academy: "url('/academypageBg.png')", },
   	}
   },
   plugins: [require("tailwindcss-animate")],

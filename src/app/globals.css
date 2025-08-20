@@ -50,7 +50,6 @@
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
   }
-
   .dark {
     --background: 0 0% 3.9%;
     --foreground: 0 0% 98%;
@@ -77,7 +76,6 @@
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }
-
   .theme {
     --animate-marquee: marquee var(--duration) infinite linear;
     --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
@@ -107,6 +105,54 @@
   background-size: cover;
 }
 
+.home-prev1 {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../public/aboutBG.png");
+  background-position-x: right;
+  background-position-y: bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: black;
+}
+
+.home-prev1::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: #000000;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 52%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  width: 100%;
+  height: 200px;
+}
+
+.home-prev1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 100vh;
+  z-index: 1;
+  background: #000000;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.588) 53%,
+    rgba(0, 0, 0, 0.759) 75%,
+    rgba(0, 0, 0, 0) 100%
+  );
+} 
+
 .glass {
   position: relative;
   left: 0;
@@ -120,12 +166,36 @@
   border: 1px solid rgba(255, 255, 255, 0.308);
   margin-bottom: 16px;
 }
-
 .glass::before {
   content: "";
   position: absolute;
   top: 20px;
   left: -10px;
+  background-color: red;
+  width: 100px;
+  height: 100%;
+  z-index: 1;
+  filter: blur(25px);
+}
+
+.glass2 {
+  position: relative;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  z-index: 2;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.308);
+  margin-bottom: 16px;
+}
+.glass2::before {
+  content: "";
+  position: absolute;
+  top: 50px;
+  left: -5px;
   background-color: red;
   width: 100px;
   height: 100%;
@@ -187,11 +257,13 @@
   width: 100%;
   height: 100%;
   background: #000000;
-  background: linear-gradient(1deg,
-      rgba(0, 0, 0, 0.872) 0%,
-      rgba(0, 0, 0, 1) 30%,
-      rgba(0, 0, 0, 0.741) 60%,
-      rgba(0, 0, 0, 0.501) 100%);
+  background: linear-gradient(
+    1deg,
+    rgba(0, 0, 0, 0.872) 0%,
+    rgba(0, 0, 0, 1) 30%,
+    rgba(0, 0, 0, 0.741) 60%,
+    rgba(0, 0, 0, 0.501) 100%
+  );
 }
 
 @layer utilities {
@@ -199,17 +271,14 @@
     0% {
       transform: translateX(0%);
     }
-
     100% {
       transform: translateX(-50%);
     }
   }
-
   @keyframes marquee-vertical {
     0% {
       transform: translateY(0%);
     }
-
     100% {
       transform: translateY(-50%);
     }
@@ -218,11 +287,9 @@
   .animate-marquee {
     animation: marquee var(--duration, 40s) linear infinite;
   }
-
   .animate-marquee-vertical {
     animation: marquee-vertical var(--duration, 40s) linear infinite;
   }
-
   .animate-reverse {
     animation-direction: reverse;
   }
@@ -233,7 +300,6 @@
   left: 0;
   top: 0;
   overflow: hidden;
-
   &::before {
     content: "";
     position: absolute;
@@ -248,7 +314,6 @@
     opacity: 0;
     transition: all 0.3s linear;
   }
-
   &::after {
     content: "";
     position: absolute;
@@ -264,18 +329,12 @@
     opacity: 0;
     transition: all 0.3s linear;
   }
-
   &:hover::before {
     opacity: 1;
   }
-
   &:hover::after {
     opacity: 1;
   }
 }
 
-.boxshadoww {
-  border-radius: 50%;
-  background: linear-gradient(214deg, #118AC6 24.87%, #BC0606 89.63%);
-  box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.60) inset;
-}
+.boxshadoww { border-radius: 50%; background: linear-gradient(214deg, #118AC6 24.87%, #BC0606 89.63%); box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.60) inset; }
