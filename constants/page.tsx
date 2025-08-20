@@ -1,35 +1,41 @@
-import { ContactData } from "../app.types";
+import { ContactData, LessonCard, NewsCard } from "../app.types";
 
 export const services = [
   {
     icon: "/images/octicon_law-16.svg",
     title: "Corporate law",
-    description: "Business registration and support, corporate governance, mergers and acquisition",
+    description:
+      "Business registration and support, corporate governance, mergers and acquisition",
   },
   {
     icon: "/images/octicon_law-16.svg",
     title: "Civil Law",
-    description: "Dispute resolution, contract drafting and analysis, protection of property and non-property rights.",
+    description:
+      "Dispute resolution, contract drafting and analysis, protection of property and non-property rights.",
   },
   {
     icon: "/images/octicon_law-16.svg",
     title: "Family Law",
-    description: "Divorce proceedings, property division, alimony, guardianship, and adoption.",
+    description:
+      "Divorce proceedings, property division, alimony, guardianship, and adoption.",
   },
   {
     icon: "/images/octicon_law-16.svg",
     title: "Labor Law",
-    description: "Consultation on labor legislation, protection of the rights of employees and employers, and resolution of labor disputes.",
+    description:
+      "Consultation on labor legislation, protection of the rights of employees and employers, and resolution of labor disputes.",
   },
   {
     icon: "/images/octicon_law-16.svg",
     title: "Investment Law",
-    description: "Legal support for public-private partnership (PPP) projects, tax optimization within investment activities, and consultation on antitrust regulation issues.",
+    description:
+      "Legal support for public-private partnership (PPP) projects, tax optimization within investment activities, and consultation on antitrust regulation issues.",
   },
   {
     icon: "/images/octicon_law-16.svg",
     title: "Administrative Law",
-    description: "Challenging administrative acts, representation in administrative bodies.",
+    description:
+      "Challenging administrative acts, representation in administrative bodies.",
   },
 ];
 
@@ -37,47 +43,56 @@ export const servicess = [
   {
     icon: "/images/octicon_law-16.svg",
     title: "Corporate law",
-    description: "Business registration and support, corporate governance, mergers and acquisition",
+    description:
+      "Business registration and support, corporate governance, mergers and acquisition",
   },
   {
     icon: "/images/octicon_law-16.svg",
     title: "Civil Law",
-    description: "Dispute resolution, contract drafting and analysis, protection of property and non-property rights.",
+    description:
+      "Dispute resolution, contract drafting and analysis, protection of property and non-property rights.",
   },
   {
     icon: "/images/octicon_law-16.svg",
     title: "Family Law",
-    description: "Divorce proceedings, property division, alimony, guardianship, and adoption.",
+    description:
+      "Divorce proceedings, property division, alimony, guardianship, and adoption.",
   },
   {
     icon: "/images/octicon_law-16.svg",
     title: "Labor Law",
-    description: "Consultation on labor legislation, protection of the rights of employees and employers, and resolution of labor disputes.",
+    description:
+      "Consultation on labor legislation, protection of the rights of employees and employers, and resolution of labor disputes.",
   },
   {
     icon: "/images/octicon_law-16.svg",
     title: "Investment Law",
-    description: "Legal support for public-private partnership (PPP) projects, tax optimization within investment activities, and consultation on antitrust regulation issues.",
+    description:
+      "Legal support for public-private partnership (PPP) projects, tax optimization within investment activities, and consultation on antitrust regulation issues.",
   },
   {
     icon: "/images/octicon_law-16.svg",
     title: "Administrative Law",
-    description: "Challenging administrative acts, representation in administrative bodies.",
+    description:
+      "Challenging administrative acts, representation in administrative bodies.",
   },
-    {
+  {
     icon: "/images/octicon_law-16.svg",
     title: "Labor Law",
-    description: "Consultation on labor legislation, protection of the rights of employees and employers, and resolution of labor disputes.",
+    description:
+      "Consultation on labor legislation, protection of the rights of employees and employers, and resolution of labor disputes.",
   },
   {
     icon: "/images/octicon_law-16.svg",
     title: "Investment Law",
-    description: "Legal support for public-private partnership (PPP) projects, tax optimization within investment activities, and consultation on antitrust regulation issues.",
+    description:
+      "Legal support for public-private partnership (PPP) projects, tax optimization within investment activities, and consultation on antitrust regulation issues.",
   },
   {
     icon: "/images/octicon_law-16.svg",
     title: "Administrative Law",
-    description: "Challenging administrative acts, representation in administrative bodies.",
+    description:
+      "Challenging administrative acts, representation in administrative bodies.",
   },
 ];
 
@@ -166,7 +181,8 @@ export const news = [
   },
   {
     id: 4,
-    title: "O‘zbekkonsert qizilchilar ijodiy klubi tashkil etish taklif etmoqda",
+    title:
+      "O‘zbekkonsert qizilchilar ijodiy klubi tashkil etish taklif etmoqda",
     excerpt:
       "O‘zbekkonsert klubi faoliyatini kengaytirib, yoshlarni qo‘llab-quvvatlash loyihasini yo‘lga qo‘ymoqchi...",
     img: "/images/Image.svg",
@@ -199,40 +215,49 @@ export const news = [
     img: "/images/Image.svg",
     date: "10 July, 2023",
     views: 154,
-  }
+  },
 ];
 
 // constants/page.ts
 export const faqdata = [
   {
     question: "Do I need to register in advance to get advice?",
-    answer: "Yes, it is recommended to make an appointment in advance for a convenient and quick service."
+    answer:
+      "Yes, it is recommended to make an appointment in advance for a convenient and quick service.",
   },
   {
     question: "Do I need to register in advance to get advice?",
-    answer: "Yes, it is recommended to make an appointment in advance for a convenient and quick service."
+    answer:
+      "Yes, it is recommended to make an appointment in advance for a convenient and quick service.",
   },
   {
     question: "Do I need to register in advance to get advice?",
-    answer: "Yes, it is recommended to make an appointment in advance for a convenient and quick service."
+    answer:
+      "Yes, it is recommended to make an appointment in advance for a convenient and quick service.",
   },
   {
     question: "Do I need to register in advance to get advice?",
-    answer: "Yes, it is recommended to make an appointment in advance for a convenient and quick service."
+    answer:
+      "Yes, it is recommended to make an appointment in advance for a convenient and quick service.",
   },
   {
     question: "Is there a support service available?",
-    answer: "Yes, our support staff is ready to assist you 24/7."
+    answer: "Yes, our support staff is ready to assist you 24/7.",
   },
-    {
+  {
     question: "Do I need to register in advance to get advice?",
-    answer: "Yes, it is recommended to make an appointment in advance for a convenient and quick service."
-  }, {
+    answer:
+      "Yes, it is recommended to make an appointment in advance for a convenient and quick service.",
+  },
+  {
     question: "Do I need to register in advance to get advice?",
-    answer: "Yes, it is recommended to make an appointment in advance for a convenient and quick service."
-  }, {
+    answer:
+      "Yes, it is recommended to make an appointment in advance for a convenient and quick service.",
+  },
+  {
     question: "Do I need to register in advance to get advice?",
-    answer: "Yes, it is recommended to make an appointment in advance for a convenient and quick service."
+    answer:
+      "Yes, it is recommended to make an appointment in advance for a convenient and quick service.",
   },
 ];
 
@@ -245,4 +270,236 @@ export const getContactInfo: ContactData[] = [
   },
 ];
 
+export const getLessonCard: LessonCard[] = [
+  {
+    id: 1,
+    number: 1,
+    title: "Huquq faniga kirish",
+    description:
+      "Ushbu mavzu doirasida siz 'huquq' tushunchasi va O‘zbekiston Respublikasi Konstitutsiyasi bilan kafolatlangan insonning asosiy huquqlari bilan tanishasiz, huquq sohalarini farqlashni o‘rganasiz, shuningdek, fuqarolarning qanday majburiyatlari borligini bilib olasiz. Ushbu bilimlar o‘quvchilarga huquq jamiyat munosabatlarini qanday tashkil etishi va fuqarolar manfaatlarini qay tarzda himoya qilishi haqida yaxshiroq tushuncha beradi.",
+  },
+  {
+    id: 2,
+    number: 2,
+    title: "Huquq faniga kirish",
+    description:
+      "Ushbu mavzu doirasida siz 'huquq' tushunchasi va O‘zbekiston Respublikasi Konstitutsiyasi bilan kafolatlangan insonning asosiy huquqlari bilan tanishasiz, huquq sohalarini farqlashni o‘rganasiz, shuningdek, fuqarolarning qanday majburiyatlari borligini bilib olasiz. Ushbu bilimlar o‘quvchilarga huquq jamiyat munosabatlarini qanday tashkil etishi va fuqarolar manfaatlarini qay tarzda himoya qilishi haqida yaxshiroq tushuncha beradi.",
+  },
+  {
+    id: 3,
+    number: 3,
+    title: "Huquq faniga kirish",
+    description:
+      "Ushbu mavzu doirasida siz 'huquq' tushunchasi va O‘zbekiston Respublikasi Konstitutsiyasi bilan kafolatlangan insonning asosiy huquqlari bilan tanishasiz, huquq sohalarini farqlashni o‘rganasiz, shuningdek, fuqarolarning qanday majburiyatlari borligini bilib olasiz. Ushbu bilimlar o‘quvchilarga huquq jamiyat munosabatlarini qanday tashkil etishi va fuqarolar manfaatlarini qay tarzda himoya qilishi haqida yaxshiroq tushuncha beradi.",
+  },
+  {
+    id: 4,
+    number: 4,
+    title: "Huquq faniga kirish",
+    description:
+      "Ushbu mavzu doirasida siz 'huquq' tushunchasi va O‘zbekiston Respublikasi Konstitutsiyasi bilan kafolatlangan insonning asosiy huquqlari bilan tanishasiz, huquq sohalarini farqlashni o‘rganasiz, shuningdek, fuqarolarning qanday majburiyatlari borligini bilib olasiz. Ushbu bilimlar o‘quvchilarga huquq jamiyat munosabatlarini qanday tashkil etishi va fuqarolar manfaatlarini qay tarzda himoya qilishi haqida yaxshiroq tushuncha beradi.",
+  },
+];
 
+export const getNews:NewsCard[] = [
+    {
+        id:1,
+        img:"/images/president.png",
+        title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
+        description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
+        date: "7 July, 2023",
+        views: 320
+    },
+    {
+        id:2,
+        img:"/images/president.png",
+        title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
+        description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
+        date: "7 July, 2023",
+        views: 320
+    },
+    {
+        id:3,
+        img:"/images/president.png",
+        title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
+        description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
+        date: "7 July, 2023",
+        views: 320
+    },
+    {
+        id:4,
+        img:"/images/president.png",
+        title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
+        description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
+        date: "7 July, 2023",
+        views: 320
+    },
+    {
+        id:5,
+        img:"/images/president.png",
+        title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
+        description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
+        date: "7 July, 2023",
+        views: 320
+    },
+    {
+        id:6,
+        img:"/images/president.png",
+        title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
+        description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
+        date: "7 July, 2023",
+        views: 320
+    },
+    {
+        id:7,
+        img:"/images/president.png",
+        title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
+        description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
+        date: "7 July, 2023",
+        views: 320
+    },
+    {
+        id:8,
+        img:"/images/president.png",
+        title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
+        description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
+        date: "7 July, 2023",
+        views: 320
+    },
+    {
+        id:9,
+        img:"/images/president.png",
+        title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
+        description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
+        date: "7 July, 2023",
+        views: 320
+    },
+    {
+        id:10,
+        img:"/images/president.png",
+        title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
+        description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
+        date: "7 July, 2023",
+        views: 320
+    },
+    {
+        id:11,
+        img:"/images/president.png",
+        title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
+        description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
+        date: "7 July, 2023",
+        views: 320
+    },
+    {
+        id:12,
+        img:"/images/president.png",
+        title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
+        description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
+        date: "7 July, 2023",
+        views: 320
+    },
+    {
+        id:13,
+        img:"/images/president.png",
+        title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
+        description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
+        date: "7 July, 2023",
+        views: 320
+    },
+    {
+        id:14,
+        img:"/images/president.png",
+        title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
+        description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
+        date: "7 July, 2023",
+        views: 320
+    },
+    {
+        id:15,
+        img:"/images/president.png",
+        title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
+        description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
+        date: "7 July, 2023",
+        views: 320
+    },
+    {
+        id:16,
+        img:"/images/president.png",
+        title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
+        description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
+        date: "7 July, 2023",
+        views: 320
+    },
+    {
+        id:17,
+        img:"/images/president.png",
+        title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
+        description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
+        date: "7 July, 2023",
+        views: 320
+    },
+    {
+        id:18,
+        img:"/images/president.png",
+        title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
+        description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
+        date: "7 July, 2023",
+        views: 320
+    },
+    {
+        id:19,
+        img:"/images/president.png",
+        title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
+        description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
+        date: "7 July, 2023",
+        views: 320
+    },
+    {
+        id:20,
+        img:"/images/president.png",
+        title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
+        description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
+        date: "7 July, 2023",
+        views: 320
+    },
+    {
+        id:21,
+        img:"/images/president.png",
+        title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
+        description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
+        date: "7 July, 2023",
+        views: 320
+    },
+    {
+        id:22,
+        img:"/images/president.png",
+        title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
+        description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
+        date: "7 July, 2023",
+        views: 320
+    },
+    {
+        id:23,
+        img:"/images/president.png",
+        title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
+        description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
+        date: "7 July, 2023",
+        views: 320
+    },
+    {
+        id:24,
+        img:"/images/president.png",
+        title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
+        description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
+        date: "7 July, 2023",
+        views: 320
+    },
+    {
+        id:25,
+        img:"/images/president.png",
+        title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
+        description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
+        date: "7 July, 2023",
+        views: 320
+    },
+]
