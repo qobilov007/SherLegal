@@ -21,3 +21,19 @@ export interface TeamsType {
     names: string;
     desc: string;
 }
+
+export type LessonCard = {
+    id: number;
+    number: number;
+    title: string;
+    description: string;
+  };
+
+  export type NewsCard = {
+    id:number;
+    img:string;
+    title: string;
+    description: string;
+    views: number;
+    date: string;
+  }
