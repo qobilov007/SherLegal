@@ -353,3 +353,22 @@
 }
 
 .boxshadoww { border-radius: 50%; background: linear-gradient(214deg, #118AC6 24.87%, #BC0606 89.63%); box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.60) inset; }
+
+
+/* videoanimatiom */
+@keyframes pulseVideo {
+    0% {
+      box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7);
+    }
+    70% {
+      box-shadow: 0 0 0 25px rgba(255, 0, 0, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+    }
+  }
+
+  .animate-pulse-video {
+    border-radius: 50%;
+    animation: pulseVideo 1s infinite;
+  }
