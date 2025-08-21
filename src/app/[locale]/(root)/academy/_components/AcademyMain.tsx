@@ -4,10 +4,10 @@ import SherLegalLogo from "../../../../public/icons/sherlegallogo.svg";
 
 export default function AcademyMain() {
   return (
-    <div className="bg-academy bg-no-repeat bg-center bg-cover w-full h-screen">
-      <div className="pt-[177px] container flex justify-between">
-        <div>
-          <article className="w-[150px] flex items-center gap-2 px-6 py-4 rounded-full glass2 border">
+    <div className="bg-academy bg-no-repeat bg-center bg-cover w-full xl:h-screen overflow-hidden">
+      <div className="pt-[177px] container flex max-md:flex-col max-md:items-center xl:justify-between">
+        <div className="max-lg:mb-10">
+          <article className="w-[150px] flex items-center gap-2 px-6 py-3 md:py-4 rounded-full glass2 border">
             <svg
               width="20"
               height="20"
@@ -24,21 +24,21 @@ export default function AcademyMain() {
               Course
             </span>
           </article>
-          <h1 className="text-[56px] font-medium text-white font-inter leading-[120%] pb-4">
+          <h1 className="md:text-[56px] sm:text-[46px] text-[40px] font-medium text-white font-inter leading-[120%] md:pb-4 pb-2">
             Legal Course by
           </h1>
-          <h1 className="text-[56px] font-medium text-white font-inter leading-[120%] flex items-center gap-3 pb-4">
-            <span className="text-[56px] font-bold text-white font-inter leading-[120%] px-3 rounded-[10px] border border-transparent sherGradient">
+          <h1 className="md:text-[56px] sm:text-[46px] text-[40px] font-medium text-white font-inter leading-[120%] flex items-center gap-3 pb-4">
+            <p className="font-inter flex items-center justify-center md:text-[56px] sm:text-[46px] text-[40px] border-[2px] border-solid border-[#ff6363] md:h-[75px] h-[65px] px-3 rounded-[20px] bg-[linear-gradient(90deg,#CB1612_0%,#650B09_100%)] font-bold">
               Sher
-            </span>
+            </p>
             Legal
           </h1>
-          <p className="text-white font-inter font-normal text-[16px] leading-[130%] pb-6">
+          <p className="text-white font-inter font-normal sm:text-[16px] text-[14px] leading-[130%] pb-6">
             Author&apos;s course from Sherzod Egamberdiev on improving legal
             literacy
           </p>
-          <button className="group boxshadow rounded-[1000px] bg-[#C61511] p-[16px]">
-            <p className="flex gap-[8px] items-center justify-between text-white text-[20px] font-inter font-[600]">
+          <button className="group boxshadow rounded-[1000px] bg-[#C61511] md:p-[16px] py-3 px-4">
+            <p className="flex md:gap-[8px] gap-1 items-center justify-between text-white text-[20px] font-inter font-[600]">
               Buy a course{" "}
               <Image
                 src={BtnIcon}
@@ -48,11 +48,13 @@ export default function AcademyMain() {
             </p>
           </button>
         </div>
-        <div>
+        <div className="max-md:hidden">
           <Image
             src={SherLegalLogo}
             alt="sherLegalLogo"
-            className=" -translate-y-36 translate-x-28"
+            className=" xl:-translate-y-36 xl:translate-x-28"
+            width={681}
+            height={99}
           />
         </div>
       </div>
