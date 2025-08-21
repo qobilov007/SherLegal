@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<svg width="1294.8317" height="454.3844" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" version="1.1" xml:space="preserve">
+ <defs id="defs6">
+  <clipPath clipPathUnits="userSpaceOnUse" id="clipPath16">
+   <path d="m356.25,1080l1080,0l0,-1080l-1080,0l0,1080z" id="path14"/>
+  </clipPath>
+ </defs>
+ <g class="layer">
+  <title>Layer 1</title>
+  <g id="g8" transform="matrix(1.33333 0 0 -1.33333 -67.4931 951.917)">
+   <g id="g10">
+    <g clip-path="url(#clipPath16)" id="g12">
+     <g id="g18" transform="translate(235.423 600.675)">
+      <path d="m356.25,0l-48.64,0l0,-48.64l-15.73,0l0.29,48.64l-48.67,0l0,41.91l12.94,0l0,-20.95l12.69,0l0,20.95l12.21,0l0,-20.95l12.65,0l0,20.95l12.54,0l0,-20.95l11.54,0l0,20.95l13.5,0l0,-20.95l11.54,0l0,20.95l13.14,0l0,-41.91zm0,-70.27l-27.83,0l27.83,-23.96l0,-15.31l-55.99,-33.82l-56.76,33.82l0,15.31l28.45,23.96l-28.45,0l0,57.68l36.77,0l0,-35.49l13.72,-11.25l0,-26.64l-28.16,-23.57l68.19,0l-27.49,23.57l0,26.64l13.5,10.39l0,36.35l36.22,0l0,-57.68zm-184.29,183.37l-0.51,-222.64c1.03,-61.97 65.23,-74.57 128.62,-117.99c64.89,43.59 125.43,55.32 127.56,117.46l0,223.17l-255.67,0z" fill="none" stroke="#ed2d25" stroke-width="2" stroke-dasharray="1000" stroke-dashoffset="1000">
+        <animate attributeName="stroke-dashoffset" begin="0s" dur="6s" values="3000;0" repeatCount="indefinite" />
+      </path>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>
