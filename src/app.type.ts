@@ -6,3 +6,6 @@ export interface TeamsType {
     names: string;
     desc: string;
   }
+
+
+  

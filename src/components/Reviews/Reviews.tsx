@@ -1,52 +1,38 @@
 "use client";
-import Image from "next/image";
 import { testimonials } from "@/constants/page";
 import { Marquee } from "../magicui/marquee";
 import ReviewCard from "./ReviewsCard";
 
 export default function TestimonialsMarquee() {
   return (
-    <section className="relative !min-h-[800px] text-white bg-black p-0">
-      <div
-        className="absolute top-0 left-0 w-full h-[700px] 
-                  pointer-events-none z-20
-                  bg-gradient-to-b from-red-800/50 via-black/80 to-transparent
-                  [mask-image:radial-gradient(150%_100%at_50%_0%,black,transparent)] 
-                  [mask-repeat:no-repeat] [mask-position:center] [mask-size:100%_100%]"
-      />
-
-      <div
-        className="absolute bottom-0 left-0 w-full h-[220px] 
-                bg-gradient-to-t 
-                from-black/90 to-transparent
-                pointer-events-none z-10"
-      />
-
+    <section className="relative !min-h-[800px] text-white bg-black p-0 bg-reviews bg-no-repeat bg-cover bg-center">
       <div className="container flex items-center gap-8 justify-between z-20">
         {/* Chap text */}
-        <div className="w-1/3">
-          <article className="w-[270px] flex items-center gap-2 px-6 py-4 rounded-full glasses border bg-red-400">
+        <div className="w-1/3 relative z-20">
+          <article className="inline-flex border-r border-l border-t items-center gap-2 px-5 border-gray-300/5  0 py-3 rounded-full glass">
             <svg
-              width="25"
-              height="24"
-              viewBox="0 0 25 24"
+              width="20"
+              height="20"
+              viewBox="0 0 18 17"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="opacity-2"
+              className="relative z-[20]"
             >
               <path
-                d="M12.5 3L13.9302 8.31181C14.1047 8.96 14.192 9.28409 14.3642 9.54905C14.5166 9.78349 14.7165 9.98336 14.951 10.1358C15.2159 10.308 15.54 10.3953 16.1882 10.5698L21.5 12L16.1882 13.4302C15.54 13.6047 15.2159 13.692 14.951 13.8642C14.7165 14.0166 14.5166 14.2165 14.3642 14.451C14.192 14.7159 14.1047 15.04 13.9302 15.6882L12.5 21L11.0698 15.6882C10.8953 15.04 10.808 14.7159 10.6358 14.451C10.4834 14.2165 10.2835 14.0166 10.049 13.8642C9.78409 13.692 9.46 13.6047 8.81181 13.4302L3.5 12L8.81181 10.5698C9.46 10.3953 9.78409 10.308 10.049 10.1358C10.2835 9.98336 10.4835 9.78349 10.6358 9.54905C10.808 9.28409 10.8953 8.96 11.0698 8.31181L12.5 3Z"
+                d="M8.39076 2.67592C8.58369 2.2431 8.68015 2.0267 8.81448 1.96005C8.93116 1.90215 9.0682 1.90215 9.18488 1.96005C9.3192 2.0267 9.41566 2.2431 9.60859 2.67592L11.1453 6.12336C11.2023 6.25131 11.2308 6.31529 11.275 6.36428C11.314 6.40763 11.3617 6.4423 11.415 6.46604C11.4753 6.49287 11.5449 6.50022 11.6842 6.51492L15.4378 6.91109C15.9091 6.96083 16.1447 6.9857 16.2496 7.09285C16.3407 7.18593 16.383 7.31626 16.364 7.44512C16.3422 7.59346 16.1661 7.75208 15.8141 8.06931L13.0103 10.5961C12.9062 10.6899 12.8542 10.7368 12.8212 10.7939C12.7921 10.8444 12.7738 10.9005 12.7677 10.9585C12.7608 11.0241 12.7754 11.0926 12.8044 11.2297L13.5876 14.922C13.6859 15.3855 13.735 15.6173 13.6656 15.7502C13.6052 15.8656 13.4943 15.9461 13.3659 15.9679C13.2181 15.9929 13.0128 15.8745 12.6023 15.6378L9.33276 13.752C9.21141 13.682 9.15073 13.647 9.08623 13.6333C9.02917 13.6212 8.97019 13.6212 8.91312 13.6333C8.84862 13.647 8.78794 13.682 8.66659 13.752L5.39702 15.6378C4.98654 15.8745 4.7813 15.9929 4.63345 15.9679C4.50503 15.9461 4.39416 15.8656 4.3338 15.7502C4.2643 15.6173 4.31346 15.3855 4.41178 14.922L5.19492 11.2297C5.22399 11.0926 5.23852 11.0241 5.23162 10.9585C5.22551 10.9005 5.20729 10.8444 5.17812 10.7939C5.14516 10.7368 5.09313 10.6899 4.98907 10.5961L2.18522 8.06931C1.83321 7.75208 1.6572 7.59346 1.63532 7.44512C1.61632 7.31626 1.65867 7.18593 1.74978 7.09285C1.85468 6.9857 2.0903 6.96083 2.56155 6.91109L6.31513 6.51492C6.45444 6.50022 6.5241 6.49287 6.58433 6.46604C6.63762 6.4423 6.68534 6.40763 6.72439 6.36428C6.76851 6.31529 6.79703 6.25131 6.85407 6.12336L8.39076 2.67592Z"
                 fill="white"
-                fillOpacity="0.8"
+                stroke="white"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
-
-            <span className="relative z-[4] font-inter text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">
-              Award winning Law Firm
-            </span>
+            <span className="relative z-[20] font-inter font-semibold text-[18px] leading-[21px] text-white">
+              525 Reviews
+            </span> 
           </article>
 
-          <h2 className="text-[48px] font-inter mt-4 leading-[120%] font-[700]">
+          <h2 className="text-[48px] font-inter mt-4 leading-[120%] font-[700] text-white">
             What our
             <br />
             clients say
@@ -64,7 +50,7 @@ export default function TestimonialsMarquee() {
           <div className="relative flex h-[900px] w-full flex-row items-center justify-center overflow-hidden">
             <Marquee pauseOnHover vertical className="[--duration:20s]">
               {testimonials.map((review, id) => (
-                <ReviewCard key={id} {...review}/>
+                <ReviewCard key={id} {...review} />
               ))}
             </Marquee>
             <Marquee reverse pauseOnHover vertical className="[--duration:20s]">
@@ -78,8 +64,3 @@ export default function TestimonialsMarquee() {
     </section>
   );
 }
-
-
-// className=" relative top-0 left-0 cursor-pointer p-6 rounded-2xl bg-gradient-to-br from-[#1a1a1a]/90 to-black/90 
-// border border-white/5 bg-yellow-300 shadow-[0_8px_30px_rgba(0,0,0,0.35)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.45)] transition-shadow duration-300"
-// >
