@@ -19,7 +19,7 @@ export default function SochealMedia() {
 
           <div className="flex flex-col -space-y-1">
             <h2 className="text-sm font-vk">Telegram</h2>
-            <p className="font-medium font-vk">t.me/CLAMO_uz</p>
+            <p className="font-medium font-vk">t.me/sherlegal.uz</p>
           </div>
         </div>
       </Link>
@@ -39,10 +39,11 @@ export default function SochealMedia() {
 
           <div className="flex flex-col -space-y-1">
             <h2 className="text-sm font-vk">Instagram</h2>
-            <p className="font-medium font-vk">@clamo.uz</p>
+            <p className="font-medium font-vk">Sherlegal_lf</p>
           </div>
         </div>
       </Link>
+
 
       {/* Facebook */}
       <Link
@@ -64,7 +65,7 @@ export default function SochealMedia() {
 
           <div className="flex flex-col -space-y-1">
             <h2 className="text-sm">Facebook</h2>
-            <p className="font-medium">@CLAMORasmiy</p>
+            <p className="font-medium">sherlegal</p>
           </div>
         </div>
       </Link>
@@ -89,7 +90,7 @@ export default function SochealMedia() {
 
           <div className="flex flex-col -space-y-1">
             <h2 className="text-sm font-vk">LinkedIn</h2>
-            <p className="font-medium font-vk">@clamo.uz</p>
+            <p className="font-medium font-vk">sherlegal_lf</p>
           </div>
         </div>
       </Link>

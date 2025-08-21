@@ -31,7 +31,7 @@ export default function ContactPage() {
           key={id}
           className="md:absolute top-[55%] left-[100px] mt-7 md:transform -translate-y-1/2 z-10 w-full sm:w-[310px] bg-white bg-opacity-90 rounded-xl shadow-lg p-6 space-y-4 text-gray-800"
         >
-          <h2 className="text-2xl font-semibold font-vk">Contact Info</h2>
+          <h2 className="text-2xl font-semibold font-vk">Contact information</h2>
 
           {/* PHONE */}
           <div className="group flex items-center gap-3">

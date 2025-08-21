@@ -411,12 +411,10 @@
 .flexshrink {
   border-radius: 28px;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(255, 255, 255, 0.03);
-  box-shadow: 0 10px 48px 0 rgba(16, 16, 16, 0.1);
-  backdrop-filter: blur(30px);
-  width: 547px;
   height: 604px;
   flex-shrink: 0;
+  position: absolute;
+  z-index: 10;
 }
 
 .bg-reviews {
