@@ -5,14 +5,9 @@ import { useEffect, useState } from "react";
 import { Globe, Menu, X } from "lucide-react";
 import { ChevronRight } from "lucide-react";
 import { usePathname } from "next/navigation";
-import EngFlag from "../../../public/icons/engflag.svg"
-import Ruflag from "../../../public/icons/ruflag.svg"
-import UzbFlag from "../../../public/icons/engflag.svg"
-import Image from "next/image";
 import MenyuLanguage from "./_components/MenyuLanguage";
 
 export default function Navbar() {
-  const [langOpen, setLangOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
@@ -40,7 +35,7 @@ export default function Navbar() {
   }, [isMenuOpen]);
 
   //sahifani tekshirish agar contacts yoki services bo'lsa fon qora
-  const forceBlack = pathname === "/contacts" || pathname === "/services";
+  const forceBlack = pathname === "/contacts" || pathname === "/services" || pathname === "/news";
 
   return (
     <div>
