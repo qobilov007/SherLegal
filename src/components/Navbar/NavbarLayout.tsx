@@ -3,13 +3,19 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Globe, Menu, X } from "lucide-react";
-import { ChevronRight } from 'lucide-react';
-
+import { ChevronRight } from "lucide-react";
+import { usePathname } from "next/navigation";
+import EngFlag from "../../../public/icons/engflag.svg"
+import Ruflag from "../../../public/icons/ruflag.svg"
+import UzbFlag from "../../../public/icons/engflag.svg"
+import Image from "next/image";
+import MenyuLanguage from "./_components/MenyuLanguage";
 
 export default function Navbar() {
   const [langOpen, setLangOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,16 +39,19 @@ export default function Navbar() {
     }
   }, [isMenuOpen]);
 
+  //sahifani tekshirish agar contacts yoki services bo'lsa fon qora
+  const forceBlack = pathname === "/contacts" || pathname === "/services";
+
   return (
     <div>
       <nav
         className={`fixed top-0 left-0 w-full z-[99] transition-colors duration-300 ${
-          scrolled ? "bg-black" : "bg-transparent"
+          scrolled || forceBlack ? "bg-black" : "bg-transparent"
         }`}
       >
         <div className="container flex items-center justify-between py-4">
           {/* Logo */}
-          <div className="flex items-center gap-2">
+          <Link href={"/"} className="flex items-center gap-2">
             <svg
               width="150"
               height="50"
@@ -72,7 +81,7 @@ export default function Navbar() {
                 />
               </defs>
             </svg>
-          </div>
+          </Link>
 
           {/* Menu */}
           <ul className="hidden smd:flex items-center gap-6 text-white font-inter">
@@ -96,50 +105,7 @@ export default function Navbar() {
           {/* Right side */}
           <div className="flex items-center gap-4">
             {/* Language Dropdown */}
-            <div className="relative hidden smd:block">
-              <button
-                onClick={() => setLangOpen(!langOpen)}
-                className={`flex items-center gap-1 px-3 py-2 rounded-full backdrop-blur-lg
-              ${
-                langOpen
-                  ? "border-red-500 text-white bg-black border"
-                  : "border-white/30 text-white bg-[#FFFFFF99]/20"
-              }
-              border-t border-r`}
-              >
-                <Globe size={16} />
-                <span>En</span>
-                <svg
-                  className={`w-4 h-4 ml-1 ${
-                    langOpen ? "text-red-500" : "text-white"
-                  }`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </button>
-
-              {langOpen && (
-                <ul className="absolute right-0 mt-2 w-24 bg-[#FFFFFF99]/20 text-black rounded-lg shadow-lg">
-                  <li className="px-3 py-2 hover:bg-gray-100 cursor-pointer">
-                    En
-                  </li>
-                  <li className="px-3 py-2 hover:bg-gray-100 cursor-pointer">
-                    Ru
-                  </li>
-                  <li className="px-3 py-2 hover:bg-gray-100 cursor-pointer">
-                    Uz
-                  </li>
-                </ul>
-              )}
-            </div>
+            <MenyuLanguage/>
 
             {/* Contact button */}
             <Link
@@ -198,8 +164,10 @@ export default function Navbar() {
           </ul>
           <div className="w-full p-4 backdrop-blur-md bg-gray-400/30 rounded-full border-t border-b">
             <article className="flex items-center justify-between ">
-              <p className="font-inter font-normal text-[16px] text-white">English</p>
-              <ChevronRight className="rotate-90 text-[16px] stroke-white"/>
+              <p className="font-inter font-normal text-[16px] text-white">
+                English
+              </p>
+              <ChevronRight className="rotate-90 text-[16px] stroke-white" />
             </article>
           </div>
         </div>
