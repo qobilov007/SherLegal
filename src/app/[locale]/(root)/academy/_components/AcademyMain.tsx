@@ -1,6 +1,6 @@
 import Image from "next/image";
-import BtnIcon from "../../../../public/images/Button Icon.svg";
-import SherLegalLogo from "../../../../public/icons/sherlegallogo.svg";
+import BtnIcon from "../../../../../../public/images/Button Icon.svg";
+import SherLegalLogo from "../../../../../../public/icons/sherlegallogo.svg";
 
 export default function AcademyMain() {
   return (

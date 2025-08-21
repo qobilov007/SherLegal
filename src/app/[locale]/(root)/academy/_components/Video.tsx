@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import button from "../../../../public/icons/buttonvideoAcademy.svg";
+import button from "../../../../../../public/icons/buttonvideoAcademy.svg";
 import { useState } from "react";
 import { X } from "lucide-react";
 

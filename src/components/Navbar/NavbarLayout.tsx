@@ -1,17 +1,19 @@
 "use client";
-import { useTranslations } from 'next-intl'; // BEGIN: Add missing import
+import { useTranslations } from "next-intl"; // BEGIN: Add missing import
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { Globe, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { ChevronRight } from "lucide-react";
 import { usePathname } from "next/navigation";
 import MenyuLanguage from "./_components/MenyuLanguage";
+import { useLocale } from "next-intl";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
-  const t = useTranslations('Navbarist');
+  const locale = useLocale();
+  const t = useTranslations("Navbarist");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,7 +38,10 @@ export default function Navbar() {
   }, [isMenuOpen]);
 
   //sahifani tekshirish agar contacts yoki services bo'lsa fon qora
-  const forceBlack = pathname === "/contacts" || pathname === "/services" || pathname === "/news";
+  const forceBlack =
+    pathname === `/${locale}/contacts` ||
+    pathname === `/${locale}/services` ||
+    pathname === `/${locale}/news`;
 
   return (
     <div>
@@ -47,7 +52,7 @@ export default function Navbar() {
       >
         <div className="container flex items-center justify-between py-4">
           {/* Logo */}
-          <Link href={"/"} className="flex items-center gap-2">
+          <Link href={`/${locale}`} className="flex items-center gap-2">
             <svg
               width="150"
               height="50"
@@ -82,30 +87,30 @@ export default function Navbar() {
           {/* Menu */}
           <ul className="hidden smd:flex items-center gap-6 text-white font-inter">
             <li>
-              <Link href="/about">{t("about")}</Link>
+              <Link href={`/${locale}/about`}>{t("about")}</Link>
             </li>
             <li>
-              <Link href="/services">{t("services")}</Link>
+              <Link href={`/${locale}/services`}>{t("services")}</Link>
             </li>
             <li>
-              <Link href="/team">{t("ourteam")}</Link>
+              <Link href={`/${locale}/team`}>{t("ourteam")}</Link>
             </li>
             <li>
-              <Link href="/academy">{t("academy")}</Link>
+              <Link href={`/${locale}/academy`}>{t("academy")}</Link>
             </li>
             <li>
-              <Link href="/contacts">{t("contact")}</Link>
+              <Link href={`/${locale}/contacts`}>{t("contact")}</Link>
             </li>
           </ul>
 
           {/* Right side */}
           <div className="flex items-center gap-4">
             {/* Language Dropdown */}
-            <MenyuLanguage/>
+            <MenyuLanguage />
 
             {/* Contact button */}
             <Link
-              href="/contacts"
+              href={`${locale}/contacts`}
               className="px-5 py-2 rounded-full border-y backdrop-blur-sm border-[white]/40 text-white hover:bg-white hover:text-black transition"
             >
               Contact
@@ -143,19 +148,19 @@ export default function Navbar() {
         <div className="container px-5">
           <ul className="pt-[120px] flex flex-col gap-4 mb-14">
             <li className="text-white">
-              <Link href="/about">About us</Link>
+              <Link href={`${locale}/about`}>{t("about")}</Link>
             </li>
             <li className="text-white">
-              <Link href="/services">Services</Link>
+              <Link href={`${locale}/services`}>{t("services")}</Link>
             </li>
             <li className="text-white">
-              <Link href="/team">Our team</Link>
+              <Link href={`${locale}/team`}>{t("ourteam")}</Link>
             </li>
             <li className="text-white">
-              <Link href="/academy">Academy</Link>
+              <Link href={`${locale}/academy`}>{t("academy")}</Link>
             </li>
             <li className="text-white">
-              <Link href="/contacts">Contact</Link>
+              <Link href={`${locale}/contacts`}>{t("contact")}</Link>
             </li>
           </ul>
           <div className="w-full p-4 backdrop-blur-md bg-gray-400/30 rounded-full border-t border-b">

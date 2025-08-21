@@ -1,5 +1,5 @@
 import Image from "next/image";
-import BtnIcon from "../../../../public/images/Button Icon.svg";
+import BtnIcon from "../../../../../../public/images/Button Icon.svg";
 
 export default function GetinTouch() {
   return (
