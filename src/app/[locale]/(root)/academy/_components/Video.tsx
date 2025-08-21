@@ -23,12 +23,12 @@ export default function Video() {
         />
 
         {open && (
-          <div className="fixed inset-0 bg-black/90 z-[999] flex items-center justify-center">
+          <div className="fixed inset-0 bg-black/60 z-[111] flex items-center justify-center">
             <button
               onClick={() => setOpen(false)}
-              className="absolute top-[40px] right-[250px] border text-white rounded-full p-2"
+              className="absolute md:top-[40px] top-[100px] right-[10px] border text-white rounded-full p-2"
             >
-              <X className="w-6 h-6" />
+              <X className="md:w-6 md:h-6 w-4 h-4" />
             </button>
 
             <div className="relative w-[90%] md:w-[70%] lg:w-[60%] aspect-video bg-black rounded-xl overflow-hidden shadow-xl">

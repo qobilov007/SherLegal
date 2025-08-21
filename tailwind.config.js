@@ -23,7 +23,8 @@ module.exports = {
   			}
   		},
 		screens:{
-			smd: "850px"
+			smd: "850px",
+            nx: "450px"
 		},
   		fontFamily: {
   			inter: [

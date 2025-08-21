@@ -36,4 +36,5 @@ export type LessonCard = {
     description: string;
     views: number;
     date: string;
+    slug: string;
   }

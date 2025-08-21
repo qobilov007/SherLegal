@@ -308,198 +308,199 @@ export const getNews:NewsCard[] = [
         title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
         description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
         date: "7 July, 2023",
-        views: 320
+        views: 320,
+        slug: "president-xalq"
     },
-    {
-        id:2,
-        img:"/images/president.png",
-        title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
-        description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
-        date: "7 July, 2023",
-        views: 320
-    },
-    {
-        id:3,
-        img:"/images/president.png",
-        title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
-        description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
-        date: "7 July, 2023",
-        views: 320
-    },
-    {
-        id:4,
-        img:"/images/president.png",
-        title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
-        description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
-        date: "7 July, 2023",
-        views: 320
-    },
-    {
-        id:5,
-        img:"/images/president.png",
-        title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
-        description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
-        date: "7 July, 2023",
-        views: 320
-    },
-    {
-        id:6,
-        img:"/images/president.png",
-        title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
-        description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
-        date: "7 July, 2023",
-        views: 320
-    },
-    {
-        id:7,
-        img:"/images/president.png",
-        title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
-        description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
-        date: "7 July, 2023",
-        views: 320
-    },
-    {
-        id:8,
-        img:"/images/president.png",
-        title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
-        description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
-        date: "7 July, 2023",
-        views: 320
-    },
-    {
-        id:9,
-        img:"/images/president.png",
-        title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
-        description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
-        date: "7 July, 2023",
-        views: 320
-    },
-    {
-        id:10,
-        img:"/images/president.png",
-        title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
-        description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
-        date: "7 July, 2023",
-        views: 320
-    },
-    {
-        id:11,
-        img:"/images/president.png",
-        title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
-        description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
-        date: "7 July, 2023",
-        views: 320
-    },
-    {
-        id:12,
-        img:"/images/president.png",
-        title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
-        description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
-        date: "7 July, 2023",
-        views: 320
-    },
-    {
-        id:13,
-        img:"/images/president.png",
-        title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
-        description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
-        date: "7 July, 2023",
-        views: 320
-    },
-    {
-        id:14,
-        img:"/images/president.png",
-        title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
-        description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
-        date: "7 July, 2023",
-        views: 320
-    },
-    {
-        id:15,
-        img:"/images/president.png",
-        title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
-        description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
-        date: "7 July, 2023",
-        views: 320
-    },
-    {
-        id:16,
-        img:"/images/president.png",
-        title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
-        description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
-        date: "7 July, 2023",
-        views: 320
-    },
-    {
-        id:17,
-        img:"/images/president.png",
-        title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
-        description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
-        date: "7 July, 2023",
-        views: 320
-    },
-    {
-        id:18,
-        img:"/images/president.png",
-        title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
-        description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
-        date: "7 July, 2023",
-        views: 320
-    },
-    {
-        id:19,
-        img:"/images/president.png",
-        title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
-        description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
-        date: "7 July, 2023",
-        views: 320
-    },
-    {
-        id:20,
-        img:"/images/president.png",
-        title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
-        description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
-        date: "7 July, 2023",
-        views: 320
-    },
-    {
-        id:21,
-        img:"/images/president.png",
-        title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
-        description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
-        date: "7 July, 2023",
-        views: 320
-    },
-    {
-        id:22,
-        img:"/images/president.png",
-        title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
-        description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
-        date: "7 July, 2023",
-        views: 320
-    },
-    {
-        id:23,
-        img:"/images/president.png",
-        title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
-        description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
-        date: "7 July, 2023",
-        views: 320
-    },
-    {
-        id:24,
-        img:"/images/president.png",
-        title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
-        description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
-        date: "7 July, 2023",
-        views: 320
-    },
-    {
-        id:25,
-        img:"/images/president.png",
-        title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
-        description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
-        date: "7 July, 2023",
-        views: 320
-    },
+    // {
+    //     id:2,
+    //     img:"/images/president.png",
+    //     title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
+    //     description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
+    //     date: "7 July, 2023",
+    //     views: 320
+    // },
+    // {
+    //     id:3,
+    //     img:"/images/president.png",
+    //     title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
+    //     description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
+    //     date: "7 July, 2023",
+    //     views: 320
+    // },
+    // {
+    //     id:4,
+    //     img:"/images/president.png",
+    //     title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
+    //     description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
+    //     date: "7 July, 2023",
+    //     views: 320
+    // },
+    // {
+    //     id:5,
+    //     img:"/images/president.png",
+    //     title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
+    //     description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
+    //     date: "7 July, 2023",
+    //     views: 320
+    // },
+    // {
+    //     id:6,
+    //     img:"/images/president.png",
+    //     title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
+    //     description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
+    //     date: "7 July, 2023",
+    //     views: 320
+    // },
+    // {
+    //     id:7,
+    //     img:"/images/president.png",
+    //     title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
+    //     description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
+    //     date: "7 July, 2023",
+    //     views: 320
+    // },
+    // {
+    //     id:8,
+    //     img:"/images/president.png",
+    //     title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
+    //     description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
+    //     date: "7 July, 2023",
+    //     views: 320
+    // },
+    // {
+    //     id:9,
+    //     img:"/images/president.png",
+    //     title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
+    //     description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
+    //     date: "7 July, 2023",
+    //     views: 320
+    // },
+    // {
+    //     id:10,
+    //     img:"/images/president.png",
+    //     title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
+    //     description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
+    //     date: "7 July, 2023",
+    //     views: 320
+    // },
+    // {
+    //     id:11,
+    //     img:"/images/president.png",
+    //     title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
+    //     description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
+    //     date: "7 July, 2023",
+    //     views: 320
+    // },
+    // {
+    //     id:12,
+    //     img:"/images/president.png",
+    //     title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
+    //     description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
+    //     date: "7 July, 2023",
+    //     views: 320
+    // },
+    // {
+    //     id:13,
+    //     img:"/images/president.png",
+    //     title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
+    //     description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
+    //     date: "7 July, 2023",
+    //     views: 320
+    // },
+    // {
+    //     id:14,
+    //     img:"/images/president.png",
+    //     title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
+    //     description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
+    //     date: "7 July, 2023",
+    //     views: 320
+    // },
+    // {
+    //     id:15,
+    //     img:"/images/president.png",
+    //     title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
+    //     description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
+    //     date: "7 July, 2023",
+    //     views: 320
+    // },
+    // {
+    //     id:16,
+    //     img:"/images/president.png",
+    //     title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
+    //     description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
+    //     date: "7 July, 2023",
+    //     views: 320
+    // },
+    // {
+    //     id:17,
+    //     img:"/images/president.png",
+    //     title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
+    //     description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
+    //     date: "7 July, 2023",
+    //     views: 320
+    // },
+    // {
+    //     id:18,
+    //     img:"/images/president.png",
+    //     title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
+    //     description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
+    //     date: "7 July, 2023",
+    //     views: 320
+    // },
+    // {
+    //     id:19,
+    //     img:"/images/president.png",
+    //     title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
+    //     description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
+    //     date: "7 July, 2023",
+    //     views: 320
+    // },
+    // {
+    //     id:20,
+    //     img:"/images/president.png",
+    //     title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
+    //     description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
+    //     date: "7 July, 2023",
+    //     views: 320
+    // },
+    // {
+    //     id:21,
+    //     img:"/images/president.png",
+    //     title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
+    //     description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
+    //     date: "7 July, 2023",
+    //     views: 320
+    // },
+    // {
+    //     id:22,
+    //     img:"/images/president.png",
+    //     title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
+    //     description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
+    //     date: "7 July, 2023",
+    //     views: 320
+    // },
+    // {
+    //     id:23,
+    //     img:"/images/president.png",
+    //     title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
+    //     description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
+    //     date: "7 July, 2023",
+    //     views: 320
+    // },
+    // {
+    //     id:24,
+    //     img:"/images/president.png",
+    //     title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
+    //     description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
+    //     date: "7 July, 2023",
+    //     views: 320
+    // },
+    // {
+    //     id:25,
+    //     img:"/images/president.png",
+    //     title: "Xalq saroyida Shavkat Mirziyoyevning tantanali yig‘ilishi bo‘lib o‘tdi",
+    //     description: "Prezident Shavkat Mirziyoyevning tantanali yig‘ilishi mamlakatimiz siyosiy hayotida muhim voqea bo‘ldi. Ushbu tadbirda davlat rahbari O‘zbekistonning kelajagi uchun strategik yo‘nalishlarni belgilab berdi.",
+    //     date: "7 July, 2023",
+    //     views: 320
+    // },
 ]
