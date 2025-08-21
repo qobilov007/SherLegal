@@ -158,7 +158,7 @@ export default function Contact() {
             <div className="flex justify-end">
               <button
                 type="submit"
-                className="group flex items-center gap-1 text-[14px] font-medium text-white px-6 py-[10px] rounded-lg bg-[#0653C9] hover:bg-[#0761e9] transition-all duration-300"
+                className="group flex items-center gap-1 text-[14px] font-medium text-white px-6 py-[10px] rounded-lg bg-[#ce3325] hover:bg-[#d81717] transition-all duration-300"
               >
                 Yuborish
               </button>
