@@ -3,7 +3,7 @@ import News from "./_components/News";
 
 export default function page() {
   return (
-    <div className="">
+    <div>
         <News/>
         <GetinTouch/>
     </div>
