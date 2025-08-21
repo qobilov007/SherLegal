@@ -1,6 +1,6 @@
-import Button from "../../components/btn/Button";
+import Button from "../../../../components/btn/Button";
 import { ArrowRight } from "lucide-react";
-import OurService from "../../components/OurService";
+import OurService from "../../../../components/OurService";
 import OurTeam from "../team/page";
 import Map from "../contacts/_components/Map";
 import Socialmedia from "../contacts/_components/SocialMedia";

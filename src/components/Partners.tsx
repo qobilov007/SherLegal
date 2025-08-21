@@ -15,7 +15,7 @@ export default function PartnersSection() {
         </p>
       </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 space-x-[1px] space-y-[1px]">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4">
         {partners.map((partner, idx) => (
           <div
             key={idx}
@@ -31,17 +31,17 @@ export default function PartnersSection() {
             />
 
             {/* 🔴 Corner lines (doimiy) */}
-            <span className="absolute top-0 left-0 w-4 h-[2px] bg-red-400"></span>
-            <span className="absolute top-0 left-0 h-4 w-[2px] bg-red-400"></span>
+            <span className="absolute top-0 left-0 w-4 h-[0.5px] bg-red-400"></span>
+            <span className="absolute top-0 left-0 h-4 w-[0.5px] bg-red-400"></span>
 
-            <span className="absolute top-0 right-0 w-4 h-[2px] bg-red-400"></span>
-            <span className="absolute top-0 right-0 h-4 w-[2px] bg-red-400"></span>
+            <span className="absolute top-0 right-0 w-4 h-[0.5px] bg-red-400"></span>
+            <span className="absolute top-0 right-0 h-4 w-[0.5px] bg-red-400"></span>
 
-            <span className="absolute bottom-0 left-0 w-4 h-[2px] bg-red-400"></span>
-            <span className="absolute bottom-0 left-0 h-4 w-[2px] bg-red-400"></span>
+            <span className="absolute bottom-0 left-0 w-4 h-[0.5px] bg-red-400"></span>
+            <span className="absolute bottom-0 left-0 h-4 w-[0.5px] bg-red-400"></span>
 
-            <span className="absolute bottom-0 right-0 w-4 h-[2px] bg-red-400"></span>
-            <span className="absolute bottom-0 right-0 h-4 w-[2px] bg-red-400"></span>
+            <span className="absolute bottom-0 right-0 w-4 h-[0.5px] bg-red-400"></span>
+            <span className="absolute bottom-0 right-0 h-4 w-[0.5px] bg-red-400"></span>
           </div>
         ))}
       </div>

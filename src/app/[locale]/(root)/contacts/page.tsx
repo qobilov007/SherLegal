@@ -1,6 +1,6 @@
 import Map from "./_components/Map";
 import SochealMedia from "./_components/SocialMedia";
-import Forma from "../../components/Forma"
+import Forma from "../../../../components/Forma"
 
 export async function generateMetadata() {
   return {

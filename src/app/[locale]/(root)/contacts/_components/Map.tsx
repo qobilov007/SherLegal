@@ -5,7 +5,7 @@ import {
   FaGlobe,
   FaMapMarkerAlt,
 } from "react-icons/fa";
-import { getContactInfo } from "../../../../constants/page";
+import { getContactInfo } from "../../../../../../constants/page";
 import Link from "next/link";
 
 export default function ContactPage() {

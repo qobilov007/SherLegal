@@ -1,12 +1,12 @@
 "use client"
 
 import Image, { StaticImageData } from "next/image";
-import why1 from "../../../public/icons/why1.svg"
-import why2 from "../../../public/icons/why2.svg"
-import why3 from "../../../public/icons/why3.svg"
-import why4 from "../../../public/icons/why4.svg"
-import why5 from "../../../public/icons/why5.svg"
-import why6 from "../../../public/icons/why6.svg"
+import why1 from "../../public/icons/why1.svg"
+import why2 from "../../public/icons/why2.svg"
+import why3 from "../../public/icons/why3.svg"
+import why4 from "../../public/icons/why4.svg"
+import why5 from "../../public/icons/why5.svg"
+import why6 from "../../public/icons/why6.svg"
 
 export default function WhyChoose() {
   interface WhyChooseType {

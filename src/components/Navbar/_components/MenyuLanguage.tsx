@@ -13,16 +13,19 @@ import { useState } from "react";
 const LANGUAGES = [
   {
     code: "Uz",
+    labelCode: "uz",
     label: "O‘zbekcha",
     flag: "/icons/uzbflag.svg",
   },
   {
     code: "En",
+    labelCode: "en",
     label: "English",
     flag: "/icons/EngFlag.svg",
   },
   {
     code: "Ru",
+    labelCode: "ru",
     label: "Русский",
     flag: "/icons/RuFlag.svg",
   },
@@ -35,10 +38,10 @@ export default function MenyuLanguage() {
 
   // hozirgi path-dan tilni aniqlash
   const currentLangCode = pathname?.split("/")[1]; // masalan: /uz/about => uz
-  const current = LANGUAGES.find((l) => l.code === currentLangCode);
+  const current = LANGUAGES.find((l) => l.labelCode === currentLangCode);
 
   const handleLangChange = (code: string) => {
-    const newPath = `/${code}${pathname.slice(3)}`; // eski til prefiksini olib tashlash
+    const newPath = `/${code.toLowerCase()}${pathname.slice(3)}`; // eski til prefiksini olib tashlash
     router.push(newPath);
     setOpen(false);
   };

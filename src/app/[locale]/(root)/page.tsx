@@ -1,13 +1,13 @@
-import Comments from "../components/Reviews/Reviews";
-import Faq from "../components/Faq";
-import News from "../components/News";
-import OurService from "../components/OurService";
-import Partners from "../components/Partners";
-import Button from "../components/btn/Button";
+import Comments from "../../../components/Reviews/Reviews";
+import Faq from "../../../components/Faq";
+import News from "../../../components/News";
+import OurService from "../../../components/OurService";
+import Partners from "../../../components/Partners";
+import Button from "../../../components/btn/Button";
 import { ArrowRight } from "lucide-react";
-import WhyChoose from "./_components/WhyChoose";
+import WhyChoose from "../../../components/WhyChoose";
 import OurTeam from "./team/page";
-import Ai from "../components/Ai"
+import Ai from "../../../components/Ai"
 
 type Stat = {
   number: string;

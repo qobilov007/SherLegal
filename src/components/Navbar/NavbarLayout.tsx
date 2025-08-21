@@ -1,5 +1,5 @@
 "use client";
-
+import { useTranslations } from 'next-intl'; // BEGIN: Add missing import
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Globe, Menu, X } from "lucide-react";
@@ -11,6 +11,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
+  const t = useTranslations('Navbarist');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -81,19 +82,19 @@ export default function Navbar() {
           {/* Menu */}
           <ul className="hidden smd:flex items-center gap-6 text-white font-inter">
             <li>
-              <Link href="/about">About us</Link>
+              <Link href="/about">{t("about")}</Link>
             </li>
             <li>
-              <Link href="/services">Services</Link>
+              <Link href="/services">{t("services")}</Link>
             </li>
             <li>
-              <Link href="/team">Our team</Link>
+              <Link href="/team">{t("ourteam")}</Link>
             </li>
             <li>
-              <Link href="/academy">Academy</Link>
+              <Link href="/academy">{t("academy")}</Link>
             </li>
             <li>
-              <Link href="/contacts">Contact</Link>
+              <Link href="/contacts">{t("contact")}</Link>
             </li>
           </ul>
 

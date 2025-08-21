@@ -1,6 +1,6 @@
 import Button from "@/src/components/btn/Button";
 import { ArrowRight } from "lucide-react";
-import cardImg from "../../../public/icons/team1.png";
+import cardImg from "../../../../../public/icons/team1.png";
 import Teamm from "./teamm"
 import { TeamsType } from "@/src/app.type";
 
