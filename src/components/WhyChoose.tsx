@@ -57,10 +57,10 @@ export default function WhyChoose() {
   return (
     <div className="container">
       <article className="mb-12">
-        <h4 className="font-inter text-center text-[#0795E2] font-bold text-[40px] leading-[48px] mb-4">
+        <h4 className="font-inter text-center text-[#0795E2] font-bold lg:text-[40px] md:text-[32px] text-[28px] leading-[48px] mb-4">
           Why choose us
         </h4>
-        <p className="font-inter text-[20px] font-normal leading-[26px] text-center">
+        <p className="font-inter md:text-[20px] text-[16px] font-normal leading-[26px] text-center">
           Solving Problems for Your Business in Tashkent and Across Uzbekistan
         </p>
       </article>

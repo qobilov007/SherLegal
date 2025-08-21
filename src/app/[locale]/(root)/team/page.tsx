@@ -54,7 +54,7 @@ export default function   OurTeam() {
   ];
 
   return (
-    <div className="bg-black pt-[100px]">
+    <div className="bg-black pt-[100px] pb-[100px]">
       <div className="container">
         <p className="font-inter font-normal leading-[26px] text-white mb-6">
           Meet Our Team of Lawyers and Attorneys

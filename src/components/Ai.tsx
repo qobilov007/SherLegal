@@ -212,7 +212,7 @@ export default function Hero() {
               <input
                 type="text"
                 placeholder="Ask for anything or use a command"
-                className="inputstyle w-[520px] pl-12 pr-4 py-2 bg-gray-800 text-sm text-gray-200 placeholder-gray-400
+                className="inputstyle w-[520px] max-sm:w-[250px] max-md:w-[450px] pl-12 pr-4 py-2 bg-gray-800 text-sm text-gray-200 placeholder-gray-400
     border-0 border-b border-gray-600 focus:border-blue-500 focus:ring-0 outline-none transition"
               />
 
@@ -220,7 +220,8 @@ export default function Hero() {
               <div className="absolute top-0 left-0 w-full h-0.5 bg-red-500 scale-x-0 inputstyle-focus:scale-x-100 transition-transform duration-200 origin-left"></div>
             </div>
 
-            <div className="cursor-pointer flex gap-[8px] w-[60px] py-[16px] px-[16px] items-center justify-center boxshadoww">
+            <div onClick={() => setOpen(true)}
+              className="cursor-pointer flex gap-[8px] w-[60px] py-[16px] px-[16px] items-center justify-center boxshadoww">
               <svg
                 width="20"
                 height="20"
@@ -245,20 +246,57 @@ export default function Hero() {
         <div className="fixed inset-0 flex items-center justify-center bg-black/60 z-[100]">
           <div className="relative">
             {/* Close */}
-            <button
-              onClick={() => setOpen(false)}
-              className="absolute -top-5 right-0 text-white text-2xl w-10"
-            >
-              ✕
-            </button>
 
-            {/* Shu yerga o'sha cardni qayta qo'ydim */}
             <div
               className="mt-10 w-[98%] max-w-[680px] mx-auto rounded-[48px] p-[12px] shadow-xl
                 [background:linear-gradient(40deg,rgba(122,167,237,1),rgba(215,211,142,1),rgba(248,97,97,1))]"
             >
               <div className="rounded-[36px] bg-[#000] text-white p-6 text-center bg-cardAi">
-                <p className="text-gray-400">Sherlegal AI </p>
+                <div className="flex mb-4 items-center justify-beetwen">
+                  <article className="inline-flex left-[1/3] relative items-center gap-2 px-4 py-2 rounded-full border bg-white/10">
+                    <svg
+                      width="20"
+                      height="27"
+                      viewBox="0 0 20 27"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clipPath="url(#clip0_239_66999)">
+                        <path
+                          d="M19.2081 0.5H0.89824C0.89824 0.5 0.789857 0.504975 0.736513 0.516585C0.633211 0.538145 0.494345 0.582095 0.351246 0.672482C0.351246 0.672482 0.347859 0.67497 0.345319 0.675799C0.126013 0.815111 -0.000151009 1.05974 -0.000151009 1.31597V17.6387C-0.00184449 17.7797 0.00323595 18.0077 0.0438795 18.2831C0.250484 19.6894 1.21831 21.1953 6.31568 24.4252C7.15057 24.9543 8.26742 25.6376 9.61966 26.3972C9.86183 26.5332 10.1607 26.534 10.4037 26.3997C11.4037 25.8474 12.2225 25.3714 12.8068 25.0264C18.6434 21.5727 19.6798 20.0925 19.9338 18.691C19.9922 18.3693 19.9998 18.1048 19.9998 17.9605V1.27534C19.9998 0.847452 19.6451 0.5 19.2081 0.5Z"
+                          fill="white"
+                        />
+                        <path
+                          d="M5.64691 9.15324H9.26673V12.7289H10.5817V9.15324H14.3751V5.93164H13.2134V7.54203H12.475V5.93164H11.4039V7.53125H10.5707V5.93164H9.43015V7.53125H8.60796V5.93164H7.4674V7.53125H6.63421V5.93164H5.64691V9.15324Z"
+                          fill="#515D6F"
+                        />
+                        <path
+                          d="M5.64693 10.1408V14.4794H7.62068L5.63593 16.4231V17.4107L10.011 19.988L14.3751 17.4862V16.4339L12.3853 14.4852H14.3751V9.96997H11.5682V12.7297C11.5682 12.7297 10.5157 13.7613 10.5157 13.7604C10.5157 13.7173 10.5157 15.6503 10.5157 15.6503L12.5555 17.3685H7.44541L9.39714 15.7042V13.7389L8.35565 12.7189V9.96997H5.64693V10.1408Z"
+                          fill="#515D6F"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_239_66999">
+                          <rect
+                            width="20"
+                            height="26"
+                            fill="white"
+                            transform="translate(0 0.5)"
+                          />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <p className="font-inter font-semibold text-2xl leading-[28px]">Sherlegal AI</p>
+                  </article>
+                  <article className="flex p-[12px] items-center justify-center gap-[8px] absolute right-[20px] top-[20px] rounded-[1000px] bg-[rgba(8,8,8,0.40)]">
+                    <button
+                      onClick={() => setOpen(false)}
+                      className="text-white text-2xl w-10"
+                    >
+                      ✕
+                    </button>
+                  </article>
+                </div>
                 <h2 className="mt-2 text-xl md:text-2xl font-[700] font-inter leading-snug text-[40px]">
                   Optimized for thought built for <br /> action
                 </h2>
