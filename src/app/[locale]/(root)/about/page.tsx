@@ -18,14 +18,14 @@ export default function Home() {
     { number: "12+", label: "Happy clients" },
   ];
   return (
-    <div>
+    <div className="">
       <div className="home-prev1">
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/40"></div>
         <div  className="container relative top-0 left-0 overly">
-          <div className="absolute top-64 -left-40 z-[2] w-[800px] h-[100px] blur-[150px]  bg-red-500 md:rotate-[130deg] rotate-[90deg]"></div>
+          <div className="absolute top-64 -left-40 z-[2] w-[800px] h-[100px] blur-[150px]  bg-red-500/50 md:bg-red-500 md:rotate-[130deg] rotate-[90deg]"></div>
         </div>
-        <div className="container flex flex-col justify-center gap-14">
+        <div className="container h-screen flex flex-col justify-center gap-14">
           <div className="pt-[130px]">
             <div className="inline-flex lg:max-w-[50%] flex-col justify-center text-white relative z-10">
               <article className="w-[150px] flex items-center gap-2 px-6 py-3 md:py-4 rounded-full glass2 border">

@@ -5,7 +5,7 @@ import SherLegalLogo from "../../../../../../public/icons/sherlegallogo.svg";
 export default function AcademyMain() {
   return (
     <div className="bg-academy bg-no-repeat bg-center bg-cover w-full xl:h-screen overflow-hidden">
-      <div className="pt-[177px] container flex max-md:flex-col max-md:items-center xl:justify-between">
+      <div className="pt-[200px] container flex max-md:flex-col max-md:items-center xl:justify-between">
         <div className="max-lg:mb-10">
           <article className="w-[150px] flex items-center gap-2 px-6 py-3 md:py-4 rounded-full glass2 border">
             <svg

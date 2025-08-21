@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function FooterPage() {
   return (
-    <div className=" w-full footer-overlay md:pt-[100px] pt-[50px]">
+    <div className=" w-full footer-overlay">
       <div className="container">
         <article className="relative z-[11] max-w-[730px] m-auto md:mb-[129px] sm:mb-10 mb-6">
           <h3 className="font-inter font-bold md:text-[64px] text-[32px] md:leading-[76px] leading-[100%] text-white text-center mb-6">

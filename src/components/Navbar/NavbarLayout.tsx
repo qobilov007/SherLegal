@@ -58,7 +58,7 @@ export default function Navbar() {
               height="50"
               viewBox="0 0 150 50"
               fill="none"
-              xmlns="http://www.w3.org/2000/svg"
+              className="md:w-[140px] w-[100px]"
             >
               <rect width="150" height="50" fill="url(#pattern0_2001_297)" />
               <defs>
@@ -87,19 +87,44 @@ export default function Navbar() {
           {/* Menu */}
           <ul className="hidden smd:flex items-center gap-6 text-white font-inter">
             <li>
-              <Link href={`/${locale}/about`}>{t("about")}</Link>
+              <Link
+                className="font-inter font-medium text-[14px]"
+                href={`/${locale}/about`}
+              >
+                {t("about")}
+              </Link>
             </li>
             <li>
-              <Link href={`/${locale}/services`}>{t("services")}</Link>
+              <Link
+                className="font-inter font-medium text-[14px]"
+                href={`/${locale}/services`}
+              >
+                {t("services")}
+              </Link>
             </li>
             <li>
-              <Link href={`/${locale}/team`}>{t("ourteam")}</Link>
+              <Link
+                className="font-inter font-medium text-[14px]"
+                href={`/${locale}/team`}
+              >
+                {t("ourteam")}
+              </Link>
             </li>
             <li>
-              <Link href={`/${locale}/academy`}>{t("academy")}</Link>
+              <Link
+                className="font-inter font-medium text-[14px]"
+                href={`/${locale}/academy`}
+              >
+                {t("academy")}
+              </Link>
             </li>
             <li>
-              <Link href={`/${locale}/contacts`}>{t("contact")}</Link>
+              <Link
+                className="font-inter font-medium text-[14px]"
+                href={`/${locale}/contacts`}
+              >
+                {t("contact")}
+              </Link>
             </li>
           </ul>
 
@@ -110,7 +135,7 @@ export default function Navbar() {
 
             {/* Contact button */}
             <Link
-              href={`${locale}/contacts`}
+              href={`/${locale}/contacts`}
               className="px-5 py-2 rounded-full border-y backdrop-blur-sm border-[white]/40 text-white hover:bg-white hover:text-black transition"
             >
               Contact
@@ -146,21 +171,46 @@ export default function Navbar() {
     ${isMenuOpen ? "top-0 opacity-100" : "-top-[380px] opacity-0"}`}
       >
         <div className="container px-5">
-          <ul className="pt-[120px] flex flex-col gap-4 mb-14">
+          <ul className="flex flex-col gap-4 mb-14">
             <li className="text-white">
-              <Link href={`${locale}/about`}>{t("about")}</Link>
+              <Link
+                href={`/${locale}/about`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {t("about")}
+              </Link>
             </li>
             <li className="text-white">
-              <Link href={`${locale}/services`}>{t("services")}</Link>
+              <Link
+                href={`/${locale}/services`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {t("services")}
+              </Link>
             </li>
             <li className="text-white">
-              <Link href={`${locale}/team`}>{t("ourteam")}</Link>
+              <Link
+                href={`/${locale}/team`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {t("ourteam")}
+              </Link>
             </li>
             <li className="text-white">
-              <Link href={`${locale}/academy`}>{t("academy")}</Link>
+              <Link
+                href={`/${locale}/academy`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {t("academy")}
+              </Link>
             </li>
             <li className="text-white">
-              <Link href={`${locale}/contacts`}>{t("contact")}</Link>
+              <Link
+                href={`/${locale}/contacts`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {t("contact")}
+              </Link>
             </li>
           </ul>
           <div className="w-full p-4 backdrop-blur-md bg-gray-400/30 rounded-full border-t border-b">
