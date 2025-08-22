@@ -1,17 +1,40 @@
 {
-    "Navbarist": {
-        "about": "Biz haqimizda",
-        "services": "Xizmatlar",
-        "ourteam": "Bizning jamoa",
-        "academy": "Akademiya",
-        "contact": "Aloqa"
-    },
-    "HomePage":{
-        "homebadge":"Mukofotga sazovor bo'lgan yuridik firma",
-        "hometitle":"Toshkentdagi advokatlik byurosi -",
-        "homesher":"Sher",
-        "homelegal":"Legal",
-        "homedes":"Bizning yuridik firmamiz sizning huquqlaringizni himoya qilish va maqsadlaringizga erishish uchun yuridik tajribani shaxsiylashtirilgan yechimlar bilan birlashtiradi.",
-        "homebtn":"Aloqa qiling"
-    }
+  "Navbarist": {
+    "about": "Biz haqimizda",
+    "services": "Xizmatlar",
+    "ourteam": "Bizning jamoa",
+    "academy": "Akademiya",
+    "contact": "Aloqa"
+  },
+  "HomePage": {
+    "homebadge": "Mukofotga sazovor bo'lgan yuridik firma",
+    "hometitle": "Toshkentdagi advokatlik byurosi -",
+    "homesher": "Sher",
+    "homelegal": "Legal",
+    "homedes": "Bizning yuridik firmamiz sizning huquqlaringizni himoya qilish va maqsadlaringizga erishish uchun yuridik tajribani shaxsiylashtirilgan yechimlar bilan birlashtiradi.",
+    "homebtn": "Aloqa qiling"
+  },
+
+  "AcademyPage": {
+    "course": "Kurs",
+    "legalCourse": "Yuridik kurs muallifi",
+    "authorsTitle": "Sherzod Egamberdievdan huquqiy savodxonlikni oshirish bo‘yicha mualliflik kursi",
+    "buyacourse": "Kursni sotib olish",
+    "programTitle": "Kurs dasturi",
+    "programDescription": "Legal Course kursi huquqiy savodxonlikni rivojlantiruvchi umumiy dastur bo'lib, 12 ta video-ma'ruza (modul)ni o'z ichiga oladi."
+  },
+  "AboutPage": {
+    "title": "Biz haqimizda",
+    "subtitle": "Biz sizning huquqlaringizni himoya qilamiz",
+    "description1": "Sher Legal yuridik firmasi 2022-yilda iqtidorli va maqsadli yurist hamda bloger Sherzod Egamberdiev tomonidan tashkil etilgan.",
+    "description2": "Yuridik konsalting kompaniyasi va yuridik xizmatlarni o‘zida mujassam etgan noyob brend yaratish g‘oyasi uning talabalik yillarida paydo bo‘lgan.",
+    "description3": "Talabalik paytidayoq Sherzod har tomonlama yuridik yordam ko‘rsatadigan va sifatli yuridik himoyani ta’minlaydigan kompaniya tashkil etishni orzu qilgan. U eng murakkab huquqiy masalalarni hal qilish uchun konsalting va yurisprudensiyaning eng yaxshi amaliyotlarini birlashtirish zarurligini ko‘rgan."
+  },
+  "NewsPage": {
+    "title": "Yangiliklar",
+    "search": "Izlash"
+  },
+  "Common": {
+    "back": "Orqaga"
+  }
 }

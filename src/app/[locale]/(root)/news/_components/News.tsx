@@ -6,9 +6,10 @@ import { IoSearchSharp } from "react-icons/io5";
 import { CiCalendarDate } from "react-icons/ci";
 import { LuEye } from "react-icons/lu";
 import Link from "next/link";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 export default function News() {
+    const t = useTranslations("NewsPage")
   const locale = useLocale();
   const news = getNews;
   const itemsPerPage = 12;
@@ -22,13 +23,13 @@ export default function News() {
     <div className="container mt-[142px]">
       <div className="flex md:items-center justify-between md:pb-[32px] pb-6">
         <h1 className=" font-bold font-inter md:text-[40px] text-[30px] leading-[120%]">
-          News
+          {t("title")}
         </h1>
         <article className="flex items-center gap-2 bg-[#F3F3F3] rounded-full p-2.5">
           <IoSearchSharp className="text-gray-500 md:w-6 md:h-6 w-4 h-4" />
           <input
             type="text"
-            placeholder="Izlash"
+            placeholder={t("search")}
             className="bg-transparent outline-none text-sm md:w-full w-1/2 placeholder:text-gray-500 text-[14px] font-medium font-inter leading-[140%]"
           />
         </article>

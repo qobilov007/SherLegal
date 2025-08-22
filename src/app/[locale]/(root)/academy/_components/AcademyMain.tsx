@@ -1,8 +1,12 @@
 import Image from "next/image";
 import BtnIcon from "../../../../../../public/images/Button Icon.svg";
 import SherLegalLogo from "../../../../../../public/icons/sherlegallogo.svg";
+import { useTranslations } from "next-intl";
 
 export default function AcademyMain() {
+  const t = useTranslations("AcademyPage");
+  const sh = useTranslations("HomePage");
+
   return (
     <div className="bg-academy bg-no-repeat bg-center bg-cover w-full xl:h-screen overflow-hidden">
       <div className="pt-[200px] container flex max-md:flex-col max-md:items-center xl:justify-between">
@@ -21,25 +25,24 @@ export default function AcademyMain() {
               />
             </svg>
             <span className="relative z-[4] font-inter text-white font-medium">
-              Course
+              {t("course")}
             </span>
           </article>
           <h1 className="md:text-[56px] sm:text-[46px] text-[40px] font-medium text-white font-inter leading-[120%] md:pb-4 pb-2">
-            Legal Course by
+            {t("legalCourse")}
           </h1>
           <h1 className="md:text-[56px] sm:text-[46px] text-[40px] font-medium text-white font-inter leading-[120%] flex items-center gap-3 pb-4">
             <p className="font-inter flex items-center justify-center md:text-[56px] sm:text-[46px] text-[40px] border-[2px] border-solid border-[#ff6363] md:h-[75px] h-[65px] px-3 rounded-[20px] bg-[linear-gradient(90deg,#CB1612_0%,#650B09_100%)] font-bold">
-              Sher
+              {sh("homesher")}
             </p>
-            Legal
+            {sh("homelegal")}
           </h1>
           <p className="text-white font-inter font-normal sm:text-[16px] text-[14px] leading-[130%] pb-6">
-            Author&apos;s course from Sherzod Egamberdiev on improving legal
-            literacy
+            {t("authorsTitle")}
           </p>
           <button className="group boxshadow rounded-[1000px] bg-[#C61511] md:p-[16px] py-3 px-4">
             <p className="flex md:gap-[8px] gap-1 items-center justify-between text-white text-[20px] font-inter font-[600]">
-              Buy a course{" "}
+              {t("buyacourse")}
               <Image
                 src={BtnIcon}
                 alt="BtnIcon"
