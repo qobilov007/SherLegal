@@ -45,55 +45,64 @@ export const servicess = [
     title: "Corporate law",
     description:
       "Business registration and support, corporate governance, mergers and acquisition",
+      slug: "corporate-law",
   },
   {
     icon: "/images/octicon_law-16.svg",
     title: "Civil Law",
     description:
       "Dispute resolution, contract drafting and analysis, protection of property and non-property rights.",
-  },
+    slug: "civil-law",
+    },
   {
     icon: "/images/octicon_law-16.svg",
     title: "Family Law",
     description:
       "Divorce proceedings, property division, alimony, guardianship, and adoption.",
-  },
+    slug: "family-law",
+    },
   {
     icon: "/images/octicon_law-16.svg",
     title: "Labor Law",
     description:
       "Consultation on labor legislation, protection of the rights of employees and employers, and resolution of labor disputes.",
-  },
+    slug: "labor-law",
+    },
   {
     icon: "/images/octicon_law-16.svg",
     title: "Investment Law",
     description:
       "Legal support for public-private partnership (PPP) projects, tax optimization within investment activities, and consultation on antitrust regulation issues.",
-  },
+    slug: "investment-law",
+    },
   {
     icon: "/images/octicon_law-16.svg",
     title: "Administrative Law",
     description:
       "Challenging administrative acts, representation in administrative bodies.",
-  },
+    slug: "administrative-law",
+    },
   {
     icon: "/images/octicon_law-16.svg",
     title: "Labor Law",
     description:
       "Consultation on labor legislation, protection of the rights of employees and employers, and resolution of labor disputes.",
-  },
+    slug: "labor-law",
+    },
   {
     icon: "/images/octicon_law-16.svg",
     title: "Investment Law",
     description:
       "Legal support for public-private partnership (PPP) projects, tax optimization within investment activities, and consultation on antitrust regulation issues.",
-  },
+    slug: "investment-law",
+    },
   {
     icon: "/images/octicon_law-16.svg",
     title: "Administrative Law",
     description:
       "Challenging administrative acts, representation in administrative bodies.",
-  },
+    slug: "administrative-law",
+    },
 ];
 
 export const partners = [
