@@ -7,10 +7,11 @@
         "contact": "Aloqa"
     },
     "HomePage":{
+        "homebadge":"Mukofotga sazovor bo'lgan yuridik firma",
         "hometitle":"Toshkentdagi advokatlik byurosi -",
         "homesher":"Sher",
         "homelegal":"Legal",
-        "homedes":"Our law firm combines legal expertise with personalized solutions to protect your rights and achieve your goals.",
-        "homebtn":"Get in touch"
+        "homedes":"Bizning yuridik firmamiz sizning huquqlaringizni himoya qilish va maqsadlaringizga erishish uchun yuridik tajribani shaxsiylashtirilgan yechimlar bilan birlashtiradi.",
+        "homebtn":"Aloqa qiling"
     }
 }
