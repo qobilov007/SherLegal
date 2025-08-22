@@ -1,5 +1,6 @@
 "use client"
 
+import { useTranslations } from "next-intl";
 import Image, { StaticImageData } from "next/image";
 import why1 from "../../public/icons/why1.svg"
 import why2 from "../../public/icons/why2.svg"
@@ -15,6 +16,8 @@ export default function WhyChoose() {
     icon: StaticImageData;
     cardBg: string;
   }
+
+  const t = useTranslations("Homepage")
 
   const items: WhyChooseType[] = [
     {
@@ -58,10 +61,10 @@ export default function WhyChoose() {
     <div className="container">
       <article className="mb-12">
         <h4 className="font-inter text-center text-[#0795E2] font-bold lg:text-[40px] md:text-[32px] text-[28px] leading-[48px] mb-4">
-          Why choose us
+          {t("whychooseus")}
         </h4>
         <p className="font-inter md:text-[20px] text-[16px] font-normal leading-[26px] text-center">
-          Solving Problems for Your Business in Tashkent and Across Uzbekistan
+          {t("whytitle")}
         </p>
       </article>
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 p-4 sm:grid-cols-2 lg:grid-cols-3">

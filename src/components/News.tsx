@@ -5,8 +5,10 @@ import BtnIcon from "../../public/images/Button Icon.svg"
 import Frame from "../../public/images/calendar.svg"
 import Link from "next/link";
 import { useLocale } from "next-intl";
+import { useTranslations } from "next-intl";
 
 export default function NewsSection() {
+    const t = useTranslations("HomePage")
     const locale  = useLocale()
     return (
         <section className="py-20 font-inter bg-gradient-to-b from-white via-gray-50 to-white">
@@ -14,15 +16,14 @@ export default function NewsSection() {
                 {/* Header */}
                 <div className="flex max-md:flex-col justify-between items-center mb-12">
                     <div>
-                        <h2 className="text-3xl font-bold text-gray-900">News</h2>
+                        <h2 className="text-3xl font-bold text-gray-900">{t("newstitle")}</h2>
                         <p className="text-gray-600 max-w-xl mt-2">
-                            Stay informed of legal developments, ahead of legislative changes:
-                            Your trusted source for timely legal updates and in-depth analysis.
+                            {t("newsdes")}
                         </p>
                     </div>
                     <Link href={`/${locale}/news`}>
                         <button className="group md:inline-flex max-md:flex max-md:mx-auto max-md:mt-4 boxshadow rounded-[1000px] bg-[#C61511] p-[16px]">
-                            <p className="flex gap-[8px] items-center justify-between text-white text-[20px] font-inter font-[600]">All News <Image src={BtnIcon} alt="BtnIcon" className="group-hover:rotate-[45deg] ease-linear duration-300" /></p>
+                            <p className="flex gap-[8px] items-center justify-between text-white text-[20px] font-inter font-[600]">{t("newsbtn")} <Image src={BtnIcon} alt="BtnIcon" className="group-hover:rotate-[45deg] ease-linear duration-300" /></p>
                         </button>
                     </Link>
                 </div>
