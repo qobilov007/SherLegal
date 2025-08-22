@@ -32,7 +32,7 @@ interface MarqueeProps extends ComponentPropsWithoutRef<"div"> {
   repeat?: number;
 }
 
-export function Marquee({
+export function Marque({
   className,
   reverse = false,
   pauseOnHover = false,

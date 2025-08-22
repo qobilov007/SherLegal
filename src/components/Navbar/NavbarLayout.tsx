@@ -170,7 +170,7 @@ export default function Navbar() {
         className={`fixed z-[55] w-full h-[540px] transition-all duration-300 ease-in-out bg-black shadow-md 
     ${isMenuOpen ? "top-0 opacity-100" : "-top-[380px] opacity-0"}`}
       >
-        <div className="container px-5">
+        <div className="container px-5 pt-[140px]">
           <ul className="flex flex-col gap-4 mb-14">
             <li className="text-white">
               <Link

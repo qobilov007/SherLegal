@@ -1,14 +1,16 @@
 "use client";
 import { testimonials } from "@/constants/page";
-import { Marquee } from "../magicui/marquee";
+import { Marque } from "../magicui/marquee";
 import ReviewCard from "./ReviewsCard";
+import ReviewMediaCard from "./ReviewsMediaCard";
+import Marquee from "react-fast-marquee";
 
 export default function TestimonialsMarquee() {
   return (
     <section className="relative !min-h-[800px] text-white bg-black p-0 bg-reviews bg-no-repeat bg-cover bg-center">
-      <div className="container flex items-center gap-8 justify-between z-20">
+      <div className="container md:flex max-md:flex-col items-center gap-8 justify-between z-20">
         {/* Chap text */}
-        <div className="w-1/3 relative z-20">
+        <div className="md:w-1/3 md:text-left  max-md:mb-16 pt-10 md:pt-0 text-center w-full relative z-20">
           <article className="inline-flex border-r border-l border-t items-center gap-2 px-5 border-gray-300/5  0 py-3 rounded-full glass">
             <svg
               width="20"
@@ -29,15 +31,13 @@ export default function TestimonialsMarquee() {
             </svg>
             <span className="relative z-[20] font-inter font-semibold text-[18px] leading-[21px] text-white">
               525 Reviews
-            </span> 
+            </span>
           </article>
 
-          <h2 className="text-[48px] font-inter mt-4 leading-[120%] font-[700] text-white">
-            What our
-            <br />
-            clients say
+          <h2 className="md:max-w-[70%] w-full text-[48px] font-inter mt-4 leading-[120%] font-[700] text-white">
+            What our clients say
           </h2>
-          <p className="text-gray-400 mt-4 text-sm leading-relaxed max-w-md">
+          <p className="text-gray-400 mt-4 text-sm leading-relaxed w-full md:max-w-md">
             Legal support for public-private partnership (PPP) projects, tax
             optimization within investment activities, and consultation on
             antitrust regulation issues.
@@ -45,20 +45,32 @@ export default function TestimonialsMarquee() {
         </div>
 
         {/* Marquee qismi */}
-        <div className="flex flex-col gap-10 w-2/3 relative">
+        <div className="flex flex-col gap-10 md:w-2/3 w-auto relative">
           {/* Tepaga harakatlanadigan */}
-          <div className="relative flex h-[900px] w-full flex-row items-center justify-center overflow-hidden">
-            <Marquee pauseOnHover vertical className="[--duration:20s]">
+          <div className="relative hidden md:flex h-[900px] w-full flex-row items-center justify-center overflow-hidden">
+            <Marque pauseOnHover vertical className="[--duration:20s]">
               {testimonials.map((review, id) => (
                 <ReviewCard key={id} {...review} />
               ))}
-            </Marquee>
-            <Marquee reverse pauseOnHover vertical className="[--duration:20s]">
+            </Marque>
+            <Marque reverse pauseOnHover vertical className="[--duration:20s]">
               {testimonials.map((review, id) => (
                 <ReviewCard key={id} {...review} />
               ))}
-            </Marquee>
+            </Marque>
           </div>
+        </div>
+        <div className="max-md:block hidden">
+          <Marquee className="mb-10">
+            {testimonials.map((review, id) => (
+              <ReviewMediaCard key={id} {...review} />
+            ))}
+          </Marquee>
+          <Marquee direction="right">
+            {testimonials.map((review, id) => (
+              <ReviewMediaCard key={id} {...review} />
+            ))}
+          </Marquee>
         </div>
       </div>
     </section>

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Frame from "../../../public/images/fi_1155628.svg";
 
-export default function ReviewCard({
+export default function ReviewMediaCard({
   name,
   role,
   text,
@@ -16,7 +16,7 @@ export default function ReviewCard({
     <article
       style={{ backgroundColor: "rgba(255, 255, 255, 0.02)" }}
       className="
-          relative cursor-pointer rounded-[32px] p-6 
+          relative cursor-pointer rounded-[32px] p-2 
             transition-all duration-300 shadow-effect border-2 border-[rgba(255,255,255,0.13)] backdrop-blur-[12px]
         "
     >
