@@ -8,7 +8,7 @@ import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
 
 export default function ServicesSection() {
-  const t = useTranslations("Homepage")
+  const t = useTranslations("HomePage")
     const locale = useLocale()
     return (
         <div className="bg-[#F9F9F9]">

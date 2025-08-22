@@ -12,9 +12,27 @@
     "homesher": "Sher",
     "homelegal": "Legal",
     "homedes": "Bizning yuridik firmamiz sizning huquqlaringizni himoya qilish va maqsadlaringizga erishish uchun yuridik tajribani shaxsiylashtirilgan yechimlar bilan birlashtiradi.",
-    "homebtn": "Aloqa qiling"
+    "homebtn": "Aloqa qiling",
+    "whychooseus": "Nima uchun bizni tanlaysiz",
+    "whytitle": "Toshkent va O'zbekiston bo'ylab biznesingiz uchun muammolarni hal qilish",
+    "teamdes": "Advokatlar va advokatlar jamoamiz bilan tanishing",
+    "teamtitle": "Bizning jamoamiz",
+    "teambtn": "Bizning barcha jamoamiz",
+    "servicedes": "Toshkent va O'zbekiston bo'ylab biznesingiz uchun muammolarni hal qilish",
+    "servicetitle": "Bizning xizmatlarimiz",
+    "servicebtn": "Bizning barcha xizmatlarimiz",
+    "aibtn": "GPT-ni sinab ko'ring",
+    "aides": "Harakat uchun tuzilgan fikr uchun optimallashtirilgan",
+    "aidess": "Aqlliroq o'ylab ko'ring va bir necha soniya ichida g'oyadan to amalga oshirishgacha tezroq harakat qiling",
+    "partnertitle": "Hamkorlarimiz tomonidan ishonchli",
+    "partnerdes": "Hamkorlarimizning ishonchi asosida mustahkam aloqalar o‘rnatdik",
+    "rewievs": "Sharhlar",
+    "reviewstitle": "Bizning mijozlarimiz nima deyishadi",
+    "reviewsdes": "Davlat-xususiy sheriklik (DXSh) loyihalarini huquqiy qo‘llab-quvvatlash, investitsiya faoliyati doirasida soliqlarni optimallashtirish, monopoliyaga qarshi tartibga solish masalalari bo‘yicha maslahatlar berish.",
+    "newstitle": "Yangiliklar",
+    "newsdes": "Qonunchilikdagi o'zgarishlardan oldin huquqiy o'zgarishlardan xabardor bo'ling: o'z vaqtida huquqiy yangilanishlar va chuqur tahlil uchun ishonchli manbangiz.",
+    "newsbtn": "Barcha yangiliklar"
   },
-
   "AcademyPage": {
     "course": "Kurs",
     "legalCourse": "Yuridik kurs muallifi",
@@ -37,40 +55,4 @@
   "Common": {
     "back": "Orqaga"
   }
-},
-    "Navbarist": {
-        "about": "Biz haqimizda",
-        "services": "Xizmatlar",
-        "ourteam": "Bizning jamoa",
-        "academy": "Akademiya",
-        "contact": "Aloqa"
-    },
-    "HomePage":{
-        "homebadge":"Mukofotga sazovor bo'lgan yuridik firma",
-        "hometitle":"Toshkentdagi advokatlik byurosi -",
-        "homesher":"Sher",
-        "homelegal":"Legal",
-        "homedes":"Bizning yuridik firmamiz sizning huquqlaringizni himoya qilish va maqsadlaringizga erishish uchun yuridik tajribani shaxsiylashtirilgan yechimlar bilan birlashtiradi.",
-        "homebtn":"Aloqa qiling",
-        "whychooseus":"Nima uchun bizni tanlaysiz",
-        "whytitle":"Toshkent va O'zbekiston bo'ylab biznesingiz uchun muammolarni hal qilish",
-        "teamdes":"Advokatlar va advokatlar jamoamiz bilan tanishing",
-        "teamtitle":"Bizning jamoamiz",
-        "teambtn":"Bizning barcha jamoamiz",
-        "servicedes":"Toshkent va O'zbekiston bo'ylab biznesingiz uchun muammolarni hal qilish",
-        "servicetitle":"Bizning xizmatlarimiz",
-        "servicebtn":"Bizning barcha xizmatlarimiz",
-        "aibtn":"GPT-ni sinab ko'ring",
-        "aides":"Harakat uchun tuzilgan fikr uchun optimallashtirilgan",
-        "aidess":"Aqlliroq o'ylab ko'ring va bir necha soniya ichida g'oyadan to amalga oshirishgacha tezroq harakat qiling",
-        "partnertitle":"Hamkorlarimiz tomonidan ishonchli",
-        "partnerdes":"Hamkorlarimizning ishonchi asosida mustahkam aloqalar o‘rnatdik",
-        "rewievs":"Sharhlar",
-        "reviewstitle":"Bizning mijozlarimiz nima deyishadi",
-        "reviewsdes":"Davlat-xususiy sheriklik (DXSh) loyihalarini huquqiy qo‘llab-quvvatlash, investitsiya faoliyati doirasida soliqlarni optimallashtirish, monopoliyaga qarshi tartibga solish masalalari bo‘yicha maslahatlar berish.",
-        "newstitle":"Yangiliklar",
-        "newsdes":"Qonunchilikdagi o'zgarishlardan oldin huquqiy o'zgarishlardan xabardor bo'ling: o'z vaqtida huquqiy yangilanishlar va chuqur tahlil uchun ishonchli manbangiz.",
-        "newsbtn":"Barcha yangiliklar"
-    }
 }
-

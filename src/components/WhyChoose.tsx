@@ -17,7 +17,7 @@ export default function WhyChoose() {
     cardBg: string;
   }
 
-  const t = useTranslations("Homepage")
+  const t = useTranslations("HomePage")
 
   const items: WhyChooseType[] = [
     {
