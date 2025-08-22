@@ -16,7 +16,7 @@ export default function ReviewMediaCard({
     <article
       style={{ backgroundColor: "rgba(255, 255, 255, 0.02)" }}
       className="
-          relative cursor-pointer rounded-[32px] p-2 
+          relative cursor-pointer ml-6 rounded-[32px] p-2 max-w-[300px] max-h-[250px] min-h-[250px]
             transition-all duration-300 shadow-effect border-2 border-[rgba(255,255,255,0.13)] backdrop-blur-[12px]
         "
     >
@@ -24,7 +24,7 @@ export default function ReviewMediaCard({
         <div className="w-[64px] h-[64px] bg-[rgba(255,255,255,0.10)] p-[20px] rounded-[1000px] border-r border-l ">
           <Image src={Frame} alt="Frame" />
         </div>
-        <p className="mt-4 text-[#FFFFFF] font-inter text-[14px] font-[400]">
+        <p className="mt-4 text-[#FFFFFF] font-inter text-[14px] font-[400] line-clamp-2">
           {text}
         </p>
         <div className="flex gap-4">
@@ -34,7 +34,7 @@ export default function ReviewMediaCard({
             className="w-12 h-12 rounded-full object-cover"
           />
           <div>
-            <h4 className="text-[20px] text-[#fff] font-inter font-[600]">
+            <h4 className="text-[20px] text-sm text-[#fff] font-inter font-[600]">
               {name}
             </h4>
             <p className="text-[14px] font-inter font-[400] text-white">

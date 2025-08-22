@@ -17,7 +17,7 @@ export default function NewsSection() {
                             Your trusted source for timely legal updates and in-depth analysis.
                         </p>
                     </div>
-                    <button className="group max-md:w-full max-md:mt-6 boxshadow rounded-[1000px] bg-[#C61511] p-[16px]">
+                    <button className="group md:inline-flex max-md:flex max-md:mx-auto max-md:mt-4 boxshadow rounded-[1000px] bg-[#C61511] p-[16px]">
                         <p className="flex gap-[8px] items-center justify-between text-white text-[20px] font-inter font-[600]">All News <Image src={BtnIcon} alt="BtnIcon" className="group-hover:rotate-[45deg] ease-linear duration-300" /></p>
                     </button>
                 </div>

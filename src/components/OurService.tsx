@@ -19,7 +19,7 @@ export default function ServicesSection() {
                     <Link
                         href="/services"
                     >
-                        <button className="group boxshadow max-md:w-full max-md:mt-4     rounded-[1000px] bg-[#C61511] p-[16px]">
+                        <button className="group boxshadow md:inline-flex max-md:flex max-md:mx-auto max-md:mt-4 rounded-[1000px] bg-[#C61511] p-[16px]">
                             <p className="flex gap-[8px] items-center justify-between text-white text-[20px] font-inter font-[600]">All Services <Image src={BtnIcon} alt="BtnIcon" className="group-hover:rotate-[45deg] ease-linear duration-300"/></p>
                         </button>
                     </Link>

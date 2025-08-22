@@ -212,7 +212,7 @@ export default function Hero() {
               <input
                 type="text"
                 placeholder="Ask for anything or use a command"
-                className="inputstyle w-[520px] max-sm:w-[250px] max-md:w-[450px] pl-12 pr-4 py-2 bg-gray-800 text-sm text-gray-200 placeholder-gray-400
+                className="inputstyle w-[520px] max-sm:w-[100px] max-md:w-[450px] pl-12 pr-4 py-2 bg-gray-800 text-sm text-gray-200 placeholder-gray-400
     border-0 border-b border-gray-600 focus:border-blue-500 focus:ring-0 outline-none transition"
               />
 
