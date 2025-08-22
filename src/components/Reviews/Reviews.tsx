@@ -66,7 +66,7 @@ export default function TestimonialsMarquee() {
               <ReviewMediaCard key={id} {...review} />
             ))}
           </Marquee>
-          <Marquee direction="right">
+          <Marquee direction="right" className="space-x-8 pb-[120px]">
             {testimonials.map((review, id) => (
               <ReviewMediaCard key={id} {...review} />
             ))}
