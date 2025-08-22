@@ -1,6 +1,5 @@
 import { getNews } from "@/constants/page";
 import { FaArrowLeftLong } from "react-icons/fa6";
-import GetinTouch from "../../academy/_components/GetinTouch";
 import Marqueforslug from "../_components/Marqueforslug";
 import { CiCalendarDate } from "react-icons/ci";
 import { LuEye } from "react-icons/lu";
@@ -20,11 +19,11 @@ export default function page({ params }: { params: { slug: string } }) {
           </h1>
         </div>
         <div
-          className="w-full h-[600px] rounded-3xl bg-cover bg-center mb-[24px]"
+          className="w-full lg:h-[600px] md:h-[500px] nx:h-[400px] h-[260px] rounded-3xl bg-cover bg-center md:mb-[24px] nx:mb-[14px] mb-[12px]"
           style={{ backgroundImage: `url(${newsItem?.img})` }}
         >
-          <div className="flex items-end translate-y-[530px] gap-1 md:py-4 py-2 px-5">
-            <article className="flex items-center md:gap-[8.5px] gap-0.5 bg-white/5 backdrop-blur-md border border-white/20 shadow-lg md:py-[6px] py-0.5 px-3 border-[#6C6C6C] rounded-full max-w-max">
+          <div className="flex items-end translate-y-[220px] nx:translate-y-[360px] md:translate-y-[430px] lg:translate-y-[530px] gap-1 md:py-4 py-2 md:px-5 px-2">
+            <article className="flex items-center md:gap-[8.5px] gap-0.5 bg-red/5 backdrop-blur-md border border-white/20 shadow-lg md:py-[6px] py-0.5 px-3 border-[#6C6C6C] rounded-full max-w-max">
               <CiCalendarDate className="text-white" />
               <span className="text-white md:text-[12px] text-[10px] font-medium font-inter">
                 {newsItem?.date}
@@ -38,16 +37,16 @@ export default function page({ params }: { params: { slug: string } }) {
             </article>
           </div>
         </div>
-        <div className="mb-[88px] px-[48px]">
-          <h1 className="font-bold font-vela text-[28px] leading-[130%] mb-[16px]">
+        <div className="lg:mb-[88px] md:mb-[60px] nx:mb-[40px] mb-[20px] md:px-[48px]">
+          <h1 className="font-bold font-vela md:text-[28px] text-[16px] nx:text-[22px] leading-[130%] mb-[16px] ">
             {newsItem?.title}
           </h1>
           <p></p>
-          <div className="space-y-4">
+          <div className="md:space-y-4 nx:space-y-3 space-y-2">
             {paragraphs?.map((p, i) => (
               <p
                 key={i}
-                className="font-normal font-vela text-[18px] leading-[130%]"
+                className="font-normal font-vela md:text-[18px] text-[14px] leading-[130%]"
               >
                 {p}
               </p>
@@ -58,8 +57,6 @@ export default function page({ params }: { params: { slug: string } }) {
       <div>
         <Marqueforslug />
       </div>
-
-      <GetinTouch />
     </section>
   );
 }
