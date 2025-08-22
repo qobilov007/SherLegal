@@ -1,9 +1,36 @@
 {
-    "Navbarist": {
-        "about": "About us",
-        "services": "Services",
-        "ourteam": "Our Team",
-        "academy": "Academy",
-        "contact": "Contact"
-    }
+  "Navbarist": {
+    "about": "About us",
+    "services": "Services",
+    "ourteam": "Our Team",
+    "academy": "Academy",
+    "contact": "Contact"
+  },
+  "HomePage": {
+    "homebadge": "Award-winning law firm",
+    "hometitle": "Law firm in Tashkent -",
+    "homesher": "Sher",
+    "homelegal": "Legal",
+    "homedes": "Our law firm combines legal expertise with personalized solutions to protect your rights and help you achieve your goals.",
+    "homebtn": "Contact us",
+    "whychooseus": "Why choose us",
+    "whytitle": "Solving business challenges across Tashkent and Uzbekistan",
+    "teamdes": "Meet our team of lawyers and attorneys",
+    "teamtitle": "Our team",
+    "teambtn": "View all our team",
+    "servicedes": "Solving business challenges across Tashkent and Uzbekistan",
+    "servicetitle": "Our services",
+    "servicebtn": "View all our services",
+    "aibtn": "Try GPT",
+    "aides": "Optimized for actionable insights",
+    "aidess": "Think smarter and move faster from idea to execution in just seconds",
+    "partnertitle": "Trusted by our partners",
+    "partnerdes": "We have built strong relationships based on the trust of our partners",
+    "rewievs": "Reviews",
+    "reviewstitle": "What our clients say",
+    "reviewsdes": "Providing legal support for public-private partnership (PPP) projects, tax optimization in investment activities, and advice on antitrust regulation issues.",
+    "newstitle": "News",
+    "newsdes": "Stay ahead of legal changes before legislative updates: your reliable source for timely legal updates and in-depth analysis.",
+    "newsbtn": "All news"
+  }
 }
