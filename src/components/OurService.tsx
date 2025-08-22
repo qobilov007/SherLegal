@@ -4,8 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { services } from "@/constants/page";
 import BtnIcon from "../../public/images/Button Icon.svg"
+import { useLocale } from "next-intl";
 
 export default function ServicesSection() {
+    const locale = useLocale()
     return (
         <div className="bg-[#F9F9F9]">
             <section className="max-w-7xl mx-auto px-6 py-16">
@@ -17,7 +19,7 @@ export default function ServicesSection() {
                         </p>
                     </div>
                     <Link
-                        href="/services"
+                        href={`/${locale}/services`}
                     >
                         <button className="group boxshadow md:inline-flex max-md:flex max-md:mx-auto max-md:mt-4 rounded-[1000px] bg-[#C61511] p-[16px]">
                             <p className="flex gap-[8px] items-center justify-between text-white text-[20px] font-inter font-[600]">All Services <Image src={BtnIcon} alt="BtnIcon" className="group-hover:rotate-[45deg] ease-linear duration-300"/></p>
