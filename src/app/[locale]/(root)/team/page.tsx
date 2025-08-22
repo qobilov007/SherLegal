@@ -1,10 +1,14 @@
-import BtnIcon from "../../../../../public/images/Button Icon.svg"
-import Image from "next/image"
+import BtnIcon from "../../../../../public/images/Button Icon.svg";
+import Image from "next/image";
 import cardImg from "../../../../../public/icons/team1.png";
-import Teamm from "./teamm"
+import Teamm from "./teamm";
 import { TeamsType } from "@/src/app.type";
+import { useLocale, useTranslations } from "next-intl";
+import Link from "next/link";
 
 export default function OurTeam() {
+  const locale = useLocale()
+
   const teams: TeamsType[] = [
     {
       teamImg: cardImg,
@@ -65,9 +69,19 @@ export default function OurTeam() {
           <h5 className="font-inter font-bold text-[28px] md:text-[40px] leading-[36px] md:leading-[48px] text-white">
             Our team
           </h5>
-          <button className="group boxshadow md:inline-flex max-md:flex rounded-[1000px] bg-[#C61511] p-[16px]">
-            <p className="flex gap-[8px] items-center justify-between text-white text-[20px] font-inter font-[600]">All Services <Image src={BtnIcon} alt="BtnIcon" className="group-hover:rotate-[45deg] ease-linear duration-300" /></p>
-          </button>
+          <Link href={`/${locale}/team`}>
+            <button className="group boxshadow md:inline-flex max-md:flex rounded-[1000px] bg-[#C61511] p-[16px]">
+              <p className="flex gap-[8px] items-center justify-between text-white text-[20px] font-inter font-[600]">
+                All team
+                <Image
+                  src={BtnIcon}
+                  alt="BtnIcon"
+                  className="group-hover:rotate-[45deg] ease-linear duration-300"
+                />
+              </p>
+            </button>
+
+          </Link>
         </article>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">

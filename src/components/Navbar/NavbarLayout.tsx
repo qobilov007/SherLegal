@@ -41,7 +41,8 @@ export default function Navbar() {
   const forceBlack =
     pathname === `/${locale}/contacts` ||
     pathname === `/${locale}/services` ||
-    pathname === `/${locale}/news`;
+    pathname === `/${locale}/news` || 
+    pathname.startsWith(`/${locale}/news`)
 
   return (
     <div>
@@ -168,7 +169,7 @@ export default function Navbar() {
       <div
         onClick={(e) => e.stopPropagation()}
         className={`fixed z-[55] w-full h-[540px] transition-all duration-300 ease-in-out bg-black shadow-md 
-    ${isMenuOpen ? "top-0 opacity-100" : "-top-[380px] opacity-0"}`}
+    ${isMenuOpen ? "top-0 opacity-100" : "-top-[550px] opacity-0"}`}
       >
         <div className="container px-5 pt-[140px]">
           <ul className="flex flex-col gap-4 mb-14">
