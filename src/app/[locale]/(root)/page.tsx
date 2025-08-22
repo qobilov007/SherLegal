@@ -8,6 +8,8 @@ import { ArrowRight } from "lucide-react";
 import WhyChoose from "../../../components/WhyChoose";
 import OurTeam from "./team/page";
 import Ai from "../../../components/Ai";
+import { useTranslations } from "next-intl"; // BEGIN: Add missing import
+
 
 type Stat = {
   number: string;
@@ -21,6 +23,9 @@ export default function Home() {
     { number: "28+", label: "Closed deals" },
     { number: "12+", label: "Happy clients" },
   ];
+  
+  const t = useTranslations("HomePage");
+
 
   return (
     <div>
@@ -47,7 +52,7 @@ export default function Home() {
                 </svg>
 
                 <span className="relative z-[4] font-inter text-sm sm:text-base md:text-lg">
-                  Award winning Law Firm
+                  {t("homebadge")}
                 </span>
               </article>
 

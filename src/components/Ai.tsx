@@ -212,7 +212,7 @@ export default function Hero() {
               <input
                 type="text"
                 placeholder="Ask for anything or use a command"
-                className="inputstyle w-[520px] max-smm:w-[250px] max-smmm:w-[200px] max-sm:w-[310px] max-md:w-[450px] pl-12 py-4 pr-4 bg-gray-800 text-sm text-gray-200 placeholder-gray-400
+                className="inputstyle w-[500px] max-smm:w-[250px] max-smmm:w-[200px] max-sm:w-[310px] max-md:w-[450px] pl-12 py-4 pr-4 bg-gray-800 text-sm text-gray-200 placeholder-gray-400
     border-0 border-b border-gray-600 focus:border-blue-500 focus:ring-0 outline-none transition"
               />
 
@@ -246,7 +246,7 @@ export default function Hero() {
             {/* Close */}
 
             <div
-              className=" mt-10 w-[90%] max-w-[680px] mx-auto rounded-[48px] p-[12px] shadow-xl
+              className=" mt-10 w-full max-w-[710px] mx-auto rounded-[48px] p-[12px] shadow-xl
         [background:linear-gradient(40deg,rgba(122,167,237,1),rgba(215,211,142,1),rgba(248,97,97,1))]"
             >
               <div className="rounded-[36px] bg-[#000] bg-cardAi  text-white p-6 text-center">
@@ -287,7 +287,7 @@ export default function Hero() {
                     </svg>
                     <p className="font-inter font-semibold text-2xl leading-[28px]">Sherlegal AI</p>
                   </article>
-                  <article className="flex p-[12px] items-center justify-center gap-[8px] absolute right-[20px] top-[20px] rounded-[1000px] bg-[rgba(8,8,8,0.40)]">
+                  <article className="flex p-[6px] items-center justify-center absolute right-[20px] top-[20px] rounded-full bg-[rgba(8,8,8,0.40)]">
                     <button
                       onClick={() => setOpen(false)}
                       className="text-white text-2xl w-10"
@@ -330,7 +330,7 @@ export default function Hero() {
                         </clipPath>
                       </defs>
                     </svg>
-                    Corporate law
+                    Civil law
                   </span>
                   <span className="px-3 py-1 rounded-full bg-gray-700 text-[#FFFFFF] font-inter  text-[18px] font-[600] flex items-center justify-center gap-2">
                     <svg
@@ -357,7 +357,7 @@ export default function Hero() {
                         </clipPath>
                       </defs>
                     </svg>
-                    Corporate law
+                    Civil law
                   </span>
                   <span className="px-3 py-1 rounded-full bg-gray-700 text-[#FFFFFF] font-inter  text-[18px] font-[600] flex items-center justify-center gap-2">
                     <svg
@@ -384,7 +384,7 @@ export default function Hero() {
                         </clipPath>
                       </defs>
                     </svg>
-                    Corporate law
+                    Civil law
                   </span>
                   <span className="px-3 relative py-1 rounded-full bg-gray-700 text-[#FFFFFF] font-inter  text-[18px] font-[600] flex items-center justify-center gap-2">
                     <svg
@@ -411,7 +411,7 @@ export default function Hero() {
                         </clipPath>
                       </defs>
                     </svg>
-                    Corporate law
+                    Civil law
                   </span>
                 </div>
 
@@ -443,7 +443,7 @@ export default function Hero() {
 
                   </div>
 
-                  <div onClick={() => setOpen(true)}
+                  <div
                     className="cursor-pointer flex gap-[8px] w-[60px] py-[16px] px-[16px] items-center justify-center boxshadoww">
                     <svg
                       width="20"
