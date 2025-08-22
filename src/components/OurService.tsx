@@ -4,25 +4,27 @@ import Image from "next/image";
 import Link from "next/link";
 import { services } from "@/constants/page";
 import BtnIcon from "../../public/images/Button Icon.svg"
+import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
 
 export default function ServicesSection() {
+  const t = useTranslations("Homepage")
     const locale = useLocale()
     return (
         <div className="bg-[#F9F9F9]">
             <section className="max-w-7xl mx-auto px-6 py-16">
                 <div className="md:flex max-md:fleex-col justify-between items-center mb-10">
                     <div>
-                        <h2 className="lg:text-[40px] text-[28px] font-bold font-inter text-gray-900 md:text-[32px]">Our services</h2>
+                        <h2 className="lg:text-[40px] text-[28px] font-bold font-inter text-gray-900 md:text-[32px]">{t("servicetitle")}</h2>
                         <p className="text-[#000] mt-2 text-[20px]">
-                            Solving Problems for Your Business in Tashkent and Across Uzbekistan
+                            {t("servicedes")}
                         </p>
                     </div>
                     <Link
                         href={`/${locale}/services`}
                     >
                         <button className="group boxshadow md:inline-flex max-md:flex max-md:mx-auto max-md:mt-4 rounded-[1000px] bg-[#C61511] p-[16px]">
-                            <p className="flex gap-[8px] items-center justify-between text-white text-[20px] font-inter font-[600]">All Services <Image src={BtnIcon} alt="BtnIcon" className="group-hover:rotate-[45deg] ease-linear duration-300"/></p>
+                            <p className="flex gap-[8px] items-center justify-between text-white text-[20px] font-inter font-[600]">{t("servicebtn")} <Image src={BtnIcon} alt="BtnIcon" className="group-hover:rotate-[45deg] ease-linear duration-300"/></p>
                         </button>
                     </Link>
                 </div>

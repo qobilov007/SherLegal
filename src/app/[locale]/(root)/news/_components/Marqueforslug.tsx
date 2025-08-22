@@ -1,63 +1,3 @@
-// "use client";
-// import { getNews } from "@/constants/page";
-// import Image from "next/image";
-// import { CiCalendarDate } from "react-icons/ci";
-// import { LuEye } from "react-icons/lu";
-// import Link from "next/link";
-// import { useLocale } from "next-intl";
-
-
-// export default function Marqueforslug() {
-//     const locale = useLocale();
-//     const news = getNews;
-//   return (
-//     <div className=" container">
-//       <div className="grid lg:grid-cols-3 nx:grid-cols-2 gap-[24px]">
-//         {news.map((item, id) => (
-//           <Link key={id} href={`/${locale}/news/${item.slug}`}>
-//             <div
-//               key={id}
-//               className="rounded-2xl overflow-hidden border hover:border-red-700 w-full cursor-pointer bg-[#F3F3F3] hover:bg-white transition-all duration-200 hover:scale-[1.01] hover:shadow-md"
-//             >
-//               <Image
-//                 src={item.img}
-//                 alt="Image"
-//                 width={379}
-//                 height={182}
-//                 className="w-full object-cover"
-//               />
-//               <article className="md:py-4 py-2 px-5">
-//                 <h2 className="sm:line-clamp-2 line-clamp-1 font-bold font-vela md:text-[16px] text-[13px] leading-[140%]  pb-[4px]">
-//                   {item.title}
-//                 </h2>
-//                 <p className="line-clamp-2 md:text-[14px] text-[12px] font-medium font-inter leading-[136%] text-[#6C6C6C]">
-//                   {item.description}
-//                 </p>
-//               </article>
-//               <div className="flex max-nx:flex-row max-md:flex-col md:items-center items-start gap-1 md:py-4 py-2 px-5">
-//                 <article className="flex items-center md:gap-[8.5px] gap-0.5 md:py-[6px] py-0.5 px-3 border border-[#6C6C6C] rounded-full max-w-max">
-//                   <CiCalendarDate className="text-[#6C6C6C]" />
-//                   <span className="text-[#6C6C6C] md:text-[12px] text-[10px] font-medium font-inter">
-//                     {item.date}
-//                   </span>
-//                 </article>
-//                 <article className="flex items-center gap-[8.5px] md:py-[6px] py-0.5 px-3 border border-[#6C6C6C] rounded-full max-w-max">
-//                   <LuEye className="text-[#6C6C6C]" />
-//                   <span className="text-[#6C6C6C] md:text-[12px] text-[10px] font-medium font-inter">
-//                     {item.views}
-//                   </span>
-//                 </article>
-//               </div>
-//             </div>
-//           </Link>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// }
-
-
-
 "use client";
 import { getNews } from "@/constants/page";
 import Image from "next/image";
@@ -76,7 +16,9 @@ export default function Marqueforslug() {
       <Marquee
         direction="right"
         speed={30}
-        gradient={false}
+        gradient={true}
+        gradientColor={"white"}
+        gradientWidth={200}
         pauseOnHover
         className="mb-[18px]"
       >
@@ -102,7 +44,7 @@ export default function Marqueforslug() {
               </p>
             </article>
             <div className="flex max-nx:flex-row max-md:flex-col md:items-center items-start gap-1 md:py-4 py-2 px-5">
-              <article className="flex items-center md:gap-[8.5px] bg-white/5 gap-0.5 md:py-[6px] py-0.5 px-3 border border-[#6C6C6C] rounded-full max-w-max">
+              <article className="flex items-center md:gap-[8.5px]   gap-0.5 md:py-[6px] py-0.5 px-3 border border-[#6C6C6C] rounded-full max-w-max">
                 <CiCalendarDate className="text-[#6C6C6C]" />
                 <span className="text-[#6C6C6C] md:text-[12px] text-[10px] font-medium font-inter">
                   {item.date}

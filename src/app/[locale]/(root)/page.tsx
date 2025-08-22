@@ -8,6 +8,8 @@ import { ArrowRight } from "lucide-react";
 import WhyChoose from "../../../components/WhyChoose";
 import OurTeam from "./team/page";
 import Ai from "../../../components/Ai";
+import { useTranslations } from "next-intl"; // BEGIN: Add missing import
+
 
 type Stat = {
   number: string;
@@ -21,6 +23,9 @@ export default function Home() {
     { number: "28+", label: "Closed deals" },
     { number: "12+", label: "Happy clients" },
   ];
+  
+  const t = useTranslations("HomePage");
+
 
   return (
     <div>
@@ -47,13 +52,13 @@ export default function Home() {
                 </svg>
 
                 <span className="relative z-[4] font-inter text-sm sm:text-base md:text-lg">
-                  Award winning Law Firm
+                  {t("homebadge")}
                 </span>
               </article>
 
               {/* Title */}
               <h2 className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] leading-[120%] font-inter font-medium text-white mt-4">
-                Law and Attorney Firm in Tashkent -
+                {t("hometitle")}
               </h2>
 
               {/* Brand name */}
@@ -67,26 +72,25 @@ export default function Home() {
                   bg-[linear-gradient(90deg,#CB1612_0%,#650B09_100%)]
                   font-bold"
                 >
-                  Sher
+                  {t("homesher")}
                 </p>
                 <span
                   className="font-inter font-bold
                   text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px]
                   py-2 px-3"
                 >
-                  Legal
+                  {t("homelegal")}
                 </span>
               </article>
 
               {/* Description */}
               <p className="text-[#cacaca] font-inter text-sm sm:text-base md:text-lg font-normal leading-[130%] mb-5 mt-3">
-                Our law firm combines legal expertise with personalized
-                solutions to protect your rights and achieve your goals.
+                {t("homedes")}
               </p>
 
               {/* Button */}
               <Button
-                title="Get in touch"
+                title={t("homebtn")}
                 icon={
                   <ArrowRight
                     size={22}
