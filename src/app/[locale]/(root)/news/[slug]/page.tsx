@@ -3,8 +3,11 @@ import { FaArrowLeftLong } from "react-icons/fa6";
 import Marqueforslug from "../_components/Marqueforslug";
 import { CiCalendarDate } from "react-icons/ci";
 import { LuEye } from "react-icons/lu";
+import { useTranslations } from "next-intl";
 
 export default function page({ params }: { params: { slug: string } }) {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const t = useTranslations("Common")
   const newsItem = getNews.find((n) => n.slug === params.slug);
 
   const paragraphs = newsItem?.description.split("\n");
@@ -12,10 +15,10 @@ export default function page({ params }: { params: { slug: string } }) {
   return (
     <section>
       <article className="pt-[124px] container">
-        <div className=" flex items-center w-[126px] gap-2 py-3 px-7 rounded-full  mb-[24px] bg-[#FFFFFF] shadow-md cursor-pointer">
+        <div className=" flex items-center max-w-max gap-2 py-3 px-7 rounded-full  mb-[24px] bg-[#FFFFFF] shadow-md cursor-pointer">
           <FaArrowLeftLong className="text-[#137BEA] w-5 h-[20px]" />
           <h1 className="font-medium font-inter text-[16px] leading-[130%]">
-            Back
+            {t("back")}
           </h1>
         </div>
         <div

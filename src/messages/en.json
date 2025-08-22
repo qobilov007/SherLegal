@@ -6,6 +6,28 @@
     "academy": "Academy",
     "contact": "Contact"
   },
+  "AcademyPage": {
+    "course": "Course",
+    "legalCourse": "Legal Course by",
+    "authorsTitle": "Author's course from Sherzod Egamberdiev on improving legal literacy",
+    "buyacourse": "Buy a course",
+    "programTitle": "Course Program",
+    "programDescription": "The Legal Course is a general program aimed at developing legal literacy and includes 12 video lectures (modules)."
+  },
+  "AboutPage": {
+    "title": "About us",
+    "subtitle": "We protect your rights",
+    "description1": "Sher Legal Law Firm was founded in 2022 by a talented and ambitious lawyer and blogger, Sherzod Egamberdiev.",
+    "description2": "The idea to create a unique brand that combines a legal consulting firm and legal services emerged during his university years.",
+    "description3": "Even as a student, Sherzod dreamed of creating a company that would provide comprehensive legal support and high-quality legal representation. He saw the need to integrate the best practices of consulting and law to solve the most complex legal issues."
+  },
+  "NewsPage": {
+    "title": "News",
+    "search": "Search"
+  },
+  "Common": {
+    "back": "Back"
+  },
   "HomePage": {
     "homebadge": "Award-winning law firm",
     "hometitle": "Law firm in Tashkent -",

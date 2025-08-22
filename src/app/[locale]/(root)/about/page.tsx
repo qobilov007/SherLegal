@@ -4,6 +4,7 @@ import OurService from "../../../../components/OurService";
 import OurTeam from "../team/page";
 import Map from "../contacts/_components/Map";
 import Socialmedia from "../contacts/_components/SocialMedia";
+import { useTranslations } from "next-intl";
 
 type Stat = {
   number: string;
@@ -11,6 +12,8 @@ type Stat = {
 };
 
 export default function Home() {
+    const t = useTranslations("AboutPage")
+
   const stats: Stat[] = [
     { number: "15+", label: "Years experience" },
     { number: "10K", label: "Project finished" },
@@ -36,25 +39,19 @@ export default function Home() {
                   />
                 </svg>
                 <span className="relative z-[4] font-inter">
-                  About us
+                  {t("title")}
                 </span>
               </article>
               <h2 className="md:text-[56px] sm:text-[46px] text-[40px] leading-[120%] font-inter font-medium text-white md:mb-6 mb-4">
-                We protect your rights
+                {t("subtitle")}
               </h2>
               <p className="text-[#cacaca] font-inter sm:text-[16px] text-[14px] font-normal leading-[130%] md:mb-5">
-                Sher Legal Law Firm was founded in 2022 by a talented and
-                ambitious lawyer and blogger, Sherzod Egamberdiev.
+                {t("description1")}
                 <br />
                 <br />
-                The idea to create a unique brand that combines a legal
-                consulting firm and legal services emerged during his university
-                years.
+                {t("description2")}
                 <br /> <br />
-                Even as a student, Sherzod dreamed of creating a company that
-                would provide comprehensive legal support and high-quality legal
-                representation. He saw the need to integrate the best practices
-                of consulting and law to solve the most complex legal issues.
+                {t("description3")}
               </p>
             </div>
           </div>
