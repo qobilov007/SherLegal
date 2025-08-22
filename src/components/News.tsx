@@ -3,8 +3,11 @@ import Image from "next/image";
 import { news } from "@/constants/page";
 import BtnIcon from "../../public/images/Button Icon.svg"
 import Frame from "../../public/images/calendar.svg"
+import Link from "next/link";
+import { useLocale } from "next-intl";
 
 export default function NewsSection() {
+    const locale  = useLocale()
     return (
         <section className="py-20 font-inter bg-gradient-to-b from-white via-gray-50 to-white">
             <div className="container mx-auto px-6">
@@ -17,9 +20,11 @@ export default function NewsSection() {
                             Your trusted source for timely legal updates and in-depth analysis.
                         </p>
                     </div>
-                    <button className="group md:inline-flex max-md:flex max-md:mx-auto max-md:mt-4 boxshadow rounded-[1000px] bg-[#C61511] p-[16px]">
-                        <p className="flex gap-[8px] items-center justify-between text-white text-[20px] font-inter font-[600]">All News <Image src={BtnIcon} alt="BtnIcon" className="group-hover:rotate-[45deg] ease-linear duration-300" /></p>
-                    </button>
+                    <Link href={`/${locale}/news`}>
+                        <button className="group md:inline-flex max-md:flex max-md:mx-auto max-md:mt-4 boxshadow rounded-[1000px] bg-[#C61511] p-[16px]">
+                            <p className="flex gap-[8px] items-center justify-between text-white text-[20px] font-inter font-[600]">All News <Image src={BtnIcon} alt="BtnIcon" className="group-hover:rotate-[45deg] ease-linear duration-300" /></p>
+                        </button>
+                    </Link>
                 </div>
 
                 {/* 3 ta card */}

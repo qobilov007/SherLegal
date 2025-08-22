@@ -246,6 +246,7 @@
   width: 900px;
   height: 200px;
   transform: rotate(50deg) translateY(100px) translateX(300px);
+  z-index: 1;
 }
 
 .footer-overlay {
@@ -392,7 +393,6 @@
 .bgcolorr {
   display: flex;
   width: auto;
-  padding: 0 64px;
   align-items: center;
   gap: 64px;
   border-radius: 28px;

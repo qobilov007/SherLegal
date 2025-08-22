@@ -136,7 +136,7 @@ export default function Navbar() {
             {/* Contact button */}
             <Link
               href={`/${locale}/contacts`}
-              className="px-5 py-2 rounded-full border-y backdrop-blur-sm border-[white]/40 text-white hover:bg-white hover:text-black transition"
+              className="px-5 py-2 rounded-full border-y backdrop-blur-sm border-[white]/40 text-white bg-[#FFFFFF0F]/10 hover:bg-[#FFFFFF0F]/20 transition"
             >
               Contact
             </Link>

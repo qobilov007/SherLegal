@@ -61,11 +61,11 @@ export default function OurTeam() {
         </p>
         <p className="w-full h-[1px] bg-white/30 mb-[30px]"></p>
 
-        <article className="flex flex-col md:flex-row md:items-center md:justify-between mb-14 gap-4">
+        <article className="flex items-center justify-between mb-14 gap-4 relative z-[10]">
           <h5 className="font-inter font-bold text-[28px] md:text-[40px] leading-[36px] md:leading-[48px] text-white">
             Our team
           </h5>
-          <button className="group boxshadow md:inline-flex max-md:flex max-md:mx-auto max-md:mt-4 rounded-[1000px] bg-[#C61511] p-[16px]">
+          <button className="group boxshadow md:inline-flex max-md:flex rounded-[1000px] bg-[#C61511] p-[16px]">
             <p className="flex gap-[8px] items-center justify-between text-white text-[20px] font-inter font-[600]">All Services <Image src={BtnIcon} alt="BtnIcon" className="group-hover:rotate-[45deg] ease-linear duration-300" /></p>
           </button>
         </article>
