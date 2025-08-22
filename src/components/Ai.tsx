@@ -71,15 +71,15 @@ export default function Hero() {
             </svg>
             <p className="font-inter font-semibold text-2xl leading-[28px]">Sherlegal AI</p>
           </article>
-          <h2 className="mt-2 text-xl md:text-2xl font-[700] font-inter leading-snug text-[40px]">
-            Optimized for thought built for <br /> action
+          <h2 className="mt-2 max-md:text-[30px] max-smmmm:text-[24px] font-[700] font-inter leading-snug text-[40px]">
+            Optimized for thought built for action
           </h2>
           <p className="mt-2 text-white font-inter text-[20px]">
             Think smarter and act faster, from idea to execution in seconds
           </p>
 
           {/* Tags */}
-          <div className="flex mb-20 flex-wrap space-y-2 w-full mx-auto justify-center items-center gap-2 mt-4">
+          <div className="flex mb-20 max-smm:grid max-smm:grid-cols-2 flex-wrap space-y-2 w-full mx-auto justify-center items-center gap-2 mt-4">
             <span className="px-3 py-1 rounded-full bg-gray-700 text-[#FFFFFF] font-inter  text-[18px] font-[600] flex items-center justify-center gap-2">
               <svg
                 width="21"
@@ -105,7 +105,7 @@ export default function Hero() {
                   </clipPath>
                 </defs>
               </svg>
-              Corporate law
+              Civil law
             </span>
             <span className="px-3 py-1 rounded-full bg-gray-700 text-[#FFFFFF] font-inter  text-[18px] font-[600] flex items-center justify-center gap-2">
               <svg
@@ -132,7 +132,7 @@ export default function Hero() {
                   </clipPath>
                 </defs>
               </svg>
-              Corporate law
+              Civil law
             </span>
             <span className="px-3 py-1 rounded-full bg-gray-700 text-[#FFFFFF] font-inter  text-[18px] font-[600] flex items-center justify-center gap-2">
               <svg
@@ -159,9 +159,9 @@ export default function Hero() {
                   </clipPath>
                 </defs>
               </svg>
-              Corporate law
+              Civil law
             </span>
-            <span className="px-3 relative py-1 rounded-full bg-gray-700 text-[#FFFFFF] font-inter  text-[18px] font-[600] flex items-center justify-center gap-2">
+            <span className="px-3 py-1 rounded-full bg-gray-700 text-[#FFFFFF] font-inter  text-[18px] font-[600] flex items-center justify-center gap-2">
               <svg
                 width="21"
                 height="20"
@@ -186,12 +186,12 @@ export default function Hero() {
                   </clipPath>
                 </defs>
               </svg>
-              Corporate law
+              Civil law
             </span>
           </div>
 
           <div className="mt-6 flex gap-4">
-            <div className="relative w-full">
+            <div className="relative w-[520px] max-sm:w-[310px] max-md:w-[450px]">
               {/* Icon */}
               <svg
                 width="30"
@@ -212,12 +212,10 @@ export default function Hero() {
               <input
                 type="text"
                 placeholder="Ask for anything or use a command"
-                className="inputstyle w-[520px] max-sm:w-[100px] max-md:w-[450px] pl-12 pr-4 py-2 bg-gray-800 text-sm text-gray-200 placeholder-gray-400
+                className="inputstyle w-[520px] max-smm:w-[250px] max-smmm:w-[200px] max-sm:w-[310px] max-md:w-[450px] pl-12 py-4 pr-4 bg-gray-800 text-sm text-gray-200 placeholder-gray-400
     border-0 border-b border-gray-600 focus:border-blue-500 focus:ring-0 outline-none transition"
               />
 
-              {/* Tepada faqat bosilganda chiqadigan qizil border */}
-              <div className="absolute top-0 left-0 w-full h-0.5 bg-red-500 scale-x-0 inputstyle-focus:scale-x-100 transition-transform duration-200 origin-left"></div>
             </div>
 
             <div onClick={() => setOpen(true)}
@@ -248,10 +246,11 @@ export default function Hero() {
             {/* Close */}
 
             <div
-              className="mt-10 w-[98%] max-w-[680px] mx-auto rounded-[48px] p-[12px] shadow-xl
-                [background:linear-gradient(40deg,rgba(122,167,237,1),rgba(215,211,142,1),rgba(248,97,97,1))]"
+              className=" mt-10 w-[90%] max-w-[680px] mx-auto rounded-[48px] p-[12px] shadow-xl
+        [background:linear-gradient(40deg,rgba(122,167,237,1),rgba(215,211,142,1),rgba(248,97,97,1))]"
             >
-              <div className="rounded-[36px] bg-[#000] text-white p-6 text-center bg-cardAi">
+              <div className="rounded-[36px] bg-[#000] bg-cardAi  text-white p-6 text-center">
+
                 <div className="flex mb-4 items-center justify-beetwen">
                   <article className="inline-flex left-[1/3] relative items-center gap-2 px-4 py-2 rounded-full border bg-white/10">
                     <svg
@@ -297,16 +296,15 @@ export default function Hero() {
                     </button>
                   </article>
                 </div>
-                <h2 className="mt-2 text-xl md:text-2xl font-[700] font-inter leading-snug text-[40px]">
+                <h2 className="mt-2 max-md:text-[30px] max-smmmm:text-[26px] font-[700] font-inter leading-snug text-[40px]">
                   Optimized for thought built for <br /> action
                 </h2>
                 <p className="mt-2 text-white font-inter text-[20px]">
-                  Think smarter and act faster, from idea to execution in
-                  seconds
+                  Think smarter and act faster, from idea to execution in seconds
                 </p>
 
                 {/* Tags */}
-                <div className="flex flex-wrap space-y-2 mb-20 w-full mx-auto justify-center items-center gap-2 mt-4">
+                <div className="flex mb-20 flex-wrap space-y-2 w-full mx-auto justify-center items-center gap-2 mt-4">
                   <span className="px-3 py-1 rounded-full bg-gray-700 text-[#FFFFFF] font-inter  text-[18px] font-[600] flex items-center justify-center gap-2">
                     <svg
                       width="21"
@@ -418,7 +416,7 @@ export default function Hero() {
                 </div>
 
                 <div className="mt-6 flex gap-4">
-                  <div className="relative w-full">
+                  <div className="relative w-[520px] max-sm:w-[310px] max-md:w-[450px]">
                     {/* Icon */}
                     <svg
                       width="30"
@@ -439,15 +437,14 @@ export default function Hero() {
                     <input
                       type="text"
                       placeholder="Ask for anything or use a command"
-                      className="inputstyle w-[520px] pl-12 pr-4 py-2 bg-gray-800 text-sm text-gray-200 placeholder-gray-400
+                      className="inputstyle w-[520px] max-smm:w-[250px] max-smmm:w-[200px] max-sm:w-[310px] max-md:w-[450px] pl-12 py-4 pr-4 bg-gray-800 text-sm text-gray-200 placeholder-gray-400
     border-0 border-b border-gray-600 focus:border-blue-500 focus:ring-0 outline-none transition"
                     />
 
-                    {/* Tepada faqat bosilganda chiqadigan qizil border */}
-                    <div className="absolute top-0 left-0 w-full h-0.5 bg-red-500 scale-x-0 inputstyle-focus:scale-x-100 transition-transform duration-200 origin-left"></div>
                   </div>
 
-                  <div className="cursor-pointer flex gap-[8px] w-[60px] py-[16px] px-[16px] items-center justify-center boxshadoww">
+                  <div onClick={() => setOpen(true)}
+                    className="cursor-pointer flex gap-[8px] w-[60px] py-[16px] px-[16px] items-center justify-center boxshadoww">
                     <svg
                       width="20"
                       height="20"

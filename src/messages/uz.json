@@ -5,5 +5,12 @@
         "ourteam": "Bizning jamoa",
         "academy": "Akademiya",
         "contact": "Aloqa"
+    },
+    "HomePage":{
+        "hometitle":"Toshkentdagi advokatlik byurosi -",
+        "homesher":"Sher",
+        "homelegal":"Legal",
+        "homedes":"Our law firm combines legal expertise with personalized solutions to protect your rights and achieve your goals.",
+        "homebtn":"Get in touch"
     }
 }

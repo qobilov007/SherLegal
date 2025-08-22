@@ -1,10 +1,10 @@
-import Button from "@/src/components/btn/Button";
-import { ArrowRight } from "lucide-react";
+import BtnIcon from "../../../../../public/images/Button Icon.svg"
+import Image from "next/image"
 import cardImg from "../../../../../public/icons/team1.png";
 import Teamm from "./teamm"
 import { TeamsType } from "@/src/app.type";
 
-export default function   OurTeam() {
+export default function OurTeam() {
   const teams: TeamsType[] = [
     {
       teamImg: cardImg,
@@ -36,7 +36,7 @@ export default function   OurTeam() {
       names: "Sherzod Egamberdiyev",
       desc: "Managing Partner, advocate and Founder of Sher Legal",
     },
-        {
+    {
       teamImg: cardImg,
       names: "Sherzod Egamberdiyev",
       desc: "Managing Partner, advocate and Founder of Sher Legal",
@@ -65,15 +65,9 @@ export default function   OurTeam() {
           <h5 className="font-inter font-bold text-[28px] md:text-[40px] leading-[36px] md:leading-[48px] text-white">
             Our team
           </h5>
-          <Button
-            title="All team"
-            icon={
-              <ArrowRight
-                size={22}
-                className="group-hover:rotate-[0deg] transition-all duration-200 rotate-[-45deg]"
-              />
-            }
-          />
+          <button className="group boxshadow md:inline-flex max-md:flex max-md:mx-auto max-md:mt-4 rounded-[1000px] bg-[#C61511] p-[16px]">
+            <p className="flex gap-[8px] items-center justify-between text-white text-[20px] font-inter font-[600]">All Services <Image src={BtnIcon} alt="BtnIcon" className="group-hover:rotate-[45deg] ease-linear duration-300" /></p>
+          </button>
         </article>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
