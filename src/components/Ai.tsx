@@ -3,10 +3,13 @@
 import BtnIcon from "../../public/images/Button Icon.svg";
 import Image from "next/image";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 
 
 
 export default function Hero() {
+  const t = useTranslations("HomePage")
+
   const [open, setOpen] = useState(false);
 
   return (
@@ -21,7 +24,7 @@ export default function Hero() {
         onClick={() => setOpen(true)}
       >
         <p className="flex gap-[8px] items-center justify-between text-white text-[20px] font-inter font-[600] ">
-          Try GPT{" "}
+          {t("aibtn")}{" "}
           <Image
             src={BtnIcon}
             alt="BtnIcon"
@@ -72,10 +75,10 @@ export default function Hero() {
             <p className="font-inter font-semibold text-2xl leading-[28px]">Sherlegal AI</p>
           </article>
           <h2 className="mt-2 max-md:text-[30px] max-smmmm:text-[24px] font-[700] font-inter leading-snug text-[40px]">
-            Optimized for thought built for action
+            {t("aides")}
           </h2>
           <p className="mt-2 text-white font-inter text-[20px]">
-            Think smarter and act faster, from idea to execution in seconds
+            {t("aidess")}
           </p>
 
           {/* Tags */}
@@ -208,7 +211,6 @@ export default function Hero() {
                 />
               </svg>
 
-              {/* Input */}
               <input
                 type="text"
                 placeholder="Ask for anything or use a command"
@@ -243,7 +245,6 @@ export default function Hero() {
       {open && (
         <div className="fixed inset-0 flex items-center justify-center bg-black/60 z-[100]">
           <div className="relative">
-            {/* Close */}
 
             <div
               className=" mt-10 w-full max-w-[710px] mx-auto rounded-[48px] p-[12px] shadow-xl
@@ -296,11 +297,11 @@ export default function Hero() {
                     </button>
                   </article>
                 </div>
-                <h2 className="mt-2 max-md:text-[30px] max-smmmm:text-[26px] font-[700] font-inter leading-snug text-[40px]">
-                  Optimized for thought built for <br /> action
+                <h2 className="mt-2 max-md:text-[30px] max-smmmm:text-[24px] font-[700] font-inter leading-snug text-[40px]">
+                  {t("aides")}
                 </h2>
                 <p className="mt-2 text-white font-inter text-[20px]">
-                  Think smarter and act faster, from idea to execution in seconds
+                  {t("aidess")}
                 </p>
 
                 {/* Tags */}
