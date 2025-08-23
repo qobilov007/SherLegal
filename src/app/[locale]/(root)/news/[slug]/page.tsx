@@ -6,8 +6,8 @@ import { LuEye } from "react-icons/lu";
 import { useTranslations } from "next-intl";
 
 export default function page({ params }: { params: { slug: string } }) {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const t = useTranslations("Common")
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const t = useTranslations("Common");
   const newsItem = getNews.find((n) => n.slug === params.slug);
 
   const paragraphs = newsItem?.description.split("\n");
