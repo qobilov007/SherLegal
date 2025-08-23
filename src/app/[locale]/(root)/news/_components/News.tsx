@@ -30,7 +30,7 @@ export default function News() {
           <input
             type="text"
             placeholder={t("search")}
-            className="bg-transparent outline-none text-sm md:w-full w-1/2 placeholder:text-gray-500 md:text-[14px] font-medium font-inter leading-[140%]"
+            className="bg-transparent outline-none text-sm w-full placeholder:text-gray-500 md:text-[14px] font-medium font-inter leading-[140%]"
           />
         </article>
       </div>
