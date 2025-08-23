@@ -209,7 +209,7 @@ export default function Home() {
             </Link>
           </article>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
-            {teams.slice(0, 9).map((team, id) => (
+            {teams.slice(0, 6).map((team, id) => (
               <Teamm key={id} infoTeam={team} />
             ))}
           </div>

@@ -11,7 +11,7 @@ export default function ServicesSection() {
     const t = useTranslations("HomePage")
     const locale = useLocale()
     return (
-        <div className="bg-[#000000]">
+        <div className="">
             <section className="max-w-7xl mx-auto px-6 py-16">
                 <div className="md:flex max-md:hidden  justify-between items-center mb-10">
                     <div>
