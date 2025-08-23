@@ -6,17 +6,31 @@ import { LuEye } from "react-icons/lu";
 import Link from "next/link";
 import { useLocale } from "next-intl";
 import Marquee from "react-fast-marquee";
+import { useEffect, useState } from "react";
 
 export default function Marqueforslug() {
   const locale = useLocale();
   const news = getNews;
+  const [gradient, setGradient] = useState(true);
+
+
+  useEffect(() => {
+    const handleResize = () => {
+      setGradient(window.innerWidth >= 768);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
-    <div className="max-w-[1600px] m-auto w-full space-y-6 overflow-visible max-md:pb-10">
+    <div className="max-w-[1600px] m-auto w-full space-y-6 overflow-visible ">
       <Marquee
         direction="right"
         speed={30}
-        gradient={true}
+        gradient={gradient}
         gradientColor={"white"}
         gradientWidth={200}
         pauseOnHover
