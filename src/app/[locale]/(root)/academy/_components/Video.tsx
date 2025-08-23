@@ -10,7 +10,7 @@ export default function Video() {
 
   return (
     <section className="container">
-      <div className="relative bg-academyVideo bg-no-repeat bg-center bg-cover w-full md:h-[500px] sm:h-[350px] h-[300px] lg:my-[52px] my-[32px] rounded-[40px] flex items-center justify-center">
+      <div className="relative bg-academyVideo bg-no-repeat bg-center bg-cover w-full md:h-[500px] sm:h-[350px] h-[240px] lg:my-[52px] my-[32px] rounded-[40px] flex items-center justify-center">
         <div className="absolute inset-0 bg-black/40 rounded-[40px]"></div>
 
         <Image

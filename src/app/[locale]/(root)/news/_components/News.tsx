@@ -21,7 +21,7 @@ export default function News() {
 
   return (
     <div className="container md:pt-[124px] pt-28">
-      <div className="flex items-center md:items-center justify-between md:pb-[32px] nx:pb-6 pb-3">
+      <div className="flex items-center md:items-center justify-between pb-[36px]">
         <h1 className=" font-bold font-inter md:text-[40px] text-[24px] leading-[120%]">
           {t("title")}
         </h1>
@@ -35,29 +35,30 @@ export default function News() {
         </article>
       </div>
 
-      <div className="grid lg:grid-cols-3 nx:grid-cols-2 gap-[24px]">
+      <div className="grid lg:grid-cols-3 sm:grid-cols-2 md:gap-[24px] gap-4">
         {currentNews.map((item, id) => (
           <Link key={id} href={`/${locale}/news/${item.slug}`}>
             <div
               key={id}
-              className="rounded-2xl overflow-hidden border hover:border-red-700 w-full cursor-pointer bg-[#F3F3F3] hover:bg-white transition-all duration-200 hover:scale-[1.01] hover:shadow-md"
+              className="rounded-2xl overflow-hidden border hover:border-red-700 w-full cursor-pointer bg-[#F3F3F3] hover:bg-white ease-linear duration-300 md:h-[367px] h-[343px]"
             >
               <Image
                 src={item.img}
                 alt="Image"
                 width={379}
                 height={182}
-                className="w-full object-cover"
+                className="w-full object-cover h-[182px]"
               />
-              <article className="md:py-4 py-2 px-5">
-                <h2 className="sm:line-clamp-2 line-clamp-1 font-bold font-vela md:text-[16px] text-[13px] leading-[140%]  pb-[4px]">
+
+              <article className=" flex flex-col justify-between md:h-[170px] h-[158px] px-4 py-2">
+                <h2 className="line-clamp-2 font-bold font-vela text-[16px] leading-[140%] pb-[4px]">
                   {item.title}
                 </h2>
-                <p className="line-clamp-2 md:text-[14px] text-[12px] font-medium font-inter leading-[136%] text-[#6C6C6C]">
+                <p className="line-clamp-2 text-[14px] font-medium font-inter leading-[136%] text-[#6C6C6C]">
                   {item.description}
                 </p>
-              </article>
-              <div className="flex max-nx:flex-row max-md:flex-col md:items-center items-start gap-1 md:py-4 py-2 px-5">
+
+              <div className="flex max-sm:flex-row max-md:flex-col md:items-center items-start gap-1">
                 <article className="flex items-center md:gap-[8.5px] gap-0.5 md:py-[6px] py-0.5 px-3 border border-[#6C6C6C] rounded-full max-w-max">
                   <CiCalendarDate className="text-[#6C6C6C]" />
                   <span className="text-[#6C6C6C] md:text-[12px] text-[10px] font-medium font-inter">
@@ -71,6 +72,7 @@ export default function News() {
                   </span>
                 </article>
               </div>
+              </article>
             </div>
           </Link>
         ))}
