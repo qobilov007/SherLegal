@@ -6,7 +6,7 @@ export default function Contact() {
   return (
     <div className="relative pt-12 sm:pt-16 md:pt-20 lg:pt-24 pb-20 sm:pb-28 md:pb-32 bg-[rgba(255,255,255,1)]">
 
-      <div className="bgcolorr container relative left-0 max-lg:p-4 flex flex-col lg:flex-row items-center justify-between w-full bg-[#0653C9] lg:rounded-[36px] rounded-2xl">
+      <div className="bgcolorr container relative left-0 max-lg:p-4 xl:flex max-xl:flex-col items-center justify-between w-full bg-[#0653C9] lg:rounded-[36px] rounded-2xl">
         <div className="w-full lg:w-[450px] px-4 sm:px-6 lg:pl-14 py-8 sm:py-10 lg:py-14">
           <h6 className="text-[22px] sm:text-[26px] md:text-[28px] lg:text-[32px] font-semibold text-black mb-2 font-vk">
             {t("contacttitle")}
@@ -80,7 +80,7 @@ export default function Contact() {
         </div>
 
         {/* Contact Form */}
-        <div className="flexshrink w-full lg:w-[600px] py-6 px-4 sm:px-6 md:px-8 lg:mt-0 border smm:w-[360px] md:w-[500px] lg:absolute lg:right-16 h-auto lg:h-[550px] relative bg-[#fff] border-[rgba(255,255,255,0.5)] z-100 lg:rounded-[36px] rounded-2xl">
+        <div className="flexshrink w-full lg:w-[550px] py-6 px-4 sm:px-6 md:px-8 lg:mt-0 border xl:absolute xl:right-16 h-auto xl:h-[550px] relative bg-[#fff] border-[rgba(255,255,255,0.5)] z-100 xl:rounded-[36px] rounded-2xl">
           <article className="">
             <h5 className="text-[22px] sm:text-[26px] md:text-[28px] lg:text-[32px] font-vk font-bold leading-[120%] text-[black] mb-2 sm:mb-3">
               {t("contacttitle1")}
