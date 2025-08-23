@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function SochealMedia() {
   return (
-    <div className="grid lg:grid-cols-4 gap-6 mb-8 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-y-3 items-center justify-center bg-[#fff] md:mb-10 py-6 max-md:mt-[405px] max-sm:mt-[395px] rounded-2xl">
+    <div className="grid lg:grid-cols-4 gap-6 mb-8 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-y-3 items-center justify-center bg-[#fff] md:mb-10 max-md:mt-[405px] max-sm:mt-[395px] rounded-2xl">
       
       {/* Telegram */}
       <Link href={"https://t.me/CLAMO_uz"} aria-label="Clamo Telegram" target="_blank">

@@ -9,12 +9,12 @@ import { useTranslations } from "next-intl";
 
 export default function NewsSection() {
     const t = useTranslations("HomePage")
-    const locale  = useLocale()
+    const locale = useLocale()
     return (
         <section className="py-20 font-inter bg-gradient-to-b from-white via-gray-50 to-white">
             <div className="container mx-auto px-6">
                 {/* Header */}
-                <div className="flex max-md:flex-col justify-between items-center mb-12">
+                <div className="lg:flex max-lg:hidden  max-md:flex-col justify-between items-center mb-12">
                     <div>
                         <h2 className="text-3xl font-bold text-gray-900">{t("newstitle")}</h2>
                         <p className="text-gray-600 max-w-xl mt-2">
@@ -26,6 +26,21 @@ export default function NewsSection() {
                             <p className="flex gap-[8px] items-center justify-between text-white text-[20px] font-inter font-[600]">{t("newsbtn")} <Image src={BtnIcon} alt="BtnIcon" className="group-hover:rotate-[45deg] ease-linear duration-300" /></p>
                         </button>
                     </Link>
+                </div>
+                <div className="max-lg:block hidden">
+                    <div className="flex max-smm:flex-col gap-16 max-smm:gap-4  items-center justify-evenly mb-8">
+                        <h2 className="lg:text-[40px] text-[24px] font-bold font-inter text-gray-900 md:text-[32px]">{t("newstitle")}</h2>
+                        <Link
+                            href={`/${locale}/services`}
+                        >
+                            <button className="group boxshadow max-md:w-auto rounded-full bg-[#C61511] p-[16px]">
+                                <p className="flex gap-[8px] items-center justify-between text-white max-md:text-[10px] md:text-[20px] font-inter font-[600]">{t("newsbtn")} <Image src={BtnIcon} alt="BtnIcon" className="group-hover:rotate-[45deg] ease-linear duration-300 max-md:w-[20px]" /></p>
+                            </button>
+                        </Link>
+                    </div>
+                    <p className="text-[#000] mt-2 text-[20px] text-center mb-8 mx-auto">
+                        {t("newsdes")}
+                    </p>
                 </div>
 
                 {/* 3 ta card */}

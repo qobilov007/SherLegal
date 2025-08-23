@@ -60,7 +60,8 @@ export default function TestimonialsMarquee() {
             </Marque>
           </div>
         </div>
-        <div className="max-md:block hidden">
+      </div>
+        <div className="max-md:block hidden overflow-hidden">
           <Marquee className="mb-10">
             {testimonials.map((review, id) => (
               <ReviewMediaCard key={id} {...review} />
@@ -72,7 +73,6 @@ export default function TestimonialsMarquee() {
             ))}
           </Marquee>
         </div>
-      </div>
     </section>
   );
 }
