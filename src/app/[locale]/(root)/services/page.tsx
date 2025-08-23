@@ -6,24 +6,24 @@ import Comments from "@/src/components/Reviews/Reviews";
 import Partners from "@/src/components/Partners";
 import Link from "next/link";
 import { useLocale } from "next-intl";
+import { useTranslations } from "next-intl";
 
 export default function ServicesSection() {
-    const locale = useLocale();
 
-  return (
-    <div className="bg-[#F9F9F9] pt-[68px]">
-      <section className="container mx-auto px-6 py-16">
-        <div className="flex justify-between items-center mb-10">
-          <div>
-            <h2 className="text-[40px] font-bold font-inter text-gray-900">
-              Our services
-            </h2>
-            <p className="text-[#000] mt-2 text-[20px]">
-              Solving Problems for Your Business in Tashkent and Across
-              Uzbekistan
-            </p>
-          </div>
-        </div>
+    const t = useTranslations("HomePage")
+    const locale = useLocale();
+    
+    return (
+        <div className="bg-[#F9F9F9] pt-[68px]">
+            <section className="container mx-auto px-6 py-16">
+                <div className="flex justify-between items-center mb-10">
+                    <div>
+                        <h2 className="text-[40px] font-bold font-inter text-gray-900">{t("servicetitle")}</h2>
+                        <p className="text-[#000] mt-2 text-[20px]">
+                            {t("servicedes")}
+                        </p>
+                    </div>
+                </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
           {servicess.map((service, index) => (

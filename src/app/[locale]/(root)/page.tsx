@@ -1,15 +1,19 @@
 import Comments from "../../../components/Reviews/Reviews";
 import Faq from "../../../components/Faq";
 import News from "../../../components/News";
+import BtnIcon from "../../../../public/images/Button Icon.svg";
 import OurService from "../../../components/OurService";
 import Partners from "../../../components/Partners";
+import cardImg from "../../../../public/icons/team1.png";
 import Button from "../../../components/btn/Button";
 import { ArrowRight } from "lucide-react";
+import { TeamsType } from "@/src/app.type";
+import Teamm from "../../../app/[locale]/(root)/team/teamm";
 import WhyChoose from "../../../components/WhyChoose";
-import OurTeam from "./team/page";
 import Ai from "../../../components/Ai";
-import { useTranslations } from "next-intl"; // BEGIN: Add missing import
-
+import { useTranslations, useLocale } from "next-intl"; // BEGIN: Add missing import
+import Image from "next/image";
+import Link from "next/link"
 
 type Stat = {
   number: string;
@@ -17,15 +21,65 @@ type Stat = {
 };
 
 export default function Home() {
+
+  const locale = useLocale()
+
   const stats: Stat[] = [
     { number: "15+", label: "Years experience" },
     { number: "10K", label: "Project finished" },
     { number: "28+", label: "Closed deals" },
     { number: "12+", label: "Happy clients" },
   ];
-  
+
   const t = useTranslations("HomePage");
 
+  const teams: TeamsType[] = [
+    {
+      teamImg: cardImg,
+      names: "Sherzod Egamberdiyev",
+      desc: "Managing Partner, advocate and Founder of Sher Legal",
+    },
+    {
+      teamImg: cardImg,
+      names: "Sherzod Egamberdiyev",
+      desc: "Managing Partner, advocate and Founder of Sher Legal",
+    },
+    {
+      teamImg: cardImg,
+      names: "Sherzod Egamberdiyev",
+      desc: "Managing Partner, advocate and Founder of Sher Legal",
+    },
+    {
+      teamImg: cardImg,
+      names: "Sherzod Egamberdiyev",
+      desc: "Managing Partner, advocate and Founder of Sher Legal",
+    },
+    {
+      teamImg: cardImg,
+      names: "Sherzod Egamberdiyev",
+      desc: "Managing Partner, advocate and Founder of Sher Legal",
+    },
+    {
+      teamImg: cardImg,
+      names: "Sherzod Egamberdiyev",
+      desc: "Managing Partner, advocate and Founder of Sher Legal",
+    },
+    {
+      teamImg: cardImg,
+      names: "Sherzod Egamberdiyev",
+      desc: "Managing Partner, advocate and Founder of Sher Legal",
+    },
+    {
+      teamImg: cardImg,
+      names: "Sherzod Egamberdiyev",
+      desc: "Managing Partner, advocate and Founder of Sher Legal",
+    },
+    {
+      teamImg: cardImg,
+      names: "Sherzod Egamberdiyev",
+      desc: "Managing Partner, advocate and Founder of Sher Legal",
+    },
+  ];
 
   return (
     <div>
@@ -130,7 +184,36 @@ export default function Home() {
         <WhyChoose />
       </div>
       <div className="w-full overflow-hidden bg-black py-10 sm:py-12 md:py-16 team-overlay">
-        <OurTeam />
+        <div className="container">
+          <p className="font-inter font-normal leading-[26px] text-white mb-6">
+            {t("teamdes")}
+          </p>
+          <p className="w-full h-[1px] bg-white/30 mb-[30px]"></p>
+
+          <article className="flex items-center justify-between mb-14 gap-4 relative z-[10]">
+            <h5 className="font-inter font-bold text-[28px] md:text-[40px] leading-[36px] md:leading-[48px] text-white">
+              {t("teamtitle")}
+            </h5>
+            <Link href={`/${locale}/team`}>
+              <button className="group boxshadow md:inline-flex max-md:flex rounded-[1000px] bg-[#C61511] p-[16px]">
+                <p className="flex gap-[8px] items-center justify-between text-white text-[20px] font-inter font-[600]">
+                  {t("teambtn")}
+                  <Image
+                    src={BtnIcon}
+                    alt="BtnIcon"
+                    className="group-hover:rotate-[45deg] ease-linear duration-300"
+                  />
+                </p>
+              </button>
+
+            </Link>
+          </article>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+            {teams.slice(0, 9).map((team, id) => (
+              <Teamm key={id} infoTeam={team} />
+            ))}
+          </div>
+        </div>
       </div>
       <OurService />
       <Ai />

@@ -1,18 +1,18 @@
 "use client";
-
+import { useTranslations } from "next-intl";
 
 export default function Contact() {
+  const t = useTranslations("ContactPage")
   return (
     <div className="relative pt-12 sm:pt-16 md:pt-20 lg:pt-24 pb-20 sm:pb-28 md:pb-32 bg-[rgba(255,255,255,1)]">
 
       <div className="bgcolorr container relative left-0 max-lg:p-4 flex flex-col lg:flex-row items-center justify-between w-full bg-[#0653C9] lg:rounded-[36px] rounded-2xl">
-        {/* Contact Info */}
         <div className="w-full lg:w-[450px] px-4 sm:px-6 lg:pl-14 py-8 sm:py-10 lg:py-14">
           <h6 className="text-[22px] sm:text-[26px] md:text-[28px] lg:text-[32px] font-semibold text-black mb-2 font-vk">
-            Biz bilan bog‘laning
+            {t("contacttitle")}
           </h6>
           <p className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] font-normal text-black text-opacity-[60%] mb-4 sm:mb-6 lg:mb-9 font-vk">
-            Savollaringizni yuboring va tez orada javob beramiz
+            {t("contacttitdes")}
           </p>
 
           <div className="flex flex-col gap-3 sm:gap-4">
@@ -28,7 +28,7 @@ export default function Contact() {
               </article>
               <article>
                 <span className="text-[12px] sm:text-[13px] md:text-[14px] font-normal font-vk text-opacity-[60%] text-black">
-                  Email
+                  {t("contactaddress")}
                 </span>
                 <p className="text-[13px] sm:text-[15px] md:text-[16px] font-medium font-vk text-black line-clamp-1">
                   info@clamo.uz
@@ -48,7 +48,7 @@ export default function Contact() {
               </article>
               <article>
                 <span className="text-[12px] sm:text-[13px] md:text-[14px] font-normal font-vk text-opacity-[60%] text-black">
-                  Email
+                  {t("contactphone")}
                 </span>
                 <p className="text-[13px] sm:text-[15px] md:text-[16px] font-medium font-vk text-black line-clamp-1">
                   info@clamo.uz
@@ -69,7 +69,7 @@ export default function Contact() {
               </article>
               <article>
                 <span className="text-[12px] sm:text-[13px] md:text-[14px] font-normal font-vk text-opacity-[60%] text-black">
-                  Email
+                  {t("contactemail")}
                 </span>
                 <p className="text-[13px] sm:text-[15px] md:text-[16px] font-medium font-vk text-black line-clamp-1">
                   info@clamo.uz
@@ -83,10 +83,10 @@ export default function Contact() {
         <div className="flexshrink w-full lg:w-[600px] py-6 px-4 sm:px-6 md:px-8 lg:mt-0 border smm:w-[360px] md:w-[500px] lg:absolute lg:right-16 h-auto lg:h-[550px] relative bg-[#fff] border-[rgba(255,255,255,0.5)] z-100 lg:rounded-[36px] rounded-2xl">
           <article className="">
             <h5 className="text-[22px] sm:text-[26px] md:text-[28px] lg:text-[32px] font-vk font-bold leading-[120%] text-[black] mb-2 sm:mb-3">
-              Any questions?
+              {t("contacttitle1")}
             </h5>
             <p className="text-[#838CAF] text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] font-normal leading-[130%] font-vk">
-              Quyidagi ma’lumotlarni to‘ldiring va biz bilan bog‘laning
+              {t("contactdess")}
             </p>
           </article>
 
@@ -102,7 +102,7 @@ export default function Contact() {
                 htmlFor="names"
                 className="inline-flex mb-2 pt-[32px] font-vk text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] font-medium text-[#black]"
               >
-                To‘liq ism
+                {t("contactname")}
               </label>
               <input
                 id="names"
@@ -118,7 +118,7 @@ export default function Contact() {
                 htmlFor="tashkilot"
                 className="inline-flex mb-2 font-vk text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] font-medium text-[black]"
               >
-                Tashkilot
+                {t("contacttash")}
               </label>
               <input
                 id="tashkilot"
@@ -135,7 +135,7 @@ export default function Contact() {
                 htmlFor="description"
                 className="inline-flex mb-2 font-vk text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] font-medium text-[#black]"
               >
-                Description
+                {t("contactdes")}
               </label>
               <textarea
                 id="description"
@@ -150,7 +150,7 @@ export default function Contact() {
                 type="submit"
                 className="group flex items-center gap-1 text-[13px] sm:text-[14px] md:text-[15px] font-medium text-white px-4 sm:px-5 md:px-6 py-2 sm:py-[9px] md:py-[10px] rounded-lg bg-[rgba(198,21,17,1)] hover:bg-[#d81717] transition-all duration-300"
               >
-                Yuborish
+                {t("contactbtn")}
               </button>
             </div>
           </form>

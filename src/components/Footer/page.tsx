@@ -1,28 +1,30 @@
+"use client"
+
 import Image from "next/image";
 import Logo from "../../../public/Logo.svg";
 import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
 
 export default function FooterPage() {
+  const tt = useTranslations("FooterPage");
   const t = useTranslations("Navbarist");
   const locale = useLocale();
   return (
     <div className="w-full footer-overlay">
       <div className="container">
-        <article className="relative z-[11] pt-24 max-w-[730px] m-auto md:mb-[129px] sm:mb-10 mb-6">
+        <article className="relative z-[11] pt-24 max-w-[900px] m-auto md:mb-[129px] sm:mb-10 mb-6">
           <h3 className="font-inter font-bold md:text-[64px] text-[32px] md:leading-[76px] leading-[100%] text-white text-center mb-6">
-            Law and Attorney Firm in Tashkent -SherLegal
+            {tt("footertitle")}
           </h3>
           <p className="md:max-w-[68%] m-auto font-normal md:text-[16px] text-[14px] font-inter leading-[20px] text-center text-white/80 mb-6">
-            Our law firm combines legal expertise with personalized solutions to
-            protect your rights and achieve your goals.
+            {tt("footerdes")}
           </p>
           <article className="flex items-center gap-5 justify-center">
             <button className="px-7 md:py-4 py-3 rounded-full border-l border-t border-r backdrop-blur-lg text-[16px] font-medium font-inter leading-[20px] text-white">
-              About us
+              {tt("footerbtn")}
             </button>
             <button className="px-6 md:py-4 py-3 rounded-full bg-[#C61511] hover:shadow-lg transition-all duration-200 hover:shadow-[#C61511] text-[16px] font-medium font-inter leading-[20px] text-white">
-              Contact us
+              {tt("footerbtn1")}
             </button>
           </article>
         </article>
@@ -35,12 +37,11 @@ export default function FooterPage() {
             alt="Logo SherLegal"
           />
           <p className="font-inter font-normal text-[16px] leading-[22px] text-white/60 md:mb-9 mb-4">
-            Our law firm combines legal expertise with personalized solutions to
-            protect your rights and achieve your goals.
+           {tt("footerdes")}
           </p>
           <div>
             <p className="font-inter font-normal text-[14px] uppercase text-white mb-4">
-              socials
+              {tt("footersocials")}
             </p>
             <article className="flex items-center gap-5">
               <Link
@@ -121,10 +122,10 @@ export default function FooterPage() {
             </article>
           </div>
         </div>
-        <article className="flex items-start justify-evenly gap-24">
+        <article className="flex items-start justify-evenly">
           <ul>
             <p className="font-inter font-bold text-[14px] uppercase text-white mb-4">
-              Company
+              {tt("footercompany")}
             </p>
             <li>
               <Link
@@ -179,8 +180,8 @@ export default function FooterPage() {
             </li>
           </ul>
           <ul>
-            <p className="font-inter font-bold text-[14px] uppercase text-white mb-4">
-              support
+            <p className="font-inter w-[170px] font-bold text-[14px] uppercase text-white mb-4">
+              {tt("footersupport")}
             </p>
             <li>
               <Link
@@ -221,7 +222,7 @@ export default function FooterPage() {
         <div className="p-5 rounded-3xl backdrop-blur-[20px] flex flex-col gap-5 border-2 border-[rgba(255,255,255,0.10)] md:mb-20 mb-8">
           <article className="flex flex-col gap-2">
             <p className="font-inter font-normal text-[14px] text-white/40">
-              Phone number
+              {tt("foterphone")}
             </p>
             <a
               href="tel:+998712007007"
@@ -233,7 +234,7 @@ export default function FooterPage() {
           </article>
           <article className="flex flex-col gap-2">
             <p className="font-inter font-normal text-[14px] text-white/40">
-              Email adress
+              {tt("footeremail")}
             </p>
             <a
               href="mailto:info@clamo.uz"
@@ -247,7 +248,7 @@ export default function FooterPage() {
           </article>
           <article className="flex flex-col gap-2">
             <p className="font-inter font-normal text-[14px] text-white/40">
-              Address
+              {tt("footeraddress")}
             </p>
             <Link
               href="https://yandex.uz/maps/10335/tashkent/?ll=69.303946%2C41.318330&mode=whatshere&whatshere%5Bpoint%5D=69.303883%2C41.318303&whatshere%5Bzoom%5D=17&z=16"

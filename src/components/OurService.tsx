@@ -8,12 +8,12 @@ import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
 
 export default function ServicesSection() {
-  const t = useTranslations("HomePage")
+    const t = useTranslations("HomePage")
     const locale = useLocale()
     return (
-        <div className="bg-[#F9F9F9]">
+        <div className="bg-[#000000]">
             <section className="max-w-7xl mx-auto px-6 py-16">
-                <div className="md:flex max-md:fleex-col justify-between items-center mb-10">
+                <div className="md:flex max-md:hidden  justify-between items-center mb-10">
                     <div>
                         <h2 className="lg:text-[40px] text-[28px] font-bold font-inter text-gray-900 md:text-[32px]">{t("servicetitle")}</h2>
                         <p className="text-[#000] mt-2 text-[20px]">
@@ -24,9 +24,24 @@ export default function ServicesSection() {
                         href={`/${locale}/services`}
                     >
                         <button className="group boxshadow md:inline-flex max-md:flex max-md:mx-auto max-md:mt-4 rounded-[1000px] bg-[#C61511] p-[16px]">
-                            <p className="flex gap-[8px] items-center justify-between text-white text-[20px] font-inter font-[600]">{t("servicebtn")} <Image src={BtnIcon} alt="BtnIcon" className="group-hover:rotate-[45deg] ease-linear duration-300"/></p>
+                            <p className="flex gap-[8px] items-center justify-between text-white text-[20px] font-inter font-[600]">{t("servicebtn")} <Image src={BtnIcon} alt="BtnIcon" className="group-hover:rotate-[45deg] ease-linear duration-300" /></p>
                         </button>
                     </Link>
+                </div>
+                <div className="max-md:block hidden">
+                    <div className="flex gap-16 items-center justify-evenly mb-8">
+                        <h2 className="lg:text-[40px] text-[28px] font-bold font-inter text-gray-900 md:text-[32px]">{t("servicetitle")}</h2>
+                        <Link
+                            href={`/${locale}/services`}
+                        >
+                            <button className="group boxshadow max-md:w-[200px] max-md:flex max-md:mx-auto max-md:mt-4 rounded-[1000px] bg-[#C61511] p-[16px]">
+                                <p className="flex gap-[8px] items-center justify-between text-white text-[20px] font-inter font-[600]">{t("servicebtn")} <Image src={BtnIcon} alt="BtnIcon" className="group-hover:rotate-[45deg] ease-linear duration-300" /></p>
+                            </button>
+                        </Link>
+                    </div>
+                    <p className="text-[#000] mt-2 text-[20px] mb-8 mx-auto">
+                        {t("servicedes")}
+                    </p>
                 </div>
 
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
