@@ -151,7 +151,7 @@ export default function Home() {
                     className="group-hover:rotate-[0deg] transition-all duration-200 rotate-[-45deg]"
                   />
                 }
-                className="w-[160px] sm:w-[180px] text-sm sm:text-base"
+                className="w-[160px] sm:w-[180px] text-[10px] sm:text-[20px]"
               />
             </div>
           </div>
