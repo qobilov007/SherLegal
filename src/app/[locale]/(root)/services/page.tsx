@@ -4,16 +4,20 @@ import Image from "next/image";
 import { servicess } from "@/constants/page";
 import Comments from "@/src/components/Reviews/Reviews";
 import Partners from "@/src/components/Partners";
+import { useTranslations } from "next-intl";
 
 export default function ServicesSection() {
+
+    const t = useTranslations("HomePage")
+
     return (
         <div className="bg-[#F9F9F9] pt-[68px]">
             <section className="container mx-auto px-6 py-16">
                 <div className="flex justify-between items-center mb-10">
                     <div>
-                        <h2 className="text-[40px] font-bold font-inter text-gray-900">Our services</h2>
+                        <h2 className="text-[40px] font-bold font-inter text-gray-900">{t("servicetitle")}</h2>
                         <p className="text-[#000] mt-2 text-[20px]">
-                            Solving Problems for Your Business in Tashkent and Across Uzbekistan
+                            {t("servicedes")}
                         </p>
                     </div>
                 </div>

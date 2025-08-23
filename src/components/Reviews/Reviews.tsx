@@ -4,8 +4,10 @@ import { Marque } from "../magicui/marquee";
 import ReviewCard from "./ReviewsCard";
 import ReviewMediaCard from "./ReviewsMediaCard";
 import Marquee from "react-fast-marquee";
+import { useTranslations } from "next-intl";
 
 export default function TestimonialsMarquee() {
+  const t = useTranslations("HomePage")
   return (
     <section className="relative !min-h-[800px] text-white bg-black p-0 bg-reviews bg-no-repeat bg-cover bg-center">
       <div className="container md:flex max-md:flex-col items-center gap-8 justify-between z-20">
@@ -30,17 +32,15 @@ export default function TestimonialsMarquee() {
               />
             </svg>
             <span className="relative z-[20] font-inter font-semibold text-[18px] leading-[21px] text-white">
-              525 Reviews
+              525 {t("rewievs")}
             </span>
           </article>
 
-          <h2 className="md:max-w-[70%] w-full text-[48px] font-inter mt-4 leading-[120%] font-[700] text-white">
-            What our clients say
+          <h2 className="md:max-w-[90%] w-full text-[48px] font-inter mt-4 leading-[120%] font-[700] text-white">
+            {t("reviewstitle")}
           </h2>
           <p className="text-gray-400 mt-4 text-sm leading-relaxed w-full md:max-w-md">
-            Legal support for public-private partnership (PPP) projects, tax
-            optimization within investment activities, and consultation on
-            antitrust regulation issues.
+            {t("reviewsdes")}
           </p>
         </div>
 

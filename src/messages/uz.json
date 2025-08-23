@@ -20,7 +20,7 @@
     "teambtn": "Bizning barcha jamoamiz",
     "servicedes": "Toshkent va O'zbekiston bo'ylab biznesingiz uchun muammolarni hal qilish",
     "servicetitle": "Bizning xizmatlarimiz",
-    "servicebtn": "Bizning barcha xizmatlarimiz",
+    "servicebtn": "Barcha xizmatlarimiz",
     "aibtn": "GPT-ni sinab ko'ring",
     "aides": "Harakat uchun tuzilgan fikr uchun optimallashtirilgan",
     "aidess": "Aqlliroq o'ylab ko'ring va bir necha soniya ichida g'oyadan to amalga oshirishgacha tezroq harakat qiling",
@@ -54,5 +54,32 @@
   },
   "Common": {
     "back": "Orqaga"
+  },
+  "FooterPage": {
+    "footertitle": "Toshkent shahridagi yuridik va advokatlik firmasi -SherLegal",
+    "footerdes": "Bizning yuridik firmamiz sizning huquqlaringizni himoya qilish va maqsadlaringizga erishish uchun huquqiy tajribani shaxsiylashtirilgan echimlar bilan birlashtiradi.",
+    "footerbtn": "Biz haqimizda",
+    "footerbtn1": "Biz bilan bog'lanish",
+    "footersocials": "ijtimoiy",
+    "foterphone": "Telefon raqam",
+    "footeremail": "E-pochta manzili",
+    "footeraddress": "Manzil",
+    "footersupport": "Qo'llab-quvvatlash",
+    "footercompany": "Kompaniya"
+  },
+  "ContactPage": {
+    "contacttitle": "Biz bilan bog‘laning",
+    "contacttitdes":"Quyidagi usullardan foydalangan holda biz bilan bog'laning tizimdan chiqishingiz mumkin",
+    "contacttitle2": "Bog'lanish uchun ma'lumot",
+    "contacttitle1": "Savollaringiz bormi?",
+    "contactdess": "Savollaringizni yuboring va tez orada javob beramiz",
+    "contactname": "To‘liq ism",
+    "contactdes": "Izoh",
+    "contacttash": "Tashkilot",
+    "contactphone": "Telefon raqam",
+    "contactemail": "Elektron pochta",
+    "contactaddress": "Manzil",
+    "contactweb": "Websayt",
+    "contactbtn":"Yuborish"
   }
 }

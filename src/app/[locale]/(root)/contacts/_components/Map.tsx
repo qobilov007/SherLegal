@@ -7,8 +7,10 @@ import {
 } from "react-icons/fa";
 import { getContactInfo } from "../../../../../../constants/page";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 export default function ContactPage() {
+  const t = useTranslations("ContactPage")
   const contact = getContactInfo;
 
   const mapUrl = `https://www.google.com/maps?&q=Parkent+Street+51,+Tashkent&hl=en&output=embed`;
@@ -31,13 +33,13 @@ export default function ContactPage() {
           key={id}
           className="md:absolute top-[55%] left-[100px] mt-7 md:transform -translate-y-1/2 z-10 w-full sm:w-[310px] bg-white bg-opacity-90 rounded-xl shadow-lg p-6 space-y-4 text-gray-800"
         >
-          <h2 className="text-2xl font-semibold font-vk">Contact information</h2>
+          <h2 className="text-2xl font-semibold font-inter">{t("contacttitle2")}</h2>
 
           {/* PHONE */}
           <div className="group flex items-center gap-3">
             <FaPhoneAlt className="text-blue-600" />
             <Link href={`tel:${item.phone}`} target="_blank">
-              <p className="text-sm font-vk">Phone Number</p>
+              <p className="text-sm font-vk">{t("contactphone")}</p>
               <p className="font-medium font-vk group-hover:underline">
                 {item.phone}
               </p>
@@ -48,7 +50,7 @@ export default function ContactPage() {
           <div className="group flex items-center gap-3">
             <FaEnvelope className="text-blue-600" />
             <Link href={`mailto:${item.email}`} target="_blank">
-              <p className="text-sm font-vk">Email</p>
+              <p className="text-sm font-vk">{t("contactemail")}</p>
               <p className="font-medium font-vk group-hover:underline">
                 {item.email}
               </p>
@@ -59,7 +61,7 @@ export default function ContactPage() {
           <div className="flex items-center gap-3">
             <FaGlobe className="text-blue-600" />
             <div className="group">
-              <p className="text-sm font-vk">Website</p>
+              <p className="text-sm font-vk">{t("contactweb")}</p>
               <Link
                 href={item.website}
                 target="_blank"
@@ -81,7 +83,7 @@ export default function ContactPage() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <p className="text-sm font-vk">Address</p>
+              <p className="text-sm font-vk">{t("contactaddress")}</p>
               <p className="font-medium font-vk group-hover:underline">
                 {item.address}
               </p>

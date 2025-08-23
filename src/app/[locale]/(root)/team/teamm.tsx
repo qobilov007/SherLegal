@@ -10,7 +10,7 @@ export default function Teams({ infoTeam }: TeamProps) {
     <div className="relative top-0 z-[10] left-0 w-full h-[500px] rounded-[32px] bg-blue-500 overflow-hidden">
       <Image
         className="w-full h-full max-md:h-[700px] object-cover"
-        src={infoTeam.teamImg}
+        src={infoTeam.teamImg}  
         alt={infoTeam.desc}
       />
       <div className="w-full h-full absolute bottom-[20px] left-0 flex items-end justify-center ">

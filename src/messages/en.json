@@ -42,7 +42,7 @@
     "teambtn": "View all our team",
     "servicedes": "Solving business challenges across Tashkent and Uzbekistan",
     "servicetitle": "Our services",
-    "servicebtn": "View all our services",
+    "servicebtn": "All services",
     "aibtn": "Try GPT",
     "aides": "Optimized for actionable insights",
     "aidess": "Think smarter and move faster from idea to execution in just seconds",
@@ -54,5 +54,32 @@
     "newstitle": "News",
     "newsdes": "Stay ahead of legal changes before legislative updates: your reliable source for timely legal updates and in-depth analysis.",
     "newsbtn": "All news"
+  },
+  "FooterPage": {
+    "footertitle": "Law and attorney firm in Tashkent - SherLegal",
+    "footerdes": "Our law firm combines legal expertise with personalized solutions to protect your rights and help you achieve your goals.",
+    "footerbtn": "About us",
+    "footerbtn1": "Contact us",
+    "footersocials": "Social",
+    "foterphone": "Phone number",
+    "footeremail": "Email address",
+    "footeraddress": "Address",
+    "footersupport": "Support",
+    "footercompany": "Company"
+  },
+  "ContactPage":{
+    "contacttitle":"Contact us",
+    "contacttitle2":"Contact Information",
+    "contacttitdes":"Contact us using the methods below you can log out",
+    "contacttitle1":"Any questions?",
+    "contactname":"Full Name",
+    "contactdes":"Description",
+    "contacttash":"Organization",
+    "contactphone":"Phone number",
+    "contactemail":"Email",
+    "contactaddress":"Address",
+    "contactweb":"Website",
+    "contactdess":"Send your questions and we will respond soon.",
+    "contactbtn":"Send"
   }
 }
