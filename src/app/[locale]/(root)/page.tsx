@@ -216,7 +216,7 @@ export default function Home() {
         </div>
       </div>
       <OurService />
-      <Ai />
+      <Ai />        
       <Partners />
       <Comments />
       <News />
