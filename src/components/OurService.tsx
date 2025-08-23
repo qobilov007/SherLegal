@@ -13,9 +13,9 @@ export default function ServicesSection() {
     return (
         <div className="">
             <section className="max-w-7xl mx-auto px-6 py-16">
-                <div className="md:flex max-md:hidden  justify-between items-center mb-10">
+                <div className="lg:flex max-lg:hidden  justify-between items-center mb-10">
                     <div>
-                        <h2 className="lg:text-[40px] text-[28px] font-bold font-inter text-gray-900 md:text-[32px]">{t("servicetitle")}</h2>
+                        <h2 className="lg:text-[40px] text-[24px] font-bold font-inter text-gray-900 md:text-[32px]">{t("servicetitle")}</h2>
                         <p className="text-[#000] mt-2 text-[20px]">
                             {t("servicedes")}
                         </p>
@@ -28,18 +28,18 @@ export default function ServicesSection() {
                         </button>
                     </Link>
                 </div>
-                <div className="max-md:block hidden">
-                    <div className="flex gap-16 items-center justify-evenly mb-8">
-                        <h2 className="lg:text-[40px] text-[28px] font-bold font-inter text-gray-900 md:text-[32px]">{t("servicetitle")}</h2>
+                <div className="max-lg:block hidden">
+                    <div className="flex max-smm:flex-col gap-16 max-smm:gap-4  items-center justify-evenly mb-8">
+                        <h2 className="lg:text-[40px] text-[24px] font-bold font-inter text-gray-900 md:text-[32px]">{t("servicetitle")}</h2>
                         <Link
                             href={`/${locale}/services`}
                         >
-                            <button className="group boxshadow max-md:w-[200px] max-md:flex max-md:mx-auto max-md:mt-4 rounded-[1000px] bg-[#C61511] p-[16px]">
-                                <p className="flex gap-[8px] items-center justify-between text-white text-[20px] font-inter font-[600]">{t("servicebtn")} <Image src={BtnIcon} alt="BtnIcon" className="group-hover:rotate-[45deg] ease-linear duration-300" /></p>
+                            <button className="group boxshadow max-md:w-auto rounded-full bg-[#C61511] p-[16px]">
+                                <p className="flex gap-[8px] items-center justify-between text-white max-md:text-[10px] md:text-[20px] font-inter font-[600]">{t("servicebtn")} <Image src={BtnIcon} alt="BtnIcon" className="group-hover:rotate-[45deg] ease-linear duration-300 max-md:w-[20px]" /></p>
                             </button>
                         </Link>
                     </div>
-                    <p className="text-[#000] mt-2 text-[20px] mb-8 mx-auto">
+                    <p className="text-[#000] mt-2 text-[20px] text-center mb-8 mx-auto">
                         {t("servicedes")}
                     </p>
                 </div>

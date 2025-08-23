@@ -190,7 +190,7 @@ export default function Home() {
           </p>
           <p className="w-full h-[1px] bg-white/30 mb-[30px]"></p>
 
-          <article className="flex items-center justify-between mb-14 gap-4 relative z-[10]">
+          <article className="flex max-smm:flex-col items-center justify-between mb-14 gap-4 relative z-[10]">
             <h5 className="font-inter font-bold text-[28px] md:text-[40px] leading-[36px] md:leading-[48px] text-white">
               {t("teamtitle")}
             </h5>
