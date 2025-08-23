@@ -45,55 +45,91 @@ export const servicess = [
     title: "Corporate law",
     description:
       "Business registration and support, corporate governance, mergers and acquisition",
+      slug: "corporate-law",
+      title1: "Legal Support for International Trade",
+      description1: "Consulting on international trade issues, including the export and import of goods and services, assistance in contract negotiations, and compliance with international trade agreements and standards."
+
   },
   {
     icon: "/images/octicon_law-16.svg",
     title: "Civil Law",
     description:
       "Dispute resolution, contract drafting and analysis, protection of property and non-property rights.",
-  },
+    slug: "civil-law",
+    title1: "International Dispute Resolution",
+    description1:
+      "Representation in international arbitration, mediation, and negotiation of cross-border disputes.",
+    },
   {
     icon: "/images/octicon_law-16.svg",
     title: "Family Law",
     description:
       "Divorce proceedings, property division, alimony, guardianship, and adoption.",
-  },
+    slug: "family-law",
+    title1: "Family Law",
+    description1:
+      "Legal support in family disputes, including divorce, child custody, alimony, and property division.",
+    },
   {
     icon: "/images/octicon_law-16.svg",
     title: "Labor Law",
     description:
       "Consultation on labor legislation, protection of the rights of employees and employers, and resolution of labor disputes.",
-  },
+    slug: "labor-law",
+    title1: "Labor Law",
+    description1:
+      "Consultation on labor legislation, protection of the rights of employees and employers, and resolution of labor disputes.",
+    },
   {
     icon: "/images/octicon_law-16.svg",
     title: "Investment Law",
     description:
       "Legal support for public-private partnership (PPP) projects, tax optimization within investment activities, and consultation on antitrust regulation issues.",
-  },
+    slug: "investment-law",
+    title1: "Investment Law",
+    description1:
+      "Legal support for public-private partnership (PPP) projects, tax optimization within investment activities, and consultation on antitrust regulation issues.",
+    },
   {
     icon: "/images/octicon_law-16.svg",
     title: "Administrative Law",
     description:
       "Challenging administrative acts, representation in administrative bodies.",
-  },
+    slug: "administrative-law",
+    title1: "Administrative Law",
+    description1:
+      "Challenging administrative acts, representation in administrative bodies.",
+    },
   {
     icon: "/images/octicon_law-16.svg",
     title: "Labor Law",
     description:
       "Consultation on labor legislation, protection of the rights of employees and employers, and resolution of labor disputes.",
-  },
+    slug: "labor-law",
+    title1: "Labor Law",
+    description1:
+      "Consultation on labor legislation, protection of the rights of employees and employers, and resolution of labor disputes.",
+    },
   {
     icon: "/images/octicon_law-16.svg",
     title: "Investment Law",
     description:
       "Legal support for public-private partnership (PPP) projects, tax optimization within investment activities, and consultation on antitrust regulation issues.",
-  },
+    slug: "investment-law",
+    title1: "Investment Law",
+    description1:
+      "Legal support for public-private partnership (PPP) projects, tax optimization within investment activities, and consultation on antitrust regulation issues.",
+    },
   {
     icon: "/images/octicon_law-16.svg",
     title: "Administrative Law",
     description:
       "Challenging administrative acts, representation in administrative bodies.",
-  },
+    slug: "administrative-law",
+    title1: "Administrative Law",
+    description1:
+      "Challenging administrative acts, representation in administrative bodies.",
+    },
 ];
 
 export const partners = [

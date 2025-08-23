@@ -3,24 +3,29 @@ import { FaArrowLeftLong } from "react-icons/fa6";
 import Marqueforslug from "../_components/Marqueforslug";
 import { CiCalendarDate } from "react-icons/ci";
 import { LuEye } from "react-icons/lu";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+import Link from "next/link";
 
 export default function page({ params }: { params: { slug: string } }) {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const t = useTranslations("Common")
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const t = useTranslations("Common");
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const locale = useLocale();
   const newsItem = getNews.find((n) => n.slug === params.slug);
 
   const paragraphs = newsItem?.description.split("\n");
 
   return (
     <section>
-      <article className="pt-[124px] container">
-        <div className=" flex items-center max-w-max gap-2 py-3 px-7 rounded-full  mb-[24px] bg-[#FFFFFF] shadow-md cursor-pointer">
-          <FaArrowLeftLong className="text-[#137BEA] w-5 h-[20px]" />
-          <h1 className="font-medium font-inter text-[16px] leading-[130%]">
-            {t("back")}
-          </h1>
-        </div>
+      <article className="md:pt-[124px] pt-[100px] container">
+        <Link href={`/${locale}/news`}>
+          <div className=" flex items-center max-w-max gap-2 py-3 px-7 rounded-full  mb-[24px] bg-[#FFFFFF] shadow-md cursor-pointer">
+            <FaArrowLeftLong className="text-[#137BEA] w-5 h-[20px]" />
+            <h1 className="font-medium font-inter text-[16px] leading-[130%]">
+              {t("back")}
+            </h1>
+          </div>
+        </Link>
         <div
           className="w-full lg:h-[600px] md:h-[500px] nx:h-[400px] h-[260px] rounded-3xl bg-cover bg-center md:mb-[24px] nx:mb-[14px] mb-[12px]"
           style={{ backgroundImage: `url(${newsItem?.img})` }}

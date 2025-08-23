@@ -20,17 +20,17 @@ export default function News() {
   const currentNews = news.slice(startIndex, startIndex + itemsPerPage);
 
   return (
-    <div className="container mt-[142px]">
-      <div className="flex md:items-center justify-between md:pb-[32px] pb-6">
-        <h1 className=" font-bold font-inter md:text-[40px] text-[30px] leading-[120%]">
+    <div className="container md:pt-[124px] pt-28">
+      <div className="flex items-center md:items-center justify-between md:pb-[32px] nx:pb-6 pb-3">
+        <h1 className=" font-bold font-inter md:text-[40px] text-[24px] leading-[120%]">
           {t("title")}
         </h1>
-        <article className="flex items-center gap-2 bg-[#F3F3F3] rounded-full p-2.5">
+        <article className="flex items-center gap-2 bg-[#F3F3F3] rounded-full ml-4 p-2.5">
           <IoSearchSharp className="text-gray-500 md:w-6 md:h-6 w-4 h-4" />
           <input
             type="text"
             placeholder={t("search")}
-            className="bg-transparent outline-none text-sm md:w-full w-1/2 placeholder:text-gray-500 text-[14px] font-medium font-inter leading-[140%]"
+            className="bg-transparent outline-none text-sm md:w-full w-1/2 placeholder:text-gray-500 md:text-[14px] font-medium font-inter leading-[140%]"
           />
         </article>
       </div>
