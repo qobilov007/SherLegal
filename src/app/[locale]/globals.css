@@ -100,7 +100,7 @@
 
 .home-prev {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-image: url("../../../public/homeImg.png");
   background-position: center;
   background-repeat: no-repeat;
@@ -141,7 +141,7 @@
   left: 0;
   top: 0;
   width: 50%;
-  height: 95vh;
+  height: 100%;
   z-index: 1;
   background: #000000;
   background: linear-gradient(90deg,

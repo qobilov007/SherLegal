@@ -87,7 +87,7 @@ export default function Home() {
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/40"></div>
 
-        <div className="container h-screen flex flex-col justify-center gap-10 sm:gap-12 md:gap-14 relative z-10">
+        <div className="container h-full flex flex-col  gap-10 sm:gap-12 md:gap-14 relative z-10">
           <div className="pt-[100px] sm:pt-[120px] md:pt-[130px]">
             <div className="inline-flex  max-w-full max-md:max-w-[100%] md:max-w-[80%] lg:max-w-[50%] flex-col justify-center text-white relative z-10">
               {/* Award badge */}
