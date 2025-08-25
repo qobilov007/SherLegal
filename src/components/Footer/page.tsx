@@ -12,7 +12,7 @@ export default function FooterPage() {
   return (
     <div className="w-full footer-overlay">
       <div className="container">
-        <article className="relative z-[11] pt-24 max-w-[900px] m-auto md:mb-[129px] sm:mb-10 mb-6">
+        <article className="relative z-[11] md:pt-24 pt-[24px] max-w-[900px] m-auto md:mb-[129px] sm:mb-10 mb-[40px]">
           <h3 className="font-inter font-bold md:text-[64px] text-[32px] md:leading-[76px] leading-[100%] text-white text-center mb-6">
             {tt("footertitle")}
           </h3>
@@ -29,10 +29,10 @@ export default function FooterPage() {
           </article>
         </article>
       </div>
-      <div className="container relative z-[11] w-full grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:gap-24 gap-8">
-        <div>
+      <div className="container relative z-[11] w-full grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:gap-24 gap-10">
+        <div className="max-md:order-3">
           <Image
-            className="md:mb-6 mb-3 max-md:w-[100px] max-md:h-[40px]"
+            className="md:mb-6 mb-4 max-md:w-[150px] max-md:h-[50px]"
             src={Logo}
             alt="Logo SherLegal"
           />
@@ -43,7 +43,7 @@ export default function FooterPage() {
             <p className="font-inter font-normal text-[14px] uppercase text-white mb-4">
               {tt("footersocials")}
             </p>
-            <article className="flex items-center gap-5">
+            <article className="flex items-center gap-5 max-md:mb-[40px]">
               <Link
                 href={"/"}
                 style={{ backgroundColor: "rgba(255, 255, 255, 0.05)" }}
@@ -122,7 +122,7 @@ export default function FooterPage() {
             </article>
           </div>
         </div>
-        <article className="flex items-start justify-evenly">
+        <article className="flex items-start justify-between max-md:order-1">
           <ul>
             <p className="font-inter font-bold text-[14px] uppercase text-white mb-4">
               {tt("footercompany")}
@@ -179,8 +179,8 @@ export default function FooterPage() {
               </Link>
             </li>
           </ul>
-          <ul>
-            <p className="font-inter w-[170px] font-bold text-[14px] uppercase text-white mb-4">
+          <ul className="flex flex-col max-md:items-end">
+            <p className="font-inter max-md:w-[170px] font-bold text-[14px] uppercase text-white mb-4">
               {tt("footersupport")}
             </p>
             <li>
@@ -219,7 +219,7 @@ export default function FooterPage() {
             </li>
           </ul>
         </article>
-        <div className="p-5 rounded-3xl backdrop-blur-[20px] flex flex-col gap-5 border-2 border-[rgba(255,255,255,0.10)] md:mb-20 mb-8">
+        <div className="p-5 max-md:order-2 rounded-3xl backdrop-blur-[20px] flex flex-col gap-5 border-2 border-[rgba(255,255,255,0.10)] md:mb-20">
           <article className="flex flex-col gap-2">
             <p className="font-inter font-normal text-[14px] text-white/40">
               {tt("foterphone")}
