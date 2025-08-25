@@ -179,8 +179,8 @@ export default function FooterPage() {
               </Link>
             </li>
           </ul>
-          <ul className="flex flex-col max-md:items-end">
-            <p className="font-inter max-md:w-[170px] font-bold text-[14px] uppercase text-white mb-4">
+          <ul className="flex flex-col max-md:justify-between">
+            <p className="font-inter w-[170px] font-bold text-[14px] uppercase text-white mb-4">
               {tt("footersupport")}
             </p>
             <li>
