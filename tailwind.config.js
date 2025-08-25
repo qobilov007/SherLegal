@@ -115,7 +115,7 @@ module.exports = {
         getintouch: "url('/gettouchBg.svg')",
     },
 	backgroundImage: {
-        'custom-gradient': 'linear-gradient(360deg,rgba(8, 8, 8, 1) 7%, rgba(8, 8, 8, 0.79) 52%, rgba(8, 8, 8, 0.31) 100%)',
+        'custom-gradient': 'linear-gradient(360deg,rgba(8, 8, 8, 1) 7%, rgba(8, 8, 8, 0.9) 52%, rgba(8, 8, 8, 0.51) 100%)',
       },
   	}
   },

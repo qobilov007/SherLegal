@@ -9,7 +9,7 @@ export default function NotFound() {
   const router = useRouter();
 
   const handleClose = () => {
-    router.push("/"); // bosh sahifaga yo‘naltiradi
+    router.push("/");
   };
 
   return (
@@ -29,7 +29,7 @@ export default function NotFound() {
           <Image src={LogoNotfound} alt="Not found"/>
 
       </div>
-      <div className=" absolute bottom-0 w-full h-[500px] bg-custom-gradient"></div>
+      <div className=" absolute bottom-0 w-full h-[300px] bg-custom-gradient"></div>
     </div>
   );
 }
