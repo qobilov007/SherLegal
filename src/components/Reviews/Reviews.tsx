@@ -36,7 +36,7 @@ export default function TestimonialsMarquee() {
             </span>
           </article>
 
-          <h2 className="md:max-w-[90%] w-full text-[48px] font-inter mt-4 leading-[120%] font-[700] text-white">
+          <h2 className="md:max-w-[90%] w-full lg:text-[48px] md:text-[32px] text-[24px] font-inter mt-4 leading-[120%] font-[700] text-white">
             {t("reviewstitle")}
           </h2>
           <p className="text-gray-400 mt-4 text-sm leading-relaxed w-full md:max-w-md">

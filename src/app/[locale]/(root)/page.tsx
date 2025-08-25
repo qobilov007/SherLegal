@@ -185,23 +185,23 @@ export default function Home() {
       </div>
       <div className="w-full overflow-hidden bg-black py-10 sm:py-12 md:py-16 team-overlay">
         <div className="container">
-          <p className="font-inter font-normal leading-[26px] text-white mb-6">
+          <p className="font-inter font-normal leading-[26px] text-white mb-6 max-smm:text-[15px]">
             {t("teamdes")}
           </p>
           <p className="w-full h-[1px] bg-white/30 mb-[30px]"></p>
 
-          <article className="flex max-smm:flex-col items-center justify-between mb-14 gap-4 relative z-[10]">
-            <h5 className="font-inter font-bold text-[28px] md:text-[40px] leading-[36px] md:leading-[48px] text-white">
+          <article className="flex items-center justify-between mb-14 gap-4 relative z-[10]">
+            <h5 className="font-inter font-bold text-[28px] max-smm:text-[20px] md:text-[40px] leading-[36px] md:leading-[48px] text-white">
               {t("teamtitle")}
             </h5>
             <Link href={`/${locale}/team`}>
-              <button className="group boxshadow md:inline-flex max-md:flex rounded-[1000px] bg-[#C61511] p-[16px]">
-                <p className="flex gap-[8px] items-center justify-between text-white text-[20px] font-inter font-[600]">
+              <button className="group boxshadow md:inline-flex max-md:flex rounded-[1000px] bg-[#C61511] smm:py-[16px] smm:px-[16px] px-[10px] py-[4px]">
+                <p className="flex gap-[8px] items-center justify-between text-white text-[13px] smm:text-[20px] font-inter font-[600]">
                   {t("teambtn")}
                   <Image
                     src={BtnIcon}
                     alt="BtnIcon"
-                    className="group-hover:rotate-[45deg] ease-linear duration-300"
+                    className="group-hover:rotate-[45deg] max-smm:w-[20px] ease-linear duration-300"
                   />
                 </p>
               </button>

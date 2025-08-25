@@ -12,7 +12,7 @@ export default function ServicesSection() {
     const locale = useLocale()
     return (
         <div className="">
-            <section className="max-w-7xl mx-auto px-6 py-16">
+            <section className="container px-6 py-16">
                 <div className="lg:flex max-lg:hidden  justify-between items-center mb-10">
                     <div>
                         <h2 className="lg:text-[40px] text-[24px] font-bold font-inter text-gray-900 md:text-[32px]">{t("servicetitle")}</h2>
@@ -29,17 +29,17 @@ export default function ServicesSection() {
                     </Link>
                 </div>
                 <div className="max-lg:block hidden">
-                    <div className="flex max-smm:flex-col gap-16 max-smm:gap-4  items-center justify-evenly mb-8">
-                        <h2 className="lg:text-[40px] text-[24px] font-bold font-inter text-gray-900 md:text-[32px]">{t("servicetitle")}</h2>
+                    <div className="flex gap-16 max-smm:gap-4  items-center justify-evenly mb-8">
+                        <h2 className="lg:text-[40px] text-[24px] max-smm:text-[16px] font-bold font-inter text-gray-900 md:text-[32px]">{t("servicetitle")}</h2>
                         <Link
                             href={`/${locale}/services`}
                         >
-                            <button className="group boxshadow max-md:w-auto rounded-full bg-[#C61511] p-[16px]">
+                            <button className="group boxshadow max-md:w-auto rounded-full bg-[#C61511] p-[4px] smm:p-[16px]">
                                 <p className="flex gap-[8px] items-center justify-between text-white max-md:text-[10px] md:text-[20px] font-inter font-[600]">{t("servicebtn")} <Image src={BtnIcon} alt="BtnIcon" className="group-hover:rotate-[45deg] ease-linear duration-300 max-md:w-[20px]" /></p>
                             </button>
                         </Link>
                     </div>
-                    <p className="text-[#000] mt-2 text-[20px] text-center mb-8 mx-auto">
+                    <p className="text-[#000] mt-2 text-[20px] max-smm:text-[15px] text-center mb-8 mx-auto">
                         {t("servicedes")}
                     </p>
                 </div>
@@ -49,20 +49,22 @@ export default function ServicesSection() {
                         <Link href={`/${locale}/services/${service.slug}`} key={index}>
                             <div
                                 key={index}
-                                className="group cursor-pointer h-[250px] max-md:h-[300px] max-sm:h-[250px] rounded-xl p-6 shadow hover:shadow-lg hover:bg-[#fff] ease-linear duration-300"
+                                className="group cursor-pointer h-[200px] max-md:h-[250px] max-sm:h-[200px] rounded-xl p-6 shadow hover:shadow-lg hover:bg-[#fff] ease-linear duration-300"
                             >
-                                <div className="bg-[#fff] mb-4 w-[80px] border-[2px] ease-linear duration-300 h-[80px] p-[16px] rounded-[24px] group-hover:border-[#137BEA] ">
-                                    <Image
-                                        src={service.icon}
-                                        alt="Service"
-                                        width={48}
-                                        height={48}
-                                        className="w-12 h-12 flex items-center justify-center rounded-full text-2xl mb-4"
-                                    />
+                                <div className="flex items-center gap-10">
+                                    <div className="bg-[#fff] mb-4 w-[80px] border-[2px] ease-linear duration-300 h-[80px] p-[16px] rounded-[24px] group-hover:border-[#137BEA] ">
+                                        <Image
+                                            src={service.icon}
+                                            alt="Service"
+                                            width={48}
+                                            height={48}
+                                            className="w-12 h-12 flex items-center justify-center rounded-full text-2xl mb-4"
+                                        />
+                                    </div>
+                                    <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                                        {service.title}
+                                    </h3>
                                 </div>
-                                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                                    {service.title}
-                                </h3>
                                 <p className="text-gray-600 text-sm">{service.description}</p>
                             </div>
                         </Link>
