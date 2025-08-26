@@ -55,13 +55,13 @@ export default function Home() {
           </div>
           <div className="relative z-[2] w-full flex justify-center items-center py-5">
             {/* Shaffof qora container ***** */}
-            <div className="relative w-full grid md:grid-cols-4 grid-cols-2 justify-evenly gap-10 md:gap-16 px-6 py-6 border-gray-200 rounded-[40px] border-t border-b backdrop-blur-[6px] text-white">
+            <div className="relative w-full grid grid-cols-4 justify-evenly gap-10 md:gap-16 px-6 py-6 border-gray-200 md:rounded-[40px] rounded-[20px] border-t border-b backdrop-blur-[6px] text-white">
               {stats.map((item, i) => (
                 <div key={i} className="flex flex-col items-center text-center">
                   <span className="md:text-7xl text-[38px] leading-[120%] text-center font-bebas font-bold">
                     {item.number}
                   </span>
-                  <span className="text-center md:text-2xl text-[16px] leading-[120%]">
+                  <span className="text-center md:text-2xl sm:text-[16px] text-[13px] font-inter font-medium leading-[120%]">
                     {item.label}
                   </span>
                 </div>

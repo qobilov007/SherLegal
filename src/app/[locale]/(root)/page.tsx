@@ -159,8 +159,8 @@ export default function Home() {
           {/* Stats Section */}
           <div className="relative w-full flex justify-center items-center py-4 sm:py-5">
             <div
-              className="relative w-[90%] sm:w-full grid sm:grid-cols-4 max-sm:grid-cols-2 justify-evenly gap-10 sm:gap-10 md:gap-16
-              px-4 sm:px-6 py-4 sm:py-6
+              className="relative w-[90%] sm:w-full grid grid-cols-4 justify-evenly gap-10 sm:gap-10 md:gap-16
+              px-6 py-4 sm:py-6
               border-gray-200/80 rounded-[20px] sm:rounded-[30px] md:rounded-[40px]
               border-t border-b backdrop-blur-[6px] text-white"
             >
@@ -169,7 +169,7 @@ export default function Home() {
                   <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[120%] font-bebas font-bold">
                     {item.number}
                   </span>
-                  <span className="text-base sm:text-lg md:text-xl lg:text-2xl leading-[120%]">
+                  <span className="text-[13px] sm:text-lg md:text-xl lg:text-2xl font-inter font-medium leading-[120%]">
                     {item.label}
                   </span>
                 </div>
@@ -216,7 +216,7 @@ export default function Home() {
         </div>
       </div>
       <OurService />
-      <Ai />        
+      <Ai />
       <Partners />
       <Comments />
       <News />
