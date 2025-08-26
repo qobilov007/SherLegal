@@ -67,19 +67,31 @@
     "footersupport": "Support",
     "footercompany": "Company"
   },
-  "ContactPage":{
-    "contacttitle":"Contact us",
-    "contacttitle2":"Contact Information",
-    "contacttitdes":"Contact us using the methods below you can log out",
-    "contacttitle1":"Any questions?",
-    "contactname":"Full Name",
-    "contactdes":"Description",
-    "contacttash":"Organization",
-    "contactphone":"Phone number",
-    "contactemail":"Email",
-    "contactaddress":"Address",
-    "contactweb":"Website",
-    "contactdess":"Send your questions and we will respond soon.",
-    "contactbtn":"Send"
+  "ContactPage": {
+    "contacttitle": "Contact us",
+    "contacttitle2": "Contact Information",
+    "contacttitdes": "Contact us using the methods below you can log out",
+    "contacttitle1": "Any questions?",
+    "contactname": "Full Name",
+    "contactdes": "Description",
+    "contacttash": "Organization",
+    "contactphone": "Phone number",
+    "contactemail": "Email",
+    "contactaddress": "Address",
+    "contactweb": "Website",
+    "contactdess": "Send your questions and we will respond soon.",
+    "contactbtn": "Send"
+  },
+  "privacy-policy": {
+    "subtitle": "Privacy policy",
+    "subtitle2": "Terms of use",
+    "title1": "When you visit the Site, we automatically collect certain information about your device, including information about your web browser, IP address, time zone, and some cookies that are installed on your device. In addition, when you browse the Site, we collect information about individual web pages or products that you view, which websites or search terms directed you to the Site, as well as information about how you interact with the Site. We call this automatically collected information Device Information.",
+    "title2": "Necessary Information",
+    "title3": "We use the Order Information that we collect, as a rule, to fulfill any orders placed through the Site (including processing your payment information, arranging delivery, and providing you with invoices and/or order confirmations). In addition, we use this Order Information for:",
+    "title4": "Checking our orders for potential risk or fraud",
+    "title5": "According to the preferences that you have shared with us, providing you with information or advertising related to our products or services.",
+    "title6": "We use the Device Information we collect to help us check for potential risks and fraud (in particular, your IP address), and more generally to improve and optimize our Site (for example, by creating analytics about how our customers view and interact with the Site, and also to evaluate the success of our marketing and advertising campaigns).",
+    "title7": "If you are a resident of Europe, you have the right to access the personal information that we hold about you, and you can request that your personal information be corrected, updated, or deleted. If you would like to exercise this right, please contact us using the contact information below.",
+    "title8": "In addition, if you are a resident of Europe, we note that we process your information to fulfill contracts that we may have with you (for example, if you place an order through the Website), or otherwise to pursue our legitimate business interests listed above. In addition, please note that your information will be transferred outside of Europe, including to Canada and the United States."
   }
 }

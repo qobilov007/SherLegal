@@ -39,10 +39,12 @@ export default function Navbar() {
 
   //sahifani tekshirish agar contacts yoki services bo'lsa fon qora
   const forceBlack =
+    pathname === `/${locale}/terms-of-use` ||
+    pathname === `/${locale}/privacy-policy` ||
     pathname === `/${locale}/contacts` ||
     pathname === `/${locale}/services` ||
-    pathname === `/${locale}/news` || 
-    pathname.startsWith(`/${locale}/news`)
+    pathname === `/${locale}/news` ||
+    pathname.startsWith(`/${locale}/news`);
 
   return (
     <div>
@@ -168,7 +170,7 @@ export default function Navbar() {
       )}
       <div
         onClick={(e) => e.stopPropagation()}
-        className={`fixed z-[55] w-full h-[540px] transition-all duration-300 ease-in-out bg-black shadow-md 
+        className={`fixed z-[55] w-full h-[540px] transition-all duration-300 ease-in-out bg-black shadow-md
     ${isMenuOpen ? "top-0 opacity-100" : "-top-[550px] opacity-0"}`}
       >
         <div className="container px-5 pt-[140px]">

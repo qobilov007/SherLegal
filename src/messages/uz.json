@@ -69,7 +69,7 @@
   },
   "ContactPage": {
     "contacttitle": "Biz bilan bog‘laning",
-    "contacttitdes":"Quyidagi usullardan foydalangan holda biz bilan bog'laning tizimdan chiqishingiz mumkin",
+    "contacttitdes": "Quyidagi usullardan foydalangan holda biz bilan bog'laning tizimdan chiqishingiz mumkin",
     "contacttitle2": "Bog'lanish uchun ma'lumot",
     "contacttitle1": "Savollaringiz bormi?",
     "contactdess": "Savollaringizni yuboring va tez orada javob beramiz",
@@ -80,6 +80,18 @@
     "contactemail": "Elektron pochta",
     "contactaddress": "Manzil",
     "contactweb": "Websayt",
-    "contactbtn":"Yuborish"
+    "contactbtn": "Yuborish"
+  },
+  "privacy-policy": {
+    "subtitle": "Maxfiylik siyosati",
+    "subtitle2": "Foydalanish shartlari",
+    "title1": "Siz Saytga tashrif buyurganingizda, biz avtomatik ravishda qurilmangiz haqida ma'lum ma'lumotlarni yig'amiz, jumladan veb-brauzeringiz, IP-manzilingiz, vaqt zonangiz va qurilmangizga o‘rnatilgan ba'zi cookie-fayllar. Bundan tashqari, Saytni ko‘rib chiqayotganda siz ko‘rgan alohida veb-sahifalar yoki mahsulotlar, sizni Saytga yo‘naltirgan saytlar yoki qidiruv so‘zlari, shuningdek Sayt bilan qanday o‘zaro aloqada bo‘lishingiz haqidagi ma’lumotlarni ham yig‘amiz. Ushbu avtomatik ravishda yig‘ilgan ma’lumotlar “Qurilma ma’lumotlari” deb ataladi.",
+    "title2": "Zarur ma’lumotlar",
+    "title3": "Biz yig‘ilgan Buyurtma ma’lumotlaridan, odatda, Sayt orqali berilgan barcha buyurtmalarni bajarish uchun foydalanamiz (jumladan, to‘lov ma’lumotlaringizni qayta ishlash, yetkazib berishni tashkil qilish va sizga hisob-faktura va/yoki buyurtma tasdiqlarini taqdim etish). Bundan tashqari, biz Buyurtma ma’lumotlaridan quyidagi maqsadlarda foydalanamiz:",
+    "title4": "Buyurtmalarimizni ehtimoliy xavf yoki firibgarlik uchun tekshirish",
+    "title5": "Siz biz bilan bo‘lishgan afzalliklarga muvofiq, mahsulot va xizmatlarimizga oid ma’lumot yoki reklamalarni taqdim etish.",
+    "title6": "Biz yig‘ilgan Qurilma ma’lumotlaridan ehtimoliy xavf va firibgarlikni tekshirish (xususan, sizning IP-manzilingiz) hamda umuman Saytni yaxshilash va optimallashtirish uchun foydalanamiz (masalan, mijozlarimiz Saytdan qanday foydalanishini tahlil qilish va marketing kampaniyalarimiz samaradorligini baholash).",
+    "title7": "Agar siz Yevropa aholisi bo‘lsangiz, bizda mavjud bo‘lgan shaxsiy ma’lumotlaringizga kirish huquqiga egasiz va ularni tuzatish, yangilash yoki o‘chirishni talab qilishingiz mumkin. Agar ushbu huquqdan foydalanmoqchi bo‘lsangiz, quyidagi aloqa ma’lumotlari orqali biz bilan bog‘laning.",
+    "title8": "Bundan tashqari, agar siz Yevropa aholisi bo‘lsangiz, biz sizning ma’lumotlaringizni biz bilan tuzilgan shartnomalarni bajarish (masalan, agar siz Veb-sayt orqali buyurtma bersangiz) yoki yuqorida qayd etilgan qonuniy biznes manfaatlarimizni ko‘zlash uchun qayta ishlashimizni ma’lum qilamiz. Shuningdek, sizning ma’lumotlaringiz Yevropadan tashqariga, jumladan Kanada va AQShga o‘tkazilishi mumkinligini e’tiborga oling."
   }
 }
