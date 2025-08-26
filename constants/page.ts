@@ -42,7 +42,7 @@ export const services = [
 export const servicess = [
   {
     icon: "/images/octicon_law-16.svg",
-    title: "Corporate law",
+    title: "Corporate law dd",
     description:
       "Business registration and support, corporate governance, mergers and acquisition",
       slug: "corporate-law",

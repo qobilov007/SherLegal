@@ -19,12 +19,12 @@ const LANGUAGES = [
   {
     code: "en",
     label: "English",
-    flag: "/icons/EngFlag.svg",
+    flag: "/icons/engflag.svg",
   },
   {
     code: "ru",
     label: "Русский",
-    flag: "/icons/RuFlag.svg",
+    flag: "/icons/ruflag.svg",
   },
 ];
 
