@@ -31,20 +31,22 @@ export default function ServicesSection() {
               <Link href={`/${locale}/services/${service.slug}`} key={index}>
                 <div
                   key={index}
-                  className="group cursor-pointer h-[250px] max-md:h-[300px] max-sm:h-[250px] rounded-xl p-6 shadow hover:shadow-lg hover:bg-[#fff] ease-linear duration-300"
+                  className="group cursor-pointer h-[220px] max-md:h-[250px] max-sm:h-[200px] rounded-xl p-6 shadow hover:shadow-lg hover:bg-[#fff] ease-linear duration-300"
                 >
-                  <div className="bg-[#fff] w-[80px] mb-4 border-[2px] ease-linear duration-300 h-[80px] p-[16px] rounded-[24px] group-hover:border-[#137BEA] ">
-                    <Image
-                      src={service.icon}
-                      alt="Service"
-                      width={48}
-                      height={48}
-                      className="w-12 h-12 flex items-center justify-center rounded-full text-2xl"
-                    />
+                  <div className="flex items-center gap-10">
+                    <div className="bg-[#fff] w-[80px] mb-4 border-[2px] ease-linear duration-300 h-[80px] p-[16px] rounded-[24px] group-hover:border-[#137BEA] ">
+                      <Image
+                        src={service.icon}
+                        alt="Service"
+                        width={48}
+                        height={48}
+                        className="w-12 h-12 flex items-center justify-center rounded-full text-2xl"
+                      />
+                    </div>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                      {service.title}
+                    </h3>
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                    {service.title}
-                  </h3>
                   <p className="text-gray-600 text-sm">{service.description}</p>
                 </div>
               </Link>

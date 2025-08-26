@@ -23,7 +23,10 @@ export default function FaqAccordion() {
             <AccordionItem
               key={index}
               value={`item-${index}`}
-              className="border border-[#E3E8E9] lg:rounded-3xl rounded-xl hover:bg-[#fff]/10 hover:border-[#C61511] transition-all duration-200"
+              className="border border-[#E3E8E9] lg:rounded-3xl rounded-xl 
+                         hover:bg-[#fff]/10 hover:border-[#C61511] 
+                         transition-all duration-200 
+                         data-[state=open]:border-[#C61511]"
             >
               <AccordionTrigger className="md:text-2xl text-base text-[black] font-inter font-bold px-8 h-[80px] py-2 no-underline">
                 {item.question}

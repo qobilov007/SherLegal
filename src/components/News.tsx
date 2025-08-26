@@ -34,7 +34,7 @@ export default function NewsSection() {
                         <Link
                             href={`/${locale}/services`}
                         >
-                            <button className="group boxshadow max-md:w-auto rounded-full bg-[#C61511] p-[16px] max-smm:p-[4px]">
+                            <button className="group boxshadow max-md:w-auto rounded-full bg-[#C61511] p-[16px] max-smm:px-[6px] smm:py-[12px]">
                                 <p className="flex gap-[8px] items-center justify-between text-white max-md:text-[10px] md:text-[20px] font-inter font-[600]">{t("newsbtn")} <Image src={BtnIcon} alt="BtnIcon" className="group-hover:rotate-[45deg] ease-linear duration-300 max-md:w-[20px]" /></p>
                             </button>
                         </Link>
@@ -119,7 +119,7 @@ function CardBackground({ item }: { item: any }) {
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M2.5 8.33333H17.5M5.83333 2.5V4.16667M14.1667 2.5V4.16667M5.16667 17.5H14.8333C15.7668 17.5 16.2335 17.5 16.59 17.3183C16.9036 17.1586 17.1586 16.9036 17.3183 16.59C17.5 16.2335 17.5 15.7668 17.5 14.8333V6.83333C17.5 5.89991 17.5 5.4332 17.3183 5.07668C17.1586 4.76308 16.9036 4.50811 16.59 4.34832C16.2335 4.16667 15.7668 4.16667 14.8333 4.16667H5.16667C4.23325 4.16667 3.76654 4.16667 3.41002 4.34832C3.09641 4.50811 2.84144 4.76308 2.68166 5.07668C2.5 5.4332 2.5 5.89991 2.5 6.83333V14.8333C2.5 15.7668 2.5 16.2335 2.68166 16.59C2.84144 16.9036 3.09641 17.1586 3.41002 17.3183C3.76654 17.5 4.23325 17.5 5.16667 17.5Z" stroke="white" strokeWidth="2" strokeLinecap="round" />
                         </svg>{item.date}</span>
-                    <span className="flex py-[6px] px-[12px] items-center gap-[6px] rounded-[100px] border-[rgba(238,238,238,0.38)]] border-[1px]"><LuEye className="text-[#6C6C6C]" /> {item.views}</span>
+                    <span className="flex py-[6px] px-[12px] items-center gap-[6px] rounded-[100px] border-[rgba(238,238,238,0.38)]] border-[1px]"><LuEye className="text-[white]" /> {item.views}</span>
                 </div>
             </div>
         </div>

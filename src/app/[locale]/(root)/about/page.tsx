@@ -73,7 +73,7 @@ export default function Home() {
       <div>
         <OurService />
       </div>
-      <div className="w-full overflow-hidden bg-black py-16 team-overlay">
+      <div className="w-full overflow-hidden bg-black team-overlay">
         <OurTeam />
       </div>
     </div>

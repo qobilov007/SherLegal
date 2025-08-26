@@ -29,12 +29,12 @@ export default function ServicesSection() {
                     </Link>
                 </div>
                 <div className="max-lg:block hidden">
-                    <div className="flex gap-16 max-smm:gap-4  items-center justify-evenly mb-8">
+                    <div className="flex items-center justify-between mb-8">
                         <h2 className="lg:text-[40px] text-[24px] max-smm:text-[16px] font-bold font-inter text-gray-900 md:text-[32px]">{t("servicetitle")}</h2>
                         <Link
                             href={`/${locale}/services`}
                         >
-                            <button className="group boxshadow max-md:w-auto rounded-full bg-[#C61511] p-[4px] smm:p-[16px]">
+                            <button className="group boxshadow max-md:w-auto rounded-full bg-[#C61511] py-[14px] px-[6px] smm:p-[16px]">
                                 <p className="flex gap-[8px] items-center justify-between text-white max-md:text-[10px] md:text-[20px] font-inter font-[600]">{t("servicebtn")} <Image src={BtnIcon} alt="BtnIcon" className="group-hover:rotate-[45deg] ease-linear duration-300 max-md:w-[20px]" /></p>
                             </button>
                         </Link>
@@ -52,20 +52,20 @@ export default function ServicesSection() {
                                 className="group cursor-pointer h-[200px] max-md:h-[250px] max-sm:h-[200px] rounded-xl p-6 shadow hover:shadow-lg hover:bg-[#fff] ease-linear duration-300"
                             >
                                 <div className="flex items-center gap-10">
-                                    <div className="bg-[#fff] mb-4 w-[80px] border-[2px] ease-linear duration-300 h-[80px] p-[16px] rounded-[24px] group-hover:border-[#137BEA] ">
+                                    <div className=" mb-4 min-w-[80px] border-[2px] ease-linear duration-300 h-[80px] p-[16px] rounded-[24px] group-hover:border-[#137BEA] ">
                                         <Image
                                             src={service.icon}
                                             alt="Service"
                                             width={48}
                                             height={48}
-                                            className="w-12 h-12 flex items-center justify-center rounded-full text-2xl mb-4"
+                                            className="w-full h-full flex items-center justify-center rounded-full text-2xl mb-4"
                                         />
                                     </div>
-                                    <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                                    <h3 className="text-[24px] line-clamp-2 font-semibold text-gray-900 mb-2">
                                         {service.title}
                                     </h3>
                                 </div>
-                                <p className="text-gray-600 text-sm">{service.description}</p>
+                                <p className="text-gray-600 text-sm line-clamp-3">{service.description}</p>
                             </div>
                         </Link>
                     ))}

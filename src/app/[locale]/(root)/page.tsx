@@ -151,7 +151,7 @@ export default function Home() {
                     className="group-hover:rotate-[0deg] transition-all duration-200 rotate-[-45deg]"
                   />
                 }
-                className="w-[160px] sm:w-[180px] text-[10px] sm:text-[20px]"
+                className="w-[135px] sm:w-[180px] text-[10px] sm:text-[20px]"
               />
             </div>
           </div>
@@ -195,7 +195,7 @@ export default function Home() {
               {t("teamtitle")}
             </h5>
             <Link href={`/${locale}/team`}>
-              <button className="group boxshadow md:inline-flex max-md:flex rounded-[1000px] bg-[#C61511] smm:py-[16px] smm:px-[16px] px-[10px] py-[4px]">
+              <button className="group boxshadow md:inline-flex max-md:flex rounded-[1000px] bg-[#C61511] smm:py-[16px] smm:px-[16px] px-[10px] py-[12px]">
                 <p className="flex gap-[8px] items-center justify-between text-white text-[13px] smm:text-[20px] font-inter font-[600]">
                   {t("teambtn")}
                   <Image

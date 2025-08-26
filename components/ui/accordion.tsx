@@ -33,12 +33,15 @@ const AccordionTrigger = React.forwardRef<
       {...props}
     >
       {children}
-      {/* state open/closed ga qarab + yoki - */}
-      <span className="ml-2 text-lg group-data-[state=closed]:inline group-data-[state=open]:hidden">
-        +
+      <span className="ml-2 text-lg group-data-[state=closed]:inline group-data-[state=open]:hidden data-[state=open]:border-[#C61511]">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 16H24M16 8V24" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
       </span>
       <span className="ml-2 text-lg hidden group-data-[state=open]:inline">
-        -
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 16L24 16" stroke="#C61511" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
       </span>
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
