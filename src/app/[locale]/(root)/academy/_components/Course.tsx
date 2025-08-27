@@ -1,9 +1,14 @@
-import { getLessonCard } from "@/constants/page";
-import { useTranslations } from "next-intl";
+import { LessonCard } from "@/app.types";
+import { getLocalizedValue } from "@/lib/getLocalization";
+import { pickStringProps } from "@/lib/getLocalizedValue";
+// import { getLessonCard } from "@/constants/page";
+import { useLocale, useTranslations } from "next-intl";
 
-export default function Course() {
+export default function Course({ course }: { course: LessonCard[] }) {
   const t = useTranslations("AcademyPage");
-  const lessons = getLessonCard;
+  //   const lessons = getLessonCard;
+//   console.log(course);
+  const locale = useLocale();
 
   return (
     <div className="container">
@@ -15,21 +20,31 @@ export default function Course() {
       </p>
 
       <div className="grid md:grid-cols-2 justify-between gap-[20px] lg:mb-[64px] mb-8">
-        {lessons.map((lesson, index) => (
-          <div key={index} className="bg-white rounded-lg shadow-lg md:p-6 p-4">
-            <div className="rounded-[16px] w-[56px] h-[56px] bg-[#C61511] flex items-center justify-center shadow-2xl md:mb-[24px] mb-[20px] md:drop-shadow-[2px_3px_8px_red] drop-shadow-[2px_3px_4px_red]">
-              <span className="font-bold text-[28px] font-inter leading-[120%] text-white">
-                {lesson.number}
-              </span>
+        {course.map((lesson, index) => {
+          const stringItem = pickStringProps(lesson);
+          const localCourse = getLocalizedValue(stringItem, "title", locale);
+          const localDescription = getLocalizedValue(stringItem, "description", locale);
+
+
+          return (
+            <div
+              key={index}
+              className="bg-white rounded-lg shadow-lg md:p-6 p-4"
+            >
+              <div className="rounded-[16px] w-[56px] h-[56px] bg-[#C61511] flex items-center justify-center shadow-2xl md:mb-[24px] mb-[20px] md:drop-shadow-[2px_3px_8px_red] drop-shadow-[2px_3px_4px_red]">
+                <span className="font-bold text-[28px] font-inter leading-[120%] text-white">
+                  {lesson.number}
+                </span>
+              </div>
+              <h2 className="font-inter font-bold md:text-[24px] text-[20px] leading-[120%] pb-2">
+                {localCourse}
+              </h2>
+              <p className="text-[14px] font-inter font-normal leading-[120%]">
+                {localDescription}
+              </p>
             </div>
-            <h2 className="font-inter font-bold md:text-[24px] text-[20px] leading-[120%] pb-2">
-              {lesson.title}
-            </h2>
-            <p className="text-[14px] font-inter font-normal leading-[120%]">
-              {lesson.description}
-            </p>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );
