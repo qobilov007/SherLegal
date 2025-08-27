@@ -52,7 +52,7 @@ export type LessonCard = {
   description: string;
 };
 
-  export interface NewsCard {
+  export type NewsCard = {
     id: number;
     slug: string;
     title: string;
@@ -63,11 +63,21 @@ export type LessonCard = {
     content_uz?: string;
     content_en?: string;
     content_ru?: string;
+    content?:string;
     image: string;
     views: number;
     created_at: string;
   }
 
+export interface Review {
+  image: string;
+  review_text_uz: string;
+  review_text_en: string;
+  review_text_ru: string;
+  profession_uz: string;
+  profession_en: string;
+  profession_ru: string;
+}
   export type Stat = {
 
     clients: string;

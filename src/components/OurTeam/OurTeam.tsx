@@ -1,13 +1,13 @@
-import Partner from "./Team"
-import { getPartners } from "@/lib/getTeam";
+import Team from "./Team"
+import { getTeam } from "@/lib/getTeam";
 
-export default async function PartnersSection() {
+export default async function OurTeam() {
 
-  const team =  await getPartners();
+  const team =  await getTeam();
 
   return (
     <div className="white">
-      <Partner team={team}/>
+      <Team team={team}/>
     </div>
   );
 }
