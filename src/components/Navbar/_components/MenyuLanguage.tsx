@@ -48,7 +48,7 @@ export default function MenyuLanguage() {
       <PopoverTrigger asChild>
         <li
           style={{ backgroundColor: "rgba(255, 255, 255, 0.10)" }}
-          className={`hidden smd:flex text-sm font-medium backdrop-blur-xl p-2 rounded-full text-white cursor-pointer border transition-all duration-200 items-center gap-[6px] ${open ? "border-[#C61511]" : "border-transparent"}`}
+          className={` inline-flex text-sm font-medium backdrop-blur-xl p-2 rounded-full text-white cursor-pointer border transition-all duration-200 items-center gap-[6px] ${open ? "border-[#C61511]" : "border-transparent"}`}
         >
           {current ? (
             <>
