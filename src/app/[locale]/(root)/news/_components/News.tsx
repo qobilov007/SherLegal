@@ -1,17 +1,23 @@
 "use client";
 import { useState } from "react";
-import { getNews } from "@/constants/page";
+// import { getNews } from "@/constants/page";
 import Image from "next/image";
 import { IoSearchSharp } from "react-icons/io5";
 import { CiCalendarDate } from "react-icons/ci";
 import { LuEye } from "react-icons/lu";
 import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
+import { NewsCard } from "@/app.types";
+import { pickStringProps } from "@/lib/getLocalizedValue";
+import { getLocalizedValue } from "@/lib/getLocalization";
 
-export default function News() {
-    const t = useTranslations("NewsPage")
+export default function News({ news }: { news: NewsCard[] }) {
+  //   console.log(news);
+
+  const t = useTranslations("NewsPage");
   const locale = useLocale();
-  const news = getNews;
+  //   const news = getNews;
+
   const itemsPerPage = 12;
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -36,46 +42,61 @@ export default function News() {
       </div>
 
       <div className="grid lg:grid-cols-3 sm:grid-cols-2 md:gap-[24px] gap-4">
-        {currentNews.map((item, id) => (
-          <Link key={id} href={`/${locale}/news/${item.slug}`}>
-            <div
-              key={id}
-              className="rounded-2xl overflow-hidden border hover:border-red-700 w-full cursor-pointer bg-[#F3F3F3] hover:bg-white ease-linear duration-300 md:h-[367px] h-[343px]"
-            >
-              <Image
-                src={item.img}
-                alt="Image"
-                width={379}
-                height={182}
-                className="w-full object-cover h-[182px]"
-              />
+        {currentNews.map((item, id) => {
+          const stringItem = pickStringProps(item);
+          const localTitle = getLocalizedValue(stringItem, "title", locale);
+          const localDescription = getLocalizedValue(
+            stringItem,
+            "content",
+            locale
+          );
+          const createdAt = new Date(item.created_at);
+          const day = String(createdAt.getDate()).padStart(2, "0");
+          const month = String(createdAt.getMonth() + 1).padStart(2, "0");
+          const year = createdAt.getFullYear();
+          const date = `${day}-${month}-${year}`;
+          return (
+            <Link key={id} href={`/${locale}/news/${item.slug}`}>
+              <div
+                key={id}
+                className="rounded-2xl overflow-hidden border hover:border-red-700 w-full cursor-pointer bg-[#F3F3F3] hover:bg-white ease-linear duration-300 md:h-[367px] h-[343px]"
+              >
+                <Image
+                  src={item.image}
+                  alt={localTitle}
+                  width={379}
+                  height={182}
+                  className="w-full object-cover h-[182px]"
+                />
 
-              <article className=" flex flex-col justify-between md:h-[170px] h-[158px] px-4 py-2">
-                <h2 className="line-clamp-2 font-bold font-vela text-[16px] leading-[140%] pb-[4px]">
-                  {item.title}
-                </h2>
-                <p className="line-clamp-2 text-[14px] font-medium font-inter leading-[136%] text-[#6C6C6C]">
-                  {item.description}
-                </p>
+                <article className=" flex flex-col justify-between md:h-[170px] h-[158px] px-4 py-2">
+                  <h2 className="line-clamp-2 font-bold font-vela text-[16px] leading-[140%] pb-[4px]">
+                    {localTitle}
+                  </h2>
+                  <div
+                    className="line-clamp-2 text-[14px] font-medium font-inter leading-[136%] text-[#6C6C6C]"
+                    dangerouslySetInnerHTML={{ __html: localDescription }}
+                  />
 
-              <div className="flex max-sm:flex-row max-md:flex-col md:items-center items-start gap-1">
-                <article className="flex items-center md:gap-[8.5px] gap-0.5 md:py-[6px] py-0.5 px-3 border border-[#6C6C6C] rounded-full max-w-max">
-                  <CiCalendarDate className="text-[#6C6C6C]" />
-                  <span className="text-[#6C6C6C] md:text-[12px] text-[10px] font-medium font-inter">
-                    {item.date}
-                  </span>
-                </article>
-                <article className="flex items-center gap-[8.5px] md:py-[6px] py-0.5 px-3 border border-[#6C6C6C] rounded-full max-w-max">
-                  <LuEye className="text-[#6C6C6C]" />
-                  <span className="text-[#6C6C6C] md:text-[12px] text-[10px] font-medium font-inter">
-                    {item.views}
-                  </span>
+                  <div className="flex max-sm:flex-row max-md:flex-col md:items-center items-start gap-1">
+                    <article className="flex items-center md:gap-[8.5px] gap-0.5 md:py-[6px] py-0.5 px-3 border border-[#6C6C6C] rounded-full max-w-max">
+                      <CiCalendarDate className="text-[#6C6C6C]" />
+                      <span className="text-[#6C6C6C] md:text-[12px] text-[10px] font-medium font-inter">
+                        {date}
+                      </span>
+                    </article>
+                    <article className="flex items-center gap-[8.5px] md:py-[6px] py-0.5 px-3 border border-[#6C6C6C] rounded-full max-w-max">
+                      <LuEye className="text-[#6C6C6C]" />
+                      <span className="text-[#6C6C6C] md:text-[12px] text-[10px] font-medium font-inter">
+                        {item.views}
+                      </span>
+                    </article>
+                  </div>
                 </article>
               </div>
-              </article>
-            </div>
-          </Link>
-        ))}
+            </Link>
+          );
+        })}
       </div>
 
       <div className="flex justify-center md:mt-10 mt-5 space-x-2">

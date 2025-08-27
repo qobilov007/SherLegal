@@ -29,12 +29,18 @@ export type LessonCard = {
     description: string;
   };
 
-  export type NewsCard = {
-    id:number;
-    img:string;
+  export interface NewsCard {
+    id: number;
+    slug: string;
     title: string;
     description: string;
+    title_uz?: string;
+    title_en?: string;
+    title_ru?: string;
+    content_uz?: string;
+    content_en?: string;
+    content_ru?: string;
+    image: string;
     views: number;
-    date: string;
-    slug: string;
+    created_at: string;
   }
