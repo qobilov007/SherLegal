@@ -2,11 +2,11 @@
 
 
 import Image from "next/image";
-import { partners } from "@/constants/page";
+import {Partner} from "@/app.types"
 import { useTranslations } from "next-intl";
 
 
-export default function PartnersSection() {
+export default function PartnersSection({ partners }: { partners: Partner[] }) {
   const t = useTranslations("HomePage")
   return (
     <div className="white">
@@ -56,3 +56,4 @@ export default function PartnersSection() {
     </div>
   );
 }
+    

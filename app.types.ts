@@ -1,6 +1,10 @@
 import { StaticImageData } from "next/image";
 
-
+export type Partner = {
+  name: string;
+  link: string;
+  logo: string;
+};
 
 export type FAQItem = {
   question: string;
@@ -14,20 +18,39 @@ export interface ContactData {
   address: string;
 }
 
+export type ServiceItems = {
+  icon: string;
+  name: string;
+  description: string;
+  slug: string;
+  details: Detail[];
+};
+
+interface Detail {
+  name: string;
+  description: string;
+}
+
+export type WhyChooseType = {
+  name: string;
+  description: string;
+  icon: StaticImageData;
+  color: string;
+};
 
 export interface TeamsType {
-    id?: string;
-    teamImg: StaticImageData;
-    names: string;
-    desc: string;
+  id?: string;
+  image: string;
+  full_name: string;
+  description: string;
 }
 
 export type LessonCard = {
-    id: number;
-    number: number;
-    title: string;
-    description: string;
-  };
+  id: number;
+  number: number;
+  title: string;
+  description: string;
+};
 
   export interface NewsCard {
     id: number;
