@@ -80,7 +80,13 @@
     "contactemail": "Elektron pochta",
     "contactaddress": "Manzil",
     "contactweb": "Websayt",
-    "contactbtn": "Yuborish"
+    "contactbtn": "Yuborish",
+    "names": "Ism kamida 2 ta belgidan iborat bo‘lishi kerak",
+    "tashkilot": "Tashkilot kiritilishi kerak",
+    "description": "Xabar kamida 5 ta belgidan iborat bo‘lishi kerak",
+    "placeholderDescription": "Tavsifingizni kiriting",
+    "organizationName": "Tashkilot nomi",
+    "enterName": "Ismingizni kiriting"
   },
   "privacy-policy": {
     "subtitle": "Maxfiylik siyosati",

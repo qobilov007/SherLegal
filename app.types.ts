@@ -78,3 +78,10 @@ export interface Review {
   profession_en: string;
   profession_ru: string;
 }
+  export type Stat = {
+
+    clients: string;
+    deals: string;
+    experience: string;
+    projects: string;
+  };
