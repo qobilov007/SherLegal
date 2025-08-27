@@ -67,3 +67,11 @@ export type LessonCard = {
     views: number;
     created_at: string;
   }
+
+  export type Stat = {
+
+    clients: string;
+    deals: string;
+    experience: string;
+    projects: string;
+  };
