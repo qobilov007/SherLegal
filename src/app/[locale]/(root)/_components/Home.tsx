@@ -1,6 +1,6 @@
 import Comments from "../../../../components/Reviews/Reviews";
 import Faq from "../../../../components/Faq";
-import News from "../../../../components/News";
+import News from "../../../../components/News/OurNews";
 import OurService from "../../../../components/OurService/Ourservice";
 import Partners from "../../../../components/Partners/Partners";
 import Button from "../../../../components/btn/Button";
