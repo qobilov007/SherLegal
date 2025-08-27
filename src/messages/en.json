@@ -80,7 +80,13 @@
     "contactaddress": "Address",
     "contactweb": "Website",
     "contactdess": "Send your questions and we will respond soon.",
-    "contactbtn": "Send"
+    "contactbtn": "Send",
+    "names": "Name must be at least 2 characters long",
+    "tashkilot": "Organization is required",
+    "description": "Message must be at least 5 characters long",
+    "placeholderDescription": "Enter your description",
+    "organizationName": "Organization name", 
+    "enterName": "Enter your name"
   },
   "privacy-policy": {
     "subtitle": "Privacy policy",
