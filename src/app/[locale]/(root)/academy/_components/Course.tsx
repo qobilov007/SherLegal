@@ -7,7 +7,7 @@ import { useLocale, useTranslations } from "next-intl";
 export default function Course({ course }: { course: LessonCard[] }) {
   const t = useTranslations("AcademyPage");
   //   const lessons = getLessonCard;
-  console.log(course);
+//   console.log(course);
   const locale = useLocale();
 
   return (

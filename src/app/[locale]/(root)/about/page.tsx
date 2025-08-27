@@ -1,22 +1,13 @@
-import OurService from "../../../../components/OurService";
-import OurTeam from "../../../../components/OurTeam";
-import { useTranslations } from "next-intl";
+import React from 'react'
+import AboutUs from './_components/AboutUs'
+import { getStatistics } from '@/lib/getStatistics';
 
-type Stat = {
-  number: string;
-  label: string;
-};
+export default async function page() {
+    const statistics = await getStatistics();
 
-export default function Home() {
-    const t = useTranslations("AboutPage")
-
-  const stats: Stat[] = [
-    { number: "15+", label: "Years experience" },
-    { number: "10K", label: "Project finished" },
-    { number: "28+", label: "Closed deals" },
-    { number: "12+", label: "Happy clients" },
-  ];
   return (
+    <div>
+      <AboutUs statistics={statistics}  />
     <div className="">
       <div className="home-prev1">
         {/* Overlay */}
@@ -77,5 +68,5 @@ export default function Home() {
         <OurTeam />
       </div>
     </div>
-  );
+  )
 }
