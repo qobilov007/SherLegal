@@ -1,60 +1,12 @@
 import cardImg from "../../../../../public/icons/team1.png";
 import Teamm from "./teamm";
-import { TeamsType } from "@/src/app.type";
 import { useTranslations } from "next-intl";
 import Comments from "@/src/components/Reviews/Reviews";
-import Partners from "@/src/components/Partners";
+import Partners from "@/src/components/Partners/Partners";
 import Faq from "../../../../components/Faq"
 
 export default function OurTeam() {
 
-  const teams: TeamsType[] = [
-    {
-      teamImg: cardImg,
-      names: "Sherzod Egamberdiyev",
-      desc: "Managing Partner, advocate and Founder of Sher Legal",
-    },
-    {
-      teamImg: cardImg,
-      names: "Sherzod Egamberdiyev",
-      desc: "Managing Partner, advocate and Founder of Sher Legal",
-    },
-    {
-      teamImg: cardImg,
-      names: "Sherzod Egamberdiyev",
-      desc: "Managing Partner, advocate and Founder of Sher Legal",
-    },
-    {
-      teamImg: cardImg,
-      names: "Sherzod Egamberdiyev",
-      desc: "Managing Partner, advocate and Founder of Sher Legal",
-    },
-    {
-      teamImg: cardImg,
-      names: "Sherzod Egamberdiyev",
-      desc: "Managing Partner, advocate and Founder of Sher Legal",
-    },
-    {
-      teamImg: cardImg,
-      names: "Sherzod Egamberdiyev",
-      desc: "Managing Partner, advocate and Founder of Sher Legal",
-    },
-    {
-      teamImg: cardImg,
-      names: "Sherzod Egamberdiyev",
-      desc: "Managing Partner, advocate and Founder of Sher Legal",
-    },
-    {
-      teamImg: cardImg,
-      names: "Sherzod Egamberdiyev",
-      desc: "Managing Partner, advocate and Founder of Sher Legal",
-    },
-    {
-      teamImg: cardImg,
-      names: "Sherzod Egamberdiyev",
-      desc: "Managing Partner, advocate and Founder of Sher Legal",
-    },
-  ];
 
   const t = useTranslations("HomePage")
 
@@ -74,9 +26,9 @@ export default function OurTeam() {
           </article>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
-            {teams.slice(0, 9).map((team, id) => (
+            {/* {teams.slice(0, 9).map((team, id) => (
               <Teamm key={id} infoTeam={team} />
-            ))}
+            ))} */}
           </div>
         </div>
       </div>
