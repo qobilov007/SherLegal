@@ -7,7 +7,7 @@ export default async function PartnersSection() {
 
   return (
     <div className="white">
-      <News news={news}/>
+      <News news={news.results}/>
     </div>
   );
 }

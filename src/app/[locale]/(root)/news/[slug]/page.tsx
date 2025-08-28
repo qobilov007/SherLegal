@@ -102,7 +102,7 @@ export default async function Page({
           </div>
         </div>
       </article>
-      <Marqueforslug news={news} />
+      <Marqueforslug news={news.results} />
     </section>
   );
 }

@@ -9,35 +9,82 @@ import { useLocale, useTranslations } from "next-intl";
 import { NewsCard } from "@/app.types";
 import { pickStringProps } from "@/lib/getLocalizedValue";
 import { getLocalizedValue } from "@/lib/getLocalization";
+import { getNews, getPaginationPages } from "@/lib/getNews";
 
-export default function News({ news }: { news: NewsCard[] }) {
-  const [filtered, setFiltered] = useState<NewsCard[]>([]);
+import {
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination";
+
+export default function News({
+  initialNews,
+  total,
+}: {
+  initialNews: NewsCard[];
+  total: number;
+}) {
+  const [allNews, setAllNews] = useState<NewsCard[]>([]);   // 🔹 barcha news
+  const [filtered, setFiltered] = useState<NewsCard[]>([]); // 🔹 qidiruv natijasi
   const [query, setQuery] = useState("");
-  const [loading, setLoading] = useState(true);
+  const [page, setPage] = useState(1);
+  const [loading, setLoading] = useState(false);
 
-  const t = useTranslations("NewsPage");
+  const pageSize = 12;
   const locale = useLocale();
+  const t = useTranslations("NewsPage");
 
+  const totalPages = Math.ceil(filtered.length / pageSize);
+
+  // 🔹 Barcha newslarni olish
   useEffect(() => {
-    if (!news) return;
+    const fetchAll = async () => {
+      setLoading(true);
+      try {
+        // katta limit bilan barcha newslarni olish (backend bo‘yicha sozlashingiz mumkin)
+        const { results } = await getNews(1, 9999);
+        setAllNews(results);
+        setFiltered(results); // default – hammasi
+      } catch (err) {
+        console.error("Error fetching all news:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchAll();
+  }, []);
 
-    setLoading(true);
+  // 🔹 Qidiruv
+  useEffect(() => {
+    if (!query) {
+      setFiltered(allNews);
+      return;
+    }
+
     const timeout = setTimeout(() => {
-      const results = news.filter((item) => {
+      const results = allNews.filter((item) => {
         const stringItem = pickStringProps(item);
         const localTitle = getLocalizedValue(stringItem, "title", locale) || "";
         return localTitle.toLowerCase().includes(query.toLowerCase());
       });
       setFiltered(results);
-      setLoading(false);
-    }, 500);
+      setPage(1); // har safar qidiruv bo‘lsa 1-sahifaga qaytadi
+    }, 400);
 
     return () => clearTimeout(timeout);
-  }, [query, news, locale]);
+  }, [query, allNews, locale]);
+
+  // 🔹 Joriy sahifa uchun slice
+  const startIndex = (page - 1) * pageSize;
+  const paginated = filtered.slice(startIndex, startIndex + pageSize);
 
   return (
     <div className="container md:pt-[124px] pt-28">
-      <div className="flex items-center md:items-center justify-between pb-[36px]">
+      {/* Title + Search */}
+      <div className="flex items-center justify-between pb-[36px]">
         <h1 className=" font-bold font-inter md:text-[40px] text-[24px] leading-[120%]">
           {t("title")}
         </h1>
@@ -53,14 +100,14 @@ export default function News({ news }: { news: NewsCard[] }) {
         </article>
       </div>
 
+      {/* News list */}
       <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 md:gap-[24px] gap-4">
         {loading ? (
-          //   Loading skelton
           <div className="col-span-full flex justify-center items-center py-10">
             <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-red-600"></div>
           </div>
-        ) : filtered.length > 0 ? (
-          filtered.map((item, id) => {
+        ) : paginated.length > 0 ? (
+          paginated.map((item, id) => {
             const stringItem = pickStringProps(item);
             const localTitle = getLocalizedValue(stringItem, "title", locale);
             const localDescription = getLocalizedValue(
@@ -122,6 +169,52 @@ export default function News({ news }: { news: NewsCard[] }) {
           </article>
         )}
       </div>
+
+      {/* 🔹 Pagination */}
+      {totalPages > 1 && (
+        <Pagination className="mt-10 flex justify-end">
+          <PaginationContent>
+            <PaginationItem>
+              <PaginationPrevious
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  if (page > 1) setPage(page - 1);
+                }}
+                className={page === 1 ? "pointer-events-none opacity-50" : ""}
+              />
+            </PaginationItem>
+
+            {getPaginationPages(page, totalPages, 5).map((p) => (
+              <PaginationItem key={p}>
+                <PaginationLink
+                  href="#"
+                  isActive={p === page}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    if (p !== page) setPage(p);
+                  }}
+                >
+                  {p}
+                </PaginationLink>
+              </PaginationItem>
+            ))}
+
+            <PaginationItem>
+              <PaginationNext
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  if (page < totalPages) setPage(page + 1);
+                }}
+                className={
+                  page === totalPages ? "pointer-events-none opacity-50" : ""
+                }
+              />
+            </PaginationItem>
+          </PaginationContent>
+        </Pagination>
+      )}
     </div>
   );
 }
