@@ -20,8 +20,13 @@ import {
   PaginationPrevious,
 } from "@/components/ui/pagination";
 
-export default function News() {
-  
+export default function News({
+  initialNews,
+  total,
+}: {
+  initialNews: NewsCard[];
+  total: number;
+}) {
   const [allNews, setAllNews] = useState<NewsCard[]>([]);   // 🔹 barcha news
   const [filtered, setFiltered] = useState<NewsCard[]>([]); // 🔹 qidiruv natijasi
   const [query, setQuery] = useState("");
