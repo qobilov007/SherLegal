@@ -1,6 +1,5 @@
 "use client";
-import { useState } from "react";
-// import { getNews } from "@/constants/page";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { IoSearchSharp } from "react-icons/io5";
 import { CiCalendarDate } from "react-icons/ci";
@@ -12,18 +11,29 @@ import { pickStringProps } from "@/lib/getLocalizedValue";
 import { getLocalizedValue } from "@/lib/getLocalization";
 
 export default function News({ news }: { news: NewsCard[] }) {
-  //   console.log(news);
+  const [filtered, setFiltered] = useState<NewsCard[]>([]);
+  const [query, setQuery] = useState("");
+  const [loading, setLoading] = useState(true);
 
   const t = useTranslations("NewsPage");
   const locale = useLocale();
-  //   const news = getNews;
 
-  const itemsPerPage = 12;
-  const [currentPage, setCurrentPage] = useState(1);
+  useEffect(() => {
+    if (!news) return;
 
-  const totalPages = Math.ceil(news.length / itemsPerPage);
-  const startIndex = (currentPage - 1) * itemsPerPage;
-  const currentNews = news.slice(startIndex, startIndex + itemsPerPage);
+    setLoading(true);
+    const timeout = setTimeout(() => {
+      const results = news.filter((item) => {
+        const stringItem = pickStringProps(item);
+        const localTitle = getLocalizedValue(stringItem, "title", locale) || "";
+        return localTitle.toLowerCase().includes(query.toLowerCase());
+      });
+      setFiltered(results);
+      setLoading(false);
+    }, 500);
+
+    return () => clearTimeout(timeout);
+  }, [query, news, locale]);
 
   return (
     <div className="container md:pt-[124px] pt-28">
@@ -37,98 +47,80 @@ export default function News({ news }: { news: NewsCard[] }) {
             type="text"
             placeholder={t("search")}
             className="bg-transparent outline-none text-sm w-full placeholder:text-gray-500 md:text-[14px] font-medium font-inter leading-[140%] pr-2"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
           />
         </article>
       </div>
 
-      <div className="grid lg:grid-cols-3 sm:grid-cols-2 md:gap-[24px] gap-4">
-        {currentNews.map((item, id) => {
-          const stringItem = pickStringProps(item);
-          const localTitle = getLocalizedValue(stringItem, "title", locale);
-          const localDescription = getLocalizedValue(
-            stringItem,
-            "content",
-            locale
-          );
-          const createdAt = new Date(item.created_at);
-          const day = String(createdAt.getDate()).padStart(2, "0");
-          const month = String(createdAt.getMonth() + 1).padStart(2, "0");
-          const year = createdAt.getFullYear();
-          const date = `${day}-${month}-${year}`;
-          return (
-            <Link key={id} href={`/${locale}/news/${item.slug}`}>
-              <div
-                key={id}
-                className="rounded-2xl overflow-hidden border hover:border-red-700 w-full cursor-pointer bg-[#F3F3F3] hover:bg-white ease-linear duration-300 md:h-[367px] h-[343px]"
-              >
-                <Image
-                  src={item.image}
-                  alt={localTitle}
-                  width={379}
-                  height={182}
-                  className="w-full object-cover h-[182px]"
-                />
+      <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 md:gap-[24px] gap-4">
+        {loading ? (
+          //   Loading skelton
+          <div className="col-span-full flex justify-center items-center py-10">
+            <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-red-600"></div>
+          </div>
+        ) : filtered.length > 0 ? (
+          filtered.map((item, id) => {
+            const stringItem = pickStringProps(item);
+            const localTitle = getLocalizedValue(stringItem, "title", locale);
+            const localDescription = getLocalizedValue(
+              stringItem,
+              "content",
+              locale
+            );
 
-                <article className=" flex flex-col justify-between md:h-[170px] h-[158px] px-4 py-2">
-                  <h2 className="line-clamp-2 font-bold font-vela text-[16px] leading-[140%] pb-[4px]">
-                    {localTitle}
-                  </h2>
-                  <div
-                    className="line-clamp-2 text-[14px] font-medium font-inter leading-[136%] text-[#6C6C6C]"
-                    dangerouslySetInnerHTML={{ __html: localDescription }}
+            return (
+              <Link key={id} href={`/${locale}/news/${item.slug}`}>
+                <div className="rounded-2xl overflow-hidden border hover:border-red-700 w-full cursor-pointer bg-[#F3F3F3] hover:bg-white ease-linear duration-300 md:h-[367px] h-[343px]">
+                  <Image
+                    src={item.image}
+                    alt={localTitle}
+                    width={379}
+                    height={182}
+                    className="w-full object-cover h-[182px]"
                   />
 
-                  <div className="flex max-sm:flex-row max-md:flex-col md:items-center items-start gap-1">
-                    <article className="flex items-center md:gap-[8.5px] gap-0.5 md:py-[6px] py-0.5 px-3 border border-[#6C6C6C] rounded-full max-w-max">
-                      <CiCalendarDate className="text-[#6C6C6C]" />
-                      <span className="text-[#6C6C6C] md:text-[12px] text-[10px] font-medium font-inter">
-                        {date}
-                      </span>
-                    </article>
-                    <article className="flex items-center gap-[8.5px] md:py-[6px] py-0.5 px-3 border border-[#6C6C6C] rounded-full max-w-max">
-                      <LuEye className="text-[#6C6C6C]" />
-                      <span className="text-[#6C6C6C] md:text-[12px] text-[10px] font-medium font-inter">
-                        {item.views}
-                      </span>
-                    </article>
-                  </div>
-                </article>
-              </div>
-            </Link>
-          );
-        })}
-      </div>
+                  <article className="flex flex-col justify-between md:h-[170px] h-[158px] px-4 py-2">
+                    <h2 className="line-clamp-2 font-bold font-vela text-[16px] leading-[140%] pb-[4px]">
+                      {localTitle}
+                    </h2>
+                    <p className="line-clamp-2 text-[14px] font-medium font-inter leading-[136%] text-[#6C6C6C]">
+                      {localDescription?.replace(/<[^>]+>/g, "")}
+                    </p>
 
-      <div className="flex justify-center md:mt-10 mt-5 space-x-2">
-        <button
-          onClick={() => setCurrentPage((p) => Math.max(p - 1, 1))}
-          disabled={currentPage === 1}
-          className="px-3 py-1 rounded-lg border text-gray-600 hover:bg-gray-200 disabled:opacity-50"
-        >
-          &lt;
-        </button>
-
-        {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-          <button
-            key={page}
-            onClick={() => setCurrentPage(page)}
-            className={`px-3 py-1 rounded-lg border ${
-              currentPage === page
-                ? "bg-red-500 text-white border-red-500"
-                : "text-gray-600 hover:bg-gray-200"
-            }`}
-          >
-            {page}
-          </button>
-        ))}
-
-        <button
-          onClick={() => setCurrentPage((p) => Math.min(p + 1, totalPages))}
-          disabled={currentPage === totalPages}
-          className="px-3 py-1 rounded-lg border text-gray-600 hover:bg-gray-200 disabled:opacity-50"
-        >
-          &gt;
-        </button>
+                    <div className="flex max-sm:flex-row max-md:flex-col md:items-center items-start gap-1">
+                      <article className="flex items-center md:gap-[8.5px] gap-0.5 md:py-[6px] py-0.5 px-3 border border-[#6C6C6C] rounded-full max-w-max">
+                        <CiCalendarDate className="text-[#6C6C6C]" />
+                        <time
+                          dateTime={item.created_at}
+                          suppressHydrationWarning
+                          className="text-[#6C6C6C] md:text-[12px] text-[10px] font-medium font-inter"
+                        >
+                          {item.created_at
+                            ?.slice(0, 10)
+                            .split("-")
+                            .reverse()
+                            .join("-")}
+                        </time>
+                      </article>
+                      <article className="flex items-center gap-[8.5px] md:py-[6px] py-0.5 px-3 border border-[#6C6C6C] rounded-full max-w-max">
+                        <LuEye className="text-[#6C6C6C]" />
+                        <span className="text-[#6C6C6C] md:text-[12px] text-[10px] font-medium font-inter">
+                          {item.views}
+                        </span>
+                      </article>
+                    </div>
+                  </article>
+                </div>
+              </Link>
+            );
+          })
+        ) : (
+          <article className="col-span-full flex justify-center items-center py-10">
+            <IoSearchSharp className="mr-2 text-gray-500" />
+            <p className="text-gray-500 font-medium">{t("found")}</p>
+          </article>
+        )}
       </div>
     </div>
   );

@@ -167,9 +167,9 @@ export default function Navbar() {
       )}
       <div
         onClick={(e) => e.stopPropagation()}
-        className={`fixed top-0 z-[100] w-[70%] h-screen transition-all duration-200 ease-in-out bg-black shadow-md
+        className={`fixed top-0 z-[100] w-[70%] h-screen transition-all duration-200 ease-in-out bg-black shadow-md smd:hidden
         ${isMenuOpen ? "left-0 opacity-100" : "  -left-[700px] opacity-0"}
-        
+
         `}
       >
         <div className="container px-5 pt-[40px]">
@@ -191,7 +191,7 @@ export default function Navbar() {
                 {t("about")}
               </Link>
             </li>
-            <hr className=" opacity-35"/>
+            <hr className=" opacity-35" />
             <li className="text-white">
               <Link
                 href={`/${locale}/services`}
@@ -200,7 +200,7 @@ export default function Navbar() {
                 {t("services")}
               </Link>
             </li>
-            <hr className=" opacity-35"/>
+            <hr className=" opacity-35" />
             <li className="text-white">
               <Link
                 href={`/${locale}/team`}
@@ -209,7 +209,7 @@ export default function Navbar() {
                 {t("ourteam")}
               </Link>
             </li>
-            <hr className=" opacity-35"/>
+            <hr className=" opacity-35" />
             <li className="text-white">
               <Link
                 href={`/${locale}/academy`}
@@ -218,7 +218,7 @@ export default function Navbar() {
                 {t("academy")}
               </Link>
             </li>
-            <hr className=" opacity-35"/>
+            <hr className=" opacity-35" />
             <li className="text-white">
               <Link
                 href={`/${locale}/contacts`}
