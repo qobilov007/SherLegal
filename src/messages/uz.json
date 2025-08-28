@@ -50,7 +50,8 @@
   },
   "NewsPage": {
     "title": "Yangiliklar",
-    "search": "Izlash"
+    "search": "Izlash",
+    "found": "Hech qanday ma'lumot topilmadi."
   },
   "Common": {
     "back": "Orqaga"
@@ -82,7 +83,7 @@
     "contactweb": "Websayt",
     "contactbtn": "Yuborish",
     "names": "Ism kamida 2 ta belgidan iborat bo‘lishi kerak",
-    "tashkilot": "Tashkilot kiritilishi kerak",
+    "phones": "Telefon raqamda xatolik bor?",
     "description": "Xabar kamida 5 ta belgidan iborat bo‘lishi kerak",
     "placeholderDescription": "Tavsifingizni kiriting",
     "organizationName": "Tashkilot nomi",

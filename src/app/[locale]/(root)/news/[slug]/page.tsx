@@ -65,7 +65,7 @@ export default async function Page({
         </Link>
 
         <div
-          className="w-full lg:h-[600px] md:h-[500px] nx:h-[400px] h-[260px] rounded-3xl bg-cover bg-center md:mb-[24px] nx:mb-[14px] mb-[12px]"
+          className="w-full lg:h-[600px] md:h-[500px] nx:h-[400px] h-[260px] rounded-3xl bg-cover bg-center md:mb-[24px] nx:mb-[14px] mb-[12px] object-cover"
           style={{ backgroundImage: `url(${data.image})` }}
         >
           <div className="flex items-end translate-y-[220px] nx:translate-y-[360px] md:translate-y-[430px] lg:translate-y-[530px] gap-1 md:py-4 py-2 md:px-5 px-2">
@@ -91,11 +91,12 @@ export default async function Page({
           <div className="md:space-y-4 nx:space-y-3 space-y-2">
             {paragraphs.map((p, i) => {
               return (
-                <div
+                <p
                   key={i}
                   className="font-normal font-inter md:text-[18px] text-[14px] leading-[130%]"
-                  dangerouslySetInnerHTML={{ __html: p }}
-                />
+                >
+                  {p?.replace(/<[^>]+>/g, "")}
+                </p>
               );
             })}
           </div>

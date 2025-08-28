@@ -7,10 +7,12 @@ import { useForm } from "react-hook-form";
 import { ContactFormType, useContactSchema } from "@/lib/zod";
 import { useEffect } from "react";
 import axios from "axios";
+import z from "zod";
 
 export default function Contact() {
-  const contactSchema = useContactSchema();
   const t = useTranslations("ContactPage");
+  const contactSchema = useContactSchema();
+
   const {
     register,
     handleSubmit,
@@ -23,38 +25,38 @@ export default function Contact() {
 
   useEffect(() => {
     if (Object.keys(errors).length > 0) {
-      const timer = setTimeout(() => {
-        clearErrors();
-      }, 5000);
+      const timer = setTimeout(() => clearErrors(), 5000);
       return () => clearTimeout(timer);
     }
   }, [errors, clearErrors]);
 
-  const onSubmit = async (data: ContactFormType) => {
+  const handleSubmitted = async (data: ContactFormType) => {
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_API_BASE_URL}/contact/contact`,
+        `${process.env.NEXT_PUBLIC_API_BASE_URL}/contact/contact/`,
         {
           method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(data),
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            full_name: data.full_name,
+            phone_number: data.phone_number,
+            description: data.description,
+          }),
         }
       );
 
-      if (!res.ok) {
-        throw new Error("Server error");
-      }
+      console.log("Status:", res.status);
+      const result = await res.json();
+      console.log("API response:", result);
 
-      toast.success("Xabaringiz muvaffaqiyatli yuborildi ✅");
-
-      reset(); // 🔥 inputlarni tozalash
-    } catch (err) {
-      console.error(err);
-      toast.error("Xatolik yuz berdi ❌");
+      toast.success("Muvaffaqiyatli jo'natildi!");
+      reset();
+    } catch (error) {
+      console.error("Submission error:", error);
+      toast.error("Xatolik yuz berdi, iltimos qayta urinib ko'ring");
     }
   };
+
   return (
     <div className="relative pb-20 xl:pt-16 pt-0 sm:pb-28 md:pb-32 bg-[rgba(255,255,255,1)]">
       <div className="bgcolorr container relative left-0 max-lg:p-4 xl:flex max-xl:flex-col items-center justify-between w-full bg-[#0653C9] lg:rounded-[36px] rounded-2xl">
@@ -176,7 +178,7 @@ export default function Contact() {
             </p>
           </article>
 
-          <form className="pb-4" onSubmit={handleSubmit(onSubmit)}>
+          <form className="pb-4" onSubmit={handleSubmit(handleSubmitted)}>
             {/* Full Name */}
             <article className="w-full mb-4 sm:mb-5 md:mb-6">
               <label
@@ -187,14 +189,14 @@ export default function Contact() {
               </label>
               <input
                 id="names"
-                {...register("names")}
+                {...register("full_name")}
                 type="text"
                 className="w-full bg-[rgba(243,243,243,1)] mb-1 focus:bg-white px-3 h-9 sm:h-10 rounded-[16px] text-[14px] sm:text-[15px] md:text-[16px] outline-none border border-transparent focus:border-[#C61511]"
                 placeholder={t("enterName")}
               />
-              {errors.names && (
+              {errors.full_name && (
                 <p className="text-red-500 text-[12px] ml-[6px]">
-                  {errors.names.message}
+                  {errors.full_name.message}
                 </p>
               )}
             </article>
@@ -205,18 +207,20 @@ export default function Contact() {
                 htmlFor="tashkilot"
                 className="inline-flex mb-2 font-vk text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] font-medium text-[black]"
               >
-                {t("contacttash")}
+                {t("contactphone")}
               </label>
               <input
-                id="tashkilot"
-                {...register("tashkilot")}
-                type="text"
+                id="phone_number"
+                {...register("phone_number")}
+                type="tel" // faqat telefon format
+                inputMode="numeric" // mobil klaviaturada faqat raqam ko‘rsatadi
+                pattern="[0-9+ ]*"
                 className="w-full bg-[rgba(243,243,243,1)] mb-1 focus:bg-white px-3 h-9 sm:h-10 rounded-[16px] text-[14px] sm:text-[15px] md:text-[16px] outline-none border border-transparent focus:border-[#C61511]"
-                placeholder={t("organizationName")}
+                placeholder="+998 90 007 00 02"
               />
-              {errors.tashkilot && (
+              {errors.phone_number && (
                 <p className="text-red-500 text-[12px] ml-[6px]">
-                  {errors.tashkilot.message}
+                  {errors.phone_number.message}
                 </p>
               )}
             </article>
@@ -246,7 +250,7 @@ export default function Contact() {
             <div className="flex justify-end">
               <button
                 type="submit"
-                className="group flex items-center gap-1 text-[13px] sm:text-[14px] md:text-[15px] font-medium text-white px-4 sm:px-5 md:px-6 py-2 sm:py-[9px] md:py-[10px] rounded-lg bg-[rgba(198,21,17,1)] hover:bg-[#d81717] transition-all duration-300"
+                className="group flex items-center gap-1 text-[13px] sm:text-[14px] md:text-[15px] font-medium text-white px-4 sm:px-5 md:px-6 py-2 sm:py-[9px] md:py-[10px] rounded-lg bg-[rgba(198,21,17,1)] hover:bg-[#d81717] transition-all duration-300 cursor-pointer"
               >
                 {t("contactbtn")}
               </button>

@@ -7,8 +7,8 @@ export const useContactSchema = () => {
   const t = useTranslations("ContactPage");
 
   return z.object({
-    names: z.string().min(2, t("names")),
-    tashkilot: z.string().trim().min(1, t("tashkilot")),
+    full_name: z.string().min(2, t("names")),
+    phone_number: z.string().trim().min(1, t("phones")),
     description: z.string().min(5, t("description")),
   });
 };
