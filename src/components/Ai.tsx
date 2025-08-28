@@ -444,7 +444,7 @@ export default function Hero() {
                     className="cursor-pointer flex gap-[10px] w-[60px] py-[16px] px-[16px] items-center justify-center boxshadoww" onClick={askAI}>
                     <button disabled={loading}>
                       {loading ? (<svg fill="#fff" height="20" width="20" version="1.2" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 32 32" enable-background="new 0 0 32 32">
+                        viewBox="0 0 32 32" enableBackground="new 0 0 32 32">
                         <path d="M24,6H8c-2.8,0-5,2.2-5,5v10c0,2.8,2.2,5,5,5h16c2.8,0,5-2.2,5-5V11C29,8.2,26.8,6,24,6z" />
                       </svg>) :
                         (<svg
