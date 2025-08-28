@@ -6,8 +6,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { ContactFormType, useContactSchema } from "@/lib/zod";
 import { useEffect } from "react";
-import axios from "axios";
-import z from "zod";
 
 export default function Contact() {
   const t = useTranslations("ContactPage");

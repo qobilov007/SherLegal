@@ -1,5 +1,3 @@
-// import { getNews } from "@/constants/page";
-
 import { FaArrowLeftLong } from "react-icons/fa6";
 import Marqueforslug from "../_components/Marqueforslug";
 import { CiCalendarDate } from "react-icons/ci";
@@ -14,9 +12,9 @@ import { getNews } from "@/lib/getNews";
 export default async function Page({
   params,
 }: {
-  params: { slug: string; locale: string };
+  params: Promise<{ slug: string; locale: string }>;
 }) {
-  const { slug, locale } = params;
+  const { slug, locale } = await params;
   const t = await getTranslations({ locale, namespace: "Common" });
 
   const res = await fetch(

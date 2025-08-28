@@ -1,7 +1,5 @@
 "use client";
 
-import { faqdata } from "@/constants/page";
-
 import {
   Accordion,
   AccordionContent,
