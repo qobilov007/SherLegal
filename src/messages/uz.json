@@ -50,7 +50,8 @@
   },
   "NewsPage": {
     "title": "Yangiliklar",
-    "search": "Izlash"
+    "search": "Izlash",
+    "found": "Hech qanday ma'lumot topilmadi."
   },
   "Common": {
     "back": "Orqaga"

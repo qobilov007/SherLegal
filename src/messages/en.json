@@ -23,7 +23,8 @@
   },
   "NewsPage": {
     "title": "News",
-    "search": "Search"
+    "search": "Search",
+    "found": "No information found."
   },
   "Common": {
     "back": "Back"
@@ -85,7 +86,7 @@
     "phones": "Is there a mistake in the phone number?",
     "description": "Message must be at least 5 characters long",
     "placeholderDescription": "Enter your description",
-    "organizationName": "Organization name", 
+    "organizationName": "Organization name",
     "enterName": "Enter your name"
   },
   "privacy-policy": {
