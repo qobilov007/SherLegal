@@ -10,23 +10,21 @@ export default function Hero() {
 
   const [open, setOpen] = useState(false);
   const [question, setQuestion] = useState("");
-  const [answer, setAnswer] = useState("");
   const [messages, setMessages] = useState<{ role: string; text: string }[]>([]);
   const [loading, setLoading] = useState(false);
-  const [tags, setTags] = useState<string[]>([
-    "Civil law",
-    "Criminal law",
-    "Tax law",
-  ]);
-  const [heading, setHeading] = useState("Yuqoridagi yozuv 1");
-  const [subHeading, setSubHeading] = useState("Yuqoridagi yozuv 2");
+  const defaultTags = ["Civil law", "Criminal law", "Tax law"];
+  const defaultHeading = t("aides");
+  const defaultSubHeading = t("aidess");
+
+  const [tags, setTags] = useState<string[]>(defaultTags);
+  const [heading, setHeading] = useState(defaultHeading);
+  const [subHeading, setSubHeading] = useState(defaultSubHeading);
 
   const chatEndRef = useRef<HTMLDivElement | null>(null);
 
   const askAI = async () => {
     if (!question.trim()) return;
     setLoading(true);
-    setAnswer("");
 
     setMessages((prev) => [...prev, { role: "user", text: question }]);
     setQuestion("");
@@ -61,6 +59,14 @@ export default function Hero() {
   useEffect(() => {
     chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
+
+  const handleClear = () => {
+    setMessages([]);
+    setTags(defaultTags);
+    setHeading(defaultHeading);
+    setSubHeading(defaultSubHeading);
+    setOpen(false);
+  };
 
   return (
     <section className="flex flex-col items-center justify-center h-[866px] bg-legalai">
@@ -268,11 +274,10 @@ export default function Hero() {
                 className="inputstyle w-[500px] max-smm:w-[250px] max-smmm:w-[200px] max-sm:w-[310px] max-md:w-[450px] pl-12 py-4 pr-4 bg-gray-800 text-sm text-gray-200 placeholder-gray-400
     border-0 border-b border-gray-600 focus:border-blue-500 focus:ring-0 outline-none transition"
               />
-
             </div>
 
             <div onClick={() => setOpen(true)}
-              className="cursor-pointer flex gap-[8px] w-[60px] py-[16px] px-[16px] items-center justify-center boxshadoww">
+              className="cursor-pointer flex gap-[10px] py-[8px] px-[16px] items-center justify-center boxshadoww">
               <svg
                 width="20"
                 height="20"
@@ -337,9 +342,12 @@ export default function Hero() {
                     </svg>
                     <p className="font-inter font-semibold text-2xl leading-[28px]">Sherlegal AI</p>
                   </article>
-                  <article className="flex p-[6px] items-center justify-center absolute right-[20px] top-[20px] rounded-full bg-[rgba(8,8,8,0.40)]">
+                  <article className="flex py-[4px] px-[2px] items-center justify-center absolute right-[20px] top-[20px] rounded-full bg-[rgba(8,8,8,0.40)]">
                     <button
-                      onClick={() => setOpen(false)}
+                      onClick={() => {
+                        handleClear();
+                        setOpen(false);
+                      }}
                       className="text-white text-2xl w-10"
                     >
                       ✕
@@ -354,7 +362,7 @@ export default function Hero() {
                 </p>
 
                 {tags.length > 0 && (
-                  <div className="flex flex-wrap justify-center gap-2 mt-6 mb-6">
+                  <div className="flex flex-wrap justify-center items-center gap-2 mt-6 mb-6">
                     {tags.map((tag, i) => (
                       <span
                         key={i}
@@ -390,17 +398,16 @@ export default function Hero() {
                   </div>
                 )}
 
-                <div className="h-auto overflow-y-auto space-y-4 p-3 bg-gray-900 rounded-xl">
+                <div className="overflow-y-auto max-h-[400px] space-y-4 p-3 rounded-xl">
                   {messages.map((msg, i) => (
                     <div
                       key={i}
-                      className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"
-                        }`}
+                      className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
                     >
                       <div
-                        className={`max-w-[70%] px-4 py-2 rounded-2xl ${msg.role === "user"
-                            ? "bg-blue-600 text-white rounded-br-none"
-                            : "bg-gray-700 text-white rounded-bl-none"
+                        className={`max-w-[70%] text-start px-4 py-2 rounded-2xl ${msg.role === "user"
+                          ? "bg-blue-600 text-white rounded-br-none"
+                          : "bg-gray-700 text-white rounded-bl-none"
                           }`}
                       >
                         {msg.text}
@@ -410,9 +417,9 @@ export default function Hero() {
                   <div ref={chatEndRef} />
                 </div>
 
-                <div className="mt-6 flex gap-4">
+
+                <div className="mt-6 flex justify-center gap-4">
                   <div className="relative w-[520px] max-sm:w-[310px] max-md:w-[450px]">
-                    {/* Icon */}
                     <svg
                       width="30"
                       height="30"
@@ -441,12 +448,13 @@ export default function Hero() {
                   </div>
 
                   <div
-                    className="cursor-pointer flex gap-[10px] w-[60px] py-[16px] px-[16px] items-center justify-center boxshadoww" onClick={askAI}>
+                    className="cursor-pointer flex gap-[10px] py-[8px] px-[16px] items-center justify-center boxshadoww" onClick={askAI}>
                     <button disabled={loading}>
-                      {loading ? (<svg fill="#fff" height="20" width="20" version="1.2" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 32 32" enableBackground="new 0 0 32 32">
-                        <path d="M24,6H8c-2.8,0-5,2.2-5,5v10c0,2.8,2.2,5,5,5h16c2.8,0,5-2.2,5-5V11C29,8.2,26.8,6,24,6z" />
-                      </svg>) :
+                      {loading ? (
+                        <svg fill="#fff" height="20" width="20" version="1.2" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 32 32" enableBackground="new 0 0 32 32">
+                          <path d="M24,6H8c-2.8,0-5,2.2-5,5v10c0,2.8,2.2,5,5,5h16c2.8,0,5-2.2,5-5V11C29,8.2,26.8,6,24,6z" />
+                        </svg>) :
                         (<svg
                           width="20"
                           height="20"
@@ -473,99 +481,3 @@ export default function Hero() {
     </section>
   );
 }
-
-// "use client";
-
-// import BtnIcon from "../../public/images/Button Icon.svg";
-// import Image from "next/image";
-// import { useState } from "react";
-// import { useTranslations } from "next-intl";
-
-// export default function Hero() {
-//   const t = useTranslations("HomePage");
-
-//   const [open, setOpen] = useState(false);
-//   const [question, setQuestion] = useState("");
-//   const [answer, setAnswer] = useState("");
-//   const [loading, setLoading] = useState(false);
-
-//   const askAI = async () => {
-//     if (!question.trim()) return;
-//     setLoading(true);
-//     setAnswer("");
-
-//     try {
-//       const res = await fetch("https://sherlegal-production.up.railway.app/api/v1/ai/chat/", {
-//         method: "POST",
-//         headers: {
-//           "Content-Type": "application/json",
-//         },
-//         body: JSON.stringify({ question }),
-//       });
-
-//       const data = await res.json();
-//       setAnswer(data.answer || "Javob topilmadi");
-//     } catch (err) {
-//       console.error(err);
-//       setAnswer("Xatolik yuz berdi. Keyinroq urinib ko‘ring.");
-//     } finally {
-//       setLoading(false);
-//     }
-//   };
-
-//   return (
-//     <section className="flex flex-col items-center justify-center h-[866px] bg-legalai">
-//       <h1 className="text-[40px] font-bold text-center text-blue-800">
-//         Sherlegal <span className="text-pink-600">AI</span>
-//       </h1>
-
-//       <button
-//         className="group boxshadow rounded-[1000px] bg-[#C61511] p-[16px] mt-4"
-//         onClick={() => setOpen(true)}
-//       >
-//         <p className="flex gap-[8px] items-center justify-between text-white text-[20px] font-inter font-[600] ">
-//           {t("aibtn")}{" "}
-//           <Image
-//             src={BtnIcon}
-//             alt="BtnIcon"
-//             className="group-hover:rotate-[45deg] ease-linear duration-300"
-//           />
-//         </p>
-//       </button>
-
-//       {open && (
-//         <div
-//           className="mt-10 w-[90%] max-w-[680px] mx-auto rounded-[48px] p-[12px] shadow-xl
-//           [background:linear-gradient(40deg,rgba(122,167,237,1),rgba(215,211,142,1),rgba(248,97,97,1))]"
-//         >
-//           <div className="rounded-[36px] bg-[#000] bg-cardAi text-white p-6 text-center">
-//             <h2 className="text-[28px] font-bold mb-4">Huquqiy savolingizni yozing:</h2>
-//             <textarea
-// value={question}
-// onChange={(e) => setQuestion(e.target.value)}
-//               className="w-full p-3 rounded-lg text-black"
-//               placeholder="Savolni shu yerga yozing..."
-//             />
-
-//             <button
-// onClick={askAI}
-//               className="bg-[#C61511] text-white px-6 py-2 rounded-full mt-4"
-// disabled={loading}
-// >
-//   {loading ? "Yozmoqda..." : "Yuborish"}
-//             </button>
-
-// {answer && (
-//   <div className="mt-6 p-4 bg-gray-800 rounded-xl text-left">
-//     <h3 className="font-bold text-lg mb-2">AI Javobi:</h3>
-//     <p>{answer}</p>
-//   </div>
-// )}
-//           </div>
-//         </div>
-//       )}
-//     </section>
-//   );
-// }
-
-
