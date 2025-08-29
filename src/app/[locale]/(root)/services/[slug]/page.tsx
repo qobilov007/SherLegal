@@ -4,9 +4,9 @@ import { ServiceItems } from "@/app.types";
 export default async function Page({
   params,
 }: {
-  params: { slug: string; locale: string };
+  params: Promise<{ slug: string; locale: string }>;
 }) {
-  const { slug, locale } = params;
+  const { slug, locale } = await params;
 
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_API_BASE_URL}/home/services/${slug}`,
