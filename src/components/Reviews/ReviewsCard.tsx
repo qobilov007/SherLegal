@@ -10,10 +10,7 @@ export default function ReviewCard({
   locale: string;
 }) {
   const text = review[`review_text_${locale}` as keyof Review] || review.review_text_uz;
-  const profession = review[`profession_${locale}` as keyof Review] || review.profession_uz;
-
- console.log(review);
-  
+  const profession = review[`profession_${locale}` as keyof Review] || review.profession_uz;  
 
   return (
     <article
