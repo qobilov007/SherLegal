@@ -17,10 +17,17 @@ import { Stat } from "@/app.types";
 // };
 
 export default function Homes({ statistics }: { statistics: Stat[] }) {
-//   const locale = useLocale();
-
-
+  //   const locale = useLocale();
+  const ss = useTranslations("Statistics");
   const t = useTranslations("HomePage");
+
+  function formatNumber(num: number) {
+    if (num >= 1000) {
+      return (num / 1000).toFixed(1).replace(/\.0$/, "") + "k";
+    } else {
+      return num.toString() + "+";
+    }
+  }
 
   return (
     <div>
@@ -106,38 +113,38 @@ export default function Homes({ statistics }: { statistics: Stat[] }) {
                   className=" grid grid-cols-4 justify-evenly gap-10 md:gap-16 px-6 py-6 border-gray-200 md:rounded-[40px] rounded-[20px] border-t border-b backdrop-blur-[6px] text-white"
                 >
                   <div className="flex flex-col items-center text-center">
-                    <span className="md:text-7xl text-[38px] leading-[120%] text-center font-bebas font-bold">
-                      {item.clients}
+                    <span className="md:text-7xl sm:text-[38px] text-[32px] leading-[120%] text-center font-bebas font-normal">
+                      {formatNumber(Number(item.clients))}
                     </span>
                     <span className="text-center md:text-2xl sm:text-[16px] text-[13px] font-inter font-medium leading-[120%]">
-                      Years experience
+                      {ss("experience")}
                     </span>
                   </div>
 
                   <div className="flex flex-col items-center text-center">
-                    <span className="md:text-7xl text-[38px] leading-[120%] text-center font-bebas font-bold">
-                      {item.deals}
+                    <span className="md:text-7xl sm:text-[38px] text-[32px] leading-[120%] text-center font-bebas font-normal">
+                      {formatNumber(Number(item.deals))}
                     </span>
                     <span className="text-center md:text-2xl sm:text-[16px] text-[13px] font-inter font-medium leading-[120%]">
-                      Project finished
+                      {ss("project")}
                     </span>
                   </div>
 
                   <div className="flex flex-col items-center text-center">
-                    <span className="md:text-7xl text-[38px] leading-[120%] text-center font-bebas font-bold">
-                      {item.experience}
+                    <span className="md:text-7xl sm:text-[38px] text-[32px] leading-[120%] text-center font-bebas font-normal">
+                      {formatNumber(Number(item.experience))}
                     </span>
                     <span className="text-center md:text-2xl sm:text-[16px] text-[13px] font-inter font-medium leading-[120%]">
-                      Closed deals
+                      {ss("closed")}
                     </span>
                   </div>
 
                   <div className="flex flex-col items-center text-center">
-                    <span className="md:text-7xl text-[38px] leading-[120%] text-center font-bebas font-bold">
-                      {item.projects}
+                    <span className="md:text-7xl sm:text-[38px] text-[32px] leading-[120%] text-center font-bebas font-normal">
+                      {formatNumber(Number(item.projects))}
                     </span>
                     <span className="text-center md:text-2xl sm:text-[16px] text-[13px] font-inter font-medium leading-[120%]">
-                      Happy clients
+                      {ss("clients")}
                     </span>
                   </div>
                 </div>

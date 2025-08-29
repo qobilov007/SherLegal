@@ -100,5 +100,11 @@
     "title6": "Biz yig‘ilgan Qurilma ma’lumotlaridan ehtimoliy xavf va firibgarlikni tekshirish (xususan, sizning IP-manzilingiz) hamda umuman Saytni yaxshilash va optimallashtirish uchun foydalanamiz (masalan, mijozlarimiz Saytdan qanday foydalanishini tahlil qilish va marketing kampaniyalarimiz samaradorligini baholash).",
     "title7": "Agar siz Yevropa aholisi bo‘lsangiz, bizda mavjud bo‘lgan shaxsiy ma’lumotlaringizga kirish huquqiga egasiz va ularni tuzatish, yangilash yoki o‘chirishni talab qilishingiz mumkin. Agar ushbu huquqdan foydalanmoqchi bo‘lsangiz, quyidagi aloqa ma’lumotlari orqali biz bilan bog‘laning.",
     "title8": "Bundan tashqari, agar siz Yevropa aholisi bo‘lsangiz, biz sizning ma’lumotlaringizni biz bilan tuzilgan shartnomalarni bajarish (masalan, agar siz Veb-sayt orqali buyurtma bersangiz) yoki yuqorida qayd etilgan qonuniy biznes manfaatlarimizni ko‘zlash uchun qayta ishlashimizni ma’lum qilamiz. Shuningdek, sizning ma’lumotlaringiz Yevropadan tashqariga, jumladan Kanada va AQShga o‘tkazilishi mumkinligini e’tiborga oling."
+  },
+  "Statistics": {
+    "experience": "Tajriba yillari",
+    "project": "Tugallangan loyihalar",
+    "closed": "Yopilgan bitimlar",
+    "clients": "Baxtli mijozlar"
   }
 }
