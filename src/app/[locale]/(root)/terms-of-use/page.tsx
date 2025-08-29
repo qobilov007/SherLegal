@@ -1,11 +1,15 @@
+import BackButton from "@/src/components/btn/BackBtn";
 import { useTranslations } from "next-intl";
 
 export default function page() {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const t = useTranslations("privacy-policy");
   return (
-    <section className="container">
-      <div className="md:mt-[124px] mt-[104px] md:p-6 p-4 m-auto rounded-2xl max-w-4xl bg-white shadow-[0_0_20px_rgba(0,0,0,0.15)] md:mb-4">
+    <section className="container md:mt-[124px] mt-[104px]">
+      <div className="mb-10">
+        <BackButton />
+      </div>
+      <div className=" md:p-6 p-4 m-auto rounded-2xl max-w-4xl bg-white shadow-[0_0_20px_rgba(0,0,0,0.15)] md:mb-4">
         <h1 className="font-inter font-bold md:text-[28px] nx:text-[24px] text-[18px] leading-[130%] md:pb-[24px] pb-[16px]">
           {t("subtitle2")}
         </h1>
