@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 import Logo from "../../../public/Logo.svg";
@@ -20,12 +20,16 @@ export default function FooterPage() {
             {tt("footerdes")}
           </p>
           <article className="flex items-center gap-5 justify-center">
-            <button className="px-7 md:py-4 py-3 rounded-full border-gray-400/40 border-l border-t border-r backdrop-blur-[50px] text-[16px] font-medium font-inter leading-[20px] transition-all duration-200 bg-gray-400/10 hover:bg-gray-400/20 text-white">
-              {tt("footerbtn")}
-            </button>
-            <button className="px-6 md:py-4 py-3 rounded-full bg-[#C61511] hover:shadow-lg transition-all duration-200 hover:shadow-[#C61511]/50 text-[16px] font-medium font-inter leading-[20px] text-white">
-              {tt("footerbtn1")}
-            </button>
+            <Link href={`/${locale}/about`}>
+              <button className="px-7 md:py-4 py-3 rounded-full border-gray-400/40 border-l border-t border-r backdrop-blur-[50px] text-[16px] font-medium font-inter leading-[20px] transition-all duration-200 bg-gray-400/10 hover:bg-gray-400/20 text-white">
+                {tt("footerbtn")}
+              </button>
+            </Link>
+            <Link href={`/${locale}/contacts`}>
+              <button className="px-6 md:py-4 py-3 rounded-full bg-[#C61511] hover:shadow-lg transition-all duration-200 hover:shadow-[#C61511]/50 text-[16px] font-medium font-inter leading-[20px] text-white">
+                {tt("footerbtn1")}
+              </button>
+            </Link>
           </article>
         </article>
       </div>
@@ -37,7 +41,7 @@ export default function FooterPage() {
             alt="Logo SherLegal"
           />
           <p className="font-inter font-normal text-[16px] leading-[22px] text-white/60 md:mb-9 mb-4">
-           {tt("footerdes")}
+            {tt("footerdes")}
           </p>
           <div>
             <p className="font-inter font-normal text-[14px] uppercase text-white mb-4">
@@ -45,7 +49,8 @@ export default function FooterPage() {
             </p>
             <article className="flex items-center gap-5 max-md:mb-[40px]">
               <Link
-                href={"/"}
+                href={"https://www.instagram.com/sherlegal_lf/"}
+                target="_blank"
                 style={{ backgroundColor: "rgba(255, 255, 255, 0.05)" }}
                 className="flex justify-center items-center w-10 h-10 border-2 border-white/20 backdrop-blur-[10px] rounded-[70px]"
               >
@@ -60,7 +65,8 @@ export default function FooterPage() {
                 </svg>
               </Link>
               <Link
-                href={"/"}
+                href={"https://t.me/sherlegal"}
+                target="_blank"
                 style={{ backgroundColor: "rgba(255, 255, 255, 0.05)" }}
                 className="flex justify-center items-center w-10 h-10 border-2 border-white/20 backdrop-blur-[10px] rounded-[70px]"
               >
@@ -75,7 +81,8 @@ export default function FooterPage() {
                 </svg>
               </Link>
               <Link
-                href={"/"}
+                href={"https://www.linkedin.com/company/sherlegal/"}
+                target="_blank"
                 style={{ backgroundColor: "rgba(255, 255, 255, 0.05)" }}
                 className="flex justify-center items-center w-10 h-10 border-2 border-white/20 backdrop-blur-[10px] rounded-[70px]"
               >
@@ -90,7 +97,8 @@ export default function FooterPage() {
                 </svg>
               </Link>
               <Link
-                href={"/"}
+                href={"https://www.facebook.com/sher.legal.uz/"}
+                target="_blank"
                 style={{ backgroundColor: "rgba(255, 255, 255, 0.05)" }}
                 className="flex justify-center items-center w-10 h-10 border-2 border-white/20 backdrop-blur-[10px] rounded-[70px]"
               >
@@ -105,7 +113,8 @@ export default function FooterPage() {
                 </svg>
               </Link>
               <Link
-                href={"/"}
+                href={"https://www.youtube.com/@sherlegal4053"}
+                target="_blank"
                 style={{ backgroundColor: "rgba(255, 255, 255, 0.05)" }}
                 className="flex justify-center items-center w-10 h-10 border-2 border-white/20 backdrop-blur-[10px] rounded-[70px]"
               >
