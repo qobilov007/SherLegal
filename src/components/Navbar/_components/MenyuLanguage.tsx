@@ -70,8 +70,8 @@ export default function MenyuLanguage() {
           />
         </li>
       </PopoverTrigger>
-      <PopoverContent className="p-0 ">
-        <ul className="bg-[#080808] shadow-black border-t overflow-hidden shadow-md rounded-[20px]">
+      <PopoverContent className="p-0">
+        <ul className="bg-[#080808] shadow-black border-t border-gray-100/20 overflow-hidden shadow-md rounded-[11px]">
           {LANGUAGES.map((lang, id) => (
             <li
               key={lang.code}
