@@ -23,6 +23,14 @@ export default function Hero() {
   const chatEndRef = useRef<HTMLDivElement | null>(null);
   const abortControllerRef = useRef<AbortController | null>(null);
 
+    useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden"; // scroll bloklanadi
+    } else {
+      document.body.style.overflow = "auto"; // qayta scroll yoqiladi
+    }
+  }, [open]);
+
   const askAI = async () => {
     if (!question.trim()) return;
     setLoading(true);
