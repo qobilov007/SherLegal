@@ -175,7 +175,7 @@ export default function Navbar() {
       >
         <div className="container px-5 pt-[40px] overflow-y-hidden h-screen flex flex-col justify-between">
           <div>
-            <div className=" flex items-center justify-between mb-6">
+            <div className=" flex items-center justify-between mb-6 ">
               <MenyuLanguage />
               <article className="smd:hidden flex items-center justify-center w-[40px] h-[40px] rounded-full border-r border-l backdrop-blur-md bg-white/10 border-[white]/60">
                 <X
@@ -232,15 +232,15 @@ export default function Navbar() {
             </ul>
           </div>
           <div>
-            <div className="pb-[24px]">
+            <div className="relative pb-[100px]">
               <p className="font-inter font-normal text-[14px] uppercase text-white mb-4">
                 {tt("footersocials")}
               </p>
-              <article className="flex items-center nx:gap-5 gap-1">
+              <article className="flex items-center nx:gap-5 gap-1 absolute z-10">
                 <Link
-                  href={"/"}
-                  style={{ backgroundColor: "rgba(255, 255, 255, 0.05)" }}
-                  className="flex justify-center items-center w-10 h-10 border-2 border-white/20 backdrop-blur-[10px] rounded-[70px]"
+                  href={"https://www.instagram.com/sherlegal_lf/"}
+                  target="_blank"
+                  className="flex justify-center items-center w-10 h-10 backdrop-blur-[150px] bg-white/10 rounded-[70px]"
                 >
                   <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
                     <path
@@ -253,9 +253,9 @@ export default function Navbar() {
                   </svg>
                 </Link>
                 <Link
-                  href={"/"}
-                  style={{ backgroundColor: "rgba(255, 255, 255, 0.05)" }}
-                  className="flex justify-center items-center w-10 h-10 border-2 border-white/20 backdrop-blur-[10px] rounded-[70px]"
+                  href={"https://t.me/sherlegal"}
+                  target="_blank"
+                  className="flex justify-center items-center w-10 h-10 backdrop-blur-[150px] bg-white/10 rounded-[70px]"
                 >
                   <svg width="20" height="18" viewBox="0 0 20 18" fill="none">
                     <path
@@ -268,9 +268,9 @@ export default function Navbar() {
                   </svg>
                 </Link>
                 <Link
-                  href={"/"}
-                  style={{ backgroundColor: "rgba(255, 255, 255, 0.05)" }}
-                  className="flex justify-center items-center w-10 h-10 border-2 border-white/20 backdrop-blur-[10px] rounded-[70px]"
+                  href={"https://www.linkedin.com/company/sherlegal/"}
+                  target="_blank"
+                  className="flex justify-center items-center w-10 h-10 backdrop-blur-[150px] bg-white/10 rounded-[70px]"
                 >
                   <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
                     <path
@@ -283,9 +283,9 @@ export default function Navbar() {
                   </svg>
                 </Link>
                 <Link
-                  href={"/"}
-                  style={{ backgroundColor: "rgba(255, 255, 255, 0.05)" }}
-                  className="flex justify-center items-center w-10 h-10 border-2 border-white/20 backdrop-blur-[10px] rounded-[70px]"
+                  href={"https://www.facebook.com/sher.legal.uz/"}
+                  target="_blank"
+                  className="flex justify-center items-center w-10 h-10  backdrop-blur-[150px] bg-white/10 rounded-[70px]"
                 >
                   <svg width="13" height="20" viewBox="0 0 13 20" fill="none">
                     <path
@@ -298,9 +298,9 @@ export default function Navbar() {
                   </svg>
                 </Link>
                 <Link
-                  href={"/"}
-                  style={{ backgroundColor: "rgba(255, 255, 255, 0.05)" }}
-                  className="flex justify-center items-center w-10 h-10 border-2 border-white/20 backdrop-blur-[10px] rounded-[70px]"
+                  href={"https://www.youtube.com/@sherlegal4053"}
+                  target="_blank"
+                  className="flex justify-center items-center w-10 h-10  backdrop-blur-[150px] bg-white/10 rounded-[70px]"
                 >
                   <svg width="15" height="18" viewBox="0 0 15 18" fill="none">
                     <path
@@ -315,6 +315,8 @@ export default function Navbar() {
               </article>
             </div>
             <div className="relative">
+              <div className=" bg-white/70 w-full h-[255px] -z[1] absolute -bottom-[100px]  blur-[220px]"></div>
+
               <div className=" bg-red-700 w-full h-[255px] absolute  blur-[220px]"></div>
             </div>
           </div>

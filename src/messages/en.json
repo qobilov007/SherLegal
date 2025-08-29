@@ -100,5 +100,11 @@
     "title6": "We use the Device Information we collect to help us check for potential risks and fraud (in particular, your IP address), and more generally to improve and optimize our Site (for example, by creating analytics about how our customers view and interact with the Site, and also to evaluate the success of our marketing and advertising campaigns).",
     "title7": "If you are a resident of Europe, you have the right to access the personal information that we hold about you, and you can request that your personal information be corrected, updated, or deleted. If you would like to exercise this right, please contact us using the contact information below.",
     "title8": "In addition, if you are a resident of Europe, we note that we process your information to fulfill contracts that we may have with you (for example, if you place an order through the Website), or otherwise to pursue our legitimate business interests listed above. In addition, please note that your information will be transferred outside of Europe, including to Canada and the United States."
+  },
+  "Statistics": {
+    "experience": "Years experience",
+    "project": "Project finished",
+    "closed": "Closed deals",
+    "clients": "Happy clients"
   }
 }
