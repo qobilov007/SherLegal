@@ -27,7 +27,7 @@ export default function News({
   initialNews: NewsCard[];
   total: number;
 }) {
-  const [allNews, setAllNews] = useState<NewsCard[]>([]);   // 🔹 barcha news
+  const [allNews, setAllNews] = useState<NewsCard[]>([]); // 🔹 barcha news
   const [filtered, setFiltered] = useState<NewsCard[]>([]); // 🔹 qidiruv natijasi
   const [query, setQuery] = useState("");
   const [page, setPage] = useState(1);

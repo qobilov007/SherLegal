@@ -10,6 +10,7 @@ import { NewsCard } from "@/app.types";
 import { pickStringProps } from "@/lib/getLocalizedValue";
 import { getLocalizedValue } from "@/lib/getLocalization";
 import { getNews } from "@/lib/getNews";
+import Image from "next/image";
 
 export default async function Page({
   params,
@@ -63,25 +64,26 @@ export default async function Page({
             </h1>
           </div>
         </Link>
-
-        <div
-          className="w-full lg:h-[600px] md:h-[500px] nx:h-[400px] h-[260px] rounded-3xl bg-cover bg-center md:mb-[24px] nx:mb-[14px] mb-[12px] object-cover"
-          style={{ backgroundImage: `url(${data.image})` }}
-        >
-          <div className="flex items-end translate-y-[220px] nx:translate-y-[360px] md:translate-y-[430px] lg:translate-y-[530px] gap-1 md:py-4 py-2 md:px-5 px-2">
-            <article className="flex items-center md:gap-[8.5px] gap-0.5 backdrop-blur-[10px] border border-white/20 shadow-lg md:py-[6px] py-0.5 px-3 border-[#6C6C6C] rounded-full max-w-max">
-              <CiCalendarDate className="text-white" />
-              <span className="text-white md:text-[12px] text-[10px] font-medium font-inter">
-                {date}
-              </span>
-            </article>
-            <article className="flex items-center gap-[8.5px] md:py-[6px] py-0.5 px-3 backdrop-blur-[10px] border border-white/30 shadow-lg border-[#6C6C6C] rounded-full max-w-max">
+        <div className="w-full rounded-[24px] overflow-hidden mb-7 relative top-0 left-0">
+          <img
+            width={500}
+            height={450}
+            className="w-full h-full object-cover object-center"
+            src={data.image}
+            alt="News item"
+          />
+          <article className="absolute left-6 bottom-6 flex items-center md:gap-[8.5px] gap-0.5 backdrop-blur-[10px] border border-white/30 md:py-[6px] py-0.5 px-3 border-[#6C6C6C] rounded-full max-w-max shadows-news">
+            <CiCalendarDate className="text-white" />
+            <span className="text-white md:text-[12px] text-[10px] font-medium font-inter">
+              {date}
+            </span>
+          </article>
+          <article className=" absolute bottom-6 left-[155px] shadows-news flex items-center gap-[8.5px] md:py-[6px] py-0.5 px-3 backdrop-blur-[10px] border border-white/30 border-[#6C6C6C] rounded-full max-w-max">
               <LuEye className="text-white" />
               <span className="text-white md:text-[12px] text-[10px] font-medium font-inter">
                 {data.views}
               </span>
             </article>
-          </div>
         </div>
 
         <div className="lg:mb-[88px] md:mb-[60px] nx:mb-[40px] mb-[20px] md:px-[48px]">
