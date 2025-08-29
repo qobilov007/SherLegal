@@ -88,7 +88,7 @@ export default function News({
         <h1 className=" font-bold font-inter md:text-[40px] text-[24px] leading-[120%]">
           {t("title")}
         </h1>
-        <article className="flex items-center gap-2 bg-[#F3F3F3] rounded-full ml-4 p-2.5">
+        <article className="flex items-center gap-2 bg-[#F3F3F3] rounded-full ml-4 p-2.5 border border-transparent transition-all duration-200 focus-within:border-red-500/50">
           <IoSearchSharp className="text-gray-500 md:w-6 md:h-6 w-4 h-4" />
           <input
             type="text"
@@ -118,7 +118,7 @@ export default function News({
 
             return (
               <Link key={id} href={`/${locale}/news/${item.slug}`}>
-                <div className="rounded-2xl overflow-hidden border hover:border-red-700 w-full cursor-pointer bg-[#F3F3F3] hover:bg-white ease-linear duration-300 md:h-[367px] h-[343px]">
+                <div className="rounded-2xl overflow-hidden border hover:border-red-700 w-full cursor-pointer bg-[#F3F3F3] hover:bg-white ease-linear duration-300">
                   <Image
                     src={item.image}
                     alt={localTitle}
@@ -127,15 +127,15 @@ export default function News({
                     className="w-full object-cover h-[182px]"
                   />
 
-                  <article className="flex flex-col justify-between md:h-[170px] h-[158px] px-4 py-2">
-                    <h2 className="line-clamp-2 font-bold font-vela text-[16px] leading-[140%] pb-[4px]">
+                  <article className="px-4 py-2 flex flex-col justify-end h-[180px]">
+                    <h2 className="line-clamp-2 font-bold font-vela text-[16px] leading-[140%] pb-[4px] mb-2">
                       {localTitle}
                     </h2>
                     <p className="line-clamp-2 text-[14px] font-medium font-inter leading-[136%] text-[#6C6C6C]">
                       {localDescription?.replace(/<[^>]+>/g, "")}
                     </p>
 
-                    <div className="flex max-sm:flex-row max-md:flex-col md:items-center items-start gap-1">
+                    <div className="flex max-sm:flex-row max-md:flex-col md:items-center items-start gap-1 mt-8">
                       <article className="flex items-center md:gap-[8.5px] gap-0.5 md:py-[6px] py-0.5 px-3 border border-[#6C6C6C] rounded-full max-w-max">
                         <CiCalendarDate className="text-[#6C6C6C]" />
                         <time

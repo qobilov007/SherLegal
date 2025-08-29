@@ -20,10 +20,10 @@ export default function FooterPage() {
             {tt("footerdes")}
           </p>
           <article className="flex items-center gap-5 justify-center">
-            <button className="px-7 md:py-4 py-3 rounded-full border-l border-t border-r backdrop-blur-lg text-[16px] font-medium font-inter leading-[20px] text-white">
+            <button className="px-7 md:py-4 py-3 rounded-full border-gray-400/40 border-l border-t border-r backdrop-blur-[50px] text-[16px] font-medium font-inter leading-[20px] transition-all duration-200 bg-gray-400/10 hover:bg-gray-400/20 text-white">
               {tt("footerbtn")}
             </button>
-            <button className="px-6 md:py-4 py-3 rounded-full bg-[#C61511] hover:shadow-lg transition-all duration-200 hover:shadow-[#C61511] text-[16px] font-medium font-inter leading-[20px] text-white">
+            <button className="px-6 md:py-4 py-3 rounded-full bg-[#C61511] hover:shadow-lg transition-all duration-200 hover:shadow-[#C61511]/50 text-[16px] font-medium font-inter leading-[20px] text-white">
               {tt("footerbtn1")}
             </button>
           </article>

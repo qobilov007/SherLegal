@@ -315,7 +315,7 @@ export default function Navbar() {
               </article>
             </div>
             <div className="relative">
-              <div className=" bg-red-700 w-full h-[55px] absolute  blur-[180px]"></div>
+              <div className=" bg-red-700 w-full h-[255px] absolute  blur-[220px]"></div>
             </div>
           </div>
         </div>
