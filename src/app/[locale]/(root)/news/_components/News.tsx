@@ -20,7 +20,7 @@ import {
   PaginationPrevious,
 } from "@/components/ui/pagination";
 
-import { Skeleton } from "@/components/ui/skeleton"; // 🔹 qo‘shildi
+import { Skeleton } from "@/components/ui/skeleton";
 
 export default function News({
   initialNews,
@@ -189,6 +189,7 @@ export default function News({
                 onClick={(e) => {
                   e.preventDefault();
                   if (page > 1) setPage(page - 1);
+                  window.scrollTo({ top: 0, behavior: "smooth" });
                 }}
                 className={page === 1 ? "pointer-events-none opacity-50" : ""}
               />
@@ -198,11 +199,16 @@ export default function News({
               <PaginationItem key={p}>
                 <PaginationLink
                   href="#"
-                  className="bg-[#C61511]"
+                  className={`${
+                    p === page
+                      ? "bg-[#C61511] text-white"
+                      : "bg-transparent text-black"
+                  } px-3 py-1 rounded-full `}
                   isActive={p === page}
                   onClick={(e) => {
                     e.preventDefault();
                     if (p !== page) setPage(p);
+                    window.scrollTo({ top: 0, behavior: "smooth" });
                   }}
                 >
                   {p}
@@ -216,6 +222,7 @@ export default function News({
                 onClick={(e) => {
                   e.preventDefault();
                   if (page < totalPages) setPage(page + 1);
+                  window.scrollTo({ top: 0, behavior: "smooth" });
                 }}
                 className={
                   page === totalPages ? "pointer-events-none opacity-50" : ""
