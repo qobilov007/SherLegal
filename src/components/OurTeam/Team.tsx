@@ -18,13 +18,13 @@ export default function OurTeam({ team }: { team: TeamsType[] }) {
         </p>
         <p className="w-full h-[1px] bg-white/30 mb-[30px]"></p>
 
-        <article className="flex max-smm:flex-col items-center justify-between mb-14 gap-4 relative z-[10]">
-          <h5 className="font-inter font-bold text-[28px] md:text-[40px] leading-[36px] md:leading-[48px] text-white">
+        <article className="flex items-center justify-between mb-14 gap-4 relative z-[10]">
+          <h5 className="font-inter max-smmmm:text-[20px] font-bold text-[28px] md:text-[40px] max-smmmm:leading-[25px] leading-[36px] md:leading-[48px] text-white">
             {t("teamtitle")}
           </h5>
           <Link href={`/${locale}/team`}>
-            <button className="group boxshadow md:inline-flex max-md:flex rounded-[1000px] bg-[#C61511] p-[16px]">
-              <p className="flex gap-[8px] items-center justify-between text-white text-[20px] font-inter font-[600]">
+            <button className="group boxshadow md:inline-flex max-md:flex max-nx:py-[10px] rounded-[1000px] bg-[#C61511] p-[16px]">
+              <p className="flex gap-[8px] items-center justify-between text-white max-smmmm:text-[16px] font-inter font-[600]">
                 {t("teambtn")}
                 <Image
                   src={BtnIcon}

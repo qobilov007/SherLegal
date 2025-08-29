@@ -7,7 +7,11 @@ import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
 import { ServiceItems } from "@/app.types";
 
-export default function ServicesSection({ service }: { service: ServiceItems[] }) {
+export default function ServicesSection({
+  service,
+}: {
+  service: ServiceItems[];
+}) {
   const t = useTranslations("HomePage");
   const locale = useLocale();
 
@@ -39,17 +43,17 @@ export default function ServicesSection({ service }: { service: ServiceItems[] }
         {/* Mobile header */}
         <div className="max-lg:block hidden">
           <div className="flex items-center justify-between mb-8">
-            <h2 className="lg:text-[40px] text-[24px] max-smm:text-[16px] font-bold font-inter text-gray-900 md:text-[32px]">
+            <h2 className="font-inter max-smmmm:text-[20px] font-bold text-[28px] md:text-[40px] max-smmmm:leading-[25px] leading-[36px] md:leading-[48px]">
               {t("servicetitle")}
             </h2>
             <Link href={`/${locale}/services`}>
-              <button className="group boxshadow max-md:w-auto rounded-full bg-[#C61511] py-[14px] px-[6px] smm:p-[16px]">
-                <p className="flex gap-[8px] items-center justify-between text-white max-md:text-[10px] md:text-[20px] font-inter font-[600]">
+              <button className="group boxshadow md:inline-flex max-md:flex max-nx:py-[10px] rounded-[1000px] bg-[#C61511] p-[16px]">
+                <p className="flex gap-[8px] items-center justify-between text-white max-smmmm:text-[16px] font-inter font-[600]">
                   {t("servicebtn")}{" "}
                   <Image
                     src={BtnIcon}
                     alt="BtnIcon"
-                    className="group-hover:rotate-[45deg] ease-linear duration-300 max-md:w-[20px]"
+                    className="group-hover:rotate-[45deg] ease-linear duration-300"
                   />
                 </p>
               </button>
