@@ -173,148 +173,152 @@ export default function Navbar() {
 
         `}
       >
-        <div className="container px-5 pt-[40px] overflow-y-hidden flex flex-col justify-between">
-          <div className=" flex items-center justify-between mb-6">
-            <MenyuLanguage />
-            <article className="smd:hidden flex items-center justify-center w-[40px] h-[40px] rounded-full border-r border-l backdrop-blur-md bg-white/10 border-[white]/60">
-              <X
-                className=" stroke-white cursor-pointer w-5 h-5"
-                onClick={() => setIsMenuOpen(false)}
-              />
-            </article>
-          </div>
-          <ul className="flex flex-col gap-4 mb-14">
-            <li className="text-white">
-              <Link
-                href={`/${locale}/about`}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {t("about")}
-              </Link>
-            </li>
-            <hr className=" opacity-35" />
-            <li className="text-white">
-              <Link
-                href={`/${locale}/services`}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {t("services")}
-              </Link>
-            </li>
-            <hr className=" opacity-35" />
-            <li className="text-white">
-              <Link
-                href={`/${locale}/team`}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {t("ourteam")}
-              </Link>
-            </li>
-            <hr className=" opacity-35" />
-            <li className="text-white">
-              <Link
-                href={`/${locale}/academy`}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {t("academy")}
-              </Link>
-            </li>
-            <hr className=" opacity-35" />
-            <li className="text-white">
-              <Link
-                href={`/${locale}/contacts`}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {t("contact")}
-              </Link>
-            </li>
-          </ul>
+        <div className="container px-5 pt-[40px] overflow-y-hidden h-screen flex flex-col justify-between">
           <div>
-            <p className="font-inter font-normal text-[14px] uppercase text-white mb-4">
-              {tt("footersocials")}
-            </p>
-            <article className="flex items-center nx:gap-5 gap-1">
-              <Link
-                href={"/"}
-                style={{ backgroundColor: "rgba(255, 255, 255, 0.05)" }}
-                className="flex justify-center items-center w-10 h-10 border-2 border-white/20 backdrop-blur-[10px] rounded-[70px]"
-              >
-                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-                  <path
-                    d="M13.5 4.5V4.51M1 5C1 3.93913 1.42143 2.92172 2.17157 2.17157C2.92172 1.42143 3.93913 1 5 1H13C14.0609 1 15.0783 1.42143 15.8284 2.17157C16.5786 2.92172 17 3.93913 17 5V13C17 14.0609 16.5786 15.0783 15.8284 15.8284C15.0783 16.5786 14.0609 17 13 17H5C3.93913 17 2.92172 16.5786 2.17157 15.8284C1.42143 15.0783 1 14.0609 1 13V5ZM6 9C6 9.79565 6.31607 10.5587 6.87868 11.1213C7.44129 11.6839 8.20435 12 9 12C9.79565 12 10.5587 11.6839 11.1213 11.1213C11.6839 10.5587 12 9.79565 12 9C12 8.20435 11.6839 7.44129 11.1213 6.87868C10.5587 6.31607 9.79565 6 9 6C8.20435 6 7.44129 6.31607 6.87868 6.87868C6.31607 7.44129 6 8.20435 6 9Z"
-                    stroke="white"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </Link>
-              <Link
-                href={"/"}
-                style={{ backgroundColor: "rgba(255, 255, 255, 0.05)" }}
-                className="flex justify-center items-center w-10 h-10 border-2 border-white/20 backdrop-blur-[10px] rounded-[70px]"
-              >
-                <svg width="20" height="18" viewBox="0 0 20 18" fill="none">
-                  <path
-                    d="M13 7L9 11L15 17L19 1L1 8L5 10L7 16L10 12"
-                    stroke="white"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </Link>
-              <Link
-                href={"/"}
-                style={{ backgroundColor: "rgba(255, 255, 255, 0.05)" }}
-                className="flex justify-center items-center w-10 h-10 border-2 border-white/20 backdrop-blur-[10px] rounded-[70px]"
-              >
-                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-                  <path
-                    d="M5 8V13M5 5V5.01M9 13V8M13 13V10C13 9.46957 12.7893 8.96086 12.4142 8.58579C12.0391 8.21071 11.5304 8 11 8C10.4696 8 9.96086 8.21071 9.58579 8.58579C9.21071 8.96086 9 9.46957 9 10M1 3C1 2.46957 1.21071 1.96086 1.58579 1.58579C1.96086 1.21071 2.46957 1 3 1H15C15.5304 1 16.0391 1.21071 16.4142 1.58579C16.7893 1.96086 17 2.46957 17 3V15C17 15.5304 16.7893 16.0391 16.4142 16.4142C16.0391 16.7893 15.5304 17 15 17H3C2.46957 17 1.96086 16.7893 1.58579 16.4142C1.21071 16.0391 1 15.5304 1 15V3Z"
-                    stroke="white"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </Link>
-              <Link
-                href={"/"}
-                style={{ backgroundColor: "rgba(255, 255, 255, 0.05)" }}
-                className="flex justify-center items-center w-10 h-10 border-2 border-white/20 backdrop-blur-[10px] rounded-[70px]"
-              >
-                <svg width="13" height="20" viewBox="0 0 13 20" fill="none">
-                  <path
-                    d="M1 8V12H4V19H8V12H11L12 8H8V6C8 5.73478 8.10536 5.48043 8.29289 5.29289C8.48043 5.10536 8.73478 5 9 5H12V1H9C7.67392 1 6.40215 1.52678 5.46447 2.46447C4.52678 3.40215 4 4.67392 4 6V8H1Z"
-                    stroke="white"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </Link>
-              <Link
-                href={"/"}
-                style={{ backgroundColor: "rgba(255, 255, 255, 0.05)" }}
-                className="flex justify-center items-center w-10 h-10 border-2 border-white/20 backdrop-blur-[10px] rounded-[70px]"
-              >
-                <svg width="15" height="18" viewBox="0 0 15 18" fill="none">
-                  <path
-                    d="M1 1V17L14 9L1 1Z"
-                    stroke="white"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </Link>
-            </article>
+            <div className=" flex items-center justify-between mb-6">
+              <MenyuLanguage />
+              <article className="smd:hidden flex items-center justify-center w-[40px] h-[40px] rounded-full border-r border-l backdrop-blur-md bg-white/10 border-[white]/60">
+                <X
+                  className=" stroke-white cursor-pointer w-5 h-5"
+                  onClick={() => setIsMenuOpen(false)}
+                />
+              </article>
+            </div>
+            <ul className="flex flex-col gap-4 mb-14">
+              <li className="text-white">
+                <Link
+                  href={`/${locale}/about`}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {t("about")}
+                </Link>
+              </li>
+              <hr className=" opacity-35" />
+              <li className="text-white">
+                <Link
+                  href={`/${locale}/services`}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {t("services")}
+                </Link>
+              </li>
+              <hr className=" opacity-35" />
+              <li className="text-white">
+                <Link
+                  href={`/${locale}/team`}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {t("ourteam")}
+                </Link>
+              </li>
+              <hr className=" opacity-35" />
+              <li className="text-white">
+                <Link
+                  href={`/${locale}/academy`}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {t("academy")}
+                </Link>
+              </li>
+              <hr className=" opacity-35" />
+              <li className="text-white">
+                <Link
+                  href={`/${locale}/contacts`}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {t("contact")}
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <div className="pb-[24px]">
+              <p className="font-inter font-normal text-[14px] uppercase text-white mb-4">
+                {tt("footersocials")}
+              </p>
+              <article className="flex items-center nx:gap-5 gap-1">
+                <Link
+                  href={"/"}
+                  style={{ backgroundColor: "rgba(255, 255, 255, 0.05)" }}
+                  className="flex justify-center items-center w-10 h-10 border-2 border-white/20 backdrop-blur-[10px] rounded-[70px]"
+                >
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                    <path
+                      d="M13.5 4.5V4.51M1 5C1 3.93913 1.42143 2.92172 2.17157 2.17157C2.92172 1.42143 3.93913 1 5 1H13C14.0609 1 15.0783 1.42143 15.8284 2.17157C16.5786 2.92172 17 3.93913 17 5V13C17 14.0609 16.5786 15.0783 15.8284 15.8284C15.0783 16.5786 14.0609 17 13 17H5C3.93913 17 2.92172 16.5786 2.17157 15.8284C1.42143 15.0783 1 14.0609 1 13V5ZM6 9C6 9.79565 6.31607 10.5587 6.87868 11.1213C7.44129 11.6839 8.20435 12 9 12C9.79565 12 10.5587 11.6839 11.1213 11.1213C11.6839 10.5587 12 9.79565 12 9C12 8.20435 11.6839 7.44129 11.1213 6.87868C10.5587 6.31607 9.79565 6 9 6C8.20435 6 7.44129 6.31607 6.87868 6.87868C6.31607 7.44129 6 8.20435 6 9Z"
+                      stroke="white"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </Link>
+                <Link
+                  href={"/"}
+                  style={{ backgroundColor: "rgba(255, 255, 255, 0.05)" }}
+                  className="flex justify-center items-center w-10 h-10 border-2 border-white/20 backdrop-blur-[10px] rounded-[70px]"
+                >
+                  <svg width="20" height="18" viewBox="0 0 20 18" fill="none">
+                    <path
+                      d="M13 7L9 11L15 17L19 1L1 8L5 10L7 16L10 12"
+                      stroke="white"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </Link>
+                <Link
+                  href={"/"}
+                  style={{ backgroundColor: "rgba(255, 255, 255, 0.05)" }}
+                  className="flex justify-center items-center w-10 h-10 border-2 border-white/20 backdrop-blur-[10px] rounded-[70px]"
+                >
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                    <path
+                      d="M5 8V13M5 5V5.01M9 13V8M13 13V10C13 9.46957 12.7893 8.96086 12.4142 8.58579C12.0391 8.21071 11.5304 8 11 8C10.4696 8 9.96086 8.21071 9.58579 8.58579C9.21071 8.96086 9 9.46957 9 10M1 3C1 2.46957 1.21071 1.96086 1.58579 1.58579C1.96086 1.21071 2.46957 1 3 1H15C15.5304 1 16.0391 1.21071 16.4142 1.58579C16.7893 1.96086 17 2.46957 17 3V15C17 15.5304 16.7893 16.0391 16.4142 16.4142C16.0391 16.7893 15.5304 17 15 17H3C2.46957 17 1.96086 16.7893 1.58579 16.4142C1.21071 16.0391 1 15.5304 1 15V3Z"
+                      stroke="white"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </Link>
+                <Link
+                  href={"/"}
+                  style={{ backgroundColor: "rgba(255, 255, 255, 0.05)" }}
+                  className="flex justify-center items-center w-10 h-10 border-2 border-white/20 backdrop-blur-[10px] rounded-[70px]"
+                >
+                  <svg width="13" height="20" viewBox="0 0 13 20" fill="none">
+                    <path
+                      d="M1 8V12H4V19H8V12H11L12 8H8V6C8 5.73478 8.10536 5.48043 8.29289 5.29289C8.48043 5.10536 8.73478 5 9 5H12V1H9C7.67392 1 6.40215 1.52678 5.46447 2.46447C4.52678 3.40215 4 4.67392 4 6V8H1Z"
+                      stroke="white"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </Link>
+                <Link
+                  href={"/"}
+                  style={{ backgroundColor: "rgba(255, 255, 255, 0.05)" }}
+                  className="flex justify-center items-center w-10 h-10 border-2 border-white/20 backdrop-blur-[10px] rounded-[70px]"
+                >
+                  <svg width="15" height="18" viewBox="0 0 15 18" fill="none">
+                    <path
+                      d="M1 1V17L14 9L1 1Z"
+                      stroke="white"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </Link>
+              </article>
+            </div>
+            <div className="relative">
+              <div className=" bg-red-700 w-full h-[55px] absolute  blur-[180px]"></div>
+            </div>
           </div>
         </div>
-          {/* <div className="relative">
-            <div className=" bg-red-700 w-full h-[55px]  mb-[490px] blur-[180px]"></div>
-          </div> */}
       </div>
     </div>
   );
