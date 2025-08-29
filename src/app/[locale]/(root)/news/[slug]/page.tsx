@@ -10,14 +10,13 @@ import { NewsCard } from "@/app.types";
 import { pickStringProps } from "@/lib/getLocalizedValue";
 import { getLocalizedValue } from "@/lib/getLocalization";
 import { getNews } from "@/lib/getNews";
-import Image from "next/image";
 
 export default async function Page({
   params,
 }: {
-  params: { slug: string; locale: string };
+  params: Promise<{ slug: string; locale: string }>;
 }) {
-  const { slug, locale } = params;
+  const { slug, locale } = await params;
   const t = await getTranslations({ locale, namespace: "Common" });
 
   const res = await fetch(
