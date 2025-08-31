@@ -6,7 +6,6 @@ import { useTranslations } from "next-intl";
 import Counter from "@/components/ui/Counter";
 
 export default function AboutUs({ statistics }: { statistics: Stat[] }) {
-  //   console.log(statistics);
   const t = useTranslations("AboutPage");
   const ss = useTranslations("Statistics");
 
