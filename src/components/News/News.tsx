@@ -35,8 +35,7 @@ export default function NewsSection({ news }: { news: NewsCard[] }) {
             </button>
           </Link>
         </div>
-
-        {/* Mobile header */}
+        {/* Mobile headers */}
         <div className="max-lg:block hidden">
           <div className="flex gap-16 max-smm:gap-4 items-center justify-between md:mb-8 mb-4">
             <h2 className="lg:text-[40px] text-[24px] max-smm:text-[18px] font-bold font-inter text-gray-900 md:text-[32px]">
