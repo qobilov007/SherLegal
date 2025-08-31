@@ -21,7 +21,7 @@ export default function Button({
   className,
 }: ButtonProps) {
   const baseStyle =
-    "group boxshadow rounded-[1000px]  bg-[#C61511] p-[16px] inline-flex gap-[8px] items-center justify-between text-white text-[12px] sm:text-[20px] font-inter font-[600]";
+    "group boxshadow rounded-[1000px] bg-[#C61511] py-[16px] px-[16px] max-nx:py-[10px] inline-flex gap-[8px] items-center justify-between text-white text-[12px] sm:text-[20px] font-inter font-[600]";
 
   const content = (
     <>
