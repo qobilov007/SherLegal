@@ -12,10 +12,10 @@ export default function NewsSection({ news }: { news: NewsCard[] }) {
   const locale = useLocale();
 
   return (
-    <section className="py-20 font-inter bg-gradient-to-b from-white via-gray-50 to-white">
+    <section className="md:py-20 py-8 font-inter bg-gradient-to-b from-white via-gray-50 to-white">
       <div className="container mx-auto px-6">
         {/* Header */}
-        <div className="lg:flex max-lg:hidden max-md:flex-col justify-between items-center mb-12">
+        <div className="lg:flex max-lg:hidden max-md:flex-col justify-between items-center md:mb-12 mb-6">
           <div>
             <h2 className="text-3xl font-bold text-gray-900">
               {t("newstitle")}
@@ -35,15 +35,14 @@ export default function NewsSection({ news }: { news: NewsCard[] }) {
             </button>
           </Link>
         </div>
-
-        {/* Mobile header */}
+        {/* Mobile headers */}
         <div className="max-lg:block hidden">
-          <div className="flex gap-16 max-smm:gap-4 items-center justify-evenly mb-8">
+          <div className="flex gap-16 max-smm:gap-4 items-center justify-between md:mb-8 mb-4">
             <h2 className="lg:text-[40px] text-[24px] max-smm:text-[18px] font-bold font-inter text-gray-900 md:text-[32px]">
               {t("newstitle")}
             </h2>
             <Link href={`/${locale}/news`}>
-              <button className="group boxshadow max-md:w-auto rounded-full bg-[#C61511] p-[16px] max-smm:px-[6px] smm:py-[12px]">
+              <button className="group boxshadow max-md:w-auto rounded-full bg-[#C61511] px-[16px] py-[8px] max-smm:px-[6px] smm:py-[12px]">
                 <p className="flex gap-[8px] items-center justify-between text-white max-md:text-[10px] md:text-[20px] font-inter font-[600]">
                   {t("newsbtn")}{" "}
                   <Image
