@@ -1,21 +1,50 @@
-import Link from "next/link";
-import { useLocale, useTranslations } from "next-intl";
+// import Link from "next/link";
+// import { useLocale, useTranslations } from "next-intl";
+// import { FaArrowLeftLong } from "react-icons/fa6";
+
+
+// export default function BackButton() {
+//     const t = useTranslations("Common");
+//     const locale = useLocale();
+//     return (
+//         <div>
+//             <Link href={`/${locale}/services`}>
+//                 <div className=" flex items-center max-w-max gap-2 py-1.5 md:py-3 px-7 rounded-full  mb-[24px] bg-[#FFFFFF] shadow-md cursor-pointer">
+//                     <FaArrowLeftLong className="text-[#137BEA] w-5 h-[20px]" />
+//                     <h1 className="font-medium font-inter text-[16px] leading-[130%]">
+//                         {t("back")}
+//                     </h1>
+//                 </div>
+//             </Link>
+//         </div>
+//     )
+// }
+
+"use client";
+
+import { useTranslations } from "next-intl";
 import { FaArrowLeftLong } from "react-icons/fa6";
+import { useRouter } from "next/navigation";
 
+export default function BackButton() {
+  const t = useTranslations("Common");
+  const router = useRouter();
 
-export default function BackButton() {  
-    const t = useTranslations("Common");
-    const locale = useLocale();
-    return (
-        <div>
-            <Link href={`/${locale}/services`}>
-                <div className=" flex items-center max-w-max gap-2 py-1.5 md:py-3 px-7 rounded-full  mb-[24px] bg-[#FFFFFF] shadow-md cursor-pointer">
-                    <FaArrowLeftLong className="text-[#137BEA] w-5 h-[20px]" />
-                    <h1 className="font-medium font-inter text-[16px] leading-[130%]">
-                        {t("back")}
-                    </h1>
-                </div>
-            </Link>
-        </div>
-    )
+  const handleBack = () => {
+    router.back();
+    window.scrollTo({ top: 0, behavior: "smooth" }); 
+  };
+  return (
+    <div>
+      <button
+        onClick={handleBack}
+        className="flex items-center max-w-max gap-2 py-1.5 md:py-3 px-7 rounded-full mb-[24px] bg-[#FFFFFF] shadow-md cursor-pointer"
+      >
+        <FaArrowLeftLong className="text-[#137BEA] w-5 h-[20px]" />
+        <span className="font-medium font-inter text-[16px] leading-[130%]">
+          {t("back")}
+        </span>
+      </button>
+    </div>
+  );
 }

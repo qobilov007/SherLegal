@@ -3,19 +3,20 @@ import { Stat } from "@/app.types";
 import OurService from "../../../../../components/OurService/Ourservice";
 import OurTeam from "../../../../../components/OurTeam/OurTeam";
 import { useTranslations } from "next-intl";
+import Counter from "@/components/ui/Counter";
 
 export default function AboutUs({ statistics }: { statistics: Stat[] }) {
   //   console.log(statistics);
   const t = useTranslations("AboutPage");
   const ss = useTranslations("Statistics");
 
-  function formatNumber(num: number) {
-    if (num >= 1000) {
-      return (num / 1000).toFixed(1).replace(/\.0$/, "") + "k";
-    } else {
-      return num.toString() + "+";
-    }
-  }
+  //   function formatNumber(num: number) {
+  //     if (num >= 1000) {
+  //       return (num / 1000).toFixed(1).replace(/\.0$/, "") + "k";
+  //     } else {
+  //       return num.toString() + "+";
+  //     }
+  //   }
 
   return (
     <div className="">
@@ -68,7 +69,7 @@ export default function AboutUs({ statistics }: { statistics: Stat[] }) {
                 >
                   <div className="flex flex-col items-center text-center">
                     <span className="md:text-7xl sm:text-[38px] text-[32px] leading-[120%] text-center font-bebas font-normal">
-                      {formatNumber(Number(item.clients))}
+                      <Counter end={Number(item.clients)} />
                     </span>
                     <span className="text-center md:text-2xl sm:text-[16px] text-[13px] font-inter font-medium leading-[120%]">
                       {ss("experience")}
@@ -77,7 +78,7 @@ export default function AboutUs({ statistics }: { statistics: Stat[] }) {
 
                   <div className="flex flex-col items-center text-center">
                     <span className="md:text-7xl sm:text-[38px] text-[32px] leading-[120%] text-center font-bebas font-normal">
-                      {formatNumber(Number(item.deals))}
+                      <Counter end={Number(item.deals)} />
                     </span>
                     <span className="text-center md:text-2xl sm:text-[16px] text-[13px] font-inter font-medium leading-[120%]">
                       {ss("project")}
@@ -86,7 +87,7 @@ export default function AboutUs({ statistics }: { statistics: Stat[] }) {
 
                   <div className="flex flex-col items-center text-center">
                     <span className="md:text-7xl sm:text-[38px] text-[32px] leading-[120%] text-center font-bebas font-normal">
-                      {formatNumber(Number(item.experience))}
+                      <Counter end={Number(item.experience)} />
                     </span>
                     <span className="text-center md:text-2xl sm:text-[16px] text-[13px] font-inter font-medium leading-[120%]">
                       {ss("closed")}
@@ -95,7 +96,7 @@ export default function AboutUs({ statistics }: { statistics: Stat[] }) {
 
                   <div className="flex flex-col items-center text-center">
                     <span className="md:text-7xl sm:text-[38px] text-[32px] leading-[120%] text-center font-bebas font-normal">
-                      {formatNumber(Number(item.projects))}
+                      <Counter end={Number(item.projects)} />
                     </span>
                     <span className="text-center md:text-2xl sm:text-[16px] text-[13px] font-inter font-medium leading-[120%]">
                       {ss("clients")}

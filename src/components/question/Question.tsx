@@ -1,6 +1,6 @@
 "use client";
 
-import { faqdata } from "@/constants/page";
+// import { faqdata } from "@/constants/page";
 
 import {
   Accordion,
@@ -18,7 +18,7 @@ type Question = {
 };
 
 export default function FaqAccordion({ question }: { question: Question[] }) {
-    const locale = useLocale();
+  const locale = useLocale();
 
   return (
     <div className="">
@@ -34,7 +34,6 @@ export default function FaqAccordion({ question }: { question: Question[] }) {
             const question = getLocalizedValue(stringItem, "question", locale);
             const answer = getLocalizedValue(stringItem, "answer", locale);
 
-
             return (
               <AccordionItem
                 key={index}
@@ -43,6 +42,9 @@ export default function FaqAccordion({ question }: { question: Question[] }) {
                          hover:bg-[#fff]/10 hover:border-[#C61511]
                          transition-all duration-200
                          data-[state=open]:border-[#C61511]"
+                data-aos="fade-up"
+                data-aos-delay={index * 150} // har biri 150ms dan kechikib chiqadi
+                data-aos-duration="800"
               >
                 <AccordionTrigger className="md:text-2xl text-base text-[black] font-inter font-bold px-8 h-[80px] py-2 no-underline">
                   {question}
