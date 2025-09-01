@@ -2,5 +2,8 @@
     "i18n-ally.localesPaths": [
         "src/i18n",
         "src/messages"
-    ]
+    ],
+    "editor.tabCompletion": "on",
+    "diffEditor.codeLens": true,
+    "MutableAI.upsell": true
 }

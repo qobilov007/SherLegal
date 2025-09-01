@@ -299,10 +299,10 @@ export const faqdata = [
 
 export const getContactInfo: ContactData[] = [
   {
-    phone: "+998 (55) 514 30 03",
-    email: "clamosocial@gmail.com",
-    website: "Clamo.uz",
-    address: "улица Мирзакалон Исмоилий, дом 2A",
+    phone: "+998 (98) 100-33-44",
+    email: "info@sher.legal",
+    website: "sher.legal",
+    address: "Adham Raxmat street 15, Tashkent city, Uzbekistan",
   },
 ];
 
