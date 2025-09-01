@@ -84,4 +84,5 @@ export interface Review {
     deals: string;
     experience: string;
     projects: string;
+    end: number;
   };

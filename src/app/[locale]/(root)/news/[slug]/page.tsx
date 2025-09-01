@@ -8,6 +8,7 @@ import { NewsCard } from "@/app.types";
 import { pickStringProps } from "@/lib/getLocalizedValue";
 import { getLocalizedValue } from "@/lib/getLocalization";
 import { getNews } from "@/lib/getNews";
+// import BackButton from "@/src/components/btn/BackBtn";
 
 export default async function Page({
   params,
@@ -61,6 +62,10 @@ export default async function Page({
             </h1>
           </div>
         </Link>
+        {/* <div className="mb-[24px]">
+          <BackButton />
+        </div> */}
+
         <div className="w-full rounded-[24px] overflow-hidden mb-7 relative top-0 left-0">
           <img
             width={500}
@@ -76,11 +81,11 @@ export default async function Page({
             </span>
           </article>
           <article className=" absolute bottom-6 left-[155px] shadows-news flex items-center gap-[8.5px] md:py-[6px] py-0.5 px-3 backdrop-blur-[10px] border border-white/30 border-[#6C6C6C] rounded-full max-w-max">
-              <LuEye className="text-white" />
-              <span className="text-white md:text-[12px] text-[10px] font-medium font-inter">
-                {data.views}
-              </span>
-            </article>
+            <LuEye className="text-white" />
+            <span className="text-white md:text-[12px] text-[10px] font-medium font-inter">
+              {data.views}
+            </span>
+          </article>
         </div>
 
         <div className="lg:mb-[88px] md:mb-[60px] nx:mb-[40px] mb-[20px] md:px-[48px]">

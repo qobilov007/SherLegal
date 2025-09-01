@@ -20,7 +20,7 @@ export default function Teams({ infoTeam }: TeamProps) {
     infoTeam.description;
 
   return (
-    <div className="relative top-0 z-[10] left-0 w-full h-[500px] rounded-[32px] bg-blue-500 overflow-hidden">
+    <div className="relative top-0 z-[10] left-0 w-full h-[500px] rounded-[32px] border border-gray-400/30 overflow-hidden">
       <Image
         className="w-full h-full max-md:h-[700px] object-cover"
         src={infoTeam.image}
@@ -33,7 +33,7 @@ export default function Teams({ infoTeam }: TeamProps) {
           <h6 className="mb-[12px] font-inter text-2xl font-bold text-white">
             {name}
           </h6>
-          <p className="text-white font-inter font-normal text-[16px] leading-[20px]">
+          <p className="text-white font-inter font-normal text-[16px] leading-[20px] line-clamp-3">
             {description}
           </p>
         </div>

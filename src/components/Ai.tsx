@@ -4,13 +4,18 @@ import BtnIcon from "../../public/images/Button Icon.svg";
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import { useTranslations } from "next-intl";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import ReactMarkdown from "react-markdown";
 
 export default function Hero() {
   const t = useTranslations("HomePage");
 
   const [open, setOpen] = useState(false);
   const [question, setQuestion] = useState("");
-  const [messages, setMessages] = useState<{ role: string; text: string }[]>([]);
+  const [messages, setMessages] = useState<{ role: string; text: string }[]>(
+    []
+  );
   const [loading, setLoading] = useState(false);
   const defaultTags = ["Civil law", "Criminal law", "Tax law"];
   const defaultHeading = t("aides");
@@ -70,6 +75,14 @@ export default function Hero() {
   };
 
   useEffect(() => {
+    AOS.init({
+      once: true,
+      duration: 1000,
+      easing: "ease-in-out",
+    });
+  }, []);
+
+  useEffect(() => {
     chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
@@ -96,7 +109,11 @@ export default function Hero() {
 
   return (
     <section className="flex flex-col items-center justify-center h-[866px] bg-legalai">
-      <h1 className="text-[40px] font-bold text-center text-blue-800">
+      <h1
+        className="text-[40px] font-bold text-center text-blue-800"
+        data-aos="fade-down"
+        data-aos-duration="800"
+      >
         Sherlegal <span className="text-pink-600">AI</span>
       </h1>
 
@@ -104,6 +121,9 @@ export default function Hero() {
       <button
         className="group boxshadow rounded-[1000px] bg-[#C61511] p-[16px] mt-4"
         onClick={() => setOpen(true)}
+        data-aos="zoom-in"
+        data-aos-delay="400"
+        data-aos-duration="1000"
       >
         <p className="flex gap-[8px] items-center justify-between text-white text-[20px] font-inter font-[600] ">
           {t("aibtn")}{" "}
@@ -114,6 +134,7 @@ export default function Hero() {
           />
         </p>
       </button>
+
 
       {/* Card */}
       <div
@@ -154,7 +175,9 @@ export default function Hero() {
                 </clipPath>
               </defs>
             </svg>
-            <p className="font-inter font-semibold text-2xl leading-[28px]">Sherlegal AI</p>
+            <p className="font-inter font-semibold text-2xl leading-[28px]">
+              Sherlegal AI
+            </p>
           </article>
           <h2 className="mt-2 max-md:text-[30px] max-smmmm:text-[24px] font-[700] font-inter leading-snug text-[40px]">
             {t("aides")}
@@ -163,36 +186,10 @@ export default function Hero() {
             {t("aidess")}
           </p>
 
+
           {/* Tags */}
-          <div className="flex mb-20 max-smm:grid max-smm:grid-cols-2 flex-wrap space-y-2 w-full mx-auto justify-center items-center gap-2 mt-4">
-            <span className="px-3 py-1 rounded-full bg-gray-700 text-[#FFFFFF] font-inter  text-[18px] font-[600] flex items-center justify-center gap-2">
-              <svg
-                width="21"
-                height="20"
-                viewBox="0 0 21 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g clipPath="url(#clip0_243_57454)">
-                  <path
-                    d="M11.4374 0.9375V2.5H12.6686C13.0486 2.5 13.4224 2.6 13.7524 2.78875L15.3649 3.70875C15.4132 3.73625 15.4649 3.75 15.5199 3.75H18.3124C18.561 3.75 18.7995 3.84877 18.9753 4.02459C19.1511 4.2004 19.2499 4.43886 19.2499 4.6875C19.2499 4.93614 19.1511 5.1746 18.9753 5.35041C18.7995 5.52623 18.561 5.625 18.3124 5.625H17.7786L20.4174 11.49C20.4954 11.6635 20.5187 11.8566 20.4843 12.0437C20.4499 12.2308 20.3595 12.403 20.2249 12.5375L19.5624 11.875L20.2236 12.5387L20.2224 12.5412L20.2199 12.5437L20.2124 12.5513L20.2049 12.5575L20.1924 12.57L20.1361 12.62C19.872 12.8408 19.5861 13.0283 19.2786 13.1825C18.6949 13.475 17.8499 13.75 16.7499 13.75C15.8743 13.7602 15.0084 13.5659 14.2211 13.1825C13.9142 13.0293 13.6264 12.8405 13.3636 12.62L13.3074 12.57L13.2874 12.5513L13.2799 12.5437L13.2749 12.5387V12.5375C13.1403 12.403 13.0498 12.2308 13.0154 12.0437C12.9811 11.8566 13.0044 11.6635 13.0824 11.49L15.7224 5.625H15.5199C15.1386 5.625 14.7649 5.52625 14.4349 5.33625L12.8224 4.41625C12.7752 4.38925 12.7218 4.37503 12.6674 4.375H11.4374V16.25H14.5624C14.811 16.25 15.0495 16.3488 15.2253 16.5246C15.4011 16.7004 15.4999 16.9389 15.4999 17.1875C15.4999 17.4361 15.4011 17.6746 15.2253 17.8504C15.0495 18.0262 14.811 18.125 14.5624 18.125H6.43738C6.18874 18.125 5.95029 18.0262 5.77447 17.8504C5.59865 17.6746 5.49988 17.4361 5.49988 17.1875C5.49988 16.9389 5.59865 16.7004 5.77447 16.5246C5.95029 16.3488 6.18874 16.25 6.43738 16.25H9.56238V4.375H8.33238C8.27801 4.37503 8.22458 4.38925 8.17738 4.41625L6.56613 5.3375C6.23488 5.525 5.86113 5.625 5.47988 5.625H5.27738L7.91738 11.49C7.99536 11.6635 8.01871 11.8566 7.98432 12.0437C7.94994 12.2308 7.85946 12.403 7.72488 12.5375L7.06238 11.875L7.72363 12.5387L7.72238 12.5412L7.71988 12.5437L7.71238 12.5513L7.69238 12.57L7.63613 12.62C7.37197 12.8408 7.08613 13.0283 6.77863 13.1825C6.19488 13.475 5.34988 13.75 4.24988 13.75C3.37428 13.7602 2.50839 13.5659 1.72113 13.1825C1.41424 13.0293 1.12643 12.8405 0.863633 12.62L0.807383 12.57L0.787383 12.5513L0.779883 12.5437L0.774883 12.5387V12.5375C0.640311 12.403 0.549824 12.2308 0.515441 12.0437C0.481058 11.8566 0.504406 11.6635 0.582383 11.49L3.22238 5.625H2.68738C2.43874 5.625 2.20029 5.52623 2.02447 5.35041C1.84866 5.1746 1.74988 4.93614 1.74988 4.6875C1.74988 4.43886 1.84866 4.2004 2.02447 4.02459C2.20029 3.84877 2.43874 3.75 2.68738 3.75H5.47988C5.53468 3.75019 5.58857 3.73596 5.63613 3.70875L7.24613 2.7875C7.57738 2.6 7.95113 2.5 8.33238 2.5H9.56238V0.9375C9.56238 0.68886 9.66115 0.450403 9.83697 0.274587C10.0128 0.098772 10.2512 0 10.4999 0C10.7485 0 10.987 0.098772 11.1628 0.274587C11.3386 0.450403 11.4374 0.68886 11.4374 0.9375Z"
-                    fill="white"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="clip0_243_57454">
-                    <rect
-                      width="20"
-                      height="20"
-                      fill="white"
-                      transform="translate(0.5)"
-                    />
-                  </clipPath>
-                </defs>
-              </svg>
-              Civil law
-            </span>
-            <span className="px-3 py-1 rounded-full bg-gray-700 text-[#FFFFFF] font-inter  text-[18px] font-[600] flex items-center justify-center gap-2">
+          <div className="flex mb-20 max-smm:grid max-smm:grid-cols-2 flex-wrap space-y-2 w-full h-full justify-center items-center gap-2 mt-4">
+            <span className="px-3 py-1 mt-1 rounded-full bg-gray-700 text-[#FFFFFF] font-inter  text-[18px] font-[600] flex items-center justify-center gap-2">
               <svg
                 width="21"
                 height="20"
@@ -248,7 +245,6 @@ export default function Hero() {
             </span>
           </div>
 
-
           <div className="mt-6 flex gap-4">
             <div className="relative w-[520px] max-sm:w-[310px] max-md:w-[450px]">
               {/* Icon */}
@@ -276,8 +272,10 @@ export default function Hero() {
     border-0 border-b border-gray-600 focus:border-blue-500 focus:ring-0 outline-none transition"
               />
             </div>
-
-            <div onClick={() => setOpen(true)}
+            <div onClick={() => {
+              setOpen(true);   // modalni ochadi
+              askAI();         // GPT API'ga so'rov yuboradi
+            }}
               className="cursor-pointer flex gap-[10px] py-[8px] px-[16px] items-center justify-center boxshadoww">
               <svg
                 width="20"
@@ -299,11 +297,12 @@ export default function Hero() {
         </div>
       </div>
 
+
       {open && (
         <div className="fixed inset-0 flex items-center justify-center bg-black/60 z-[100]">
           <div className="relative">
             <div
-              className=" mt-10 w-full max-w-[710px] mx-auto rounded-[48px] p-[12px] shadow-xl
+              className="mt-10 w-full max-w-[710px] rounded-[48px] p-[17px] shadow-xl
         [background:linear-gradient(40deg,rgba(122,167,237,1),rgba(215,211,142,1),rgba(248,97,97,1))]"
             >
               <div className="rounded-[36px] bg-[#000] bg-cardAi  text-white p-6 text-center">
@@ -341,7 +340,9 @@ export default function Hero() {
                         </clipPath>
                       </defs>
                     </svg>
-                    <p className="font-inter font-semibold text-2xl leading-[28px]">Sherlegal AI</p>
+                    <p className="font-inter font-semibold text-2xl leading-[28px]">
+                      Sherlegal AI
+                    </p>
                   </article>
                   <article className="flex py-[4px] px-[2px] items-center justify-center absolute right-[20px] top-[20px] rounded-full bg-[rgba(8,8,8,0.40)]">
                     <button
@@ -362,12 +363,13 @@ export default function Hero() {
                   {subHeading}
                 </p>
 
+
                 {tags.length > 0 && (
                   <div className="flex flex-wrap justify-center items-center gap-2 mt-6 mb-6">
                     {tags.map((tag, i) => (
                       <span
                         key={i}
-                        className="px-3 py-1 rounded-full flex gap-2 bg-gray-700 text-white text-[18px] font-[600]"
+                        className="px-3 py-1 rounded-full flex gap-2 bg-gray-700 text-white justify-center items-center text-[18px] font-[600]"
                       >
                         <svg
                           width="21"
@@ -396,28 +398,41 @@ export default function Hero() {
                         {tag}
                       </span>
                     ))}
+
                   </div>
                 )}
 
-                <div className="overflow-y-auto max-h-[400px] space-y-4 p-3 rounded-xl">
+                <div className="overflow-y-auto custom-scroll max-h-[400px] space-y-4 p-3 rounded-xl">
                   {messages.map((msg, i) => (
                     <div
                       key={i}
-                      className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
+                      className={`flex ${
+                        msg.role === "user" ? "justify-end" : "justify-start"
+                      }`}
                     >
                       <div
-                        className={`max-w-[70%] text-start px-4 py-2 rounded-2xl ${msg.role === "user"
+                        className={`prose max-w-[80%] text-start px-4 py-2 rounded-2xl ${msg.role === "user"
                           ? "bg-blue-600 text-white rounded-br-none"
                           : "bg-gray-700 text-white rounded-bl-none"
                           }`}
                       >
-                        {msg.text}
+                        <ReactMarkdown>{msg.text}</ReactMarkdown>
                       </div>
                     </div>
                   ))}
+                  {loading && (
+                    <div className="flex justify-start">
+                      <div className="max-w-[70%] text-start px-4 py-2 rounded-2xl bg-gray-700 text-white rounded-bl-none">
+                        <div className="typing-dots">
+                          <span className="dot" />
+                          <span className="dot" />
+                          <span className="dot" />
+                        </div>
+                      </div>
+                    </div>
+                  )}
                   <div ref={chatEndRef} />
                 </div>
-
 
                 <div className="mt-6 flex justify-center gap-4">
                   <div className="relative w-[520px] max-sm:w-[310px] max-md:w-[450px]">
@@ -436,18 +451,16 @@ export default function Hero() {
                       />
                     </svg>
 
-                    {/* Input */}
                     <input
                       type="text"
                       onKeyPress={handleKeyPress}
-
                       value={question ?? ''} onChange={(e) => setQuestion(e.target.value)}
                       placeholder="Ask for anything or use a command"
-                      className="inputstyle w-[520px] max-smm:w-[250px] max-smmm:w-[200px] max-sm:w-[310px] max-md:w-[450px] pl-12 py-4 pr-4 bg-gray-800 text-sm text-gray-200 placeholder-gray-400
+                      className="inputstyle w-[520px] max-smm:w-[300px] max-smmm:w-[280px] max-sm:w-[310px] max-md:w-[450px] pl-12 py-4 pr-4 bg-gray-800 text-sm text-gray-200 placeholder-gray-400
     border-0 border-b border-gray-600 focus:border-blue-500 focus:ring-0 outline-none transition"
                     />
-
                   </div>
+
 
                   <div
                     className="cursor-pointer flex gap-[10px] py-[8px] px-[16px] items-center justify-center boxshadoww">
