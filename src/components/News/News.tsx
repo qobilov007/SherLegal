@@ -5,24 +5,47 @@ import Link from "next/link";
 import { NewsCard } from "@/app.types";
 import { LuEye } from "react-icons/lu";
 import { useLocale, useTranslations } from "next-intl";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function NewsSection({ news }: { news: NewsCard[] }) {
   const t = useTranslations("HomePage");
   const locale = useLocale();
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true, easing: "ease-in-out" });
+  }, []);
 
   return (
     <section className="md:py-20 py-8 font-inter bg-gradient-to-b from-white via-gray-50 to-white">
       <div className="container mx-auto px-6">
         {/* Header */}
-        <div className="lg:flex max-lg:hidden max-md:flex-col justify-between items-center md:mb-12 mb-6">
+        <div
+          className="lg:flex max-lg:hidden max-md:flex-col justify-between items-center md:mb-12 mb-6"
+          data-aos="fade-up"
+        >
           <div>
-            <h2 className="text-3xl font-bold text-gray-900">
+            <h2
+              className="text-3xl font-bold text-gray-900"
+              data-aos="fade-right"
+              data-aos-delay="100"
+            >
               {t("newstitle")}
             </h2>
-            <p className="text-gray-600 max-w-xl mt-2">{t("newsdes")}</p>
+            <p
+              className="text-gray-600 max-w-xl mt-2"
+              data-aos="fade-right"
+              data-aos-delay="200"
+            >
+              {t("newsdes")}
+            </p>
           </div>
           <Link href={`/${locale}/news`}>
-            <button className="group md:inline-flex max-md:flex max-md:mx-auto max-md:mt-4 boxshadow rounded-[1000px] bg-[#C61511] p-[16px]">
+            <button
+              className="group md:inline-flex max-md:flex max-md:mx-auto max-md:mt-4 boxshadow rounded-[1000px] bg-[#C61511] p-[16px]"
+              data-aos="zoom-in"
+              data-aos-delay="300"
+            >
               <p className="flex gap-[8px] items-center justify-between text-white text-[20px] font-inter font-[600]">
                 {t("newsbtn")}{" "}
                 <Image
@@ -34,14 +57,23 @@ export default function NewsSection({ news }: { news: NewsCard[] }) {
             </button>
           </Link>
         </div>
+
         {/* Mobile headers */}
-        <div className="max-lg:block hidden">
+        <div className="max-lg:block hidden" data-aos="fade-up">
           <div className="flex gap-16 max-smm:gap-4 items-center justify-between md:mb-8 mb-4">
-            <h2 className="lg:text-[40px] text-[24px] max-smm:text-[18px] font-bold font-inter text-gray-900 md:text-[32px]">
+            <h2
+              className="lg:text-[40px] text-[24px] max-smm:text-[18px] font-bold font-inter text-gray-900 md:text-[32px]"
+              data-aos="fade-right"
+              data-aos-delay="100"
+            >
               {t("newstitle")}
             </h2>
             <Link href={`/${locale}/news`}>
-              <button className="group boxshadow max-md:w-auto rounded-full bg-[#C61511] px-[16px] py-[8px] max-smm:px-[6px] smm:py-[12px]">
+              <button
+                className="group boxshadow max-md:w-auto rounded-full bg-[#C61511] px-[16px] py-[8px] max-smm:px-[6px] smm:py-[12px]"
+                data-aos="zoom-in"
+                data-aos-delay="200"
+              >
                 <p className="flex gap-[8px] items-center justify-between text-white max-md:text-[10px] md:text-[20px] font-inter font-[600]">
                   {t("newsbtn")}{" "}
                   <Image
@@ -53,7 +85,11 @@ export default function NewsSection({ news }: { news: NewsCard[] }) {
               </button>
             </Link>
           </div>
-          <p className="text-[#000] mt-2 max-smm:text-[15px] text-[20px] text-center mb-8 mx-auto">
+          <p
+            className="text-[#000] mt-2 max-smm:text-[15px] text-[20px] text-center mb-8 mx-auto"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
             {t("newsdes")}
           </p>
         </div>

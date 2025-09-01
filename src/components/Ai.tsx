@@ -4,6 +4,8 @@ import BtnIcon from "../../public/images/Button Icon.svg";
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import { useTranslations } from "next-intl";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import ReactMarkdown from "react-markdown";
 
 export default function Hero() {
@@ -11,7 +13,9 @@ export default function Hero() {
 
   const [open, setOpen] = useState(false);
   const [question, setQuestion] = useState("");
-  const [messages, setMessages] = useState<{ role: string; text: string }[]>([]);
+  const [messages, setMessages] = useState<{ role: string; text: string }[]>(
+    []
+  );
   const [loading, setLoading] = useState(false);
   const defaultTags = ["Civil law", "Criminal law", "Tax law"];
   const defaultHeading = t("aides");
@@ -71,6 +75,14 @@ export default function Hero() {
   };
 
   useEffect(() => {
+    AOS.init({
+      once: true,
+      duration: 1000,
+      easing: "ease-in-out",
+    });
+  }, []);
+
+  useEffect(() => {
     chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
@@ -97,7 +109,11 @@ export default function Hero() {
 
   return (
     <section className="flex flex-col items-center justify-center h-[866px] bg-legalai">
-      <h1 className="text-[40px] font-bold text-center text-blue-800">
+      <h1
+        className="text-[40px] font-bold text-center text-blue-800"
+        data-aos="fade-down"
+        data-aos-duration="800"
+      >
         Sherlegal <span className="text-pink-600">AI</span>
       </h1>
 
@@ -105,6 +121,9 @@ export default function Hero() {
       <button
         className="group boxshadow rounded-[1000px] bg-[#C61511] p-[16px] mt-4"
         onClick={() => setOpen(true)}
+        data-aos="zoom-in"
+        data-aos-delay="400"
+        data-aos-duration="1000"
       >
         <p className="flex gap-[8px] items-center justify-between text-white text-[20px] font-inter font-[600] ">
           {t("aibtn")}{" "}
@@ -156,7 +175,9 @@ export default function Hero() {
                 </clipPath>
               </defs>
             </svg>
-            <p className="font-inter font-semibold text-2xl leading-[28px]">Sherlegal AI</p>
+            <p className="font-inter font-semibold text-2xl leading-[28px]">
+              Sherlegal AI
+            </p>
           </article>
           <h2 className="mt-2 max-md:text-[30px] max-smmmm:text-[24px] font-[700] font-inter leading-snug text-[40px]">
             {t("aides")}
@@ -251,7 +272,6 @@ export default function Hero() {
             </span>
           </div>
 
-
           <div className="mt-6 flex gap-4">
             <div className="relative w-[520px] max-sm:w-[310px] max-md:w-[450px]">
               {/* Icon */}
@@ -279,7 +299,6 @@ export default function Hero() {
     border-0 border-b border-gray-600 focus:border-blue-500 focus:ring-0 outline-none transition"
               />
             </div>
-
             <div onClick={() => {
               setOpen(true);   // modalni ochadi
               askAI();         // GPT API'ga so'rov yuboradi
@@ -348,7 +367,9 @@ export default function Hero() {
                         </clipPath>
                       </defs>
                     </svg>
-                    <p className="font-inter font-semibold text-2xl leading-[28px]">Sherlegal AI</p>
+                    <p className="font-inter font-semibold text-2xl leading-[28px]">
+                      Sherlegal AI
+                    </p>
                   </article>
                   <article className="flex py-[4px] px-[2px] items-center justify-center absolute right-[20px] top-[20px] rounded-full bg-[rgba(8,8,8,0.40)]">
                     <button
@@ -412,7 +433,9 @@ export default function Hero() {
                   {messages.map((msg, i) => (
                     <div
                       key={i}
-                      className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
+                      className={`flex ${
+                        msg.role === "user" ? "justify-end" : "justify-start"
+                      }`}
                     >
                       <div
                         className={`prose max-w-[80%] text-start px-4 py-2 rounded-2xl ${msg.role === "user"
@@ -463,11 +486,11 @@ export default function Hero() {
                       className="inputstyle w-[520px] max-smm:w-[300px] max-smmm:w-[280px] max-sm:w-[310px] max-md:w-[450px] pl-12 py-4 pr-4 bg-gray-800 text-sm text-gray-200 placeholder-gray-400
     border-0 border-b border-gray-600 focus:border-blue-500 focus:ring-0 outline-none transition"
                     />
-
                   </div>
 
 
                   <div
+
                     className="cursor-pointer flex gap-[10px] py-[8px] px-[16px] items-center justify-center boxshadoww">
                     {loading ? (
                       <button onClick={stopAI} disabled={!loading}>
