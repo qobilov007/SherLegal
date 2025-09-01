@@ -32,13 +32,13 @@ export default function BackButton() {
 
   const handleBack = () => {
     router.back();
-    window.scrollTo({ top: 0, behavior: "smooth" }); 
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
   return (
     <div>
       <button
         onClick={handleBack}
-        className="flex items-center max-w-max gap-2 py-1.5 md:py-3 px-7 rounded-full mb-[24px] bg-[#FFFFFF] shadow-md cursor-pointer"
+        className="flex items-center max-w-max gap-2 py-2.5 md:py-3 px-7 rounded-full mb-[24px] bg-[#FFFFFF] shadow-md cursor-pointer"
       >
         <FaArrowLeftLong className="text-[#137BEA] w-5 h-[20px]" />
         <span className="font-medium font-inter text-[16px] leading-[130%]">

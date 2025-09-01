@@ -10,6 +10,7 @@ import { NewsCard } from "@/app.types";
 import { pickStringProps } from "@/lib/getLocalizedValue";
 import { getLocalizedValue } from "@/lib/getLocalization";
 import { getNews } from "@/lib/getNews";
+import CustomDate from "@/components/ui/CustomDate";
 // import BackButton from "@/src/components/btn/BackBtn";
 
 export default async function Page({
@@ -78,11 +79,9 @@ export default async function Page({
           />
           <article className="absolute left-6 bottom-6 flex items-center md:gap-[8.5px] gap-0.5 backdrop-blur-[10px] border border-white/30 md:py-[6px] py-0.5 px-3 border-[#6C6C6C] rounded-full max-w-max shadows-news">
             <CiCalendarDate className="text-white" />
-            <span className="text-white md:text-[12px] text-[10px] font-medium font-inter">
-              {date}
-            </span>
+              <CustomDate created_at={data.created_at} className="text-white" />
           </article>
-          <article className=" absolute bottom-6 left-[155px] shadows-news flex items-center gap-[8.5px] md:py-[6px] py-0.5 px-3 backdrop-blur-[10px] border border-white/30 border-[#6C6C6C] rounded-full max-w-max">
+          <article className="absolute bottom-6 left-[191px] shadows-news flex items-center gap-[8.5px] md:py-[6px] py-0.5 px-3 backdrop-blur-[10px] border border-white/30 border-[#6C6C6C] rounded-full max-w-max">
             <LuEye className="text-white" />
             <span className="text-white md:text-[12px] text-[10px] font-medium font-inter">
               {data.views}
