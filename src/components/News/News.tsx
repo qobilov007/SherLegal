@@ -10,6 +10,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import CustomDate from "@/components/ui/CustomDate";
 
 export default function NewsSection({ news }: { news: NewsCard[] }) {
   const t = useTranslations("HomePage");
@@ -117,21 +118,23 @@ export default function NewsSection({ news }: { news: NewsCard[] }) {
 /* Oddiy card */
 function CardNormal({ item, locale }: { item: NewsCard; locale: string }) {
   const title =
-    item?.[`title_${locale}` as keyof NewsCard]?.toString() || item?.title || "";
+    item?.[`title_${locale}` as keyof NewsCard]?.toString() ||
+    item?.title ||
+    "";
   const excerpt =
-    item?.[`content_${locale}` as keyof NewsCard]?.toString() || item?.content || "";
+    item?.[`content_${locale}` as keyof NewsCard]?.toString() ||
+    item?.content ||
+    "";
 
+  //   const createdAt = item?.created_at ? new Date(item.created_at) : null;
 
-  const createdAt = item?.created_at ? new Date(item.created_at) : null;
-
-  const date = createdAt && !isNaN(createdAt.getTime())
-    ? new Intl.DateTimeFormat("en-GB", {
-      day: "numeric",
-      month: "long",
-      year: "numeric",
-    }).format(createdAt)
-    : "";
-
+  //   const date = createdAt && !isNaN(createdAt.getTime())
+  //     ? new Intl.DateTimeFormat("en-GB", {
+  //       day: "numeric",
+  //       month: "long",
+  //       year: "numeric",
+  //     }).format(createdAt)
+  //     : "";
 
   return (
     <Link href={`/${locale}/news/${item?.slug}`}>
@@ -154,7 +157,11 @@ function CardNormal({ item, locale }: { item: NewsCard; locale: string }) {
           </p>
           <div className="flex items-center mt-5 text-xs text-gray-500 border-t pt-3 gap-2">
             <span className="flex py-[6px] px-[12px] items-center gap-[6px] rounded-[100px] border-[#EEE] border-[1px]">
-              <Image src={Frame} alt="Frame" /> {date}
+              <Image src={Frame} alt="Frame" />{" "}
+              <CustomDate
+                created_at={item.created_at}
+                className="text-[#6C6C6C]"
+              />
             </span>
             <span className="flex py-[6px] px-[12px] items-center gap-[6px] rounded-[100px] border-[#EEE] border-[1px]">
               <LuEye className="text-[#6C6C6C]" /> {item?.views}
@@ -169,15 +176,17 @@ function CardNormal({ item, locale }: { item: NewsCard; locale: string }) {
 /* Katta background card */
 function CardBackground({ item, locale }: { item: NewsCard; locale: string }) {
   const title =
-    item?.[`title_${locale}` as keyof NewsCard]?.toString() || item?.title || "";
+    item?.[`title_${locale}` as keyof NewsCard]?.toString() ||
+    item?.title ||
+    "";
 
-  const createdAt = new Date(item.created_at);
+  //   const createdAt = new Date(item.created_at);
 
-  const date = new Intl.DateTimeFormat("en-GB", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-  }).format(createdAt);
+  //   const date = new Intl.DateTimeFormat("en-GB", {
+  //     day: "numeric",
+  //     month: "long",
+  //     year: "numeric",
+  //   }).format(createdAt);
 
   return (
     <Link href={`/${locale}/news/${item?.slug}`}>
@@ -209,7 +218,10 @@ function CardBackground({ item, locale }: { item: NewsCard; locale: string }) {
                   strokeLinecap="round"
                 />
               </svg>
-              {date}
+              <CustomDate
+                created_at={item.created_at}
+                className="text-white"
+              />
             </span>
             <span className="flex py-[6px] px-[12px] items-center gap-[6px] rounded-[100px] border-[rgba(238,238,238,0.38)] border-[1px]">
               <LuEye className="text-[white]" /> {item?.views}
@@ -224,7 +236,9 @@ function CardBackground({ item, locale }: { item: NewsCard; locale: string }) {
 /* Overlay card */
 function CardOverlay({ item, locale }: { item: NewsCard; locale: string }) {
   const title =
-    item?.[`title_${locale}` as keyof NewsCard]?.toString() || item?.title || "";
+    item?.[`title_${locale}` as keyof NewsCard]?.toString() ||
+    item?.title ||
+    "";
 
   return (
     <Link href={`/${locale}/news/${item?.slug}`}>
