@@ -13,7 +13,7 @@ export default async function Page({
     { cache: "no-store" }
   );
 
-  const data: ServiceItems = await res.json();
+  const data: ServiceItems = await res.json();  
 
   // Backenddan til bo‘yicha name/description olish
   const name =
