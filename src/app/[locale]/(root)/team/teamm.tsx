@@ -33,7 +33,7 @@ export default function Teams({ infoTeam }: TeamProps) {
           <h6 className="mb-[12px] font-inter text-2xl font-bold text-white">
             {name}
           </h6>
-          <p className="text-white font-inter font-normal text-[16px] leading-[20px]">
+          <p className="text-white font-inter font-normal text-[16px] leading-[20px] line-clamp-3">
             {description}
           </p>
         </div>
