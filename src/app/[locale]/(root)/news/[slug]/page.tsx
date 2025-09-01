@@ -1,5 +1,3 @@
-// import { getNews } from "@/constants/page";
-
 import { FaArrowLeftLong } from "react-icons/fa6";
 import Marqueforslug from "../_components/Marqueforslug";
 import { CiCalendarDate } from "react-icons/ci";

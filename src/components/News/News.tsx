@@ -1,4 +1,5 @@
-"use client";
+"use client"
+
 import Image from "next/image";
 import BtnIcon from "../../../public/images/Button Icon.svg";
 import Frame from "../../../public/images/calendar.svg";

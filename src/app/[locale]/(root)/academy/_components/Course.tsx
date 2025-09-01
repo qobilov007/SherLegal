@@ -1,13 +1,10 @@
 import { LessonCard } from "@/app.types";
 import { getLocalizedValue } from "@/lib/getLocalization";
 import { pickStringProps } from "@/lib/getLocalizedValue";
-// import { getLessonCard } from "@/constants/page";
 import { useLocale, useTranslations } from "next-intl";
 
 export default function Course({ course }: { course: LessonCard[] }) {
   const t = useTranslations("AcademyPage");
-  //   const lessons = getLessonCard;
-//   console.log(course);
   const locale = useLocale();
 
   return (
