@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import BtnIcon from "../../../public/images/Button Icon.svg";
 import Frame from "../../../public/images/calendar.svg";
@@ -81,27 +80,31 @@ export default function NewsSection({ news }: { news: NewsCard[] }) {
 /* Oddiy card */
 function CardNormal({ item, locale }: { item: NewsCard; locale: string }) {
   const title =
-    (item[`title_${locale}` as keyof NewsCard] as string) || item.title;
+    item?.[`title_${locale}` as keyof NewsCard]?.toString() || item?.title || "";
   const excerpt =
-    (item[`content_${locale}` as keyof NewsCard] as string) || item.content;
+    item?.[`content_${locale}` as keyof NewsCard]?.toString() || item?.content || "";
 
-  const createdAt = new Date(item.created_at);
 
-  const date = new Intl.DateTimeFormat("en-GB", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-  }).format(createdAt);
+  const createdAt = item?.created_at ? new Date(item.created_at) : null;
+
+  const date = createdAt && !isNaN(createdAt.getTime())
+    ? new Intl.DateTimeFormat("en-GB", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    }).format(createdAt)
+    : "";
+
 
   return (
-    <Link href={`/${locale}/news/${item.slug}`}>
+    <Link href={`/${locale}/news/${item?.slug}`}>
       <div className="cursor-pointer group max-lg:h-[500px] flex flex-col rounded-2xl w-[278px] max-lg:w-full h-[379px] overflow-hidden shadow-md hover:shadow-xl transition-all bg-white">
         <div className="relative w-full h-[320px] overflow-hidden">
           <Image
-            src={item.image}
-            alt={title}
-            fill
-            className="object-cover group-hover:scale-105 transition-transform duration-500"
+            src="https://087a87050fb35936828b2df899a476ad.r2.cloudflarestorage.com/sherlegal/media/news/tatyana-dobreva-i6Wc5qZO5MQ.jpg"
+            alt="news"
+            width={828}
+            height={552}
           />
         </div>
 
@@ -117,7 +120,7 @@ function CardNormal({ item, locale }: { item: NewsCard; locale: string }) {
               <Image src={Frame} alt="Frame" /> {date}
             </span>
             <span className="flex py-[6px] px-[12px] items-center gap-[6px] rounded-[100px] border-[#EEE] border-[1px]">
-              <LuEye className="text-[#6C6C6C]" /> {item.views}
+              <LuEye className="text-[#6C6C6C]" /> {item?.views}
             </span>
           </div>
         </div>
@@ -129,7 +132,7 @@ function CardNormal({ item, locale }: { item: NewsCard; locale: string }) {
 /* Katta background card */
 function CardBackground({ item, locale }: { item: NewsCard; locale: string }) {
   const title =
-    (item[`title_${locale}` as keyof NewsCard] as string) || item.title;
+    item?.[`title_${locale}` as keyof NewsCard]?.toString() || item?.title || "";
 
   const createdAt = new Date(item.created_at);
 
@@ -140,11 +143,11 @@ function CardBackground({ item, locale }: { item: NewsCard; locale: string }) {
   }).format(createdAt);
 
   return (
-    <Link href={`/${locale}/news/${item.slug}`}>
+    <Link href={`/${locale}/news/${item?.slug}`}>
       <div className="cursor-pointer relative rounded-2xl overflow-hidden shadow-xl group h-[379px] max-lg:h-[500px] w-[520px] max-lg:w-full flex items-end">
         <Image
-          src={item.image}
-          alt={title}
+          src={item?.image || ""}
+          alt="Image"
           fill
           className="object-cover group-hover:scale-105 transition-transform duration-700"
         />
@@ -172,7 +175,7 @@ function CardBackground({ item, locale }: { item: NewsCard; locale: string }) {
               {date}
             </span>
             <span className="flex py-[6px] px-[12px] items-center gap-[6px] rounded-[100px] border-[rgba(238,238,238,0.38)] border-[1px]">
-              <LuEye className="text-[white]" /> {item.views}
+              <LuEye className="text-[white]" /> {item?.views}
             </span>
           </div>
         </div>
@@ -184,14 +187,14 @@ function CardBackground({ item, locale }: { item: NewsCard; locale: string }) {
 /* Overlay card */
 function CardOverlay({ item, locale }: { item: NewsCard; locale: string }) {
   const title =
-    (item[`title_${locale}` as keyof NewsCard] as string) || item.title;
+    item?.[`title_${locale}` as keyof NewsCard]?.toString() || item?.title || "";
 
   return (
-    <Link href={`/${locale}/news/${item.slug}`}>
+    <Link href={`/${locale}/news/${item?.slug}`}>
       <div className="cursor-pointer relative rounded-xl overflow-hidden group h-[260px] shadow-md hover:shadow-xl">
         <Image
-          src={item.image}
-          alt={title}
+          src={item?.image || ""}
+          alt="Image"
           fill
           className="object-cover group-hover:scale-105 transition-transform duration-500"
         />
