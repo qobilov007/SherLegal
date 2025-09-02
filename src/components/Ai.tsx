@@ -188,7 +188,7 @@ export default function Hero() {
 
 
           {/* Tags */}
-          <div className="flex mb-20 max-smm:grid max-smm:grid-cols-2 flex-wrap space-y-2 w-full h-full justify-center items-center gap-2 mt-4">
+          <div className="flex mb-20 max-smm:grid max-smm:grid-cols-1 flex-wrap space-y-2 w-full h-full justify-center items-center gap-2 mt-4">
             <span className="px-3 py-1 mt-1 rounded-full bg-gray-700 text-[#FFFFFF] font-inter  text-[18px] font-[600] flex items-center justify-center gap-2">
               <svg
                 width="21"
@@ -365,7 +365,7 @@ export default function Hero() {
 
 
                 {tags.length > 0 && (
-                  <div className="flex flex-wrap justify-center items-center gap-2 mt-6 mb-6">
+                  <div className="flex flex-wrap  justify-center items-center gap-2 mt-6 mb-6">
                     {tags.map((tag, i) => (
                       <span
                         key={i}
