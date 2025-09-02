@@ -98,10 +98,25 @@ module.exports = {
             height: "0",
           },
         },
+        "bounce-small": {
+          "0%, 100%": {
+            transform: "translateY(-20%)", // -25% o‘rniga -10%
+            animationTimingFunction: "cubic-bezier(0.8,0,1,1)",
+          },
+          "50%": {
+            transform: "translateY(-17%)",
+            animationTimingFunction: "cubic-bezier(0,0,0.2,1)",
+          },
+          "100%": {
+            transform: "translateY(-20%)",
+            animationTimingFunction: "cubic-bezier(0,0,0.2,1)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "bounce-small": "bounce-small 1s infinite",
       },
       backgroundImage: {
         "custom-gradient":
@@ -112,8 +127,5 @@ module.exports = {
       },
     },
   },
-  plugins: [
-    require("tailwindcss-animate"),
-    require("@tailwindcss/typography")
-    ],
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
 };

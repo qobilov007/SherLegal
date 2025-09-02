@@ -1,17 +1,32 @@
+"use client";
 import Image from "next/image";
 import BtnIcon from "../../../../../../public/images/Button Icon.svg";
 import SherLegalLogo from "../../../../../../public/icons/sherlegallogo.svg";
 import { useTranslations } from "next-intl";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+import AOS from "aos";
 
 export default function AcademyMain() {
   const t = useTranslations("AcademyPage");
   const sh = useTranslations("HomePage");
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1200, // animatsiya davomiyligi
+      once: true, // faqat bir marta ishlasin
+      easing: "ease-in-out",
+    });
+  }, []);
+
   return (
     <div className="bg-academy bg-no-repeat bg-center bg-cover w-full max-nx:h-[660px] xl:h-screen overflow-hidden">
       <div className="md:pt-[200px] pt-[100px] container flex max-md:flex-col max-md:items-center xl:justify-between">
-        <div className="max-lg:mb-10">
-          <article className="md:w-[150px] w-[105px] flex items-center max-md:justify-center gap-2 md:px-6 py-3 md:py-4 rounded-full glass2 border">
+        <div className="max-lg:mb-10" data-aos="fade-right">
+          <article
+            className="md:w-[150px] w-[105px] flex items-center max-md:justify-center gap-2 md:px-6 py-3 md:py-4 rounded-full glass2 border"
+            data-aos="zoom-in"
+          >
             <svg
               width="20"
               height="20"
@@ -29,19 +44,34 @@ export default function AcademyMain() {
             </span>
           </article>
 
-          <h1 className="lg:text-[56px] md:text-[48px] sm:text-[40px] nx:text-[32px] max-nx:text-[28px] font-medium text-white font-inter leading-[120%] md:pb-4 pb-2">
+          <h1
+            data-aos="fade-up"
+            className="lg:text-[56px] md:text-[48px] sm:text-[40px] nx:text-[32px] max-nx:text-[28px] font-medium text-white font-inter leading-[120%] md:pb-4 pb-2"
+          >
             {t("legalCourse")}
           </h1>
-          <h1 className="lg:text-[56px] md:text-[48px] sm:text-[40px] nx:text-[32px] max-nx:text-[28px] font-medium text-white font-inter leading-[120%] flex items-center gap-3 pb-4">
+          <h1
+            data-aos="fade-up"
+            data-aos-delay="200"
+            className="lg:text-[56px] md:text-[48px] sm:text-[40px] nx:text-[32px] max-nx:text-[28px] font-medium text-white font-inter leading-[120%] flex items-center gap-3 pb-4"
+          >
             <p className="font-inter flex items-center justify-center lg:text-[56px] md:text-[48px] sm:text-[40px] nx:text-[32px] max-nx:text-[28px] border-[2px] border-solid border-[#ff6363] md:h-[75px] nx:h-[65px] h-[36px] rounded-[12px] px-3 md:rounded-[20px] bg-[linear-gradient(90deg,#CB1612_0%,#650B09_100%)] font-bold">
               {sh("homesher")}
             </p>
             {sh("homelegal")}
           </h1>
-          <p className="text-white font-inter font-normal sm:text-[16px] text-[14px] leading-[130%] md:pb-6 pb-3">
+          <p
+            data-aos="fade-up"
+            data-aos-delay="400"
+            className="text-white font-inter font-normal sm:text-[16px] text-[14px] leading-[130%] md:pb-6 pb-3"
+          >
             {t("authorsTitle")}
           </p>
-          <button className="group boxshadow rounded-[1000px] bg-[#C61511] md:p-[16px] py-3 px-4">
+          <button
+            data-aos="fade-up"
+            data-aos-delay="400"
+            className="group boxshadow rounded-[1000px] bg-[#C61511] md:p-[16px] py-3 px-4"
+          >
             <p className="flex md:gap-[8px] items-center justify-between text-white md:text-[20px] text-[14px] font-inter font-[600]">
               {t("buyacourse")}
               <Image
@@ -53,12 +83,14 @@ export default function AcademyMain() {
           </button>
         </div>
 
-
-        <div className="max-md:-translate-y-[67px] max-md:translate-x-[58px]">
+        <div
+          className="max-md:-translate-y-[67px] max-md:translate-x-[58px]"
+          data-aos="fade-left"
+        >
           <Image
             src={SherLegalLogo}
             alt="sherLegalLogo"
-            className=" xl:-translate-y-36 xl:translate-x-28 max-nx:w-[329px] max-nx:h-[329px] max-md:w-[420px] max-md:h-[420px]"
+            className=" xl:-translate-y-36 xl:translate-x-28 max-nx:w-[329px] max-nx:h-[329px] max-md:w-[420px] max-md:h-[420px] animate-bounce-small"
             width={681}
             height={99}
           />
