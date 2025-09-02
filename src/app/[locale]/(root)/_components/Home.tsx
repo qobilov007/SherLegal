@@ -123,6 +123,7 @@ export default function Homes({ statistics }: { statistics: Stat[] }) {
                     <span className="text-center md:text-2xl sm:text-[16px] text-[13px] font-inter font-medium leading-[120%]">
                       {ss("experience")}
                     </span>
+                    
                   </div>
 
                   <div className="flex flex-col items-center text-center">
