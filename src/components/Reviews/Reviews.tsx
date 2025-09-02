@@ -8,6 +8,8 @@ import ReviewMediaCard from "./ReviewsMediaCard";
 import Marquee from "react-fast-marquee";
 import { useTranslations, useLocale } from "next-intl";
 import { Review } from "@/app.types";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function TestimonialsMarquee() {
   const t = useTranslations("HomePage");
@@ -20,12 +22,26 @@ export default function TestimonialsMarquee() {
       .catch((err) => console.error("Fetch xatolik:", err));
   }, []);
 
+  useEffect(() => {
+    AOS.init({
+      once: true,
+      duration: 1000,
+      easing: "ease-in-out",
+    });
+  }, []);
+
   return (
     <section className="relative !min-h-[800px] text-white bg-black p-0 bg-reviews bg-no-repeat bg-cover bg-center">
       <div className="container md:flex max-md:flex-col items-center gap-8 justify-between z-20">
         {/* Chap text */}
-        <div className="md:w-1/3 md:text-left max-md:mb-16 pt-10 md:pt-0 text-center w-full relative z-20">
-          <article className="inline-flex border-r border-l border-t items-center gap-2 px-5 border-gray-300/5 py-3 rounded-full glass">
+        <div
+          className="md:w-1/3 md:text-left max-md:mb-16 pt-10 md:pt-0 text-center w-full relative z-20"
+          data-aos="fade-right"
+        >
+          <article
+            className="inline-flex border-r border-l border-t items-center gap-2 px-5 border-gray-300/5 py-3 rounded-full glass"
+            data-aos="fade-down"
+          >
             <span className="relative z-[10] flex items-center gap-2 font-inter font-semibold text-[18px] leading-[21px] text-white">
               <svg
                 width="18"
@@ -47,16 +63,27 @@ export default function TestimonialsMarquee() {
             </span>
           </article>
 
-          <h2 className="md:max-w-[90%] w-full lg:text-[48px] md:text-[32px] text-[24px] font-inter mt-4 leading-[120%] font-[700] text-white">
+          <h2
+            className="md:max-w-[90%] w-full lg:text-[48px] md:text-[32px] text-[24px] font-inter mt-4 leading-[120%] font-[700] text-white"
+            data-aos="fade-right"
+            data-aos-delay="150"
+          >
             {t("reviewstitle")}
           </h2>
-          <p className="text-gray-400 mt-4 text-sm leading-relaxed w-full md:max-w-md">
+          <p
+            className="text-gray-400 mt-4 text-sm leading-relaxed w-full md:max-w-md"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
             {t("reviewsdes")}
           </p>
         </div>
 
         {/* Marquee qismi */}
-        <div className="flex flex-col gap-10 md:w-2/3 w-auto relative">
+        <div
+          className="flex flex-col gap-10 md:w-2/3 w-auto relative"
+          data-aos="zoom-in"
+        >
           {/* Tepaga harakatlanadigan (desktop) */}
           <div className="relative hidden md:flex h-[900px] w-full flex-row items-center justify-center overflow-hidden">
             <Marque pauseOnHover vertical className="[--duration:20s]">
@@ -72,7 +99,11 @@ export default function TestimonialsMarquee() {
           </div>
 
           {/* Mobile uchun */}
-          <div className="max-md:block hidden overflow-hidden">
+          <div
+            className="max-md:block hidden overflow-hidden"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <Marquee className="mb-10">
               {reviews.map((review, id) => (
                 <ReviewMediaCard key={id} review={review} locale={locale} />

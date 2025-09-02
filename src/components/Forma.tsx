@@ -6,8 +6,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { ContactFormType, useContactSchema } from "@/lib/zod";
 import { useEffect } from "react";
-import axios from "axios";
-import z from "zod";
 
 export default function Contact() {
   const t = useTranslations("ContactPage");
@@ -71,7 +69,8 @@ export default function Contact() {
           <div className="flex flex-col gap-3 sm:gap-4">
             {/* Location */}
             <a
-              href="mailto:info@clamo.uz"
+              href="https://yandex.uz/maps/10335/tashkent/?ll=69.303946%2C41.318330&mode=whatshere&whatshere%5Bpoint%5D=69.303883%2C41.318303&whatshere%5Bzoom%5D=17&z=16"
+              target="_blank"
               className="group bg-[rgba(243,243,243,1)] transition-all duration-200 border border-opacity-[16%] border-white gap-2 inline-flex items-center py-2 sm:py-3 px-3 sm:px-4 rounded-full cursor-pointer"
             >
               <article className="p-2 sm:p-[9px] flex items-center gap-[10px] rounded-full bg-[rgba(19,123,234,0.12)]">
@@ -96,14 +95,15 @@ export default function Contact() {
                   {t("contactaddress")}
                 </span>
                 <p className="text-[13px] sm:text-[15px] md:text-[16px] font-medium font-vk text-black line-clamp-1">
-                  info@clamo.uz
+                  Adham Raxmat street 15, Tashkent city, Uzbekistan
                 </p>
               </article>
             </a>
 
             {/* Phone */}
             <a
-              href="mailto:info@clamo.uz"
+              href="tel:+998981003344"
+              target="_blank"
               className="group bg-[rgba(243,243,243,1)] transition-all duration-200 border border-opacity-[16%] border-white gap-2 inline-flex items-center py-2 sm:py-3 px-3 sm:px-4 rounded-full cursor-pointer"
             >
               <article className="p-2 sm:p-[9px] flex items-center gap-[10px] rounded-full bg-[rgba(19,123,234,0.12)]">
@@ -128,14 +128,14 @@ export default function Contact() {
                   {t("contactphone")}
                 </span>
                 <p className="text-[13px] sm:text-[15px] md:text-[16px] font-medium font-vk text-black line-clamp-1">
-                  info@clamo.uz
+                  +998 (98) 100-33-44
                 </p>
               </article>
             </a>
 
-            {/* Email */}
             <a
-              href="mailto:info@clamo.uz"
+              href="mailto:info@sher.legal"
+              target="_blank"
               className="group bg-[rgba(243,243,243,1)] transition-all duration-200 border border-opacity-[16%] border-white gap-2 inline-flex items-center py-2 sm:py-3 px-3 sm:px-4 rounded-full cursor-pointer"
             >
               <article className="p-2 sm:p-[9px] flex items-center gap-[10px] rounded-full bg-[rgba(19,123,234,0.12)]">
@@ -160,7 +160,7 @@ export default function Contact() {
                   {t("contactemail")}
                 </span>
                 <p className="text-[13px] sm:text-[15px] md:text-[16px] font-medium font-vk text-black line-clamp-1">
-                  info@clamo.uz
+                  info@sher.legal
                 </p>
               </article>
             </a>

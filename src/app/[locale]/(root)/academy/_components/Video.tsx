@@ -2,11 +2,28 @@
 
 import Image from "next/image";
 import button from "../../../../../../public/icons/buttonvideoAcademy.svg";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { X } from "lucide-react";
 
 export default function Video() {
   const [open, setOpen] = useState(false);
+  const [closing, setClosing] = useState(false);
+
+  useEffect(() => {
+    if (open) document.body.style.overflow = "hidden";
+    else document.body.style.overflow = "auto";
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [open]);
+
+  const handleClose = () => {
+    setClosing(true);
+    setTimeout(() => {
+      setOpen(false);
+      setClosing(false);
+    }, 500);
+  };
 
   return (
     <section className="container">
@@ -23,15 +40,23 @@ export default function Video() {
         />
 
         {open && (
-          <div className="fixed inset-0 bg-black/60 z-[111] flex items-center justify-center">
+          <div
+            className={`fixed inset-0 z-[111] flex items-center justify-center transition-opacity duration-300 ${
+              closing ? "opacity-0" : "opacity-100"
+            } bg-black/60`}
+          >
             <button
-              onClick={() => setOpen(false)}
+              onClick={handleClose}
               className="absolute md:top-[40px] top-[100px] right-[10px] border text-white rounded-full p-2"
             >
               <X className="md:w-6 md:h-6 w-4 h-4" />
             </button>
 
-            <div className="relative w-[90%] md:w-[70%] lg:w-[60%] aspect-video bg-black rounded-xl overflow-hidden shadow-xl">
+            <div
+              className={`relative w-[90%] md:w-[70%] lg:w-[60%] aspect-video bg-black rounded-xl overflow-hidden shadow-xl transform transition-transform duration-300 ${
+                closing ? "scale-95 opacity-0" : "scale-100 opacity-100"
+              }`}
+            >
               <iframe
                 className="w-full h-full"
                 src="https://www.youtube.com/embed/sDuqCsiFV7M?autoplay=1"

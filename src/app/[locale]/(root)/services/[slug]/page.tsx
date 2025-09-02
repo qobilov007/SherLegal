@@ -14,6 +14,8 @@ export default async function Page({
   );
 
   const data: ServiceItems = await res.json();
+  console.log(data);
+    
 
   // Backenddan til bo‘yicha name/description olish
   const name =

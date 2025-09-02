@@ -40,7 +40,7 @@ export default function ContactPage() {
             <FaPhoneAlt className="text-blue-600" />
             <Link href={`tel:${item.phone}`} target="_blank">
               <p className="text-sm font-vk">{t("contactphone")}</p>
-              <p className="font-medium font-vk group-hover:underline">
+              <p className="font-medium font-vk group-hover:underline-none">
                 {item.phone}
               </p>
             </Link>
@@ -51,7 +51,7 @@ export default function ContactPage() {
             <FaEnvelope className="text-blue-600" />
             <Link href={`mailto:${item.email}`} target="_blank">
               <p className="text-sm font-vk">{t("contactemail")}</p>
-              <p className="font-medium font-vk group-hover:underline">
+              <p className="font-medium font-vk group-hover:underline-none">
                 {item.email}
               </p>
             </Link>
@@ -67,8 +67,9 @@ export default function ContactPage() {
                 target="_blank"
                 aria-label="website url"
                 rel="noopener noreferrer"
+                className="font-medium font-vk group-hover:underline-none"
               >
-                <p className="font-medium font-vk group-hover:underline">
+                <p className="font-medium font-vk group-hover:underline-none">
                   {item.website}
                 </p>
               </Link>
@@ -84,7 +85,7 @@ export default function ContactPage() {
               rel="noopener noreferrer"
             >
               <p className="text-sm font-vk">{t("contactaddress")}</p>
-              <p className="font-medium font-vk group-hover:underline">
+              <p className="font-medium font-vk group-hover:underline-none">
                 {item.address}
               </p>
             </Link>

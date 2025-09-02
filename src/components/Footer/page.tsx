@@ -205,7 +205,7 @@ export default function FooterPage() {
                   />
                 </svg>
                 <span className="text-white font-inter text-[14px] font-normal group-hover:text-[#137BEA] transition-all duration-200 opacity-50 group-hover:opacity-100">
-                  Terms of use
+                  {tt("termsofuse")}
                 </span>
               </Link>
             </li>
@@ -222,7 +222,7 @@ export default function FooterPage() {
                   />
                 </svg>
                 <span className="text-white font-inter text-[14px] font-normal group-hover:text-[#137BEA] transition-all duration-200 opacity-50 group-hover:opacity-100">
-                  Privacy policy
+                  {tt("privacypolicy")}
                 </span>
               </Link>
             </li>
@@ -234,11 +234,11 @@ export default function FooterPage() {
               {tt("foterphone")}
             </p>
             <a
-              href="tel:+998712007007"
+              href="tel:+998981003344"
               aria-label="Phone number"
               className="font-inter font-medium text-white text-[16px]"
             >
-              +998 (71) 200 70 07
+              +998 (98) 100-33-44
             </a>
           </article>
           <article className="flex flex-col gap-2">
@@ -246,13 +246,13 @@ export default function FooterPage() {
               {tt("footeremail")}
             </p>
             <a
-              href="mailto:info@clamo.uz"
+              href="mailto:info@sher.legal"
               aria-label="Email"
               target="_blank"
               rel="noopener noreferrer"
               className="font-inter font-medium text-white text-[16px]"
             >
-              info@sherlegal.uz
+              info@sher.legal
             </a>
           </article>
           <article className="flex flex-col gap-2">

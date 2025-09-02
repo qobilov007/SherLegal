@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 import { NewsCard } from "@/app.types";
 import { pickStringProps } from "@/lib/getLocalizedValue";
 import { getLocalizedValue } from "@/lib/getLocalization";
+import CustomDate from "@/components/ui/CustomDate";
 
 export default function Marqueforslug({ news }: { news: NewsCard[] }) {
   const locale = useLocale();
@@ -46,11 +47,11 @@ export default function Marqueforslug({ news }: { news: NewsCard[] }) {
             "content",
             locale
           );
-          const createdAt = new Date(item.created_at);
-          const day = String(createdAt.getDate()).padStart(2, "0");
-          const month = String(createdAt.getMonth() + 1).padStart(2, "0");
-          const year = createdAt.getFullYear();
-          const date = `${day}-${month}-${year}`;
+          //   const createdAt = new Date(item.created_at);
+          //   const day = String(createdAt.getDate()).padStart(2, "0");
+          //   const month = String(createdAt.getMonth() + 1).padStart(2, "0");
+          //   const year = createdAt.getFullYear();
+          //   const date = `${day}-${month}-${year}`;
           return (
             <Link
               key={id}
@@ -73,12 +74,16 @@ export default function Marqueforslug({ news }: { news: NewsCard[] }) {
                     {localDescription?.replace(/<[^>]+>/g, "")}
                   </p>
                 </article>
-                <div className="flex max-nx:flex-row max-md:flex-col md:items-center items-start gap-1 md:py-4 py-2 px-5">
+                <div className="flex max-md:flex-col md:items-center items-start gap-1 md:py-4 py-2 px-5">
                   <article className="flex items-center md:gap-[8.5px]  gap-0.5 md:py-[6px] py-0.5 px-3 border border-[#6C6C6C] rounded-full max-w-max">
                     <CiCalendarDate className="text-[#6C6C6C]" />
-                    <span className="text-[#6C6C6C] md:text-[12px] text-[10px] font-medium font-inter">
+                    {/* <span className="text-[#6C6C6C] md:text-[12px] text-[10px] font-medium font-inter">
                       {date}
-                    </span>
+                    </span> */}
+                    <CustomDate
+                      created_at={item.created_at}
+                      className="text-[#6C6C6C]"
+                    />
                   </article>
                   <article className="flex items-center gap-[8.5px] md:py-[6px] py-0.5 px-3 border border-[#6C6C6C] rounded-full max-w-max">
                     <LuEye className="text-[#6C6C6C]" />

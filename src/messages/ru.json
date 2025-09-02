@@ -66,7 +66,9 @@
     "footeremail": "Адрес электронной почты",
     "footeraddress": "Адрес",
     "footersupport": "Поддерживать",
-    "footercompany": "Компания"
+    "footercompany": "Компания",
+    "termsofuse":"Условия эксплуатации",
+    "privacypolicy":"Политика конфиденциальности"
   },
   "ContactPage": {
     "contacttitle": "Свяжитесь с нами",

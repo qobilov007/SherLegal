@@ -21,6 +21,7 @@ import {
 } from "@/components/ui/pagination";
 
 import { Skeleton } from "@/components/ui/skeleton";
+import CustomDate from "@/components/ui/CustomDate";
 
 export default function News({
   initialNews,
@@ -148,17 +149,10 @@ export default function News({
                     <div className="flex max-sm:flex-row max-md:flex-col md:items-center items-start gap-1 mt-8">
                       <article className="flex items-center md:gap-[8.5px] gap-0.5 md:py-[6px] py-0.5 px-3 border border-[#6C6C6C] rounded-full max-w-max">
                         <CiCalendarDate className="text-[#6C6C6C]" />
-                        <time
-                          dateTime={item.created_at}
-                          suppressHydrationWarning
-                          className="text-[#6C6C6C] md:text-[12px] text-[10px] font-medium font-inter"
-                        >
-                          {item.created_at
-                            ?.slice(0, 10)
-                            .split("-")
-                            .reverse()
-                            .join("-")}
-                        </time>
+                        <CustomDate
+                          created_at={item.created_at}
+                          className="text-[#6C6C6C]"
+                        />
                       </article>
                       <article className="flex items-center gap-[8.5px] md:py-[6px] py-0.5 px-3 border border-[#6C6C6C] rounded-full max-w-max">
                         <LuEye className="text-[#6C6C6C]" />

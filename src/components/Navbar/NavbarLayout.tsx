@@ -3,7 +3,6 @@ import { useTranslations } from "next-intl"; // BEGIN: Add missing import
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
-// import { ChevronRight } from "lucide-react";
 import { usePathname } from "next/navigation";
 import MenyuLanguage from "./_components/MenyuLanguage";
 import { useLocale } from "next-intl";
@@ -44,6 +43,7 @@ export default function Navbar() {
     pathname === `/${locale}/privacy-policy` ||
     pathname === `/${locale}/contacts` ||
     pathname === `/${locale}/services` ||
+    pathname.startsWith(`/${locale}/services/`) ||
     pathname === `/${locale}/news` ||
     pathname.startsWith(`/${locale}/news`);
 

@@ -1,5 +1,3 @@
-// import { getNews } from "@/constants/page";
-
 import { FaArrowLeftLong } from "react-icons/fa6";
 import Marqueforslug from "../_components/Marqueforslug";
 import { CiCalendarDate } from "react-icons/ci";
@@ -10,6 +8,8 @@ import { NewsCard } from "@/app.types";
 import { pickStringProps } from "@/lib/getLocalizedValue";
 import { getLocalizedValue } from "@/lib/getLocalization";
 import { getNews } from "@/lib/getNews";
+import CustomDate from "@/components/ui/CustomDate";
+// import BackButton from "@/src/components/btn/BackBtn";
 
 export default async function Page({
   params,
@@ -63,6 +63,10 @@ export default async function Page({
             </h1>
           </div>
         </Link>
+        {/* <div className="mb-[24px]">
+          <BackButton />
+        </div> */}
+
         <div className="w-full rounded-[24px] overflow-hidden mb-7 relative top-0 left-0">
           <img
             width={500}
@@ -73,16 +77,14 @@ export default async function Page({
           />
           <article className="absolute left-6 bottom-6 flex items-center md:gap-[8.5px] gap-0.5 backdrop-blur-[10px] border border-white/30 md:py-[6px] py-0.5 px-3 border-[#6C6C6C] rounded-full max-w-max shadows-news">
             <CiCalendarDate className="text-white" />
+              <CustomDate created_at={data.created_at} className="text-white" />
+          </article>
+          <article className="absolute bottom-6 left-[191px] shadows-news flex items-center gap-[8.5px] md:py-[6px] py-0.5 px-3 backdrop-blur-[10px] border border-white/30 border-[#6C6C6C] rounded-full max-w-max">
+            <LuEye className="text-white" />
             <span className="text-white md:text-[12px] text-[10px] font-medium font-inter">
-              {date}
+              {data.views}
             </span>
           </article>
-          <article className=" absolute bottom-6 left-[155px] shadows-news flex items-center gap-[8.5px] md:py-[6px] py-0.5 px-3 backdrop-blur-[10px] border border-white/30 border-[#6C6C6C] rounded-full max-w-max">
-              <LuEye className="text-white" />
-              <span className="text-white md:text-[12px] text-[10px] font-medium font-inter">
-                {data.views}
-              </span>
-            </article>
         </div>
 
         <div className="lg:mb-[88px] md:mb-[60px] nx:mb-[40px] mb-[20px] md:px-[48px]">

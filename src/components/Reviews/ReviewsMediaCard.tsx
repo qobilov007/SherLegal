@@ -23,7 +23,7 @@ export default function ReviewMediaCard({
         </div>
         <p className="mt-4 text-[#FFFFFF] font-inter text-[14px] font-[400] line-clamp-2">{text}</p>
         <div className="flex gap-4">
-          <img src={review.image} alt={profession} className="w-12 h-12 rounded-full object-cover" />
+          <Image src={review.image} alt={profession} width={12} height={12} className="w-12 h-12 rounded-full object-cover" />
           <div>
             <p className="text-[14px] font-inter font-[400] text-white">{profession}</p>
           </div>

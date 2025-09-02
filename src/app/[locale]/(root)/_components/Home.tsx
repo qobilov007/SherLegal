@@ -1,3 +1,4 @@
+"use clients";
 import Comments from "../../../../components/Reviews/Reviews";
 import Faq from "../../../../components/Faq";
 import News from "../../../../components/News/OurNews";
@@ -10,6 +11,8 @@ import Ai from "../../../../components/Ai";
 import { useTranslations } from "next-intl"; // BEGIN: Add missing import
 import OurTeam from "../../../../components/OurTeam/OurTeam";
 import { Stat } from "@/app.types";
+import "aos/dist/aos.css";
+import Counter from "@/components/ui/Counter";
 
 // type Stat = {
 //   number: string;
@@ -21,13 +24,13 @@ export default function Homes({ statistics }: { statistics: Stat[] }) {
   const ss = useTranslations("Statistics");
   const t = useTranslations("HomePage");
 
-  function formatNumber(num: number) {
-    if (num >= 1000) {
-      return (num / 1000).toFixed(1).replace(/\.0$/, "") + "k";
-    } else {
-      return num.toString() + "+";
-    }
-  }
+    // function formatNumber(num: number) {
+    //   if (num >= 1000) {
+    //     return (num / 1000).toFixed(1).replace(/\.0$/, "") + "k";
+    //   } else {
+    //     return num.toString() + "+";
+    //   }
+    // }
 
   return (
     <div>
@@ -92,6 +95,7 @@ export default function Homes({ statistics }: { statistics: Stat[] }) {
 
               {/* Button */}
               <Button
+                data-aos="fade-right"
                 title={t("homebtn")}
                 icon={
                   <ArrowRight
@@ -114,7 +118,7 @@ export default function Homes({ statistics }: { statistics: Stat[] }) {
                 >
                   <div className="flex flex-col items-center text-center">
                     <span className="md:text-7xl sm:text-[38px] text-[32px] leading-[120%] text-center font-bebas font-normal">
-                      {formatNumber(Number(item.clients))}
+                      <Counter end={Number(item.clients)} />
                     </span>
                     <span className="text-center md:text-2xl sm:text-[16px] text-[13px] font-inter font-medium leading-[120%]">
                       {ss("experience")}
@@ -124,7 +128,7 @@ export default function Homes({ statistics }: { statistics: Stat[] }) {
 
                   <div className="flex flex-col items-center text-center">
                     <span className="md:text-7xl sm:text-[38px] text-[32px] leading-[120%] text-center font-bebas font-normal">
-                      {formatNumber(Number(item.deals))}
+                      <Counter end={Number(item.deals)} />
                     </span>
                     <span className="text-center md:text-2xl sm:text-[16px] text-[13px] font-inter font-medium leading-[120%]">
                       {ss("project")}
@@ -133,7 +137,7 @@ export default function Homes({ statistics }: { statistics: Stat[] }) {
 
                   <div className="flex flex-col items-center text-center">
                     <span className="md:text-7xl sm:text-[38px] text-[32px] leading-[120%] text-center font-bebas font-normal">
-                      {formatNumber(Number(item.experience))}
+                      <Counter end={Number(item.experience)} />
                     </span>
                     <span className="text-center md:text-2xl sm:text-[16px] text-[13px] font-inter font-medium leading-[120%]">
                       {ss("closed")}
@@ -142,7 +146,7 @@ export default function Homes({ statistics }: { statistics: Stat[] }) {
 
                   <div className="flex flex-col items-center text-center">
                     <span className="md:text-7xl sm:text-[38px] text-[32px] leading-[120%] text-center font-bebas font-normal">
-                      {formatNumber(Number(item.projects))}
+                      <Counter end={Number(item.projects)} />
                     </span>
                     <span className="text-center md:text-2xl sm:text-[16px] text-[13px] font-inter font-medium leading-[120%]">
                       {ss("clients")}

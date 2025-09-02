@@ -4,9 +4,9 @@ import Link from "next/link";
 export default function SochealMedia() {
   return (
     <div className="grid lg:grid-cols-4 gap-6 mb-8 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-y-3 items-center justify-center bg-[#fff] md:mb-10 max-md:mt-[405px] max-sm:mt-[395px] rounded-2xl">
-      
+
       {/* Telegram */}
-      <Link href={"https://t.me/CLAMO_uz"} aria-label="Clamo Telegram" target="_blank">
+      <Link href={"https://t.me/sherlegal"} aria-label="Clamo Telegram" target="_blank">
         <div className="flex items-center md:justify-center md:gap-5 ml-5 gap-2 group hover:cursor-pointer">
           <div className="w-10 h-10 flex items-center justify-center rounded-full bg-[#0650C3]/[18%] transition duration-200 group-hover:bg-[#0650C3] cursor-pointer">
             <svg
@@ -19,13 +19,13 @@ export default function SochealMedia() {
 
           <div className="flex flex-col -space-y-1">
             <h2 className="text-sm font-vk">Telegram</h2>
-            <p className="font-medium font-vk">t.me/sherlegal.uz</p>
+            <p className="font-medium font-vk">sherlegal</p>
           </div>
         </div>
       </Link>
 
       {/* Instagram */}
-      <Link href={"https://instagram.com/clamo.uz"} aria-label="Clamo Instagram" target="_blank">
+      <Link href={"https://instagram.com/sherlegal_lf"} aria-label="Clamo Instagram" target="_blank">
         <div className="flex items-center md:justify-center md:gap-5 ml-5 gap-2 group hover:cursor-pointer">
           <div className="w-10 h-10 flex items-center justify-center rounded-full bg-[#0650C3]/[18%] transition duration-200 group-hover:bg-[#0650C3] cursor-pointer">
             <svg
@@ -48,8 +48,7 @@ export default function SochealMedia() {
       {/* Facebook */}
       <Link
         href={
-          "https://www.facebook.com/people/CLAMO-Rasmiy/61574003283120/?mibextid=wwXIfr"
-        }
+          "https://www.facebook.com/sher.legal.uz/"}
         aria-label="Clamo Facebook"
         target="_blank"
       >
@@ -73,8 +72,7 @@ export default function SochealMedia() {
       {/* LinkedIn */}
       <Link
         href={
-          "https://www.linkedin.com/in/clamo-social-3a1454364/"
-        }
+          "https://www.linkedin.com/company/sherlegal/"}
         aria-label="Clamo LinkedIn"
         target="_blank"
       >
