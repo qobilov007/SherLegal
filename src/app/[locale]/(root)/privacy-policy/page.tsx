@@ -9,7 +9,7 @@ export default function page() {
       <div className="mb-10">
         <BackButton />
       </div>
-      <div className=" m-auto p-6 rounded-2xl max-w-4xl bg-white shadow-[0_0_20px_rgba(0,0,0,0.15)] md:mb-4">
+      <div className="m-auto md:p-6 p-4 rounded-2xl max-w-4xl smd:bg-white smd:shadow-xl lg:mb-[64px] md:mb-[44px] mb-[24px]">
         <h1 className="font-inter font-bold md:text-[28px] nx:text-[24px] text-[18px] leading-[130%] md:pb-[24px] pb-[16px]">
           {t("subtitle")}
         </h1>

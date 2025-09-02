@@ -1,4 +1,4 @@
-"use clients";
+
 import Comments from "../../../../components/Reviews/Reviews";
 import Faq from "../../../../components/Faq";
 import News from "../../../../components/News/OurNews";
@@ -13,24 +13,21 @@ import OurTeam from "../../../../components/OurTeam/OurTeam";
 import { Stat } from "@/app.types";
 import "aos/dist/aos.css";
 import Counter from "@/components/ui/Counter";
+import "aos/dist/aos.css";
 
-// type Stat = {
-//   number: string;
-//   label: string;
-// };
 
 export default function Homes({ statistics }: { statistics: Stat[] }) {
   //   const locale = useLocale();
   const ss = useTranslations("Statistics");
   const t = useTranslations("HomePage");
 
-    // function formatNumber(num: number) {
-    //   if (num >= 1000) {
-    //     return (num / 1000).toFixed(1).replace(/\.0$/, "") + "k";
-    //   } else {
-    //     return num.toString() + "+";
-    //   }
-    // }
+  // function formatNumber(num: number) {
+  //   if (num >= 1000) {
+  //     return (num / 1000).toFixed(1).replace(/\.0$/, "") + "k";
+  //   } else {
+  //     return num.toString() + "+";
+  //   }
+  // }
 
   return (
     <div>
@@ -38,11 +35,16 @@ export default function Homes({ statistics }: { statistics: Stat[] }) {
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/40"></div>
 
-        <div className="container h-full flex flex-col  gap-10 sm:gap-12 md:gap-14 relative z-10">
+        <div className="container h-full flex flex-col  gap-2 sm:gap-12 md:gap-14 relative z-10">
           <div className="pt-[100px] sm:pt-[120px] md:pt-[130px]">
             <div className="inline-flex  max-w-full max-md:max-w-[100%] md:max-w-[80%] lg:max-w-[50%] flex-col justify-center text-white relative z-10">
               {/* Award badge */}
-              <article className="w-fit flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-4 rounded-full glass border-t border-r bg-red-400">
+              <article
+                className="w-fit flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-4 rounded-full glass border-t border-r bg-red-400"
+                data-aos="fade-down"
+                data-aos-duration="800"
+                data-aos-delay="200"
+              >
                 <svg
                   width="16"
                   height="24"
@@ -62,12 +64,22 @@ export default function Homes({ statistics }: { statistics: Stat[] }) {
               </article>
 
               {/* Title */}
-              <h2 className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] leading-[120%] font-inter font-medium text-white mt-4">
+              <h2
+                className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] leading-[120%] font-inter font-medium text-white mt-4"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="400"
+              >
                 {t("hometitle")}
               </h2>
 
               {/* Brand name */}
-              <article className="flex items-center gap-1 mt-2">
+              <article
+                className="flex items-center gap-1 mt-2"
+                data-aos="zoom-in"
+                data-aos-duration="1000"
+                data-aos-delay="600"
+              >
                 <p
                   className="font-inter flex items-center justify-center
                   text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px]
@@ -89,22 +101,33 @@ export default function Homes({ statistics }: { statistics: Stat[] }) {
               </article>
 
               {/* Description */}
-              <p className="text-[#cacaca] font-inter text-sm sm:text-base md:text-lg font-normal leading-[130%] mb-5 mt-3">
+              <p
+                className="text-[#cacaca] font-inter text-sm sm:text-base md:text-lg font-normal leading-[130%] mb-5 mt-3"
+                data-aos="fade-right"
+                data-aos-duration="1200"
+                data-aos-delay="800"
+              >
                 {t("homedes")}
               </p>
 
               {/* Button */}
-              <Button
-                data-aos="fade-right"
-                title={t("homebtn")}
-                icon={
-                  <ArrowRight
-                    size={22}
-                    className="group-hover:rotate-[0deg] transition-all duration-200 rotate-[-45deg]"
-                  />
-                }
-                className="w-[135px] sm:w-[180px] text-[10px] sm:text-[20px]"
-              />
+              <div
+                data-aos="fade-up"
+                data-aos-duration="1400"
+                data-aos-delay="1000"
+              >
+                <Button
+                  data-aos="fade-right"
+                  title={t("homebtn")}
+                  icon={
+                    <ArrowRight
+                      size={22}
+                      className="group-hover:rotate-[0deg] transition-all duration-200 rotate-[-45deg]"
+                    />
+                  }
+                  className="w-[135px] sm:w-[180px] text-[10px] sm:text-[20px]"
+                />
+              </div>
             </div>
           </div>
 
@@ -123,7 +146,6 @@ export default function Homes({ statistics }: { statistics: Stat[] }) {
                     <span className="text-center md:text-2xl sm:text-[16px] text-[13px] font-inter font-medium leading-[120%]">
                       {ss("experience")}
                     </span>
-                    
                   </div>
 
                   <div className="flex flex-col items-center text-center">

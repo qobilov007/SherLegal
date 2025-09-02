@@ -1,5 +1,5 @@
 "use client";
-import { useTranslations } from "next-intl"; // BEGIN: Add missing import
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";

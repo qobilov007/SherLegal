@@ -10,7 +10,12 @@ interface CounterProps {
   formatted?: boolean;
 }
 
-export default function Counter({ from = 0, end, duration = 2000, formatted = true }: CounterProps) {
+export default function Counter({
+  from = 0,
+  end,
+  duration = 2000,
+  formatted = true,
+}: CounterProps) {
   const [value, setValue] = useState(from);
 
   useEffect(() => {
@@ -21,13 +26,12 @@ export default function Counter({ from = 0, end, duration = 2000, formatted = tr
 
     const interval = setInterval(() => {
       currentStep++;
-      const progress = currentStep / totalSteps;
+      const progress = Math.min(currentStep / totalSteps, 1);
       const currentValue = Math.floor(from + range * progress);
       setValue(currentValue);
 
       if (currentStep >= totalSteps) {
         clearInterval(interval);
-        setValue(end);
       }
     }, stepTime);
 

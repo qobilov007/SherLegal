@@ -14,10 +14,8 @@ export default async function Page({
   );
 
   const data: ServiceItems = await res.json();
-  console.log(data);
+//   console.log(data);
     
-
-  // Backenddan til bo‘yicha name/description olish
   const name =
     (data[`title_${locale}` as keyof ServiceItems] as string) || data.name;
   const description =

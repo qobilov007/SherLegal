@@ -8,7 +8,7 @@ import ReviewMediaCard from "./ReviewsMediaCard";
 import Marquee from "react-fast-marquee";
 import { useTranslations, useLocale } from "next-intl";
 import { Review } from "@/app.types";
-import AOS from "aos";
+// import AOS from "aos";
 import "aos/dist/aos.css";
 
 export default function TestimonialsMarquee() {
@@ -22,13 +22,13 @@ export default function TestimonialsMarquee() {
       .catch((err) => console.error("Fetch xatolik:", err));
   }, []);
 
-  useEffect(() => {
-    AOS.init({
-      once: true,
-      duration: 1000,
-      easing: "ease-in-out",
-    });
-  }, []);
+//   useEffect(() => {
+//     AOS.init({
+//       once: true,
+//       duration: 1000,
+//       easing: "ease-in-out",
+//     });
+//   }, []);
 
   return (
     <section className="relative !min-h-[800px] text-white bg-black p-0 bg-reviews bg-no-repeat bg-cover bg-center">
