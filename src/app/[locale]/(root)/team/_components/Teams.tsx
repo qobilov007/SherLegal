@@ -24,7 +24,7 @@ export default function OurTeam({ team }: { team: TeamsType[] }) {
             </h5>
           </article>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full relative z-[10]">
             {team.slice(0, 9).map((team, id) => (
               <Teamm key={id} infoTeam={team} />
             ))}

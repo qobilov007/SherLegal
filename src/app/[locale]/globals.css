@@ -268,6 +268,7 @@
   position: relative;
   left: 0;
   top: 0;
+  z-index: 11;
 }
 
 .team-overlay::before {
@@ -281,6 +282,7 @@
   width: 900px;
   height: 200px;
   transform: rotate(140deg) translateY(-450px) translateX(350px);
+  z-index: -1;
 }
 
 .team-overlay::after {
@@ -294,7 +296,8 @@
   width: 900px;
   height: 200px;
   transform: rotate(50deg) translateY(100px) translateX(300px);
-  z-index: 1;
+  z-index: -1;
+
 }
 
 .footer-overlay {
