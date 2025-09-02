@@ -4,22 +4,38 @@ import Image from "next/image";
 import Logo from "../../../public/Logo.svg";
 import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
+import "aos/dist/aos.css";
 
 export default function FooterPage() {
   const tt = useTranslations("FooterPage");
   const t = useTranslations("Navbarist");
   const locale = useLocale();
   return (
-    <div className="w-full footer-overlay">
+    <div className="w-full footer-overlay overflow-hidden">
       <div className="container">
-        <article className="relative z-[11] md:pt-24 pt-[24px] max-w-[900px] m-auto md:mb-[129px] sm:mb-10 mb-[40px]">
-          <h3 className="font-inter font-bold md:text-[64px] text-[32px] md:leading-[76px] leading-[100%] text-white text-center mb-6">
+        <article
+          className="relative z-[11] md:pt-24 pt-[24px] max-w-[900px] m-auto md:mb-[129px] sm:mb-10 mb-[40px]"
+          data-aos="fade-up"
+        >
+          <h3
+            className="font-inter font-bold md:text-[64px] text-[32px] md:leading-[76px] leading-[100%] text-white text-center mb-6"
+            data-aos="zoom-in"
+            // data-aos-delay="200"
+          >
             {tt("footertitle")}
           </h3>
-          <p className="md:max-w-[68%] m-auto font-normal md:text-[16px] text-[14px] font-inter leading-[20px] text-center text-white/80 mb-6">
+          <p
+            className="md:max-w-[68%] m-auto font-normal md:text-[16px] text-[14px] font-inter leading-[20px] text-center text-white/80 mb-6"
+            data-aos="fade-up"
+            // data-aos-delay="400"
+          >
             {tt("footerdes")}
           </p>
-          <article className="flex items-center gap-5 justify-center">
+          <article
+            className="flex items-center gap-5 justify-center"
+            data-aos="fade-up"
+            // data-aos-delay="600"
+          >
             <Link href={`/${locale}/about`}>
               <button className="px-7 md:py-4 py-3 rounded-full border-gray-400/40 border-l border-t border-r backdrop-blur-[50px] text-[16px] font-medium font-inter leading-[20px] transition-all duration-200 bg-gray-400/10 hover:bg-gray-400/20 text-white">
                 {tt("footerbtn")}
@@ -33,8 +49,9 @@ export default function FooterPage() {
           </article>
         </article>
       </div>
+
       <div className="container relative z-[11] w-full grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:gap-24 gap-10">
-        <div className="max-md:order-3">
+        <div className="max-md:order-3" data-aos="fade-up-right">
           <Image
             className="md:mb-6 mb-4 max-md:w-[150px] max-md:h-[50px]"
             src={Logo}
@@ -131,7 +148,11 @@ export default function FooterPage() {
             </article>
           </div>
         </div>
-        <article className="flex items-start justify-between max-md:order-1">
+
+        <article
+          className="flex items-start justify-between max-md:order-1"
+          data-aos="fade-up"
+        >
           <ul>
             <p className="font-inter font-bold text-[14px] uppercase text-white mb-4">
               {tt("footercompany")}
@@ -228,7 +249,11 @@ export default function FooterPage() {
             </li>
           </ul>
         </article>
-        <div className="p-5 max-md:order-2 rounded-3xl backdrop-blur-[20px] flex flex-col gap-5 border-2 border-[rgba(255,255,255,0.10)] md:mb-20">
+
+        <div
+          className="p-5 max-md:order-2 rounded-3xl backdrop-blur-[20px] flex flex-col gap-5 border-2 border-[rgba(255,255,255,0.10)] md:mb-20"
+          data-aos="fade-up-left"
+        >
           <article className="flex flex-col gap-2">
             <p className="font-inter font-normal text-[14px] text-white/40">
               {tt("foterphone")}
@@ -270,6 +295,7 @@ export default function FooterPage() {
           </article>
         </div>
       </div>
+
       <p className="container relative z-[11] w-full h-[1px] bg-white/20 rounded-full mb-5"></p>
       <p className="container relative z-[11] text-white/60 pb-[23px]">
         Copyright 2024 - “Sherlegal” LLC

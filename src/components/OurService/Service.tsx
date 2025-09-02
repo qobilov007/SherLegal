@@ -6,8 +6,8 @@ import BtnIcon from "../../../public/images/Button Icon.svg";
 import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
 import { ServiceItems } from "@/app.types";
-import { useEffect } from "react";
-import AOS from "aos";
+// import { useEffect } from "react";
+// import AOS from "aos";
 import "aos/dist/aos.css";
 
 export default function ServicesSection({
@@ -17,13 +17,13 @@ export default function ServicesSection({
 }) {
   const t = useTranslations("HomePage");
   const locale = useLocale();
-  useEffect(() => {
-    AOS.init({
-      once: true,
-      duration: 1000,
-      easing: "ease-in-out",
-    });
-  }, []);
+//   useEffect(() => {
+//     AOS.init({
+//       once: true,
+//       duration: 1000,
+//       easing: "ease-in-out",
+//     });
+//   }, []);
 
   return (
     <div className="">

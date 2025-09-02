@@ -4,7 +4,7 @@ import BtnIcon from "../../public/images/Button Icon.svg";
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import { useTranslations } from "next-intl";
-import AOS from "aos";
+// import AOS from "aos";
 import "aos/dist/aos.css";
 import ReactMarkdown from "react-markdown";
 
@@ -74,13 +74,13 @@ export default function Hero() {
     }
   };
 
-  useEffect(() => {
-    AOS.init({
-      once: true,
-      duration: 1000,
-      easing: "ease-in-out",
-    });
-  }, []);
+//   useEffect(() => {
+//     AOS.init({
+//       once: true,
+//       duration: 1000,
+//       easing: "ease-in-out",
+//     });
+//   }, []);
 
   useEffect(() => {
     chatEndRef.current?.scrollIntoView({ behavior: "smooth" });

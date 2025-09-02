@@ -1,4 +1,3 @@
-"use client";
 
 import React, { ReactNode } from "react";
 import Link from "next/link";
@@ -12,7 +11,7 @@ interface ButtonProps {
   className?: string;
 }
 
-export default function Button({
+export default function cc({
   title,
   link,
   onClick,

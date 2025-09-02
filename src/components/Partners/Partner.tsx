@@ -3,19 +3,19 @@
 import Image from "next/image";
 import { Partner } from "@/app.types";
 import { useTranslations } from "next-intl";
-import { useEffect } from "react";
-import AOS from "aos";
+// import { useEffect } from "react";
+// import AOS from "aos";
 import "aos/dist/aos.css";
 
 export default function PartnersSection({ partners }: { partners: Partner[] }) {
   const t = useTranslations("HomePage");
-  useEffect(() => {
-    AOS.init({
-      once: true,
-      duration: 1000,
-      easing: "ease-in-out",
-    });
-  }, []);
+//   useEffect(() => {
+//     AOS.init({
+//       once: true,
+//       duration: 1000,
+//       easing: "ease-in-out",
+//     });
+//   }, []);
   return (
     <div className="white">
       <section

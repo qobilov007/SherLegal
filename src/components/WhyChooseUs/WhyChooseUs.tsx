@@ -1,24 +1,23 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import Image from "next/image";
 import { WhyChooseType } from "@/app.types";
-import { useLocale } from "next-intl";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
-import AOS from "aos";
+// import { useEffect } from "react";
+// import AOS from "aos";
 
 export default function WhyChoose({ partners }: { partners: WhyChooseType[] }) {
   const t = useTranslations("HomePage");
   const locale = useLocale();
 
-  useEffect(() => {
-    AOS.init({
-      once: true,
-      duration: 1000,
-      easing: "ease-in-out",
-    });
-  }, []);
+  //   useEffect(() => {
+  //     AOS.init({
+  //       once: true,
+  //       duration: 1000,
+  //       easing: "ease-in-out",
+  //     });
+  //   }, []);
 
   return (
     <div className="container">
@@ -73,8 +72,13 @@ export default function WhyChoose({ partners }: { partners: WhyChooseType[] }) {
               <p className="text-[#2E2E2E] text-sm font-normal font-inter group-hover:text-white transition-all duration-200">
                 {description}
               </p>
-              <style jsx>{`
+              {/* <style jsx>{`
                 div:hover {
+                  background-color: ${item.color};
+                }
+              `}</style> */}
+              <style jsx>{`
+                .card-${id}:hover {
                   background-color: ${item.color};
                 }
               `}</style>
