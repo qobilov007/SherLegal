@@ -205,7 +205,7 @@ export default function FooterPage() {
                   />
                 </svg>
                 <span className="text-white font-inter text-[14px] font-normal group-hover:text-[#137BEA] transition-all duration-200 opacity-50 group-hover:opacity-100">
-                  Terms of use
+                  {tt("termsofuse")}
                 </span>
               </Link>
             </li>
@@ -222,7 +222,7 @@ export default function FooterPage() {
                   />
                 </svg>
                 <span className="text-white font-inter text-[14px] font-normal group-hover:text-[#137BEA] transition-all duration-200 opacity-50 group-hover:opacity-100">
-                  Privacy policy
+                  {tt("privacypolicy")}
                 </span>
               </Link>
             </li>

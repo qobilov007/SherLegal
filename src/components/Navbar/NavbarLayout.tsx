@@ -43,6 +43,7 @@ export default function Navbar() {
     pathname === `/${locale}/privacy-policy` ||
     pathname === `/${locale}/contacts` ||
     pathname === `/${locale}/services` ||
+    pathname.startsWith(`/${locale}/services/`) ||
     pathname === `/${locale}/news` ||
     pathname.startsWith(`/${locale}/news`);
 
