@@ -1,3 +1,4 @@
+
 "use client"
 
 import Image from "next/image";
@@ -104,6 +105,7 @@ export default function NewsSection({ news }: { news: NewsCard[] }) {
           <CardNormal item={news[2]} locale={locale} />
         </div>
 
+
         {/* Other News */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {news.slice(3, 7).map((item) => (
@@ -126,22 +128,22 @@ function CardNormal({ item, locale }: { item: NewsCard; locale: string }) {
     item?.content ||
     "";
 
-  //   const createdAt = item?.created_at ? new Date(item.created_at) : null;
+    const createdAt = item?.created_at ? new Date(item.created_at) : null;
 
-  //   const date = createdAt && !isNaN(createdAt.getTime())
-  //     ? new Intl.DateTimeFormat("en-GB", {
-  //       day: "numeric",
-  //       month: "long",
-  //       year: "numeric",
-  //     }).format(createdAt)
-  //     : "";
+    const date = createdAt && !isNaN(createdAt.getTime())
+      ? new Intl.DateTimeFormat("en-GB", {
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+      }).format(createdAt)
+      : "";
 
   return (
     <Link href={`/${locale}/news/${item?.slug}`}>
       <div className="cursor-pointer group max-lg:h-[500px] flex flex-col rounded-2xl w-[278px] max-lg:w-full h-[379px] overflow-hidden shadow-md hover:shadow-xl transition-all bg-white">
         <div className="relative w-full h-[320px] overflow-hidden">
           <Image
-            src="https://087a87050fb35936828b2df899a476ad.r2.cloudflarestorage.com/sherlegal/media/news/tatyana-dobreva-i6Wc5qZO5MQ.jpg"
+            src={item?.image || ""}
             alt="news"
             width={828}
             height={552}
@@ -187,6 +189,7 @@ function CardBackground({ item, locale }: { item: NewsCard; locale: string }) {
   //     month: "long",
   //     year: "numeric",
   //   }).format(createdAt);
+
 
   return (
     <Link href={`/${locale}/news/${item?.slug}`}>
