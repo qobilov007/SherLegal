@@ -20,21 +20,21 @@ export default function FooterPage() {
           <h3
             className="font-inter font-bold md:text-[64px] text-[32px] md:leading-[76px] leading-[100%] text-white text-center mb-6"
             data-aos="zoom-in"
-            // data-aos-delay="200"
+            data-aos-delay="200"
           >
             {tt("footertitle")}
           </h3>
           <p
             className="md:max-w-[68%] m-auto font-normal md:text-[16px] text-[14px] font-inter leading-[20px] text-center text-white/80 mb-6"
             data-aos="fade-up"
-            // data-aos-delay="400"
+            data-aos-delay="400"
           >
             {tt("footerdes")}
           </p>
           <article
             className="flex items-center gap-5 justify-center"
             data-aos="fade-up"
-            // data-aos-delay="600"
+            data-aos-delay="600"
           >
             <Link href={`/${locale}/about`}>
               <button className="px-7 md:py-4 py-3 rounded-full border-gray-400/40 border-l border-t border-r backdrop-blur-[50px] text-[16px] font-medium font-inter leading-[20px] transition-all duration-200 bg-gray-400/10 hover:bg-gray-400/20 text-white">
