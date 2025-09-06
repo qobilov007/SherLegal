@@ -4,20 +4,20 @@ import { useTranslations, useLocale } from "next-intl";
 import Image from "next/image";
 import { WhyChooseType } from "@/app.types";
 import "aos/dist/aos.css";
-// import { useEffect } from "react";
-// import AOS from "aos";
+import { useEffect } from "react";
+import AOS from "aos";
 
 export default function WhyChoose({ partners }: { partners: WhyChooseType[] }) {
   const t = useTranslations("HomePage");
   const locale = useLocale();
 
-  //   useEffect(() => {
-  //     AOS.init({
-  //       once: true,
-  //       duration: 1000,
-  //       easing: "ease-in-out",
-  //     });
-  //   }, []);
+    useEffect(() => {
+      AOS.init({
+        once: false,
+        duration: 400,
+        easing: "ease-in-out",
+      });
+    }, []);
 
   return (
     <div className="container">
@@ -25,16 +25,16 @@ export default function WhyChoose({ partners }: { partners: WhyChooseType[] }) {
         <h4
           className="font-inter text-center text-[#0795E2] font-bold lg:text-[40px] md:text-[32px] text-[28px] leading-[48px] mb-4"
           data-aos="fade-up"
-          data-aos-duration="800"
-          data-aos-delay="100"
+          data-aos-duration="400"
+          data-aos-delay="200"
         >
           {t("whychooseus")}
         </h4>
         <p
           className="font-inter md:text-[20px] text-[16px] font-normal leading-[26px] text-center"
           data-aos="zoom-in"
-          data-aos-duration="1000"
-          data-aos-delay="300"
+          data-aos-duration="400"
+          data-aos-delay="200"
         >
           {t("whytitle")}
         </p>
@@ -56,7 +56,7 @@ export default function WhyChoose({ partners }: { partners: WhyChooseType[] }) {
               className={`p-6 rounded-[40px] bg-[#FAFAFA] cursor-pointer group transition-all duration-200`}
               data-aos="fade-up"
               data-aos-delay={id * 100}
-              data-aos-duration="800"
+              data-aos-duration="400"
             >
               <Image
                 src={item.icon}

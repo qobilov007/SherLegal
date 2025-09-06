@@ -1,15 +1,10 @@
+"use client";
 
-import Comments from "../../../../components/Reviews/Reviews";
-import Faq from "../../../../components/Faq";
-import News from "../../../../components/News/OurNews";
-import OurService from "../../../../components/OurService/Ourservice";
-import Partners from "../../../../components/Partners/Partners";
+import { useEffect } from "react";
+import AOS from "aos";
 import Button from "../../../../components/btn/Button";
 import { ArrowRight } from "lucide-react";
-import WhyChoose from "../../../../components/WhyChooseUs/WhyChoose";
-import Ai from "../../../../components/Ai";
-import { useTranslations } from "next-intl"; // BEGIN: Add missing import
-import OurTeam from "../../../../components/OurTeam/OurTeam";
+import { useTranslations, useLocale } from "next-intl"; // BEGIN: Add missing import
 import { Stat } from "@/app.types";
 import "aos/dist/aos.css";
 import Counter from "@/components/ui/Counter";
@@ -17,17 +12,16 @@ import "aos/dist/aos.css";
 
 
 export default function Homes({ statistics }: { statistics: Stat[] }) {
-  //   const locale = useLocale();
   const ss = useTranslations("Statistics");
   const t = useTranslations("HomePage");
-
-  // function formatNumber(num: number) {
-  //   if (num >= 1000) {
-  //     return (num / 1000).toFixed(1).replace(/\.0$/, "") + "k";
-  //   } else {
-  //     return num.toString() + "+";
-  //   }
-  // }
+  const locale = useLocale();
+  useEffect(() => {
+    AOS.init({
+      duration: 300, 
+      easing: "ease-out-cubic",
+      once: true,  
+    });
+  }, []);
 
   return (
     <div>
@@ -42,7 +36,7 @@ export default function Homes({ statistics }: { statistics: Stat[] }) {
               <article
                 className="w-fit flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-4 rounded-full glass border-t border-r bg-red-400"
                 data-aos="fade-down"
-                data-aos-duration="800"
+                data-aos-duration="300"
                 data-aos-delay="200"
               >
                 <svg
@@ -67,8 +61,8 @@ export default function Homes({ statistics }: { statistics: Stat[] }) {
               <h2
                 className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] leading-[120%] font-inter font-medium text-white mt-4"
                 data-aos="fade-up"
-                data-aos-duration="1000"
-                data-aos-delay="400"
+                data-aos-duration="300"
+                data-aos-delay="200"
               >
                 {t("hometitle")}
               </h2>
@@ -77,8 +71,8 @@ export default function Homes({ statistics }: { statistics: Stat[] }) {
               <article
                 className="flex items-center gap-1 mt-2"
                 data-aos="zoom-in"
-                data-aos-duration="1000"
-                data-aos-delay="600"
+                data-aos-duration="400"
+                data-aos-delay="200"
               >
                 <p
                   className="font-inter flex items-center justify-center
@@ -104,8 +98,8 @@ export default function Homes({ statistics }: { statistics: Stat[] }) {
               <p
                 className="text-[#cacaca] font-inter text-sm sm:text-base md:text-lg font-normal leading-[130%] mb-5 mt-3"
                 data-aos="fade-right"
-                data-aos-duration="1200"
-                data-aos-delay="800"
+                data-aos-duration="400"
+                data-aos-delay="200"
               >
                 {t("homedes")}
               </p>
@@ -113,8 +107,8 @@ export default function Homes({ statistics }: { statistics: Stat[] }) {
               {/* Button */}
               <div
                 data-aos="fade-up"
-                data-aos-duration="1400"
-                data-aos-delay="1000"
+                data-aos-duration="400"
+                data-aos-delay="200"
               >
                 <Button
                   data-aos="fade-right"
@@ -125,13 +119,12 @@ export default function Homes({ statistics }: { statistics: Stat[] }) {
                       className="group-hover:rotate-[0deg] transition-all duration-200 rotate-[-45deg]"
                     />
                   }
-                  className="w-[135px] sm:w-[180px] text-[10px] sm:text-[20px]"
-                />
+                  className={`text-[10px] sm:text-[20px] ${locale === "uz" ? "sm:w-[240px]" : "sm:w-[180px]"
+                    }`} />
               </div>
             </div>
           </div>
 
-          {/* Stats Section */}
           <div className="relative w-full flex justify-center items-center py-4 sm:py-5">
             <div className="relative w-full">
               {statistics.map((item, i) => (
@@ -180,20 +173,6 @@ export default function Homes({ statistics }: { statistics: Stat[] }) {
           </div>
         </div>
       </div>
-
-      {/* Other sections */}
-      <div className="w-full py-10 sm:py-12 md:py-16">
-        <WhyChoose />
-      </div>
-      <div className="w-full overflow-hidden bg-black team-overlay">
-        <OurTeam />
-      </div>
-      <OurService />
-      <Ai />
-      <Partners />
-      <Comments />
-      <News />
-      <Faq />
     </div>
   );
 }

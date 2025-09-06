@@ -3,30 +3,31 @@
 import Image from "next/image";
 import { Partner } from "@/app.types";
 import { useTranslations } from "next-intl";
-// import { useEffect } from "react";
-// import AOS from "aos";
+import { useEffect } from "react";
+import AOS from "aos";
 import "aos/dist/aos.css";
 
 export default function PartnersSection({ partners }: { partners: Partner[] }) {
   const t = useTranslations("HomePage");
-//   useEffect(() => {
-//     AOS.init({
-//       once: true,
-//       duration: 1000,
-//       easing: "ease-in-out",
-//     });
-//   }, []);
+  useEffect(() => {
+    AOS.init({
+      once: false,
+      duration: 200,
+      easing: "ease-in-out",
+    });
+  }, []);
   return (
     <div className="white">
       <section
         className="container mx-auto px-6 py-16 bg-white"
         data-aos="fade-up"
+        data-aos-duration="200"
       >
         <div className="text-center mb-12" data-aos="fade-down">
-          <h2 className="text-3xl font-bold text-gray-900">
+          <h2 className="text-3xl font-bold text-gray-900" data-aos="fade-down" data-aos-duration="200" data-aos-delay="200">
             {t("partnertitle")}
           </h2>
-          <p className="text-gray-600 mt-2">{t("partnerdes")}</p>
+          <p className="text-gray-600 mt-2" data-aos="fade-down" data-aos-duration="200" data-aos-delay="300">{t("partnerdes")}</p>
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4">
@@ -36,6 +37,7 @@ export default function PartnersSection({ partners }: { partners: Partner[] }) {
               className="group cursor-pointer relative flex items-center justify-center h-28 p-4 bg-white border border-transparent hover:border-red-400 ease-linear duration-300"
               data-aos="zoom-in"
               data-aos-delay={idx * 100}
+              data-aos-duration="200"
             >
               {/* Logo */}
               <Image
