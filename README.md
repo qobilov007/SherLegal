@@ -37,6 +37,13 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ## My Contribution
 
-I served as the primary developer of this project, implementing most of the application's architecture, core features, business logic, and user interface.
+I was primarily responsible for:
 
-The project was developed with guidance and mentorship from my teacher, who provided architectural advice, technical feedback, and code reviews during the development process.
+- Designing and implementing the frontend with Next.js
+- Building reusable React components
+- Developing core business logic
+- Integrating APIs
+- Implementing responsive UI
+- Fixing bugs and optimizing performance
+
+The project was developed with guidance and mentorship from my teacher, who provided architectural advice, technical feedback, and code reviews.
