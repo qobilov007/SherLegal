@@ -38,4 +38,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ## My Contribution
 
-I developed the majority of the project's core features and functionality. The project was completed in collaboration with my mentor.
+I served as the primary developer of this project, implementing most of the application's architecture, core features, business logic, and user interface.
+
+The project was developed with guidance and mentorship from my teacher, who provided architectural advice, technical feedback, and code reviews during the development process.
